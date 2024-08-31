@@ -1,0 +1,133 @@
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 250px;
+  padding: 2rem;
+  background-color: var(--darkgrey);
+  border-radius: 0.8rem;
+  border: 2px solid var(--darkgrey);
+  cursor: pointer;
+}
+
+.grid:hover {
+  border: 2px solid var(--green);
+  transition: all 0.3s;
+}
+
+.grid-red:hover {
+  border: 2px solid var(--red);
+  transition: all 0.3s;
+}
+
+.img-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon-flex {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.watchlist-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--green);
+  border-radius: 50%;
+  color: var(--green);
+  padding: 0.5rem;
+  height: 1.5rem;
+  width: 1.5rem !important;
+}
+
+.watchlist-icon-red {
+  border: 2px solid var(--red);
+  color: var(--red);
+}
+
+.coin-image {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.info-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.2rem;
+}
+
+.coin-symbol {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0rem;
+}
+
+.coin-name {
+  margin: 0;
+  font-weight: 400;
+  color: var(--grey);
+  font-size: 0.8rem;
+}
+
+.chip-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.price-chip {
+  border: 2px solid var(--green);
+  border-radius: 2rem;
+  padding: 0.25rem 1rem;
+  font-weight: 600;
+  color: var(--green);
+}
+
+.price-chip:hover,
+.chip-icon:hover {
+  background-color: var(--green);
+  color: var(--white);
+  transition: all 0.3s;
+}
+
+.chip-icon {
+  border: 2px solid var(--green);
+  padding: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--green);
+}
+
+.red {
+  border: 2px solid var(--red) !important;
+  color: var(--red);
+}
+
+.red:hover {
+  background-color: var(--red) !important;
+  color: var(--white) !important;
+  transition: all 0.3s;
+}
+
+.current-price,
+.current-price-red {
+  color: var(--green);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.current-price-red {
+  color: var(--red) !important;
+}

@@ -1,0 +1,60 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  position: sticky;
+  top: 0;
+  background-color: var(--black);
+  z-index: 1000;
+}
+
+.header h1 {
+  font-size: 1.2rem;
+  margin: 0rem;
+  font-weight: 600;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.link {
+  font-size: 0.8rem;
+  color: var(--grey);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: var(--white);
+  transform: all 0.3s;
+}
+
+.drawer-component {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .links {
+    display: none;
+  }
+
+  .drawer-component {
+    display: block;
+  }
+
+  .header {
+    padding: 0.5rem 1.5rem;
+  }
+
+  .drawer-div {
+    width: 40vw;
+    background-color: var(--black);
+    height: 100vh;
+    padding: 0.5rem 1.5rem;
+  }
+}
