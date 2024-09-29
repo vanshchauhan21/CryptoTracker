@@ -1,9 +1,9 @@
 .btn {
   background-color: var(--blue);
   padding: 0.45rem 1.5rem;
-  border-radius: 3rem;
+  border-radius: 8px;
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 16px;
   text-transform: capitalize;
   cursor: pointer;
   border: 2px solid var(--blue);
@@ -21,9 +21,9 @@
   text-align: center;
   background-color: var(--black);
   padding: 0.45rem 1.5rem;
-  border-radius: 3rem;
+  border-radius: 8px;
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 16px;
   text-transform: capitalize;
   cursor: pointer;
   border: 2px solid var(--blue);
@@ -32,6 +32,7 @@
 }
 
 .btn-outlined:hover {
+  color: white;
   background-color: var(--blue);
   transition: all 0.3s;
 }
