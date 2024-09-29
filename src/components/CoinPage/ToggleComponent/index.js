@@ -1,12 +1,15 @@
-import FormatAlignLeftIcon from "@mui/icons-material/FormatAlignLeft";
-import FormatAlignCenterIcon from "@mui/icons-material/FormatAlignCenter";
-import FormatAlignRightIcon from "@mui/icons-material/FormatAlignRight";
-import FormatAlignJustifyIcon from "@mui/icons-material/FormatAlignJustify";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import { useState } from "react";
 
 export default function ToggleComponents({ priceType, handlePriceTypeChange }) {
+  const [selectedPriceType, setSelectedPriceType] = useState(priceType);
+
+  const handleClick = (newPriceType) => {
+    setSelectedPriceType(newPriceType);
+    handlePriceTypeChange(newPriceType);
+  };
+
   return (
     <div
       style={{
@@ -19,28 +22,34 @@ export default function ToggleComponents({ priceType, handlePriceTypeChange }) {
       <ToggleButtonGroup
         value={priceType}
         exclusive
-        onChange={(e) => {
-          handlePriceTypeChange(e);
+        onChange={(e, newPriceType) => {
+          if (newPriceType) handleClick(newPriceType);
         }}
         sx={{
-          "&.Mui-selected": {
-            color: "var(--blue) !important",
-          },
-          borderColor: "var(--blue)",
-          border: "unset !important",
           "& .MuiToggleButtonGroup-grouped": {
-            border: "1px solid var(--blue)!important",
-            borderColor: "unset",
-            color: "var(--blue) !important ",
-          },
-          "& .MuiToggleButton-standard": {
-            color: "var(--blue) !important",
+            border: "1px solid var(--blue)",
+            color: "var(--blue)",
+            "&.Mui-selected": {
+              backgroundColor: "var(--blue)",
+              color: "#fff",
+              borderColor: "var(--blue)",
+            },
+            "&:not(.Mui-selected)": {
+              color: "var(--blue)",
+            },
           },
         }}
       >
-        <ToggleButton value="prices">Prices</ToggleButton>
-        <ToggleButton value="market_caps">Market Cap</ToggleButton>
-        <ToggleButton value="total_volumes">Total Volume</ToggleButton>
+        <ToggleButton value="prices" onClick={() => handleClick("prices")} selected={selectedPriceType === "prices"}>
+          Prices
+        </ToggleButton>
+        <ToggleButton value="market_caps" onClick={() => handleClick("market_caps")} selected={selectedPriceType === "market_caps"}>
+          Market Cap
+        </ToggleButton>
+        <ToggleButton value="total_volumes" onClick={() => handleClick("total_volumes")} selected={selectedPriceType === "total_volumes"}>
+          Total Volume
+        </ToggleButton>
+
       </ToggleButtonGroup>
     </div>
   );

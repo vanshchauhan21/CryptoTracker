@@ -105,6 +105,16 @@ a {
   transition: all 400ms ease-out;
 }
 
+.cursor.click {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.cursor-pointer.click {
+  width: 3rem;
+  height: 3rem;
+}
+
 @media only screen and (max-width: 600px) {
   .cursor-pointer,
   .cursor {

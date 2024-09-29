@@ -4,6 +4,7 @@ import TemporaryDrawer from "./drawer";
 import "./styles.css";
 import Switch from "@mui/material/Switch";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
   const [darkMode, setDarkMode] = useState(
@@ -38,9 +39,11 @@ function Header() {
     document.documentElement.setAttribute("data-theme", "light");
   };
 
+  const navigate = useNavigate();
+
   return (
     <div className="header">
-      <h1>
+      <h1 onClick={() => navigate("/")}>
         CryptoTracker<span style={{ color: "var(--blue)" }}>.</span>
       </h1>
       <div className="links">
