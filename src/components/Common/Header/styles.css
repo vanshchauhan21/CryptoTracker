@@ -19,18 +19,35 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .link {
-  font-size: 0.8rem;
+  position: relative;
+  font-size: 21px;
   color: var(--grey);
   font-weight: 600;
   cursor: pointer;
 }
 
+.link::after {
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #3a80e9;
+  transform: scaleX(0);
+  transform-origin: left;
+  position: absolute;
+  transition: transform 0.3s ease-in-out; 
+}
+
+.link:hover::after {
+  transform: scaleX(1); 
+}
 .link:hover {
-  color: var(--white);
+  color: #3a80e9;
   transform: all 0.3s;
 }
 
@@ -42,7 +59,9 @@
   .links {
     display: none;
   }
-
+  .link {
+    font-size: 16px;
+}
   .drawer-component {
     display: block;
   }
