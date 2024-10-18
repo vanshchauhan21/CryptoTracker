@@ -22,7 +22,7 @@ A cryptocurrency tracker is an essential tool for investors and enthusiasts in t
 We’re excited to have you contribute to this *Ice Cream Parlour Website* project! Follow these simple steps to get started:
 
 1. **🍴 Fork the Repository**  
-   - Go to the [repository page](https://github.com/tushargupta1504/Medical-Website/fork).
+   - Go to the [repository page].
    - Click the *Fork* button (top right). This creates a copy of the project in your GitHub account.
 
 2. **💻 Clone Your Fork**  
