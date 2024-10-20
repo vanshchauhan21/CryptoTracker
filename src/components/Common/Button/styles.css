@@ -1,7 +1,7 @@
 .btn {
   background-color: var(--blue);
   padding: 0.45rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: 600;
   font-size: 16px;
   text-transform: capitalize;
