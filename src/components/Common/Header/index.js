@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import Button from "../Button";
 import TemporaryDrawer from "./drawer";
 import "./styles.css";
-import Switch from "@mui/material/Switch";
-// import { toast } from "react-toastify";
+import Switch from "@mui/material/Switch"; 
 
 function Header() {
   const [darkMode, setDarkMode] = useState(
@@ -24,8 +23,7 @@ function Header() {
     } else {
       setLight();
     }
-    setDarkMode(!darkMode);
-    // toast.success("Theme Changed!");
+    setDarkMode(!darkMode); 
   };
 
   const setDark = () => {
