@@ -9,6 +9,7 @@ import Watchlist from "./pages/Watchlist";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect } from "react";
+import Footer from "./components/Footer";
 
 function App() {
   const theme = createTheme({
@@ -55,6 +56,7 @@ function App() {
   }, []);
 
   return (
+    <>
     <div className="App">
       <div className="cursor" id="cursor" />
       <div className="cursor-pointer" id="cursor-pointer" />
@@ -71,6 +73,8 @@ function App() {
         </BrowserRouter>
       </ThemeProvider>
     </div>
+    <div className="footbelow"> <Footer /></div>
+    </>
   );
 }
 

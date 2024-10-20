@@ -1,3 +1,5 @@
+
+
 .top-btn {
   position: fixed;
   display: none;
@@ -24,4 +26,253 @@
   width: 90%;
   display: block;
   margin: 1.5rem auto;
+}
+.footbelow{
+  margin-top: 15%;
+}
+.footer {
+  background: linear-gradient(135deg, #13072e, #3f2182);
+  padding: 20px;
+  margin-top: 80%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  color: white;
+  font-weight: 500;
+  border-top: 2px solid white;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+  padding-bottom: 20px;
+  flex-direction: row;
+}
+
+.left {
+  flex: 1;
+  min-width: 250px; 
+  padding: 20px;
+}
+
+.right {
+  flex: 2;
+  display: flex;
+  flex-direction: column; 
+  padding: 20px;
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-icon img {
+  height: 50px;
+  border-radius: 8px;
+}
+
+.nav-icon p {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.about-text h3 {
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 1.75rem;
+  color: #edede7;
+}
+
+.resources-row {
+  display: flex;
+  justify-content: space-between; 
+  gap: 20px; 
+  flex-wrap: wrap; 
+  margin-bottom: 20px;
+  color: white;
+}
+
+.resources .first,
+.resources .second {
+  flex: 1;
+  min-width: 200px; 
+}
+
+.resources.third {
+  margin-top: 20px; 
+  margin-right: 5px;
+}
+
+.resources ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.resources li {
+  margin-bottom: 10px;
+}
+
+.resources li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+
+.resources li a:hover {
+  color: cyan;
+}
+
+.third .search {
+  position: relative; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px; 
+}
+
+.third input {
+  width: 100%; 
+  padding: 12px 15px;
+  padding-right: 40px; 
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background-color: #f5f5f5;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.third input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.third button {
+  position: absolute; 
+  right: 10px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 8px 10px; 
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 14px;
+  height: 30px;
+  width: 30px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.third button:hover {
+  background-color: #0056b3;
+}
+
+.third button:active {
+  background-color: white
+}
+
+
+
+.foot {
+  text-align: center;
+  padding: 15px;
+  background-color: rgb(191, 232, 242);
+  color: #333;
+  font-size: 16px;
+  border-top: 1.5px solid rgba(0, 0, 0, 0.4);
+  border-radius: 50px;
+  margin: 20px auto 0 auto;
+  width: 80%;
+}
+
+.foot p {
+  margin: 0;
+  font-family: 'FontAwesome';
+  letter-spacing: 2px;
+}
+
+
+/* For Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .footbelow{
+    margin-top: 70%;
+  }
+  .footer {
+    padding: 15px;
+  }
+
+  .footer-top {
+    padding-bottom: 15px; 
+  }
+
+  .left, .right {
+    width: 100%;
+    padding: 10px; 
+  }
+
+  .resources-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
+  }
+
+  .nav-icon img {
+    height: 40px; 
+  }
+
+  .nav-icon p {
+    font-size: 18px;
+  }
+
+  .third input {
+    width: 90%; 
+    padding: 10px; 
+  }
+
+  .third button {
+    height: 25px;
+    width: 25px;
+  }
+
+  .foot {
+    width: 90%; 
+    padding: 10px; 
+  }
+}
+
+/* For Very Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .footer-top {
+    padding-bottom: 10px;
+  }
+
+  .left, .right {
+    padding: 8px;
+  }
+
+  .resources-row {
+    gap: 5px; /* Minimal gap for very small screens */
+  }
+
+  .third input {
+    font-size: 12px; /* Smaller font size */
+  }
+
+  .third button {
+    padding: 5px; /* Adjust padding */
+    font-size: 12px; /* Adjust font size */
+  }
+
+  .foot {
+    font-size: 14px; /* Adjust font size for small screens */
+  }
 }
