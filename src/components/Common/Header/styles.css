@@ -131,18 +131,19 @@ body {
   .links {
     display: none;
   }
-
+  
   .drawer-component {
     display: block;
   }
-
+  
   .header {
     padding: 0.5rem 1.5rem;
+    color: var(--text-color);
   }
 
   .drawer-div {
     width: 40vw;
-    background-color: var(--black);
+    background-color: var(--background-color);
     height: 100vh;
     padding: 0.5rem 1.5rem;
   }
