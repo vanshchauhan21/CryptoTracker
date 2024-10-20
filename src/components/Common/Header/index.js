@@ -2,16 +2,18 @@ import React, { useEffect, useState } from "react";
 import Button from "../Button";
 import TemporaryDrawer from "./drawer";
 import "./styles.css";
-import Switch from "@mui/material/Switch";
-// import { toast } from "react-toastify";
+import { styled } from '@mui/material/styles';
+import { Switch } from "@mui/material";
+import { Link } from 'react-router-dom'; // Make sure to import Link if using React Router
 
 function Header() {
   const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("theme") == "dark" ? true : false
+    localStorage.getItem("theme") === "dark"
   );
 
   useEffect(() => {
-    if (localStorage.getItem("theme") == "dark") {
+    const theme = localStorage.getItem("theme");
+    if (theme === "dark") {
       setDark();
     } else {
       setLight();
@@ -19,13 +21,12 @@ function Header() {
   }, []);
 
   const changeMode = () => {
-    if (localStorage.getItem("theme") != "dark") {
-      setDark();
-    } else {
+    if (darkMode) {
       setLight();
+    } else {
+      setDark();
     }
     setDarkMode(!darkMode);
-    // toast.success("Theme Changed!");
   };
 
   const setDark = () => {
@@ -38,13 +39,69 @@ function Header() {
     document.documentElement.setAttribute("data-theme", "light");
   };
 
+  const IOSSwitch = styled((props) => (
+    <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
+  ))(({ theme }) => ({
+    width: 60,
+    height: 34,
+    padding: 0,
+    '& .MuiSwitch-switchBase': {
+      padding: 0,
+      margin: 2,
+      transition: 'transform 0.3s ease-in-out',
+      '&.Mui-checked': {
+        transform: 'translateX(26px)',
+        color: '#fff',
+        '& + .MuiSwitch-track': {
+          backgroundColor: '#65C466',
+          opacity: 1,
+        },
+      },
+    },
+    '& .MuiSwitch-thumb': {
+      boxSizing: 'border-box',
+      width: 32,
+      height: 32,
+      position: 'relative',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      transition: 'background-color 0.3s ease',
+      '&::before': {
+        content: '"☀️"',
+        position: 'absolute',
+        left: '6px',
+        fontSize: '16px',
+        transition: 'opacity 0.3s ease-in-out',
+        opacity: darkMode ? 0 : 1,
+      },
+      '&::after': {
+        content: '"🌙"',
+        position: 'absolute',
+        right: '6px',
+        fontSize: '16px',
+        transition: 'opacity 0.3s ease-in-out',
+        opacity: darkMode ? 1 : 0,
+      },
+    },
+    '& .MuiSwitch-track': {
+      borderRadius: 34 / 2,
+      backgroundColor: '#E9E9EA',
+      opacity: 1,
+      transition: theme.transitions.create(['background-color'], {
+        duration: 500,
+      }),
+    },
+  }));
+
   return (
     <div className="header">
-      <h1 >
-        CryptoTracker<span style={{ color: "var(--blue)" }}>.</span>
-      </h1>
+      <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <h1>
+          CryptoTracker<span style={{ color: "var(--blue)" }}>.</span>
+        </h1>
+      </Link>
       <div className="links">
-        <Switch checked={darkMode} onClick={() => changeMode()} />
         <a href="/">
           <p className="link">Home</p>
         </a>
@@ -54,10 +111,15 @@ function Header() {
         <a href="/watchlist">
           <p className="link">Watchlist</p>
         </a>
+        <IOSSwitch
+          checked={darkMode}
+          onChange={changeMode}
+          inputProps={{ 'aria-label': 'theme toggle' }}
+        />
+      </div>
         <a href="/dashboard">
           <Button text={"dashboard"} />
         </a>
-      </div>
       <div className="drawer-component">
         <TemporaryDrawer />
       </div>
