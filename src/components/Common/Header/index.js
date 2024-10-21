@@ -39,13 +39,13 @@ function Header() {
   return (
     <div className="header">
       <h1 >
-        CryptoTracker<span style={{ color: "var(--blue)" }}>.</span>
+        <a href="/">CryptoTracker<span style={{ color: "var(--blue)" }}>.</span></a>
       </h1>
       <div className="links">
         <Switch checked={darkMode} onClick={() => changeMode()} />
-        <a href="/">
+        {/* <a href="/">
           <p className="link">Home</p>
-        </a>
+        </a> */}
         <a href="/compare">
           <p className="link">Compare</p>
         </a>
