@@ -29,7 +29,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 2.5rem;
+  padding: 0rem 2.5rem;
   position: sticky;
   top: 0;
   background-color: var(--background-color);
