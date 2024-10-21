@@ -36,8 +36,8 @@
   margin-top: 80%;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  color: white;
   font-weight: 500;
+  color: white;
   border-top: 2px solid white;
   display: flex;
   flex-direction: column;
@@ -85,7 +85,6 @@
   margin-top: 15px;
   font-size: 16px;
   line-height: 1.75rem;
-  color: #edede7;
 }
 
 .resources-row {
