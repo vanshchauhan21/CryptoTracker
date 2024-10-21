@@ -25,34 +25,29 @@ function App() {
 
   useEffect(() => {
     cursor = document.getElementById("cursor");
-    cursorPointer = document.getElementById("cursor-pointer");
+    const moveCursor = (e) => {
+      cursor.style.left = `${e.clientX}px`;
+      cursor.style.top = `${e.clientY}px`;
+    };
+    const handleMouseDown = () => {
+      cursor.style.transform = "scale(1.5)";
+    };
 
-    document.body.addEventListener("mousemove", function (e) {
-      return (
-        (cursor.style.left = e.clientX + "px"),
-        (cursor.style.top = e.clientY + "px"),
-        (cursorPointer.style.left = e.clientX + "px"),
-        (cursorPointer.style.top = e.clientY + "px")
-      );
-    });
+    const handleMouseUp = () => {
+      cursor.style.transform = "scale(1)";
+    };
 
-    document.body.addEventListener("mousedown", function (e) {
-      return (
-        (cursor.style.height = "0.5rem"),
-        (cursor.style.width = "0.5rem"),
-        (cursorPointer.style.height = "3rem"),
-        (cursorPointer.style.width = "3rem")
-      );
-    });
+    // Attach event listeners
+    document.body.addEventListener("mousemove", moveCursor);
+    document.body.addEventListener("mousedown", handleMouseDown);
+    document.body.addEventListener("mouseup", handleMouseUp);
 
-    document.body.addEventListener("mouseup", function (e) {
-      return (
-        (cursor.style.height = "0.3rem"),
-        (cursor.style.width = "0.3rem"),
-        (cursorPointer.style.height = "2rem"),
-        (cursorPointer.style.width = "2rem")
-      );
-    });
+    // Clean up event listeners on component unmount
+    return () => {
+      document.body.removeEventListener("mousemove", moveCursor);
+      document.body.removeEventListener("mousedown", handleMouseDown);
+      document.body.removeEventListener("mouseup", handleMouseUp);
+    };
   }, []);
 
   return (
