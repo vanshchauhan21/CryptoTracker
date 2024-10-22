@@ -11,8 +11,8 @@
 }
 
 [data-theme="dark"] {
-  --white: #ffffff;
-  --black: #111;
+  --white: #fff;
+  --black: #ffffff;
   --grey: #888;
   --darkgrey: #1b1b1b;
 }
@@ -78,15 +78,19 @@ a {
   text-decoration: none;
   color: var(--white) !important;
 }
+
 /* Comment out or remove these styles */
-.cursor, .cursor-pointer {
-  display: none; /* Hides any remaining elements */
+.cursor,
+.cursor-pointer {
+  display: none;
+  /* Hides any remaining elements */
 }
 
 
 
 
 @media only screen and (max-width: 600px) {
+
   .cursor-pointer,
   .cursor {
     display: none;
