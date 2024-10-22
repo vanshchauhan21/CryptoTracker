@@ -19,6 +19,19 @@
 .footer h2 {
   cursor: pointer;
 }
+.foot {
+  text-align: center;
+  padding: 20px;
+}
+
+.foot p {
+  color: black;
+}
+
+/* When dark mode is active */
+.dark-mode .dark-mode-text {
+  color: white;
+}
 
 .social-links {
   display: flex;
