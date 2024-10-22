@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.jpg";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-
+import "./ComparePage/SelectCoins/index"
 function Footer() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -63,19 +63,19 @@ function Footer() {
               <h3>Connect with us</h3>
               <ul>
                 <li>
-                  <a href="#">Instagram</a>
+                  <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
                 </li>
                 <li>
-                  <a href="#">Github</a>
+                  <a href="#"><i class="fa-brands fa-github fa-xl"></i></a>
                 </li>
                 <li>
-                  <a href="#">Twitter</a>
+                  <a href="#"><i class="fa-brands fa-x-twitter fa-xl"></i></a>
                 </li>
                 <li>
-                  <a href="#">Linkedin</a>
+                  <a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></a>
                 </li>
                 <li>
-                  <a href="#">Discord</a>
+                  <a href="#"><i class="fa-brands fa-discord fa-xl"></i></a>
                 </li>
               </ul>
             </div>
