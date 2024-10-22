@@ -13,3 +13,7 @@
   align-items: center;
   gap: 1rem;
 }
+
+.resources.second ul{
+  text-align: center;
+}
