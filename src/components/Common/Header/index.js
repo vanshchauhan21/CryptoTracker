@@ -44,7 +44,7 @@ function Header() {
     <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
   ))(({ theme }) => ({
     width: 60,
-    height: 34,
+    height: 36,
     padding: 0,
     '& .MuiSwitch-switchBase': {
       padding: 0,
@@ -118,9 +118,9 @@ function Header() {
           inputProps={{ 'aria-label': 'theme toggle' }}
         />
       </div>
-        <a href="/dashboard">
-          <Button text={"dashboard"} />
-        </a>
+      <a href="/dashboard">
+        <Button text={"dashboard"} />
+      </a>
       <div className="drawer-component">
         <TemporaryDrawer />
       </div>

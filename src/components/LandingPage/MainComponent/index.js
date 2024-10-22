@@ -11,14 +11,15 @@ function MainComponent() {
   return (
     <div className="main-flex">
       <div className="info-landing">
-        <motion.h1
+        {/* <motion.h1
           className="heading1"
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 1, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
           Track Crypto
-        </motion.h1>
+        </motion.h1> */}
+        <h1 className="heading1">Track Crypto</h1>
         <motion.h1
           className="heading2"
           initial={{ opacity: 0, x: 50 }}
