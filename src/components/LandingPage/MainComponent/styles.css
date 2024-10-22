@@ -1,3 +1,10 @@
+:root {
+  --heading1-color-dark: #fff;
+  /* White for dark theme */
+  --heading1-color-light: #111;
+  /* Black for light theme */
+}
+
 .main-flex {
   display: flex;
   justify-content: space-between;
@@ -11,11 +18,21 @@
   margin: 0;
 }
 
-.heading1:hover {
+
+/* .heading1:hover {
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: var(--white);
-  color: var(--black);
+  color: var(--white);
   transition: all 0.3s;
+} */
+
+
+[data-theme="dark"] .heading1 {
+  color: var(--heading1-color-dark);
+}
+
+[data-theme="light"] .heading1 {
+  color: var(--heading1-color-light);
 }
 
 .heading2 {
@@ -45,6 +62,7 @@
   top: 80px;
   width: 250px;
 }
+
 .iphone {
   position: absolute;
   right: 10px;
@@ -52,6 +70,7 @@
 }
 
 @media only screen and (max-width: 1350px) {
+
   .heading1,
   .heading2 {
     font-size: 5rem;
@@ -59,6 +78,7 @@
 }
 
 @media only screen and (max-width: 1050px) {
+
   .heading1,
   .heading2 {
     font-size: 4rem;
@@ -69,6 +89,7 @@
     top: 60px;
     width: 200px;
   }
+
   .iphone {
     right: 0px;
     width: 250px;
@@ -76,10 +97,12 @@
 }
 
 @media only screen and (max-width: 800px) {
+
   .heading1,
   .heading2 {
     font-size: 2rem;
   }
+
   .main-flex {
     flex-direction: column;
     justify-content: center;
@@ -106,7 +129,9 @@
     margin-right: auto;
   }
 }
+
 @media only screen and (max-width: 800px) {
+
   .gradient,
   .iphone {
     left: 0px;
