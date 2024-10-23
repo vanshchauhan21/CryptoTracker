@@ -10,6 +10,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect } from "react";
 import Footer from "./components/Footer";
+import TermCondition from "./pages/TermCondition";
 
 function App() {
   const theme = createTheme({
@@ -64,6 +65,7 @@ function App() {
             <Route path="/coin/:id" element={<Coin />} />
             <Route path="/compare" element={<Compare />} />
             <Route path="/watchlist" element={<Watchlist />} />
+            <Route path="/terms-conditions" element={<TermCondition />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
