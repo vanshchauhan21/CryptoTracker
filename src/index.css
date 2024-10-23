@@ -76,7 +76,7 @@ img {
 
 a {
   text-decoration: none;
-  color: var(--white) !important;
+  color: var(--white);
 }
 
 /* Comment out or remove these styles */
