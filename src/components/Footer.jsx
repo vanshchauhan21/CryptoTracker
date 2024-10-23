@@ -61,6 +61,9 @@ function Footer() {
                 <li>
                   <a href="/terms-conditions">Terms and Conditions</a>
                 </li>
+                <li>
+                  <a href="/contributors">Contributors</a>
+                </li>
               </ul>
             </div>
             <div className="resources second">

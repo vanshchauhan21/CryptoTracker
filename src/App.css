@@ -205,6 +205,21 @@
 .privacy-container h1, p{
   color: black;
 }
+/* .............. css for .contributor page........... */
+.contributors-page h1 {
+color: black;
+text-align: center;
+}
+ .contributors-list{
+ 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+ }
+
+
+
+
 /* For Mobile Devices (max-width: 768px) */
 @media (max-width: 768px) {
   .footbelow{
