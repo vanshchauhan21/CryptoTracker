@@ -57,10 +57,10 @@
 }
 
 .gradient {
-  position: absolute;
-  right: 0px;
-  top: 80px;
-  width: 250px;
+  position: relative;
+  left: 18.75rem;
+  top: 3.75rem;
+  width: 15.625rem;
 }
 
 .iphone {
