@@ -277,3 +277,39 @@
     font-size: 14px; /* Adjust font size for small screens */
   }
 }
+
+.resources.first ul li a {
+  color: rgb(255, 255, 255) ;
+  text-decoration: none ;
+  transition: color 0.3s ease, transform 0.3s ease !important;
+}
+
+.resources.first ul li a:hover {
+  color: #0000CD ;
+}
+
+/* For Social Media Icons */
+.resources.second ul li a {
+  color: rgb(255, 253, 253) ; /* Default icon color */
+  transition: color 0.3s ease, transform 0.3s ease !important;
+}
+
+.resources.second ul li:nth-child(1) a:hover {
+  color: #E1306C ; 
+}
+
+.resources.second ul li:nth-child(2) a:hover {
+  color: #333 ; 
+}
+
+.resources.second ul li:nth-child(3) a:hover {
+  color: #000 ; 
+}
+
+.resources.second ul li:nth-child(4) a:hover {
+  color:#0047AB; 
+}
+
+.resources.second ul li:nth-child(5) a:hover {
+  color: #5865F2 ; 
+}
