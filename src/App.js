@@ -6,6 +6,7 @@ import Compare from "./pages/Compare";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
 import Watchlist from "./pages/Watchlist";
+import Faq from "./pages/Faq"
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect } from "react";
@@ -67,6 +68,7 @@ function App() {
             <Route path="/coin/:id" element={<Coin />} />
             <Route path="/compare" element={<Compare />} />
             <Route path="/watchlist" element={<Watchlist />} />
+            <Route path="/faq" element={<Faq />} />
             <Route path="/terms-conditions" element={<TermCondition />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
