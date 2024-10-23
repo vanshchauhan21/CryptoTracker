@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.jpg";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import "./ComparePage/SelectCoins/index"
+import "./ComparePage/SelectCoins/index";
+
 function Footer() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -52,10 +53,13 @@ function Footer() {
                   <a href="/watchlist">Watchlist</a>
                 </li>
                 <li>
-                  <a href=" /dashboard">Dashboard</a>
+                  <a href="/dashboard">Dashboard</a>
                 </li>
                 <li>
                   <a href="#">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="/terms-conditions">Terms and Conditions</a>
                 </li>
               </ul>
             </div>
@@ -63,19 +67,19 @@ function Footer() {
               <h3>Connect with us</h3>
               <ul>
                 <li>
-                  <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>
+                  <a href="#"><i className="fa-brands fa-instagram fa-xl"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fa-brands fa-github fa-xl"></i></a>
+                  <a href="#"><i className="fa-brands fa-github fa-xl"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fa-brands fa-x-twitter fa-xl"></i></a>
+                  <a href="#"><i className="fa-brands fa-x-twitter fa-xl"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+                  <a href="#"><i className="fa-brands fa-linkedin fa-xl"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fa-brands fa-discord fa-xl"></i></a>
+                  <a href="#"><i className="fa-brands fa-discord fa-xl"></i></a>
                 </li>
               </ul>
             </div>
