@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 import TermCondition from "./pages/TermCondition";
 import NotFoundPage from "./components/PageNotFound/PageNotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Contributors from "./pages/Contributors";
 
 function App() {
   const theme = createTheme({
@@ -69,7 +70,7 @@ function App() {
             <Route path="/watchlist" element={<Watchlist />} />
             <Route path="/terms-conditions" element={<TermCondition />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-
+            <Route path="/contributors" element={<Contributors />} />
             <Route path="*" element={<NotFoundPage />} />
             
           </Routes>
