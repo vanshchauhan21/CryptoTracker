@@ -199,7 +199,9 @@
   letter-spacing: 2px;
 }
 
-
+.text-color{
+  color: black;
+}
 /* For Mobile Devices (max-width: 768px) */
 @media (max-width: 768px) {
   .footbelow{
