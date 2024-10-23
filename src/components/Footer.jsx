@@ -61,25 +61,38 @@ function Footer() {
                 <li>
                   <a href="/terms-conditions">Terms and Conditions</a>
                 </li>
+                <li>
+                  <a href="/faq">FAQ</a>
+                </li>
               </ul>
             </div>
             <div className="resources second">
               <h3>Connect with us</h3>
               <ul>
                 <li>
-                  <a href="#"><i className="fa-brands fa-instagram fa-xl"></i></a>
+                  <a href="#">
+                    <i className="fa-brands fa-instagram fa-xl"></i>
+                  </a>
                 </li>
                 <li>
-                  <a href="#"><i className="fa-brands fa-github fa-xl"></i></a>
+                  <a href="#">
+                    <i className="fa-brands fa-github fa-xl"></i>
+                  </a>
                 </li>
                 <li>
-                  <a href="#"><i className="fa-brands fa-x-twitter fa-xl"></i></a>
+                  <a href="#">
+                    <i className="fa-brands fa-x-twitter fa-xl"></i>
+                  </a>
                 </li>
                 <li>
-                  <a href="#"><i className="fa-brands fa-linkedin fa-xl"></i></a>
+                  <a href="#">
+                    <i className="fa-brands fa-linkedin fa-xl"></i>
+                  </a>
                 </li>
                 <li>
-                  <a href="#"><i className="fa-brands fa-discord fa-xl"></i></a>
+                  <a href="#">
+                    <i className="fa-brands fa-discord fa-xl"></i>
+                  </a>
                 </li>
               </ul>
             </div>

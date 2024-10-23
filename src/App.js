@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Watchlist from "./pages/Watchlist";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login"
+import Faq from "./pages/Faq"
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect } from "react";
@@ -71,6 +72,7 @@ function App() {
             <Route path="/watchlist" element={<Watchlist />} />
             <Route path="/signup" element={<Signup/>} />
             <Route path="/login" element={<Login/>} />
+            <Route path="/faq" element={<Faq/>} />
             <Route path="/terms-conditions" element={<TermCondition />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
