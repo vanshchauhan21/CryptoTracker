@@ -11,6 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useEffect } from "react";
 import Footer from "./components/Footer";
 import TermCondition from "./pages/TermCondition";
+import NotFoundPage from "./components/PageNotFound/PageNotFound";
 
 function App() {
   const theme = createTheme({
@@ -66,6 +67,7 @@ function App() {
             <Route path="/compare" element={<Compare />} />
             <Route path="/watchlist" element={<Watchlist />} />
             <Route path="/terms-conditions" element={<TermCondition />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
