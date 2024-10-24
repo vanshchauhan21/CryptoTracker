@@ -28,7 +28,7 @@ function Watchlist() {
         <TabsComponent coins={coins} />
       ) : (
         <div>
-          <h1 style={{ textAlign: "center" }}>
+          <h1 style={{ textAlign: "center",  color: "var(--text-color)"  }}>
             Sorry, No Items In The Watchlist.
           </h1>
           <div
