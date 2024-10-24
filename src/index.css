@@ -321,6 +321,15 @@ h1 {
   font-weight: bold;
   text-align: center; /* Optional: center the heading */
 }
+
+.text {
+  color: var(--white);
+}
+
+.bg-light {
+  background-color: var(--black);
+}
+
 :root {
   --white: #fff;
   --black: #111;
@@ -329,20 +338,18 @@ h1 {
   --darkgrey: #1b1b1b;
   --green: #61c96f;
   --red: #f94141;
+  --text-dark: #fff; /* Text color for dark mode */
+  --text-light: #111; /* Text color for light mode */
+}
+[data-theme="dark"] {
+  --background-color: #1b1b1b;
+  --text-color: var(--text-dark); /* White text */
 }
 
-[data-theme="dark"] {
-  --white: #fff;
-  --black: #ffffff;
-  --grey: #888;
-  --darkgrey: #1b1b1b;
-}
 
 [data-theme="light"] {
-  --white: #111;
-  --black: #fff;
-  --grey: #888;
-  --darkgrey: #f3f3f3;
+  --background-color: #fff;
+  --text-color: var(--text-light); /* Dark text */
 }
 
 html {
@@ -354,8 +361,8 @@ body {
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--black);
-
+  background-color: var(--background-color);
+  color: var(--text-color);
   overflow-x: hidden;
 }
 
@@ -367,7 +374,7 @@ h5,
 h6,
 p,
 span {
-  color: var(--white);
+  color: var(--text-color);
 }
 
 ::selection {
