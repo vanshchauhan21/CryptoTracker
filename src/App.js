@@ -76,7 +76,7 @@ function App() {
         </BrowserRouter>
       </ThemeProvider>
     </div>
-    <div className="footbelow"> <Footer /></div>
+    <div className="footbelow"> <Footer/> </div>
     </>
   );
 }
