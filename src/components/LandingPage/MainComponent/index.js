@@ -6,27 +6,22 @@ import iphone from "../../../assets/iphone.png";
 import { motion } from "framer-motion";
 import { RWebShare } from "react-web-share";
 import { toast } from "react-toastify";
+import { useTranslation } from "react-i18next";
 
 function MainComponent() {
+  const { t } = useTranslation(); // Initialize translation
+
   return (
     <div className="main-flex">
       <div className="info-landing">
-        {/* <motion.h1
-          className="heading1"
-          initial={{ opacity: 1, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.5, duration: 1 }}
-        >
-          Track Crypto
-        </motion.h1> */}
-        <h1 className="heading1">Track Crypto</h1>
+        <h1 className="heading1">{t("trackCrypto")}</h1>
         <motion.h1
           className="heading2"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.75, duration: 1 }}
         >
-          Real Time.
+          {t("realTime")}
         </motion.h1>
         <motion.p
           className="info-text"
@@ -34,8 +29,7 @@ function MainComponent() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 1, duration: 1 }}
         >
-          Track crypto through a public api in real time. Visit the dashboard to
-          do so!{" "}
+          {t("infoText")}
         </motion.p>
         <motion.div
           className="btn-flex"
@@ -44,22 +38,22 @@ function MainComponent() {
           transition={{ delay: 1.25, duration: 0.75 }}
         >
           <a href="/dashboard">
-            <Button text={"Dashboard"} />
+            <Button text={t("dashboard")} />
           </a>
           <RWebShare
             data={{
-              text: "CryptoDashboard made by Avi Vashishta using React JS.",
+              text: t("shareMessage"),
               url: "https://crypto-dashboard-jan.netlify.app",
-              title: "CryptoTracker.",
+              title: t("shareTitle"),
             }}
             onClick={() => toast.info("App Shared!")}
           >
-            <Button text={"Share App"} outlined={true} />
+            <Button text={t("shareApp")} outlined={true} />
           </RWebShare>
         </motion.div>
       </div>
       <div className="gradient-div">
-        <img src={gradient} className="gradient" />
+        <img src={gradient} className="gradient" alt="Gradient background" />
         <motion.img
           src={iphone}
           className="iphone"
@@ -71,6 +65,7 @@ function MainComponent() {
             duration: 2,
             repeat: Infinity,
           }}
+          alt="iPhone animation"
         />
       </div>
     </div>
