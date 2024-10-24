@@ -2,7 +2,6 @@ import { MenuItem, Select } from "@mui/material";
 import React, { useState } from "react";
 import SelectDays from "../../CoinPage/SelectDays";
 import "./styles.css";
-
 function SelectCoins({
   allCoins,
   crypto1,
@@ -13,12 +12,12 @@ function SelectCoins({
 }) {
   const style = {
     height: "2.5rem",
-    color: "var(--white)",
+    color: "var(--text-color)",
     "& .MuiOutlinedInput-notchedOutline": {
-      borderColor: "var(--white)",
+      borderColor: "var(--text-color)",
     },
     "& .MuiSvgIcon-root": {
-      color: "var(--white)",
+      color:  "var(--text-color)",
     },
     "&:hover": {
       "&& fieldset": {
@@ -30,7 +29,7 @@ function SelectCoins({
   return (
     <div className="select-coins-div">
       <div className="select-flex">
-        <p>Crypto 1</p>
+        <p style={{ color: "var(--text-color)"}}>Crypto 1</p>
         <Select
           value={crypto1}
           onChange={(e) => onCoinChange(e, false)}
@@ -46,7 +45,7 @@ function SelectCoins({
         </Select>
       </div>
       <div className="select-flex">
-        <p>Crypto 2</p>
+        <p style={{ color: "var(--text-color)"}}>Crypto 2</p>
         <Select
           value={crypto2}
           onChange={(e) => onCoinChange(e, true)}

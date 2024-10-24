@@ -112,6 +112,12 @@ function Header() {
         <a href="/watchlist">
           <p className="link">Watchlist</p>
         </a>
+        <a href="/signup">
+          <p className="link">Sign Up</p>
+        </a>
+        <a href="/login">
+          <p className="link">Log In</p>
+        </a>
         <IOSSwitch
           checked={darkMode}
           onChange={changeMode}
