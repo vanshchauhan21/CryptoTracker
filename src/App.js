@@ -14,6 +14,8 @@ import Footer from "./components/Footer";
 import TermCondition from "./pages/TermCondition";
 import NotFoundPage from "./components/PageNotFound/PageNotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Signup from "./pages/Signup"
+import Login from "./pages/Login"
 
 function App() {
   const theme = createTheme({
@@ -69,6 +71,8 @@ function App() {
             <Route path="/compare" element={<Compare />} />
             <Route path="/watchlist" element={<Watchlist />} />
             <Route path="/faq" element={<Faq />} />
+            <Route path="/signup" element={<Signup/>} />
+            <Route path="/login" element={<Login/>} />
             <Route path="/terms-conditions" element={<TermCondition />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
