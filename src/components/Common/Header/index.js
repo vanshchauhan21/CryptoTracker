@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import Button from "../Button";
 import TemporaryDrawer from "./drawer";
 import "./styles.css";
-import { styled } from '@mui/material/styles';
+import { styled } from "@mui/material/styles";
 import { Switch } from "@mui/material";
-import { Link } from 'react-router-dom'; // Make sure to import Link if using React Router
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Header() {
+  const { t } = useTranslation(); // Initialize the translation hook
   const [darkMode, setDarkMode] = useState(
     localStorage.getItem("theme") === "dark"
   );
@@ -27,7 +29,6 @@ function Header() {
       setDark();
     }
     setDarkMode(!darkMode);
-    // toast.success("Theme Changed!");
   };
 
   const setDark = () => {
@@ -60,35 +61,21 @@ function Header() {
       },
     },
     '& .MuiSwitch-thumb': {
-      boxSizing: 'border-box',
       width: 32,
       height: 32,
       position: 'relative',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      transition: 'background-color 0.3s ease',
       '&::before': {
         content: '"☀️"',
-        position: 'absolute',
-        left: '6px',
-        fontSize: '16px',
-        transition: 'opacity 0.3s ease-in-out',
         opacity: darkMode ? 0 : 1,
       },
       '&::after': {
         content: '"🌙"',
-        position: 'absolute',
-        right: '6px',
-        fontSize: '16px',
-        transition: 'opacity 0.3s ease-in-out',
         opacity: darkMode ? 1 : 0,
       },
     },
     '& .MuiSwitch-track': {
       borderRadius: 34 / 2,
       backgroundColor: '#E9E9EA',
-      opacity: 1,
       transition: theme.transitions.create(['background-color'], {
         duration: 500,
       }),
@@ -99,34 +86,34 @@ function Header() {
     <div className="header">
       <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
         <h1>
-          CryptoTracker<span style={{ color: "var(--blue)" }}>.</span>
+          {t("cryptoTracker")}<span style={{ color: "var(--blue)" }}>.</span>
         </h1>
       </Link>
       <div className="links">
-        <a href="/">
-          <p className="link">Home</p>
-        </a>
-        <a href="/compare">
-          <p className="link">Compare</p>
-        </a>
-        <a href="/watchlist">
-          <p className="link">Watchlist</p>
-        </a>
-        <a href="/signup">
-          <p className="link">Sign Up</p>
-        </a>
-        <a href="/login">
-          <p className="link">Log In</p>
-        </a>
+        <Link to="/">
+          <p className="link">{t("home")}</p>
+        </Link>
+        <Link to="/compare">
+          <p className="link">{t("compare")}</p>
+        </Link>
+        <Link to="/watchlist">
+          <p className="link">{t("watchlist")}</p>
+        </Link>
+        <Link to="/signup">
+          <p className="link">{t("signUp")}</p>
+        </Link>
+        <Link to="/login">
+          <p className="link">{t("logIn")}</p>
+        </Link>
         <IOSSwitch
           checked={darkMode}
           onChange={changeMode}
-          inputProps={{ 'aria-label': 'theme toggle' }}
+          inputProps={{ "aria-label": "theme toggle" }}
         />
       </div>
-      <a href="/dashboard">
-        <Button text={"dashboard"} />
-      </a>
+      <Link to="/dashboard">
+        <Button text={t("dashboard")} />
+      </Link>
       <div className="drawer-component">
         <TemporaryDrawer />
       </div>

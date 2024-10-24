@@ -1,0 +1,70 @@
+{
+    "welcome": "Bienvenido a CryptoTracker",
+    "dashboard": "Tablero",
+    "coin": "Moneda",
+    "compare": "Comparar",
+    "watchlist": "Lista de seguimiento",
+    "faq": "Preguntas frecuentes",
+    "login": "Iniciar sesión",
+    "signup": "Regístrate",
+    "privacyPolicy": "Política de privacidad",
+    "termsAndConditions": "Términos y condiciones",
+    "pageNotFound": "¡Vaya! Página no encontrada.",
+
+
+
+ 
+        "home": "Inicio",
+        "compare": "Comparar",
+        "watchlist": "Lista de seguimiento",
+        "signUp": "Registrarse",
+        "logIn": "Iniciar sesión",
+        "dashboard": "Tablero",
+        "cryptoTracker": "CryptoTracker",
+
+
+
+    
+            "trackCrypto": "Rastrear Cripto",
+            "realTime": "Tiempo Real.",
+            "infoText": "Rastrea criptomonedas a través de una API pública en tiempo real. ¡Visita el tablero para hacerlo!",
+            "dashboard": "Tablero",
+            "shareApp": "Compartir App",
+            "shareMessage": "CryptoDashboard hecho por Avi Vashishta usando React JS.",
+            "shareTitle": "CryptoTracker.",
+     
+          
+
+
+
+
+
+
+
+
+
+
+       
+            "logoText": "CryptoTracker",
+            "aboutText": "Mantente actualizado con los precios de criptomonedas en tiempo real y las tendencias. Sigue, compara y toma decisiones informadas con CryptoTracker.",
+            "quickLinks": "Enlaces Rápidos",
+            "home": "Inicio",
+            "compare": "Comparar",
+            "watchlist": "Lista de Seguimiento",
+            "dashboard": "Tablero",
+            "privacyPolicy": "Política de Privacidad",
+            "termsAndConditions": "Términos y Condiciones",
+            "faq": "Preguntas Frecuentes",
+            "connectWithUs": "Conéctate con nosotros",
+            "newsletterHeading": "Suscríbete a nuestro Boletín",
+            "subscribeText": "Mantente al tanto y suscríbete al boletín de CryptoTracker",
+            "enterEmail": "Introduce tu correo electrónico",
+            "subscriptionAdded": "¡Suscripción añadida! 🎉",
+            "validEmailPrompt": "Por favor, introduce una dirección de correo válida.",
+            "copyright": "Todos los derechos reservados."
+      
+          
+ 
+      
+  }
+  
