@@ -10,6 +10,7 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 1rem 3rem;
+  position: relative;
 }
 
 .heading1,
@@ -67,6 +68,7 @@
   position: absolute;
   right: 10px;
   width: 300px;
+  top: 0;
 }
 
 @media only screen and (max-width: 1350px) {
@@ -93,6 +95,7 @@
   .iphone {
     right: 0px;
     width: 250px;
+    top: 20px;
   }
 }
 
@@ -128,9 +131,21 @@
     margin-top: 3rem;
     margin-right: auto;
   }
+
+  .gradient,
+  .iphone {
+    left: 0px;
+    right: 0px;
+  }
+
+  .iphone {
+    width: 80%; /* Make it responsive */
+    max-width: 250px; /* Maintain a max width */
+    top: 10px; /* Adjust top positioning for mobile */
+  }
 }
 
-@media only screen and (max-width: 800px) {
+/* @media only screen and (max-width: 800px) {
 
   .gradient,
   .iphone {
@@ -147,3 +162,15 @@ clamp(minFontSize, ratio, maxFontSize)
   formula to calculate the ratio
   (max-size/design width) * 100
   example: (70/1440)*100 */
+  @media only screen and (max-width: 200px) {
+
+    .gradient,
+    .iphone {
+      left: 0px;
+      
+    }
+  
+    /* .iphone {
+      left: -20px;
+    } */
+  } 
