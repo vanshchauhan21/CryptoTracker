@@ -11,12 +11,12 @@ function SelectDays({ days, handleDaysChange, noPTag }) {
         onChange={(e) => handleDaysChange(e)}
         sx={{
           height: "2.5rem",
-          color: "var(--white)",
+          color: "var(--text-color)",
           "& .MuiOutlinedInput-notchedOutline": {
-            borderColor: "var(--white)",
+            borderColor: "var(--text-color)",
           },
           "& .MuiSvgIcon-root": {
-            color: "var(--white)",
+          color: "var(--text-color)"
           },
           "&:hover": {
             "&& fieldset": {
