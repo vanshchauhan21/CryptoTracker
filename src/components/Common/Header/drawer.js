@@ -57,6 +57,12 @@ export default function TemporaryDrawer() {
           <a href="/dashboard">
             <p className="link">Dashboard</p>
           </a>
+          <a href="/signup">
+          <p className="link">Sign Up</p>
+        </a>
+        <a href="/login">
+          <p className="link">Log In</p>
+        </a>
           <Switch checked={darkMode} onClick={() => changeMode()} />
         </div>
       </Drawer>
