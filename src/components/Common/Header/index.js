@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import Button from "../Button";
 import TemporaryDrawer from "./drawer";
 import "./styles.css";
-import { styled } from '@mui/material/styles';
+import { styled } from "@mui/material/styles";
 import { Switch } from "@mui/material";
-import { Link } from 'react-router-dom'; // Make sure to import Link if using React Router
+import { Link } from "react-router-dom"; // Make sure to import Link if using React Router
+import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 
 function Header() {
   const [darkMode, setDarkMode] = useState(
@@ -41,55 +42,59 @@ function Header() {
   };
 
   const IOSSwitch = styled((props) => (
-    <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
+    <Switch
+      focusVisibleClassName=".Mui-focusVisible"
+      disableRipple
+      {...props}
+    />
   ))(({ theme }) => ({
     width: 60,
     height: 36,
     padding: 0,
-    '& .MuiSwitch-switchBase': {
+    "& .MuiSwitch-switchBase": {
       padding: 0,
       margin: 2,
-      transition: 'transform 0.3s ease-in-out',
-      '&.Mui-checked': {
-        transform: 'translateX(26px)',
-        color: '#fff',
-        '& + .MuiSwitch-track': {
-          backgroundColor: '#65C466',
+      transition: "transform 0.3s ease-in-out",
+      "&.Mui-checked": {
+        transform: "translateX(26px)",
+        color: "#fff",
+        "& + .MuiSwitch-track": {
+          backgroundColor: "#65C466",
           opacity: 1,
         },
       },
     },
-    '& .MuiSwitch-thumb': {
-      boxSizing: 'border-box',
+    "& .MuiSwitch-thumb": {
+      boxSizing: "border-box",
       width: 32,
       height: 32,
-      position: 'relative',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      transition: 'background-color 0.3s ease',
-      '&::before': {
+      position: "relative",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      transition: "background-color 0.3s ease",
+      "&::before": {
         content: '"☀️"',
-        position: 'absolute',
-        left: '6px',
-        fontSize: '16px',
-        transition: 'opacity 0.3s ease-in-out',
+        position: "absolute",
+        left: "6px",
+        fontSize: "16px",
+        transition: "opacity 0.3s ease-in-out",
         opacity: darkMode ? 0 : 1,
       },
-      '&::after': {
+      "&::after": {
         content: '"🌙"',
-        position: 'absolute',
-        right: '6px',
-        fontSize: '16px',
-        transition: 'opacity 0.3s ease-in-out',
+        position: "absolute",
+        right: "6px",
+        fontSize: "16px",
+        transition: "opacity 0.3s ease-in-out",
         opacity: darkMode ? 1 : 0,
       },
     },
-    '& .MuiSwitch-track': {
+    "& .MuiSwitch-track": {
       borderRadius: 34 / 2,
-      backgroundColor: '#E9E9EA',
+      backgroundColor: "#E9E9EA",
       opacity: 1,
-      transition: theme.transitions.create(['background-color'], {
+      transition: theme.transitions.create(["background-color"], {
         duration: 500,
       }),
     },
@@ -97,7 +102,7 @@ function Header() {
 
   return (
     <div className="header">
-      <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+      <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
         <h1>
           CryptoTracker<span style={{ color: "var(--blue)" }}>.</span>
         </h1>
@@ -112,16 +117,22 @@ function Header() {
         <a href="/watchlist">
           <p className="link">Watchlist</p>
         </a>
-        <a href="/signup">
-          <p className="link">Sign Up</p>
-        </a>
-        <a href="/login">
-          <p className="link">Log In</p>
-        </a>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+        <SignedOut>
+          <a href="/signup">
+            <p className="link">Sign Up</p>
+          </a>
+          <a href="/login">
+            <p className="link">Log In</p>
+          </a>
+        </SignedOut>
+
         <IOSSwitch
           checked={darkMode}
           onChange={changeMode}
-          inputProps={{ 'aria-label': 'theme toggle' }}
+          inputProps={{ "aria-label": "theme toggle" }}
         />
       </div>
       <a href="/dashboard">
