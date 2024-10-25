@@ -1,10 +1,15 @@
 import Header from "../components/Common/Header";
 import React from "react";
+import LanguageSwitcher from "./LanguageSwitcher"
+import { useTranslation } from 'react-i18next';
 function TermCondition() {
+    const { t } = useTranslation();
     return (
         <>
         <Header/>
-        <h1 className="text-color">TermCondition</h1>
+        <LanguageSwitcher/>
+        <h1 className="text-color">
+            {t("term")}</h1>
         </>
     )
 }

@@ -1,5 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700&display=swap");
 
+
+.language-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.language-button {
+  background-color: #007bff; /* Button color */
+  color: white; /* Text color */
+  padding: 10px 15px; /* Button padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size */
+  transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.language-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.dropdown-content {
+  display: flex; /* Flexbox for better layout */
+  flex-direction: column; /* Vertical layout */
+  position: absolute; /* Position relative to the button */
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: rgb(181, 228, 242); /* Background color */
+  border: 1px solid #ccc; /* Border */
+  border-radius: 5px; /* Rounded corners */
+  z-index: 1; /* Ensure dropdown is above other content */
+  margin-top: 5px; /* Space between button and dropdown */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.dropdown-content button {
+  background: none; /* No background */
+  border: none; /* No border */
+  padding: 10px; /* Padding */
+  text-align: left; /* Align text to the left */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.dropdown-content button:hover {
+  background-color: #f1f1f1; /* Light gray on hover */
+}
+
 /*faq styling */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -80,6 +128,7 @@ h1 {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+/*drodown styling*/
 
 /*signup styling*/
 /* Signup container */

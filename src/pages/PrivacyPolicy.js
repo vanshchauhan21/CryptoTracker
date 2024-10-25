@@ -1,33 +1,35 @@
-// src/pages/PrivacyPolicy.jsx
 import React from "react";
 import Header from "../components/Common/Header";
+import LanguageSwitcher from './LanguageSwitcher'; // Import the LanguageSwitcher
+import { useTranslation } from 'react-i18next';
 
 const PrivacyPolicy = () => {
+    const { t } = useTranslation();
+
     return (
         <>
             <Header />
             <div className="privacy-container">
-
-                <h1>Privacy Policy</h1>
-                <p>
-                    This Privacy Policy explains how Crypto Tracker ("we", "our", or "us") collects, uses, and shares information about you when you use our application.
-                </p>
-                <h2>Information Collection</h2>
-                <p>[Describe what information you collect]</p>
-                <h2>How We Use Your Information</h2>
-                <p>[Explain how you use the collected information]</p>
-                <h2>Data Sharing</h2>
-                <p>[Clarify if and how you share user data]</p>
-                <h2>User Rights</h2>
-                <p>[Inform users about their rights regarding their personal data]</p>
-                <h2>Security Measures</h2>
-                <p>[Describe how you protect user data]</p>
-                <h2>Changes to This Policy</h2>
-                <p>[Explain how changes to the Privacy Policy will be communicated]</p>
-                <h2>Contact Information</h2>
-                <p>If you have any questions, please contact us at [Your Contact Email].</p>
+                {/* Language Switcher */}
+                <LanguageSwitcher />
+                
+                <h1>{t("privacy.title")}</h1>
+                <p>{t("privacy.introduction")}</p>
+                <h2>{t("privacy.informationCollection")}</h2>
+                <p>{t("privacy.informationDetails")}</p>
+                <h2>{t("privacy.howWeUse")}</h2>
+                <p>{t("privacy.howWeUseDetails")}</p>
+                <h2>{t("privacy.dataSharing")}</h2>
+                <p>{t("privacy.dataSharingDetails")}</p>
+                <h2>{t("privacy.userRights")}</h2>
+                <p>{t("privacy.userRightsDetails")}</p>
+                <h2>{t("privacy.securityMeasures")}</h2>
+                <p>{t("privacy.securityDetails")}</p>
+                <h2>{t("privacy.changes")}</h2>
+                <p>{t("privacy.changesDetails")}</p>
+                <h2>{t("privacy.contact")}</h2>
+                <p>{t("privacy.contactDetails")}</p>
             </div>
-
         </>
     );
 };

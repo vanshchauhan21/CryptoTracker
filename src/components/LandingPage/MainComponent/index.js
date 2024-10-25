@@ -6,9 +6,15 @@ import iphone from "../../../assets/iphone.png";
 import { motion } from "framer-motion";
 import { RWebShare } from "react-web-share";
 import { toast } from "react-toastify";
+import LanguageSwitcher from '../../../pages/LanguageSwitcher';
 
+
+import { useTranslation } from 'react-i18next';
 function MainComponent() {
+  const { t } = useTranslation();
   return (
+    <>
+    <LanguageSwitcher/>
     <div className="main-flex">
       <div className="info-landing">
         {/* <motion.h1
@@ -19,14 +25,14 @@ function MainComponent() {
         >
           Track Crypto
         </motion.h1> */}
-        <h1 className="heading1">Track Crypto</h1>
+        <h1 className="heading1">{t('crypto')}</h1>
         <motion.h1
           className="heading2"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.75, duration: 1 }}
         >
-          Real Time.
+          {t("time")}
         </motion.h1>
         <motion.p
           className="info-text"
@@ -34,8 +40,7 @@ function MainComponent() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 1, duration: 1 }}
         >
-          Track crypto through a public api in real time. Visit the dashboard to
-          do so!{" "}
+         {t("info")}
         </motion.p>
         <motion.div
           className="btn-flex"
@@ -74,6 +79,7 @@ function MainComponent() {
         />
       </div>
     </div>
+    </>
   );
 }
 

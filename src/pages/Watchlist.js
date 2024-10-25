@@ -3,6 +3,8 @@ import Button from "../components/Common/Button";
 import Header from "../components/Common/Header";
 import TabsComponent from "../components/Dashboard/Tabs";
 import { get100Coins } from "../functions/get100Coins";
+import LanguageSwitcher from "./LanguageSwitcher"
+import { useTranslation } from 'react-i18next';
 
 function Watchlist() {
   const watchlist = JSON.parse(localStorage.getItem("watchlist"));
@@ -20,16 +22,17 @@ function Watchlist() {
       setCoins(allCoins.filter((coin) => watchlist.includes(coin.id)));
     }
   };
-
+  const { t } = useTranslation();
   return (
     <div>
       <Header />
+      <LanguageSwitcher/>
       {watchlist?.length > 0 ? (
         <TabsComponent coins={coins} />
       ) : (
         <div>
           <h1 style={{ textAlign: "center",  color: "var(--text-color)"  }}>
-            Sorry, No Items In The Watchlist.
+            {t("watch")}
           </h1>
           <div
             style={{
