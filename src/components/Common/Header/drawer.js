@@ -57,6 +57,9 @@ export default function TemporaryDrawer() {
           <a href="/dashboard">
             <p className="link">Dashboard</p>
           </a>
+          <a href="/review">
+            <p className="link">Reviews</p>
+          </a>
           <a href="/signup">
           <p className="link">Sign Up</p>
         </a>

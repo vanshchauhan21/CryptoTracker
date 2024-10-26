@@ -1,5 +1,62 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700&display=swap");
 
+/*Review section css*/
+.review-section {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+
+}
+.review-text{
+  background-color: rgba(188, 175, 222, 0.926);
+  border-radius: 15px;
+  margin-top: 100px;
+  padding: 20px
+}
+.review-text:hover{
+  transform: scale(1.2);
+  background-color: #a5e2ed;
+}
+
+.review-card {
+  background-color: #eef396;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(241, 6, 6, 0.821);
+  transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+  transform: scale(1.05);
+}
+
+.review-content h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.review-content p {
+  color: #555;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #333; /* Change this to a more visible color */
+  font-size: 15px; /* Increase the size of the arrows */
+  background-color: rgba(246, 49, 49, 0.5); /* Optional: Add background for better visibility */
+  padding: 10px; /* Optional: Add padding for easier clickability */
+  border-radius: 50%; /* Optional: Make the arrow background rounded */
+}
+
+.slick-prev, .slick-next {
+  z-index: 1; /* Ensure arrows are not hidden behind content */
+  width: 50px; /* Adjust width for larger clickable area */
+  height: 50px; /* Adjust height for larger clickable area */
+}
+
 
 .language-dropdown {
   position: relative;

@@ -13,6 +13,7 @@ import { useEffect } from "react";
 import Footer from "./components/Footer";
 import TermCondition from "./pages/TermCondition";
 import NotFoundPage from "./components/PageNotFound/PageNotFound";
+import Review from "./pages/Review";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Signup from "./pages/Signup"
 import Login from "./pages/Login"
@@ -71,6 +72,7 @@ function App() {
             <Route path="/compare" element={<Compare />} />
             <Route path="/watchlist" element={<Watchlist />} />
             <Route path="/faq" element={<Faq />} />
+            <Route path="/review" element={<Review />} />
             <Route path="/signup" element={<Signup/>} />
             <Route path="/login" element={<Login/>} />
             <Route path="/terms-conditions" element={<TermCondition />} />

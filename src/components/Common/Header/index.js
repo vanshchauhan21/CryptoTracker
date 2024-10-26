@@ -112,6 +112,9 @@ function Header() {
         <a href="/watchlist">
           <p className="link">Watchlist</p>
         </a>
+        <a href="/review">
+          <p className="link">Reviews</p>
+        </a>
         <a href="/signup">
           <p className="link">Sign Up</p>
         </a>
