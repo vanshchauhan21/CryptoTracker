@@ -39,7 +39,13 @@ Make sure you have the following installed on your machine:
   ```bash
   cd CryptoTracker
 ```
-3. Install the dependencies:
+
+3. Copy the environment variables template and add your Clerk publishable key:
+```bash
+cp .env.sample .env.local
+```
+
+4. Install the dependencies:
 ```bash
   npm install
 ```
