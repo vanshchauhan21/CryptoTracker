@@ -16,7 +16,7 @@ function List({ coin, delay }) {
   return (
     <a href={`/coin/${coin.id}`}>
       <motion.tr
-        className="list-row"
+        className={`list-row ${coin.price_change_percentage_24h < 0 && "list-row-red"}`}
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: delay }}
