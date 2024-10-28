@@ -7,7 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
 import Watchlist from "./pages/Watchlist";
 import Faq from "./pages/Faq"
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect } from "react";
 import Footer from "./components/Footer";
@@ -27,7 +27,7 @@ function App() {
   });
 
   var cursor;
-  var cursorPointer;
+
 
   useEffect(() => {
     cursor = document.getElementById("cursor");

@@ -1,5 +1,5 @@
 import { MenuItem, Select } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 import "./styles.css";
 
 function SelectDays({ days, handleDaysChange, noPTag }) {
