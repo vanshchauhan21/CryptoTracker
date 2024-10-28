@@ -17,5 +17,9 @@
     "subscribe": "Suscribirse",
     "app_shared": "¡Gracias por suscribirte!",
     "please_enter_email": "Por favor, introduce una dirección de correo válida.",
-    "all_rights_reserved": "Todos los Derechos Reservados."
+    "all_rights_reserved": "Todos los Derechos Reservados.",
+    "contributor_card": {
+      "description": "Un colaborador clave que nos ayuda a construir esta increíble plataforma.",
+      "view_profile": "Ver Perfil"
+    }
   }

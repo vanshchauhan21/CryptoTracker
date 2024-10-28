@@ -68,6 +68,7 @@ const Footer = () => {
                   { path: "/privacy-policy", label: "privacy_policy" },
                   { path: "/terms-conditions", label: "terms_conditions" },
                   { path: "/faq", label: "faq" },
+                  { path: "/Contributors", label: "Contributors" },
                 ].map(({ path, label }) => (
                   <li key={label}>
                     <a href={path}>
