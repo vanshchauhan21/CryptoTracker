@@ -128,10 +128,10 @@ function Header() {
         </SignedIn>
         <SignedOut>
           <a href="/signup">
-          <p className="link">{t("signUp")}</p>
+          <p className="link">{t("SignUp")}</p>
           </a>
           <a href="/login">
-          <p className="link">{t("logIn")}</p>
+          <p className="link">{t("LogIn")}</p>
           </a>
         </SignedOut>
 
