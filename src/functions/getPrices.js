@@ -8,9 +8,9 @@ export const getPrices = (id, days, priceType, setError) => {
     .then((response) => {
       if (response.data) {
         console.log("Prices>>>", response.data);
-        if (priceType == "market_caps") {
+        if (priceType === "market_caps") {
           return response.data.market_caps;
-        } else if (priceType == "total_volumes") {
+        } else if (priceType === "total_volumes") {
           return response.data.total_volumes;
         } else {
           return response.data.prices;

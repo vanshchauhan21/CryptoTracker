@@ -1,5 +1,5 @@
 import { MenuItem, Select } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 import SelectDays from "../../CoinPage/SelectDays";
 import "./styles.css";
 function SelectCoins({
@@ -36,7 +36,7 @@ function SelectCoins({
           sx={style}
         >
           {allCoins
-            .filter((coin) => coin.id != crypto2)
+            .filter((coin) => coin.id !== crypto2)
             .map((coin, i) => (
               <MenuItem value={coin.id} key={i}>
                 {coin.name}
@@ -52,7 +52,7 @@ function SelectCoins({
           sx={style}
         >
           {allCoins
-            .filter((coin) => coin.id != crypto1)
+            .filter((coin) => coin.id !== crypto1)
             .map((coin, i) => (
               <MenuItem value={coin.id} key={i}>
                 {coin.name}
