@@ -7,7 +7,7 @@ import TabsComponent from "../components/Dashboard/Tabs";
 
 import PaginationComponent from "../components/Dashboard/Pagination";
 import TopButton from "../components/Common/TopButton";
-import Footer from "../components/Common/Footer/footer";
+// import Footer from "../components/Common/Footer/footer";
 
 function Dashboard() {
   const [coins, setCoins] = useState([]);
