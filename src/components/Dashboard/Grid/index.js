@@ -21,16 +21,21 @@ function Grid({ coin, delay }) {
         transition={{ duration: 0.5, delay: delay }}
       >
         <div className="img-flex">
-          <img src={coin.image} className="coin-image" />
+
+          <img
+            src={coin.image}
+            className="coin-image"
+            alt={`${coin.name} logo`}
+          />
+
           <div className="icon-flex">
             <div className="info-flex">
               <p className="coin-symbol">{coin.symbol}</p>
               <p className="coin-name">{coin.name}</p>
             </div>
             <div
-              className={`watchlist-icon ${
-                coin.price_change_percentage_24h < 0 && "watchlist-icon-red"
-              }`}
+              className={`watchlist-icon ${coin.price_change_percentage_24h < 0 && "watchlist-icon-red"
+                }`}
               onClick={(e) => {
                 if (isCoinAdded) {
                   // remove coin
