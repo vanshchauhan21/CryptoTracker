@@ -17,6 +17,12 @@
     "subscribe": "订阅",
     "app_shared": "感谢您的订阅！",
     "please_enter_email": "请输入有效的电子邮件地址。",
-    "all_rights_reserved": "版权所有。"
+    "all_rights_reserved": "版权所有。",
+
+
+    "contributor_card": {
+      "description": "一位帮助我们构建这个精彩平台的重要贡献者。",
+      "view_profile": "查看资料"
+    }
   }
   

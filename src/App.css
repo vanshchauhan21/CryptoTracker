@@ -260,6 +260,22 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* .............. css for .contributor page........... */
+.contributors-page h1 {
+  color: black;
+  text-align: center;
+  }
+   .contributors-list{
+  
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   }
+
+
+
+
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .footer-content-wrapper {
