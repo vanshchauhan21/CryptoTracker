@@ -16,6 +16,9 @@ import NotFoundPage from "./components/PageNotFound/PageNotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
+import { I18nextProvider } from "react-i18next";
+import i18n from "./i18n";
+
 
 function App() {
   const theme = createTheme({
@@ -60,6 +63,8 @@ function App() {
 
   return (
     <>
+       <I18nextProvider i18n={i18n}>
+
       <div className="App">
         <div className="cursor" ref={cursorRef} id="cursor" />
         <div className="cursor-pointer" id="cursor-pointer" />
@@ -85,6 +90,8 @@ function App() {
       <div className="footbelow">
         <Footer />
       </div>
+      </I18nextProvider>
+
     </>
   );
 }
