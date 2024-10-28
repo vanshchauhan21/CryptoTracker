@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../index.css'; // Import the CSS file for styling
+import Header from '../components/Common/Header';
 
 const FAQ = () => {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -45,6 +46,8 @@ const FAQ = () => {
 
 
     return (
+        <>
+        <Header/>
         <div className="faq-container">
             <h1 className='authhead'>Frequently Asked Questions</h1>
             {faqData.map((item, index) => (
@@ -64,6 +67,8 @@ const FAQ = () => {
                 </div>
             ))}
         </div>
+        </>
+
     );
 };
 
