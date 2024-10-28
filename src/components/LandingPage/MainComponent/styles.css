@@ -55,6 +55,8 @@
   position: relative;
   width: 50%;
   margin-left: auto;
+  margin-bottom: 30px; /*  bottom margin to create space */
+  z-index: 1;
 }
 
 .gradient {
@@ -68,7 +70,9 @@
   position: absolute;
   right: 10px;
   width: 300px;
-  top: 0;
+  top: 10px;
+  z-index: 2;
+  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.5));
 }
 
 @media only screen and (max-width: 1350px) {
@@ -130,6 +134,7 @@
   .gradient-div {
     margin-top: 3rem;
     margin-right: auto;
+    margin-bottom: 50px;
   }
 
   .gradient,
@@ -169,8 +174,34 @@ clamp(minFontSize, ratio, maxFontSize)
       left: 0px;
       
     }
+    .footer {
+      margin-top: 80px; /* Adjust margin for mobile */
+      margin: 1.5rem 0.5rem;
+    }
+    
+  .main-wrapper {
+    padding-bottom: 50px; /* Reduce padding on mobile */
+  }
   
     /* .iphone {
       left: -20px;
     } */
   } 
+
+  .main-wrapper {
+    min-height: 80vh;
+    position: relative;
+    padding-bottom: 20px; /* Add padding to prevent footer overlap */
+  }
+  
+  .main-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding:3rem 3rem 1rem;
+    position: relative;
+  }
+  .info-landing {
+    max-width: 50%; /* Limit width to prevent overlapping with iPhone */
+    padding-right: 2rem; /* Add some padding to the right */
+  }
