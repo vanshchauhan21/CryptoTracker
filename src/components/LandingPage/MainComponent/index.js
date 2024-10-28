@@ -10,18 +10,17 @@ import { useTranslation } from "react-i18next"; // Import i18n translation hook
 
 function MainComponent() {
   const { t } = useTranslation(); // Use the translation function
-
   return (
     <div className="main-flex">
       <div className="info-landing">
-        <h1 className="heading1">{t("track_crypto")}</h1>
+        <h1 className="heading1">Track Crypto</h1>
         <motion.h1
           className="heading2"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.75, duration: 1 }}
         >
-          {t("real_time")}
+          Real Time.
         </motion.h1>
         <motion.p
           className="info-text"
@@ -29,7 +28,8 @@ function MainComponent() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 1, duration: 1 }}
         >
-          {t("track_crypto_info")}
+          Track crypto through a public api in real time. Visit the dashboard to
+          do so!{" "}
         </motion.p>
         <motion.div
           className="btn-flex"
@@ -38,22 +38,22 @@ function MainComponent() {
           transition={{ delay: 1.25, duration: 0.75 }}
         >
           <a href="/dashboard">
-            <Button text={t("dashboard")} />
+            <Button text={"Dashboard"} />
           </a>
           <RWebShare
             data={{
-              text: t("share_message"),
+              text: "CryptoDashboard made by Avi Vashishta using React JS.",
               url: "https://crypto-dashboard-jan.netlify.app",
-              title: t("crypto_tracker"),
+              title: "CryptoTracker.",
             }}
-            onClick={() => toast.info(t("app_shared"))}
+            onClick={() => toast.info("App Shared!")}
           >
-            <Button text={t("share_app")} outlined={true} />
+            <Button text={"Share App"} outlined={true} />
           </RWebShare>
         </motion.div>
       </div>
       <div className="gradient-div">
-        <img src={gradient} alt={t("image_alt")} className="gradient" />
+        <img src={gradient} alt="some image" className="gradient" />
         <motion.img
           src={iphone}
           className="iphone"
