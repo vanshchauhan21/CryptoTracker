@@ -1,0 +1,21 @@
+{
+    "crypto_tracker": "CryptoTracker",
+    "track_crypto_info": "Mantente actualizado con los precios y tendencias de criptomonedas en tiempo real. Rastrea, compara y toma decisiones informadas con CryptoTracker.",
+    "image_alt": "Logo",
+    "quick_links": "Enlaces Rápidos",
+    "home": "Inicio",
+    "compare": "Comparar",
+    "watchlist": "Lista de Seguimiento",
+    "dashboard": "Panel de Control",
+    "privacy_policy": "Política de Privacidad",
+    "terms_conditions": "Términos y Condiciones",
+    "faq": "Preguntas Frecuentes",
+    "connect_with_us": "Conéctate con nosotros",
+    "newsletter": "Boletín",
+    "newsletter_description": "Mantente al tanto y suscríbete al Boletín de CryptoTracker",
+    "enter_email": "Introduce tu correo electrónico",
+    "subscribe": "Suscribirse",
+    "app_shared": "¡Gracias por suscribirte!",
+    "please_enter_email": "Por favor, introduce una dirección de correo válida.",
+    "all_rights_reserved": "Todos los Derechos Reservados."
+  }

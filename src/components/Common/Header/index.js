@@ -6,8 +6,14 @@ import { styled } from "@mui/material/styles";
 import { Switch } from "@mui/material";
 import { Link } from "react-router-dom"; // Make sure to import Link if using React Router
 import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
+import { useTranslation } from "react-i18next";
 
 function Header() {
+
+
+ 
+
+  const { t } = useTranslation(); 
   const [darkMode, setDarkMode] = useState(
     localStorage.getItem("theme") === "dark"
   );
@@ -104,28 +110,28 @@ function Header() {
     <div className="header">
       <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
         <h1>
-          CryptoTracker<span style={{ color: "var(--blue)" }}>.</span>
+         {t("CryptoTracker")}<span style={{ color: "var(--blue)" }}>.</span>
         </h1>
       </Link>
       <div className="links">
         <a href="/">
-          <p className="link">Home</p>
+        <p className="link">{t("home")}</p>
         </a>
         <a href="/compare">
-          <p className="link">Compare</p>
+        <p className="link">{t("compare")}</p>
         </a>
         <a href="/watchlist">
-          <p className="link">Watchlist</p>
+        <p className="link">{t("watchlist")}</p>
         </a>
         <SignedIn>
           <UserButton />
         </SignedIn>
         <SignedOut>
           <a href="/signup">
-            <p className="link">Sign Up</p>
+          <p className="link">{t("signUp")}</p>
           </a>
           <a href="/login">
-            <p className="link">Log In</p>
+          <p className="link">{t("logIn")}</p>
           </a>
         </SignedOut>
 
@@ -136,7 +142,8 @@ function Header() {
         />
       </div>
       <a href="/dashboard">
-        <Button text={"dashboard"} />
+        {/* <Button text={"dashboard"} /> */}
+        <Button text={t("dashboard")} />
       </a>
       <div className="drawer-component">
         <TemporaryDrawer />
