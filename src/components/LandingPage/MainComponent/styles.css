@@ -18,6 +18,9 @@
   font-size: 6rem;
   margin: 0;
 }
+.heading1{
+  color: var(--black) !important;
+}
 
 
 /* .heading1:hover {
@@ -28,13 +31,13 @@
 } */
 
 
-[data-theme="dark"] .heading1 {
+/* [data-theme="dark"] .heading1 {
   color: var(--heading1-color-dark);
 }
 
 [data-theme="light"] .heading1 {
   color: var(--heading1-color-light);
-}
+} */
 
 .heading2 {
   color: var(--blue);
