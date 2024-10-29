@@ -23,6 +23,7 @@ import Contributors from "./pages/Contributors";
 import PrivacyPolicy from "./pages/Privacy-Policy/PrivacyPolicy";
 import Pricing from "./pages/Pricing/Pricing";
 import Learn from "./components/Learn";
+import Disclaimer from "./pages/Disclaimer/Disclaimer";
 
 
 
@@ -91,7 +92,7 @@ function App() {
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/Contributors" element={<Contributors />} />
               <Route path="/pricing" element={<Pricing />} />
-
+              <Route path="/disclaimer" element={<Disclaimer />} />
               <Route path="*" element={<NotFoundPage />} />
               
             </Routes>
