@@ -9,6 +9,8 @@
   margin-right: auto;
   border-radius: 0.8rem;
   cursor: pointer;
+  background-color: var(--darkgrey);
+  border: 2px solid var(--darkgrey);
 }
 
 .list-row:hover {
