@@ -38,6 +38,7 @@
 
 .heading2 {
   color: var(--blue);
+  margin-top: -5px; 
 }
 
 .info-text {
@@ -61,8 +62,8 @@
 
 .gradient {
   position: relative;
-  left: 18.75rem;
-  top: 3.75rem;
+  left: 18.5rem;
+  top: 3rem;
   width: 15.625rem;
 }
 
@@ -181,7 +182,7 @@ clamp(minFontSize, ratio, maxFontSize)
     }
     
   .main-wrapper {
-    padding-bottom: 50px; /* Reduce padding on mobile */
+    padding-bottom: 60px; /* Reduce padding on mobile */
   }
   
     /* .iphone {
