@@ -38,6 +38,7 @@
 
 .heading2 {
   color: var(--blue);
+  margin-top: -5px; 
 }
 
 .info-text {
@@ -61,8 +62,8 @@
 
 .gradient {
   position: relative;
-  left: 18.75rem;
-  top: 3.75rem;
+  left: 18.5rem;
+  top: 3rem;
   width: 15.625rem;
 }
 
@@ -107,7 +108,7 @@
 
   .heading1,
   .heading2 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .main-flex {
@@ -123,7 +124,7 @@
   }
 
   .info-text {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .btn-flex {
@@ -142,11 +143,16 @@
     left: 0px;
     right: 0px;
   }
-
+  .gradient {
+    right: 0px;
+    top: 60px;
+    width: 200px;
+    height: 50%;
+  }
   .iphone {
-    width: 80%; /* Make it responsive */
-    max-width: 250px; /* Maintain a max width */
-    top: 10px; /* Adjust top positioning for mobile */
+    width: 95%; 
+    max-width: 400px; 
+    top: 20px; 
   }
 }
 
@@ -181,7 +187,7 @@ clamp(minFontSize, ratio, maxFontSize)
     }
     
   .main-wrapper {
-    padding-bottom: 50px; /* Reduce padding on mobile */
+    padding-bottom: 60px; /* Reduce padding on mobile */
   }
   
     /* .iphone {
@@ -202,16 +208,6 @@ clamp(minFontSize, ratio, maxFontSize)
     padding:3rem 3rem 1rem;
     position: relative;
   }
-  .info-landing {
-    max-width: 50%; /* Limit width to prevent overlapping with iPhone */
-    padding-right: 2rem; /* Add some padding to the right */
-  }
-
-    /* .iphone {
-      left: -20px;
-    } */
-
-
 /* Custom CSS styling for share App dialog box */
 
 .rws-backdrop {
