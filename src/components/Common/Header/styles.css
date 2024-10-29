@@ -29,7 +29,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0rem 2.5rem;
+  padding: 0.75rem 2.5rem; 
+  min-height: 60px; 
   position: sticky;
   top: 0;
   background-color: var(--background-color);
@@ -57,32 +58,25 @@ body {
   gap: 2rem;
 }
 
-.link {
+.link, .active-link {
   position: relative;
   color: var(--text-color);
   font-size: 21px;
-  /* color: var(--grey); */
   font-weight: 600;
   cursor: pointer;
   padding: 10px 15px;
-  /* Add some padding for better hover effect */
   transition: background-color 0.3s, border 0.3s;
-  /* Smooth transitions */
   border: 2px solid transparent;
-  /* Transparent border initially */
   border-radius: 5px;
-  /* Optional: round the corners */
-}
-.link:hover {
-  color: #3a80e9;
-  /* Text color on hover */
-  background-color: rgba(245, 245, 245, 0.8);
-  /* Light gray background on hover */
-  border: 2px solid #3a80e9;
-  /* Border on hover */
 }
 
-.link::after {
+.link:hover, .active-link {
+  color: #3a80e9;
+  background-color: rgba(245, 245, 245, 0.8);
+  border: 2px solid #3a80e9;
+}
+
+.link::after, .active-link::after {
   content: "";
   position: absolute;
   bottom: -6px;
@@ -95,12 +89,8 @@ body {
   transition: transform 0.3s ease;
 }
 
-.link:hover::after {
+.link:hover::after, .active-link:hover::after, .active-link::after {
   transform: scaleX(1);
-}
-
-.link:hover {
-  color: var(--link-hover-color);
 }
 
 /* Drawer component */

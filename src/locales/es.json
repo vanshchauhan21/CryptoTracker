@@ -18,8 +18,25 @@
     "app_shared": "¡Gracias por suscribirte!",
     "please_enter_email": "Por favor, introduce una dirección de correo válida.",
     "all_rights_reserved": "Todos los Derechos Reservados.",
-    "contributor_card": {
-      "description": "Un colaborador clave que nos ayuda a construir esta increíble plataforma.",
-      "view_profile": "Ver Perfil"
+
+
+
+    "common": {
+      "per_month": "/mes",
+      "get_started_today": "Empieza hoy"
+    },
+    "pricing": {
+      "hobby_title": "Hobby",
+      "hobby_description": "El plan perfecto si recién estás comenzando con nuestro producto.",
+      "hobby_feature_1": "25 productos",
+      "hobby_feature_2": "Hasta 10,000 suscriptores",
+      "hobby_feature_3": "Análisis avanzados",
+      "hobby_feature_4": "Soporte 24 horas",
+      "enterprise_title": "Empresarial",
+      "enterprise_description": "Soporte y infraestructura dedicados para tu empresa.",
+      "enterprise_feature_1": "Productos ilimitados",
+      "enterprise_feature_2": "Suscriptores ilimitados",
+      "enterprise_feature_3": "Análisis avanzados",
+      "enterprise_feature_4": "Soporte dedicado"
     }
   }
