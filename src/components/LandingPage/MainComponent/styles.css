@@ -264,3 +264,13 @@ clamp(minFontSize, ratio, maxFontSize)
     --rws-container-border: 0.5px solid var(--rws-close-bg);
 }
 
+.submit-button {
+
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: var(--primary-color, #3a80e9);
+  color: white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
