@@ -110,23 +110,23 @@ function Header() {
       </Link>
       <div className="links">
         <NavLink to="/" className={({ isActive }) => (isActive ? "active-link link" : "link")}>
-          {t("home")}
+          {t("Home")}
         </NavLink>
         <NavLink to="/compare" className={({ isActive }) => (isActive ? "active-link link" : "link")}>
-          {t("compare")}
+          {t("Compare")}
         </NavLink>
         <NavLink to="/watchlist" className={({ isActive }) => (isActive ? "active-link link" : "link")}>
-          {t("watchlist")}
+          {t("Watchlist")}
         </NavLink>
         <SignedIn>
           <UserButton />
         </SignedIn>
         <SignedOut>
           <NavLink to="/signup" className={({ isActive }) => (isActive ? "active-link link" : "link")}>
-            {t("SignUp")}
+            {t("Sign Up")}
           </NavLink>
           <NavLink to="/login" className={({ isActive }) => (isActive ? "active-link link" : "link")}>
-            {t("LogIn")}
+            {t("Log In")}
           </NavLink>
         </SignedOut>
 
