@@ -13,6 +13,7 @@ import { useEffect, useRef } from "react";
 import Footer from "./components/Footer";
 import TermCondition from "./pages/TermCondition";
 import NotFoundPage from "./components/PageNotFound/PageNotFound";
+import GoogleTranslate from "./components/GoogleTranslate";
 
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
@@ -27,9 +28,6 @@ import Learn from "./components/Learn";
 import Disclaimer from "./pages/Disclaimer/Disclaimer";
 
 import ProgressBar from "./components/Common/ProgressBar/ProgressBar";
-
-
-
 
 function App() {
   const theme = createTheme({
@@ -74,41 +72,39 @@ function App() {
 
   return (
     <>
-       <I18nextProvider i18n={i18n}>
-
-      <div className="App">
-      <ProgressBar /> 
-        <div className="cursor" ref={cursorRef} id="cursor" />
-        <div className="cursor-pointer" id="cursor-pointer" />
-        <ToastContainer />
-        <ThemeProvider theme={theme}>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/coin/:id" element={<Coin />} />
-              <Route path="/compare" element={<Compare />} />
-              <Route path="/watchlist" element={<Watchlist />} />
-              <Route path="/learn" element={<Learn />} />
-              <Route path="/faq" element={<Faq />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/terms-conditions" element={<TermCondition />} />
-              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              <Route path="/Contributors" element={<Contributors />} />
-              <Route path="/pricing" element={<Pricing />} />
-              <Route path="/disclaimer" element={<Disclaimer />} />
-              <Route path="*" element={<NotFoundPage />} />
-              
-            </Routes>
-          </BrowserRouter>
-        </ThemeProvider>
-      </div>
-      <div className="footbelow">
-        <Footer />
-      </div>
+      <I18nextProvider i18n={i18n}>
+        <div className="App">
+          <ProgressBar />
+          <div className="cursor" ref={cursorRef} id="cursor" />
+          <div className="cursor-pointer" id="cursor-pointer" />
+          <ToastContainer />
+          <ThemeProvider theme={theme}>
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/coin/:id" element={<Coin />} />
+                <Route path="/compare" element={<Compare />} />
+                <Route path="/watchlist" element={<Watchlist />} />
+                <Route path="/learn" element={<Learn />} />
+                <Route path="/faq" element={<Faq />} />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/terms-conditions" element={<TermCondition />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/Contributors" element={<Contributors />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/disclaimer" element={<Disclaimer />} />
+                <Route path="/GoogleTranslate" element={<GoogleTranslate />} />
+                <Route path="*" element={<NotFoundPage />} />
+              </Routes>
+            </BrowserRouter>
+          </ThemeProvider>
+        </div>
+        <div className="footbelow">
+          <Footer />
+        </div>
       </I18nextProvider>
-
     </>
   );
 }
