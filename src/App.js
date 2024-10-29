@@ -19,6 +19,7 @@ import Login from "./pages/Login";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 import Contributors from "./pages/Contributors";
+import Pricing from "./pages/Pricing";
 
 
 function App() {
@@ -84,7 +85,10 @@ function App() {
               <Route path="/terms-conditions" element={<TermCondition />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/Contributors" element={<Contributors />} />
+              <Route path="/pricing" element={<Pricing />} />
+
               <Route path="*" element={<NotFoundPage />} />
+              
             </Routes>
           </BrowserRouter>
         </ThemeProvider>

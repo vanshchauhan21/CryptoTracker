@@ -1,0 +1,70 @@
+/* Card.css */
+.card {
+    position: relative;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.6);
+
+  }
+
+ 
+  .card.highlighted {
+    background-color: #2a2d31; /* Dark background for highlighted card */
+    color: white;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4c51bf; /* Indigo color */
+  }
+  
+  .card-price {
+    margin-top: 10px;
+    display: flex;
+    align-items: baseline;
+  }
+  
+  .price {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .per-month {
+    font-size: 1rem;
+    color: #a0aec0; /* Gray color */
+  }
+  
+  .card-description {
+    margin-top: 15px;
+    font-size: 1rem;
+  }
+  
+  .card-features {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .checkmark {
+    color: green; /* Green checkmark */
+    margin-right: 5px;
+  }
+  
+  .card-button {
+    margin-top: 15px;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #4c51bf; /* Indigo color */
+    color: white;
+    text-decoration: none;
+  }
