@@ -19,9 +19,10 @@ import Login from "./pages/Login";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 import Contributors from "./pages/Contributors";
-import Pricing from "./pages/Pricing";
+
 import PrivacyPolicy from "./pages/Privacy-Policy/PrivacyPolicy";
-// import PrivacyPolicy from "./pages/Privacy-Policy/PrivacyPolicy";
+import Pricing from "./pages/Pricing/Pricing";
+
 
 
 function App() {
