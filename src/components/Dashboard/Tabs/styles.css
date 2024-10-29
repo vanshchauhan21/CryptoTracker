@@ -13,6 +13,23 @@
   margin-left: auto;
   margin-right: auto;
 }
+/* Style for tab labels */
+.MuiTab-root {
+  color: var(--text-color) !important; /* This ensures text is visible in both modes */
+}
+
+/* Selected tab style */
+.Mui-selected {
+  color: var(--blue) !important;
+}
+
+[data-theme="light"] .MuiTab-root {
+  color: var(--black) !important; /* Dark color for light mode */
+}
+
+[data-theme="dark"] .MuiTab-root {
+  color: var(--white) !important; /* Light color for dark mode */
+}
 
 @media only screen and (max-width: 600px) {
   .list-flex {
