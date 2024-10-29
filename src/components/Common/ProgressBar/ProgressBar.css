@@ -1,0 +1,29 @@
+/* src/components/Common/ProgressBar/ProgressBar.css */
+.progress-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 9999;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background: linear-gradient(to right, #3a80e9,#007aff, #61c96f);
+    width: 0%;
+    transition: width 0.3s ease-out;
+    border-radius: 0 2px 2px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Dark mode styles */
+  [data-theme="dark"] .progress-bar-container {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Light mode styles */
+  [data-theme="light"] .progress-bar-container {
+    background: rgba(0, 0, 0, 0.1);
+  }

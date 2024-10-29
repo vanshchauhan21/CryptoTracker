@@ -1,74 +1,151 @@
+/* ContributorCard.css */
 
-.contributor-card{
-    border: 2px solid rgb(123, 240, 253);
-  }
-  .avatar{
-      width:10%;
-      height: 10%;
-  }
-  
-  .card-content  h3{
-  color: black;
-  }
-  
+.contributor-card {
+  background-color: var(--darkgrey);
+  border-radius: 0.8rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: calc(25% - 2rem); /* This ensures 4 cards per row with some gap */
+  margin: 1rem;
+}
 
+.contributor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Add this to your Contributors.css or the parent container styling */
+.contributors-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1400px; /* Adjust based on your layout needs */
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.avatar-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  border: 3px solid var(--blue);
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  width: 100%;
+}
+
+.username {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  color: var(--grey);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.card-actions {
+  width: 100%;
+}
+
+.profile-button {
+  background-color: var(--blue);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.profile-button:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
   .contributor-card {
-      width: 300px;
-      margin: 16px;
-      padding: 16px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-      background-color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .contributor-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 16px rgba(108, 218, 240, 0.552);
-    }
-  
-    .avatar-container {
-      width: 120px;
-      height: 120px;
-      overflow: hidden;
-      border-radius: 50%;
-      margin-bottom: 16px;
-    }
-  
-    .avatar {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  
-    .card-content h2 {
-      font-size: 1.5rem;
-      margin: 8px 0;
-      color: #333;
-    }
-  
-    .description {
-      font-size: 0.9rem;
-      color: #666;
-      margin-bottom: 16px;
-    }
-  
-    .card-actions .profile-button {
-      display: inline-block;
-      padding: 10px 20px;
-      color: #fff;
-      background-color: var(--blue);
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background-color 0.3s;
-    }
-  
-    .card-actions .profile-button:hover {
-      background-color: #0056b3;
+    width: calc(33.33% - 2rem); /* 3 cards per row */
+  }
+}
 
-      }
+@media (max-width: 900px) {
+  .contributor-card {
+    width: calc(50% - 2rem); /* 2 cards per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .contributor-card {
+    width: calc(100% - 2rem); /* 1 card per row */
+    padding: 1rem;
+  }
+
+  .avatar-container {
+    width: 80px;
+    height: 80px;
+  }
+
+  .username {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+
+  .profile-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .contributor-card {
+  background-color: var(--darkgrey);
+}
+
+[data-theme="dark"] .username {
+  color: var(--white);
+}
+
+[data-theme="dark"] .description {
+  color: var(--grey);
+}
+
+/* Light mode adjustments */
+[data-theme="light"] .contributor-card {
+  background-color: var(--darkgrey); /* Keep the card background dark in light mode */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .username {
+  color: var(--white); /* Keep the username text white in light mode */
+}
+
+[data-theme="light"] .description {
+  color: var(--grey); /* Keep the description text grey in light mode */
+}
+
+/* You may need to adjust the body or main container background for light mode */
+[data-theme="light"] body {
+  background-color: var(--white); /* or any light color you prefer */
+}

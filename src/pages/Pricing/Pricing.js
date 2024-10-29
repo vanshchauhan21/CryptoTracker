@@ -1,17 +1,21 @@
 // Pricing.js
 import React from 'react';
-import PriceCard from '../components/Common/Price Card/PriceCard';
+
+
+
 import { useTranslation } from 'react-i18next'; // Import useTranslation
-import "../App.css"
-import Header from '../components/Common/Header';
+import "./Pricing.css";
+import Header from '../../components/Common/Header';
+import PriceCard from '../../components/Common/Price Card/PriceCard';
+
 
 function Pricing() {
   const { t } = useTranslation(); // Initialize translation function
 
   return (
-    <div className="pricing-container">
+    <>
       <Header />
-      <div className="card-container">
+      <div className=" pricing-container card-container">
         <PriceCard
           title={t('pricing.hobby_title')} // Translate title
           price="29"
@@ -36,7 +40,7 @@ function Pricing() {
           isHighlighted
         />
       </div>
-    </div>
+    </>
   );
 }
 
