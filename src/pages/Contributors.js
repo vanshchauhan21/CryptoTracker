@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Common/Header";
 import Loader from "../components/Common/Loader";
+
 import axios from "axios";
+
+import ContributorCard from "../components/Common/Contributors Card/ContributorCard";
+
 import "./Contributors.css";
 
 function Contributors() {

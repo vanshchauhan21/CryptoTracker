@@ -19,9 +19,16 @@ import Login from "./pages/Login";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 import Contributors from "./pages/Contributors";
-import Pricing from "./pages/Pricing";
+
 import PrivacyPolicy from "./pages/Privacy-Policy/PrivacyPolicy";
-// import PrivacyPolicy from "./pages/Privacy-Policy/PrivacyPolicy";
+import Pricing from "./pages/Pricing/Pricing";
+import Learn from "./components/Learn";
+
+import Disclaimer from "./pages/Disclaimer/Disclaimer";
+
+import ProgressBar from "./components/Common/ProgressBar/ProgressBar";
+
+
 
 
 function App() {
@@ -70,6 +77,7 @@ function App() {
        <I18nextProvider i18n={i18n}>
 
       <div className="App">
+      <ProgressBar /> 
         <div className="cursor" ref={cursorRef} id="cursor" />
         <div className="cursor-pointer" id="cursor-pointer" />
         <ToastContainer />
@@ -81,6 +89,7 @@ function App() {
               <Route path="/coin/:id" element={<Coin />} />
               <Route path="/compare" element={<Compare />} />
               <Route path="/watchlist" element={<Watchlist />} />
+              <Route path="/learn" element={<Learn />} />
               <Route path="/faq" element={<Faq />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/login" element={<Login />} />
@@ -88,7 +97,7 @@ function App() {
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/Contributors" element={<Contributors />} />
               <Route path="/pricing" element={<Pricing />} />
-
+              <Route path="/disclaimer" element={<Disclaimer />} />
               <Route path="*" element={<NotFoundPage />} />
               
             </Routes>
