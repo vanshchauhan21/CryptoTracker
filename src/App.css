@@ -275,6 +275,30 @@
 
 
 
+/* .............................pricing css............... */
+
+
+
+
+/* Pricing.css */
+.pricing-container {
+  /* Add your styles for the pricing container here */
+
+  padding: 10px;
+  height: 100vh;
+
+}
+.card-container{
+  /* border: 10px solid rgb(97, 12, 255); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 3rem; 
+  padding: 2rem;
+}
+
+
 
 /* Responsive Design */
 @media (max-width: 1024px) {
