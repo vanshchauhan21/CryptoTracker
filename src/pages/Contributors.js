@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/Common/Header";
 import Loader from "../components/Common/Loader";
 import ContributorCard from "../components/Common/Contributors Card/ContributorCard";
+import "./Contributors.css";
 
 const Contributors = () => {
   const [contributors, setContributors] = useState([]);
