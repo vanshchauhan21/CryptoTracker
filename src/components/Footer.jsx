@@ -97,6 +97,7 @@ const Footer = () => {
               { path: "/#", label: "Cookie Policy" },
               { path: "/terms-conditions", label: "terms_conditions" },
               { path: "/faq", label: "faq" },
+              { path: "/Feedback", label: "Feedback" },
               { path: "/refund-policy", label: "Refund Policy" },
             ].map(({ path, label }) => (
               <li key={label}>

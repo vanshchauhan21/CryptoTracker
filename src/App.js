@@ -12,6 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useRef } from "react";
 import Footer from "./components/Footer";
 import TermCondition from "./pages/TermCondition";
+import Feedback from "./pages/Feedback";
 import NotFoundPage from "./components/PageNotFound/PageNotFound";
 import GoogleTranslate from "./components/GoogleTranslate";
 
@@ -91,6 +92,7 @@ function App() {
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/terms-conditions" element={<TermCondition />} />
+                <Route path="/Feedback" element={<Feedback />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/Contributors" element={<Contributors />} />
                 <Route path="/pricing" element={<Pricing />} />
