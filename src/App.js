@@ -23,7 +23,11 @@ import Contributors from "./pages/Contributors";
 import PrivacyPolicy from "./pages/Privacy-Policy/PrivacyPolicy";
 import Pricing from "./pages/Pricing/Pricing";
 import Learn from "./components/Learn";
+
 import Disclaimer from "./pages/Disclaimer/Disclaimer";
+
+import ProgressBar from "./components/Common/ProgressBar/ProgressBar";
+
 
 
 
@@ -73,6 +77,7 @@ function App() {
        <I18nextProvider i18n={i18n}>
 
       <div className="App">
+      <ProgressBar /> 
         <div className="cursor" ref={cursorRef} id="cursor" />
         <div className="cursor-pointer" id="cursor-pointer" />
         <ToastContainer />
