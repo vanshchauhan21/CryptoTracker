@@ -1,3 +1,7 @@
+[data-theme="dark"] body {
+    background: #121212;
+}
+
 .footer {
   background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
   color: #fff;
@@ -280,11 +284,38 @@ padding:1rem;
   text-align: center;
   }
    .contributors-list{
-  
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
    }
+
+
+
+
+
+/* .............................pricing css............... */
+
+
+
+
+/* Pricing.css */
+.pricing-container {
+  /* Add your styles for the pricing container here */
+
+  padding: 10px;
+  height: 100vh;
+
+}
+.card-container{
+  /* border: 10px solid rgb(97, 12, 255); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 3rem;
+  padding: 2rem;
+}
 
 
 
@@ -296,11 +327,11 @@ padding:1rem;
     flex-direction: column;
     gap: 3rem;
   }
-  
+
   .footer-brand {
     max-width: 100%;
   }
-  
+
   .footer-content {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
@@ -311,27 +342,82 @@ padding:1rem;
   .footer {
     padding: 3rem 0 0;
   }
-  
+
   .footer-container {
     padding: 0 1.5rem;
   }
+
+
+  .footer-content-wrapper {
+    gap: 1rem; /* Reduced gap between sections */
+    margin-bottom: 0.5rem;
+  }
   
+
   .footer-content {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
-  
+
   .social-icons {
     justify-content: flex-start;
   }
-  
+
   .input-group {
     flex-direction: column;
   }
-  
+
   .submit-button {
     width: 100%;
     justify-content: center;
+
+    padding: 0.5rem 1rem; /* Reduced padding for smaller screens */
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    margin-bottom: 0.5rem; /* Reduced margin below section titles */
+    font-size: 1rem;
+    padding-bottom: 0.4rem;
+  }
+
+  .link-list {
+    gap: 0.4rem;
+  }
+
+  .brand-description {
+    font-size: 0.9rem; /* Smaller font size for description */
+    margin-bottom: 0.25rem;
+    line-height: 1.4;
+  }
+
+  .social-icons {
+    gap: 0.75rem; /* Reduced gap between social icons */
+  }
+
+  .social-icon {
+    width: 32px; /* Smaller social icons */
+    height: 32px;
+  }
+
+  .newsletter-description {
+    margin-bottom: 1rem;
+  }
+
+  .input-group {
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-bottom {
+    margin-top: 1.5rem;
+    padding: 1rem 0;
+  }
+  .link-list {
+    gap: 0.25rem;
+  }
+  .footer-section {
+    margin-bottom: 0.5rem; /* Add space between footer sections */
+
   }
 }
 
@@ -339,15 +425,39 @@ padding:1rem;
   .footer-container {
     padding: 0 1rem;
   }
+
+
+  .footer-content-wrapper {
+    gap: 0.25rem;
+  }
+
   
+
   .logo {
     width: 40px;
     height: 40px;
     font-size: 1rem;
   }
-  
+
   .brand-name {
     font-size: 1.5rem;
   }
 }
+
+.brand-description {
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+  line-height: 1.3;
+}
+.footer-content{
+  gap:0.5rem;
+}
+.footer-brand {
+  margin-bottom: 0.25rem;
+}
+.footer-section {
+  margin-bottom: 0.25rem;
+}
+
+
 
