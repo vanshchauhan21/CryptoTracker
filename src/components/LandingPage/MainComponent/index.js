@@ -6,10 +6,10 @@ import iphone from "../../../assets/iphone.png";
 import { motion } from "framer-motion";
 import { RWebShare } from "react-web-share";
 import { toast } from "react-toastify";
-import { useTranslation } from "react-i18next"; // Import i18n translation hook
+
 
 function MainComponent() {
-  const { t } = useTranslation(); // Use the translation function
+
   return (
     <div className="main-wrapper">
     <div className="main-flex">
