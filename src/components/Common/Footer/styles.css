@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  margin: 3rem;
+  margin: 1.5rem 3rem;
   height: auto;
   border-radius: 0.75rem;
   background: linear-gradient(
@@ -14,6 +14,9 @@
   );
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
+  position: relative; 
+  z-index: 100;  
+  margin-top: 50px; /* Increase top margin to prevent overlap */
 }
 
 .footer h2 {
