@@ -22,6 +22,7 @@ import Contributors from "./pages/Contributors";
 
 import PrivacyPolicy from "./pages/Privacy-Policy/PrivacyPolicy";
 import Pricing from "./pages/Pricing/Pricing";
+import Learn from "./components/Learn";
 
 
 
@@ -82,6 +83,7 @@ function App() {
               <Route path="/coin/:id" element={<Coin />} />
               <Route path="/compare" element={<Compare />} />
               <Route path="/watchlist" element={<Watchlist />} />
+              <Route path="/learn" element={<Learn />} />
               <Route path="/faq" element={<Faq />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/login" element={<Login />} />
