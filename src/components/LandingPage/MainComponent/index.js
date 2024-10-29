@@ -14,14 +14,14 @@ function MainComponent() {
     <div className="main-wrapper">
     <div className="main-flex">
       <div className="info-landing">
-        <h1 className="heading1">Track Crypto</h1>
+        <h1 className="heading1">Real Time</h1>
         <motion.h1
           className="heading2"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.75, duration: 1 }}
         >
-          Real Time.
+         Track Crypto
         </motion.h1>
         <motion.p
           className="info-text"
@@ -45,7 +45,7 @@ function MainComponent() {
             data={{
               text: "CryptoDashboard made by Avi Vashishta using React JS.",
               url: "https://crypto-dashboard-jan.netlify.app",
-              title: "CryptoTracker.",
+              title: "CryptoTracker",
             }}
             onClick={() => toast.info("App Shared!")}
           >

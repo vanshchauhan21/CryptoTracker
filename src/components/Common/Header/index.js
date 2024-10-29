@@ -4,15 +4,11 @@ import TemporaryDrawer from "./drawer";
 import "./styles.css";
 import { styled } from "@mui/material/styles";
 import { Switch } from "@mui/material";
-import { Link } from "react-router-dom"; // Make sure to import Link if using React Router
+import { Link, NavLink } from "react-router-dom"; // Import NavLink
 import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 import { useTranslation } from "react-i18next";
 
 function Header() {
-
-
- 
-
   const { t } = useTranslation(); 
   const [darkMode, setDarkMode] = useState(
     localStorage.getItem("theme") === "dark"
@@ -34,7 +30,6 @@ function Header() {
       setDark();
     }
     setDarkMode(!darkMode);
-    // toast.success("Theme Changed!");
   };
 
   const setDark = () => {
@@ -114,25 +109,25 @@ function Header() {
         </h1>
       </Link>
       <div className="links">
-        <a href="/">
-        <p className="link">{t("home")}</p>
-        </a>
-        <a href="/compare">
-        <p className="link">{t("compare")}</p>
-        </a>
-        <a href="/watchlist">
-        <p className="link">{t("watchlist")}</p>
-        </a>
+        <NavLink to="/" className={({ isActive }) => (isActive ? "active-link link" : "link")}>
+          {t("home")}
+        </NavLink>
+        <NavLink to="/compare" className={({ isActive }) => (isActive ? "active-link link" : "link")}>
+          {t("compare")}
+        </NavLink>
+        <NavLink to="/watchlist" className={({ isActive }) => (isActive ? "active-link link" : "link")}>
+          {t("watchlist")}
+        </NavLink>
         <SignedIn>
           <UserButton />
         </SignedIn>
         <SignedOut>
-          <a href="/signup">
-          <p className="link">{t("SignUp")}</p>
-          </a>
-          <a href="/login">
-          <p className="link">{t("LogIn")}</p>
-          </a>
+          <NavLink to="/signup" className={({ isActive }) => (isActive ? "active-link link" : "link")}>
+            {t("SignUp")}
+          </NavLink>
+          <NavLink to="/login" className={({ isActive }) => (isActive ? "active-link link" : "link")}>
+            {t("LogIn")}
+          </NavLink>
         </SignedOut>
 
         <IOSSwitch
@@ -141,10 +136,9 @@ function Header() {
           inputProps={{ "aria-label": "theme toggle" }}
         />
       </div>
-      <a href="/dashboard">
-        {/* <Button text={"dashboard"} /> */}
+      <NavLink to="/dashboard">
         <Button text={t("dashboard")} />
-      </a>
+      </NavLink>
       <div className="drawer-component">
         <TemporaryDrawer />
       </div>
