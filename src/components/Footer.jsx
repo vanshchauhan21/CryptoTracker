@@ -1,12 +1,10 @@
-
-
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next"; // Import hook for translations
 import { ArrowRight, Instagram, Github, Twitter, Linkedin } from "lucide-react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import logo from "../assets/logo.jpg";
 import "./ComparePage/SelectCoins/index";
-import LanguageSwitcher from "./Common/Language Swicher/LanguageSwitcher";
+import GoogleTranslate from "./GoogleTranslate";
 
 const Footer = () => {
   const { t } = useTranslation(); // Destructure translation function
@@ -43,8 +41,6 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-
-
       {/* .................1 links-section............... */}
       <div className="footer-container">
         <div className="footer-section">
@@ -80,7 +76,6 @@ const Footer = () => {
               { path: "/#", label: "Crypto Convertor" },
               { path: "/#", label: "Bit coint Rainbow Chart" },
               { path: "/#", label: "24h Cryptocurrency Market" },
-
             ].map(({ path, label }) => (
               <li key={label}>
                 <a href={path}>
@@ -91,13 +86,11 @@ const Footer = () => {
           </ul>
         </div>
 
-
         {/* .....................................3...................... */}
         <div className="footer-section">
           <h3 className="section-title">{t("Policies")}</h3>
           <ul className="link-list">
             {[
-
               { path: "/disclaimer", label: "Disclaimer" },
               { path: "/#", label: "Term of use" },
               { path: "/privacy-policy", label: "Privacy Policy" },
@@ -126,7 +119,6 @@ const Footer = () => {
               { path: "/#", label: "Learn about Crypto Tracker Reward" },
               { path: "/#", label: "How to Buy Crypto with Card" },
               { path: "/#", label: "How to Track NFTs on Crypto Tracker" },
-
             ].map(({ path, label }) => (
               <li key={label}>
                 <a href={path}>
@@ -136,9 +128,7 @@ const Footer = () => {
             ))}
           </ul>
         </div>
-
       </div>
-
 
       {/* .......................2 socail icons and company logo  */}
       <div className="footer-content-wrapper">
@@ -152,9 +142,6 @@ const Footer = () => {
           </div>
           <p className="brand-description">{t("track_crypto_info")}</p>
         </div>
-
-
-
 
         {/* Connect Section */}
         <div className="footer-section">
@@ -178,7 +165,6 @@ const Footer = () => {
             ))}
           </div>
         </div>
-
       </div>
 
       <hr></hr>
@@ -205,15 +191,14 @@ const Footer = () => {
         </form>
       </div>
 
-      <div>
-        <LanguageSwitcher />
+      <div
+        className="translate relative z-50 flex items-center"
+        style={{ marginLeft: "16px", top: "-20px" }}
+      >
+        <GoogleTranslate />
       </div>
-
-
-
     </footer>
   );
 };
 
 export default Footer;
-
