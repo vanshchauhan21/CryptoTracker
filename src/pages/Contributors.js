@@ -17,7 +17,7 @@ function Contributors() {
       try {
         while (true) {
           const response = await axios.get(
-            `https://api.github.com/repos/AlfiyaSiddique/TastyTrails/contributors`,
+            `https://api.github.com/repos/vanshchauhan21/CryptoTracker/contributors`,
             {
               params: {
                 per_page: 100,
