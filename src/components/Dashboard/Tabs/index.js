@@ -17,7 +17,7 @@ export default function TabsComponent({ coins, setSearch }) {
   };
 
   const style = {
-    color: "var(--white)",
+    color: "var(--text-color)",
     "& .Mui-selected": {
       color: "var(--blue) !important",
     },
