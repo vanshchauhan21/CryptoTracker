@@ -6,6 +6,7 @@ import Compare from "./pages/Compare";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
 import Watchlist from "./pages/Watchlist";
+import Review from "./pages/Review";
 import Faq from "./pages/Faq";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -95,6 +96,7 @@ function App() {
                 <Route path="/watchlist" element={<Watchlist />} />
                 <Route path="/learn" element={<Learn />} />
                 <Route path="/faq" element={<Faq />} />
+                <Route path="/review" element={<Review/>} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/terms-conditions" element={<TermCondition />} />
