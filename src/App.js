@@ -34,6 +34,7 @@ import RefundPolicy from "./pages/Refund Policy/RefundPolicy";
 import CookiesPolicy from "./pages/CookiesPolicy";
 
 import CookiePolicy from "./pages/Cookie-Policy/CookiePolicy";
+import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator";
 
 
 function App() {
@@ -104,6 +105,7 @@ function App() {
                 <Route path="/Contributors" element={<Contributors />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/disclaimer" element={<Disclaimer />} />
+                <Route path="/ProfitReturnCalculator" element={<ProfitReturnCalculator/>} />
 
                 <Route path="/refund-policy" element={<RefundPolicy />} />
 
