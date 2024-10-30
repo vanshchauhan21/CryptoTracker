@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { RWebShare } from "react-web-share";
 import { toast } from "react-toastify";
 import CurrencyConvertor from "./CurrencyConvertor";
+import ProFreeSubcription from "../../../pages/Pro-Free-Subscription/ProFreeSubscription";
 
 
 function MainComponent() {
@@ -71,6 +72,7 @@ function MainComponent() {
       </div>
     </div>
     <CurrencyConvertor/>
+    <ProFreeSubcription/>
     </div>
   );
 }
