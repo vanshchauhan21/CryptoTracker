@@ -117,15 +117,33 @@ body {
   background-color: #2f6ac7;
   transform: scale(1.05);
 }
+.mobile-menu-button {
+  display: none;
+}
 
 /* Mobile Responsiveness */
 @media only screen and (max-width: 800px) {
   .links {
     display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: var(--background-color);
+    padding: 20px;
+    z-index: 1000;
+  }
+  .links.mobile-menu-open {
+    display: flex;
+  }
+  
+  .mobile-menu-button {
+    display: block;
   }
   
   .drawer-component {
-    display: block;
+    display: none;
   }
   
   .header {
@@ -142,6 +160,32 @@ body {
 
   .link {
     font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: var(--background-color);
+    padding: 20px;
+    z-index: 1000;
+  }
+
+  .links.mobile-menu-open {
+    display: flex;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
+
+  .drawer-component {
+    display: none;
   }
 }
 
