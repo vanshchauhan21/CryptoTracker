@@ -430,3 +430,61 @@ a {
     display: none;
   }
 }
+
+/* Styling the login and signup page */
+
+[data-theme="dark"] {
+    --color: #b5b5b5;
+    --cl-internal-4x6jej-bg-color: linear-gradient(rgb(0 0 0 / 3%), rgb(6 6 6 / 3%)), linear-gradient(rgb(0 0 0), rgb(0 0 0));
+    --cl-internal-1p733cp-bg-color: #000;
+    --div-login-page-bg-color: #121212;
+    --div-signup-page-bg-color: #121212;
+    --text-color: #b5b5b5;
+    --cl-internal-2iusy0-color: var(--white);
+    --fa-home-color:  rgb(197 197 197);
+}
+
+[data-theme="light"] {
+    --cl-internal-1p733cp-bg-color: var(--white);
+    --cl-internal-2iusy0-color: var(--white);
+}
+
+.cl-internal-1p733cp {
+    background-color: var(--cl-internal-1p733cp-bg-color) !important;
+}
+
+.cl-internal-4x6jej {
+    background: var(--cl-internal-4x6jej-bg-color) !important;
+}
+
+.cl-internal-1tpvhd8 {
+    color: var(--text-color) !important;
+}
+
+.cl-internal-15di0mo {
+    color: var(--text-color) !important;
+}
+
+.cl-internal-1v2koqu {
+    color: var(--text-color) !important;
+}
+
+.cl-internal-1c7fjmu {
+    color: var(--text-color) !important;
+}
+
+.cl-internal-2iusy0 {
+    color: var(--cl-internal-2iusy0-color) !important;
+}
+
+div.login-page {
+    background-color: var(--div-login-page-bg-color) !important;
+}
+
+div.signup-page {
+    background-color: var(--div-login-page-bg-color) !important;
+}
+
+.fa-home {
+    color: var(--fa-home-color) !important;
+}

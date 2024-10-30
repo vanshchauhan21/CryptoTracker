@@ -29,7 +29,11 @@ import Learn from "./components/Learn";
 import Disclaimer from "./pages/Disclaimer/Disclaimer";
 
 import ProgressBar from "./components/Common/ProgressBar/ProgressBar";
+
 import CookiesPolicy from "./pages/CookiesPolicy";
+
+import CookiePolicy from "./pages/Cookie-Policy/CookiePolicy";
+
 
 function App() {
   const theme = createTheme({
@@ -99,6 +103,7 @@ function App() {
                 <Route path="/Contributors" element={<Contributors />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/disclaimer" element={<Disclaimer />} />
+                <Route path="/cookie-policy" element={<CookiePolicy />} />
                 <Route path="/GoogleTranslate" element={<GoogleTranslate />} />
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>
