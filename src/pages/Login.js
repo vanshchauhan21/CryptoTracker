@@ -3,11 +3,12 @@ import React from 'react';
 
 export default function SignInPage() {
   const handleHomeClick = () => {
-    window.location.href = '/'; 
+    window.location.href = '/';
   };
 
   return (
     <div
+    className="login-page"
       style={{
         display: "flex",
         flexDirection: "column",
@@ -24,14 +25,14 @@ export default function SignInPage() {
           top: "3rem",
           left: "3rem",
           cursor: "pointer",
-          transition: "transform 0.3s ease", 
+          transition: "transform 0.3s ease",
         }}
         onClick={handleHomeClick}
         onMouseEnter={(e) => {
-          e.currentTarget.style.transform = "scale(1.2)"; 
+          e.currentTarget.style.transform = "scale(1.2)";
         }}
         onMouseLeave={(e) => {
-          e.currentTarget.style.transform = "scale(1)"; 
+          e.currentTarget.style.transform = "scale(1)";
         }}
       >
         <i className="fas fa-home" style={{ fontSize: "24px", color: "#333" }}></i>

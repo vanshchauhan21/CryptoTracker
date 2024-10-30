@@ -3,11 +3,12 @@ import React from 'react';
 
 export default function SignUpPage() {
   const handleHomeClick = () => {
-    window.location.href = '/'; 
+    window.location.href = '/';
   };
 
   return (
     <div
+    className="signup-page"
       style={{
         display: "flex",
         flexDirection: "column",
@@ -31,7 +32,7 @@ export default function SignUpPage() {
           e.currentTarget.style.transform = "scale(1.2)";
         }}
         onMouseLeave={(e) => {
-          e.currentTarget.style.transform = "scale(1)"; 
+          e.currentTarget.style.transform = "scale(1)";
         }}
       >
         <i className="fas fa-home" style={{ fontSize: "24px", color: "#333" }}></i>

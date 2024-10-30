@@ -31,6 +31,11 @@ import Disclaimer from "./pages/Disclaimer/Disclaimer";
 import ProgressBar from "./components/Common/ProgressBar/ProgressBar";
 import RefundPolicy from "./pages/Refund Policy/RefundPolicy";
 
+import CookiesPolicy from "./pages/CookiesPolicy";
+
+import CookiePolicy from "./pages/Cookie-Policy/CookiePolicy";
+
+
 function App() {
   const theme = createTheme({
     palette: {
@@ -95,10 +100,15 @@ function App() {
                 <Route path="/terms-conditions" element={<TermCondition />} />
                 <Route path="/Feedback" element={<Feedback />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/cookies-policy" element={<CookiesPolicy />} />
                 <Route path="/Contributors" element={<Contributors />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/disclaimer" element={<Disclaimer />} />
+
                 <Route path="/refund-policy" element={<RefundPolicy />} />
+
+                <Route path="/cookie-policy" element={<CookiePolicy />} />
+
                 <Route path="/GoogleTranslate" element={<GoogleTranslate />} />
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>
