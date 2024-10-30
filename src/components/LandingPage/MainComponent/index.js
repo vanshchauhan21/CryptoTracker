@@ -6,7 +6,11 @@ import iphone from "../../../assets/iphone.png";
 import { motion } from "framer-motion";
 import { RWebShare } from "react-web-share";
 import { toast } from "react-toastify";
+
+import ProFreeSubcription from "../../../pages/Pro-Free-Subscribtion/ProFreeSubcription";
+
 import Marquee from "../../../pages/Marquee/Marquee";
+
 
 
 function MainComponent() {
@@ -54,6 +58,7 @@ function MainComponent() {
           >
             <Button text={"Share App"} outlined={true} />
           </RWebShare>
+
         </motion.div>
       </div>
       <div className="gradient-div">
@@ -70,8 +75,15 @@ function MainComponent() {
             repeat: Infinity,
           }}
         />
+
       </div>
+  
     </div>
+
+    <div>
+      <ProFreeSubcription/>
+      </div>
+
 
     <Marquee/>
 

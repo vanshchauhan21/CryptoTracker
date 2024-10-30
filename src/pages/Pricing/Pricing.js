@@ -1,4 +1,4 @@
-// Pricing.js
+//  Pricing.js
 import React from 'react';
 
 
