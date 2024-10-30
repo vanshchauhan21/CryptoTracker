@@ -430,3 +430,58 @@ a {
     display: none;
   }
 }
+
+.bg-white {
+  background-color: var(--bg-white-bg-color) !important;
+  color: #000000 !important;
+  border: 0.01rem solid var(--grey) !important;
+}
+
+.bg-gray-100 {
+    background-color: var(--bg-gray-100) !important;
+    color: var(--bg-gray-100-color) !important;
+}
+
+.bg-white\/30 {
+    background-color: var(--bg-white-30-bg-color) !important;
+    border: none !important;
+}
+
+.text-black\/40 {
+    color: var(--text-black-40-color) !important;
+}
+
+.bg-blue-600 {
+    border: none !important;
+}
+
+input {
+    background-color: var(--input-bg-color) !important;
+    color: var(--input-color) !important;
+    outline-color: var(--input-outline-color) !important;
+    border-radius: 25px !important;
+    padding-left: 0.5rem !important;
+}
+
+
+[data-theme="dark"] {
+    --bg-gray-100: #1b1b1b;
+    --bg-gray-100-color: #fafafa;
+    --bg-white-bg-color: #000;
+    --bg-white-border:  0.1rem solid var(--grey);
+    --text-black-40-color: #626262;
+    --bg-white-30-bg-color: rgb(0 0 0 / 90%);
+    --input-bg-color: #000;
+    --input-color: #fff;
+    --input-outline-color: var(--darkgrey);
+}
+
+[data-theme="light"] {
+    --bg-gray-100: #f9f9f9;
+    --bg-white-bg-color: #fff;
+    --bg-white-30-bg-color: rgb(0 0 0 / 50%);
+    --bg-white-border:  0.1rem solid var(--darkgrey);
+    --bg-blue-600-bg-color: #3a80e9;
+    --bg-white-30-bg-color: rgb(0 0 0 / 0%) ;
+    --input-outline-color: var(--white);
+}
