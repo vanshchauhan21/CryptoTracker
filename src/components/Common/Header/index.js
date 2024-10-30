@@ -4,15 +4,27 @@ import TemporaryDrawer from "./drawer";
 import "./styles.css";
 import { styled } from "@mui/material/styles";
 import { Switch } from "@mui/material";
-import { Link, NavLink } from "react-router-dom"; // Import NavLink
+import { Link, NavLink } from "react-router-dom";
 import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 import { useTranslation } from "react-i18next";
+import MobileMenuButton from "./MobileMenuButton";
 
 function Header() {
-  const { t } = useTranslation(); 
+  const { t } = useTranslation();
   const [darkMode, setDarkMode] = useState(
     localStorage.getItem("theme") === "dark"
   );
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 800);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const theme = localStorage.getItem("theme");
@@ -40,6 +52,10 @@ function Header() {
   const setLight = () => {
     localStorage.setItem("theme", "light");
     document.documentElement.setAttribute("data-theme", "light");
+  };
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
   };
 
   const IOSSwitch = styled((props) => (
@@ -105,10 +121,10 @@ function Header() {
     <div className="header">
       <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
         <h1>
-         {t("CryptoTracker")}<span style={{ color: "var(--blue)" }}>.</span>
+          {t("CryptoTracker")}<span style={{ color: "var(--blue)" }}>.</span>
         </h1>
       </Link>
-      <div className="links">
+      <div className={`links ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}>
         <NavLink to="/" className={({ isActive }) => (isActive ? "active-link link" : "link")}>
           {t("Home")}
         </NavLink>
@@ -142,9 +158,18 @@ function Header() {
       <NavLink to="/dashboard">
         <Button text={t("dashboard")} />
       </NavLink>
-      <div className="drawer-component">
-        <TemporaryDrawer />
-      </div>
+      
+      {isMobile && (
+        <div className="mobile-menu-button">
+          <MobileMenuButton onClick={toggleMobileMenu} isOpen={mobileMenuOpen} />
+        </div>
+      )}
+      
+      {!isMobile && (
+        <div className="drawer-component">
+          <TemporaryDrawer />
+        </div>
+      )}
     </div>
   );
 }
