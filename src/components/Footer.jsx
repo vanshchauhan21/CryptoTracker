@@ -4,6 +4,7 @@ import { ArrowRight, Instagram, Github, Twitter, Linkedin } from "lucide-react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import logo from "../assets/logo.jpg";
 import "./ComparePage/SelectCoins/index";
+import CryptoConverter from "../pages/CryptoConverter";
 import GoogleTranslate from "./GoogleTranslate";
 
 const Footer = () => {
@@ -71,9 +72,9 @@ const Footer = () => {
           <ul className="link-list">
             {[
               { path: "/#", label: "Crypto Profit Calculator" },
-              { path: "/#", label: "Profit Return Calculator" },
+              { path: "/ProfitReturnCalculator", label: "Profit Return Calculator" },
               { path: "/#", label: "Impermanent Loss Calculator" },
-              { path: "/#", label: "Crypto Convertor" },
+              { path: "/CryptoConverter", label: "Crypto Convertor" },
               { path: "/#", label: "Bit coint Rainbow Chart" },
               { path: "/#", label: "24h Cryptocurrency Market" },
             ].map(({ path, label }) => (
