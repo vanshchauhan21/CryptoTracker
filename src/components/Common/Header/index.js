@@ -121,6 +121,9 @@ function Header() {
         <NavLink to="/learn" className={({ isActive }) => (isActive ? "active-link link" : "link")}>
           {t("Learn")}
         </NavLink>
+        <NavLink to="/review" className={({ isActive }) => (isActive ? "active-link link" : "link")}>
+          {t("Reviews")}
+        </NavLink>
         <SignedIn>
           <UserButton />
         </SignedIn>
