@@ -1,0 +1,83 @@
+/* CookiePolicy.css */
+
+/* General Styling */
+.cookie-policy {
+    max-width: 800px;
+    margin: 80px auto; /* Centered on the page */
+    padding: 20px;
+    background-color: var(--background-color, #ffffff);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--text-color, #333);
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Heading Styles */
+  .cookie-policy h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+    text-align: center;
+    color: var(--primary-color, #0077cc);
+    border-bottom: 2px solid var(--primary-color, #0077cc);
+    padding-bottom: 8px;
+  }
+  
+  .cookie-policy h2 {
+    font-size: 24px;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    color: var(--primary-color, #005a99);
+  }
+  
+  /* Paragraph Styles */
+  .cookie-policy p {
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: var(--text-color, #444);
+  }
+  
+  /* List Styles */
+  .cookie-policy ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .cookie-policy li {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+  
+  /* Link Styling */
+  .cookie-policy a {
+    color: var(--link-color, #0066cc);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .cookie-policy a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .cookie-policy {
+      padding: 15px;
+      margin: 60px 10px;
+    }
+  
+    .cookie-policy h1 {
+      font-size: 28px;
+    }
+  
+    .cookie-policy h2 {
+      font-size: 20px;
+    }
+  
+    .cookie-policy p,
+    .cookie-policy li {
+      font-size: 14px;
+    }
+  }
+  
