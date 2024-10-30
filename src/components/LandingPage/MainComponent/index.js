@@ -7,12 +7,19 @@ import { motion } from "framer-motion";
 import { RWebShare } from "react-web-share";
 import { toast } from "react-toastify";
 
+import ProFreeSubcription from "../../../pages/Pro-Free-Subscribtion/ProFreeSubcription";
+
+import Marquee from "../../../pages/Marquee/Marquee";
+
+
 
 function MainComponent() {
 
   return (
     <div className="main-wrapper">
     <div className="main-flex">
+
+
       <div className="info-landing">
         <h1 className="heading1">Real Time</h1>
         <motion.h1
@@ -51,6 +58,7 @@ function MainComponent() {
           >
             <Button text={"Share App"} outlined={true} />
           </RWebShare>
+
         </motion.div>
       </div>
       <div className="gradient-div">
@@ -67,8 +75,14 @@ function MainComponent() {
             repeat: Infinity,
           }}
         />
+
       </div>
+
     </div>
+
+
+    <Marquee/>
+
     </div>
   );
 }

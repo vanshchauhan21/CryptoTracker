@@ -350,12 +350,18 @@ h1 {
 [data-theme="dark"] {
   --background-color: #1b1b1b;
   --text-color: var(--text-dark); /* White text */
+  --heading1-color: var(--grey);
 }
 
 
 [data-theme="light"] {
   --background-color: #fff;
   --text-color: var(--text-light); /* Dark text */
+  --heading1-color: #000;
+}
+
+.heading1{
+    color: var(--heading1-color) !important;
 }
 
 html {
