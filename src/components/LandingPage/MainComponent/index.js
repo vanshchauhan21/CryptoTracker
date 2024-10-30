@@ -77,12 +77,8 @@ function MainComponent() {
         />
 
       </div>
-  
-    </div>
 
-    <div>
-      <ProFreeSubcription/>
-      </div>
+    </div>
 
 
     <Marquee/>
