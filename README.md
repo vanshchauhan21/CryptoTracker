@@ -98,5 +98,19 @@ git push origin feature-YourFeature
 You've now mastered the art of cryptocurrency tracking. If only making money were this easy. Good luck, and may your portfolio be as impressive as your coding skills!
 
 
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
+
+## 💗 Contributors
+
+<a href="https://github.com/vanshchauhan21/CryptoTracker/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=vanshchauhan21/CryptoTracker" />
+</a>
+
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
+
 
    
