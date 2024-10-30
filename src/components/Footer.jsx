@@ -73,7 +73,7 @@ const Footer = () => {
           <ul className="link-list">
             {[
               { path: "/#", label: "Crypto Profit Calculator" },
-              { path: "/#", label: "Profit Return Calculator" },
+              { path: "/ProfitReturnCalculator", label: "Profit Return Calculator" },
               { path: "/#", label: "Impermanent Loss Calculator" },
               { path: "/CryptoConverter", label: "Crypto Convertor" },
               {

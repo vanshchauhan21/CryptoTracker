@@ -6,6 +6,11 @@ This project was created by @vanshchauhan.
 
 CryptoTracker is a web application that allows users to track and monitor cryptocurrency prices in real-time. With a user-friendly interface, users can easily access current market trends and make informed decisions about their investments.
 
+## 📈 GitHub Repository Stats
+| 🌟 **Stars** | 🍴 **Forks** | 🐛 **Issues** | 🔔 **Open PRs** | 🔕 **Closed PRs** | 🛠️ **Languages** | ✅ **Contributors** |
+|--------------|--------------|---------------|-----------------|------------------|------------------|------------------|
+| ![GitHub stars](https://img.shields.io/github/stars/vanshchauhan21/CryptoTracker) | ![forks](https://img.shields.io/github/forks/vanshchauhan21/CryptoTracker) | ![issues](https://img.shields.io/github/issues/vanshchauhan21/CryptoTracker?color=32CD32) | ![pull requests](https://img.shields.io/github/issues-pr/vanshchauhan21/CryptoTracker?color=FFFF8F) | ![Closed PRs](https://img.shields.io/github/issues-pr-closed/vanshchauhan21/CryptoTracker?color=20B2AA) | ![Languages](https://img.shields.io/github/languages/count/vanshchauhan21/CryptoTracker?color=20B2AA) | ![Contributors](https://img.shields.io/github/contributors/vanshchauhan21/CryptoTracker?color=00FA9A) |
+
 ## Features
 
 - Real-time cryptocurrency price tracking
@@ -91,6 +96,20 @@ git push origin feature-YourFeature
 **Congratulations!**
 
 You've now mastered the art of cryptocurrency tracking. If only making money were this easy. Good luck, and may your portfolio be as impressive as your coding skills!
+
+
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
+
+## 💗 Contributors
+
+<a href="https://github.com/vanshchauhan21/CryptoTracker/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=vanshchauhan21/CryptoTracker" />
+</a>
+
+<!--line-->
+<img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
 
 

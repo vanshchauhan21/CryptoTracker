@@ -1,3 +1,4 @@
+
 // Card.js
 import React from 'react';
 import './PriceCard.css'; // Import your CSS file for Card styles
