@@ -15,6 +15,7 @@ import TermCondition from "./pages/TermCondition";
 import Feedback from "./pages/Feedback";
 import NotFoundPage from "./components/PageNotFound/PageNotFound";
 import GoogleTranslate from "./components/GoogleTranslate";
+import CryptoConverter from "./pages/CryptoConverter";
 
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
@@ -34,7 +35,6 @@ import RefundPolicy from "./pages/Refund Policy/RefundPolicy";
 import CookiesPolicy from "./pages/CookiesPolicy";
 
 import CookiePolicy from "./pages/Cookie-Policy/CookiePolicy";
-
 
 function App() {
   const theme = createTheme({
@@ -104,6 +104,7 @@ function App() {
                 <Route path="/Contributors" element={<Contributors />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/disclaimer" element={<Disclaimer />} />
+                <Route path="CryptoConverter" element={<CryptoConverter />} />
 
                 <Route path="/refund-policy" element={<RefundPolicy />} />
 
