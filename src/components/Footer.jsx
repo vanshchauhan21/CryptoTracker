@@ -94,7 +94,7 @@ const Footer = () => {
               { path: "/disclaimer", label: "Disclaimer" },
               { path: "/#", label: "Term of use" },
               { path: "/privacy-policy", label: "Privacy Policy" },
-              { path: "/#", label: "Cookie Policy" },
+              { path: "/cookie-policy", label: "Cookie Policy" },
               { path: "/terms-conditions", label: "terms_conditions" },
               { path: "/faq", label: "faq" },
               { path: "/Feedback", label: "Feedback" },
