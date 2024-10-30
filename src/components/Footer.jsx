@@ -94,7 +94,11 @@ const Footer = () => {
               { path: "/disclaimer", label: "Disclaimer" },
               { path: "/#", label: "Term of use" },
               { path: "/privacy-policy", label: "Privacy Policy" },
-              { path: "/#", label: "Cookie Policy" },
+
+              { path: "/cookies-policy", label: "Cookie Policy" },
+
+              { path: "/cookie-policy", label: "Cookie Policy" },
+
               { path: "/terms-conditions", label: "terms_conditions" },
               { path: "/faq", label: "faq" },
               { path: "/Feedback", label: "Feedback" },
@@ -197,6 +201,21 @@ const Footer = () => {
         style={{ marginLeft: "16px", top: "-20px" }}
       >
         <GoogleTranslate />
+      </div>
+      <div
+        className="flex"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          marginTop: "1rem",
+          marginBottom: "0.5rem",
+          fontSize: "0.9rem",
+          color: "#ffffff",
+        }}
+      >
+        <text>© 2024 CryptoTracker. All rights reserved.</text>
       </div>
     </footer>
   );
