@@ -1,0 +1,49 @@
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  margin-top: 2rem;
+  padding: 5rem;
+  /* border: 2px solid greenyellow; */
+ margin:2rem 5rem 2rem 5rem ;
+}
+
+.marquee-content {
+  display: inline-block;
+  display: flex;
+  flex-direction:row ;
+  animation: marquee 20s linear infinite; /* Adjust speed here */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Shift by half the width of the full set of logos */
+  }
+}
+
+.logo {
+  display: inline-block;
+  margin: 0 60px; /* Space between logos */
+  height: 50px; /* Set a uniform height */
+  /* border: 2px solid greenyellow; */
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  box-shadow: 0 4px 15px rgba(0, 0, 255, 0.6); /* Blue glow shadow */
+  cursor: pointer; /* Change cursor to pointer */
+}
+.company-logo-box{
+  display: flex;
+  flex-direction:row-reverse ;
+  /* border: 2px solid red; */
+  justify-content: center;
+
+  margin: 5px;
+}
+.company-logo-box h5{
+  margin-top: 0.7rem;
+}
