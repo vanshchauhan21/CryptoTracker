@@ -4,6 +4,10 @@ import { ArrowRight, Instagram, Github, Twitter, Linkedin } from "lucide-react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import logo from "../assets/logo.jpg";
 import "./ComparePage/SelectCoins/index";
+import CryptoConverter from "../pages/CryptoConverter";
+
+import BitcoinRainbowChart from "../pages/BitcoinRainbowChart";
+import CryptoProfitCalculator from "../pages/CryptoProfitCalculator";
 
 import GoogleTranslate from "./GoogleTranslate";
 
@@ -71,27 +75,11 @@ const Footer = () => {
           <h3 className="section-title">{t("Useful Tools")}</h3>
           <ul className="link-list">
             {[
-              { path: "/#", label: "Crypto Profit Calculator" },
-              {
-                path: "/ProfitReturnCalculator",
-                label: "Profit Return Calculator",
-              },
-
-              {
-                path: "/CryptoProfitCalculator",
-                label: "Crypto Profit Calculator",
-              },
-              {
-                path: "/ProfitReturnCalculator",
-                label: "Profit Return Calculator",
-              },
-              {
-                path: "/ImpermanentLossCalculator",
-                label: "Impermanent Loss Calculator",
-              },
-
+              { path: "/CryptoProfitCalculator", label: "Crypto Profit Calculator" },
+              { path: "/ProfitReturnCalculator", label: "Profit Return Calculator" },
+              { path: "/ImpermanentLossCalculator", label: "Impermanent Loss Calculator" },
               { path: "/CryptoConverter", label: "Crypto Convertor" },
-              { path: "/#", label: "Bit coint Rainbow Chart" },
+              { path: "/BitcoinRainbowChart", label: "Bit coint Rainbow Chart" },
               { path: "/#", label: "24h Cryptocurrency Market" },
             ].map(({ path, label }) => (
               <li key={label}>
@@ -188,30 +176,28 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        {/*...................3 Newsletter Section................. */}
-        <div className="footer-section">
-          <h3 className="section-title">{t("newsletter")}</h3>
-          <p className="newsletter-description">
-            {t("newsletter_description")}
-          </p>
-          <form onSubmit={handleSubscription}>
-            <div className="input-group">
-              <input
-                type="email"
-                value={email}
-                onChange={handleEmailChange}
-                placeholder={t("enter_email")}
-                className="newsletter-input"
-                required
-                spellCheck="false"
-              />
-              <button type="submit" className="submit-button">
-                {t("subscribe")} <ArrowRight size={16} />
-              </button>
-            </div>
-            {message && <p className="subscription-message">{message}</p>}
-          </form>
-        </div>
+      {/*...................3 Newsletter Section................. */}
+      <div className="footer-section">
+        <h3 className="section-title">{t("newsletter")}</h3>
+        <p className="newsletter-description">{t("newsletter_description")}</p>
+        <form onSubmit={handleSubscription}>
+          <div className="input-group">
+            <input
+              type="email"
+              value={email}
+              onChange={handleEmailChange}
+              placeholder={t("enter_email")}
+              className="newsletter-input"
+              required
+              spellCheck="false"
+            />
+            <button type="submit" className="submit-button">
+              {t("subscribe")} <ArrowRight size={16} />
+            </button>
+          </div>
+          {message && <p className="subscription-message">{message}</p>}
+        </form>
+      </div>
       </div>
 
       <hr></hr>
