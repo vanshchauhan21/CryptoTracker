@@ -46,6 +46,7 @@ const GoogleTranslate = () => {
         });
       }
     };
+    
     loadGoogleTranslateScript();
 
     if (window.google && window.google.translate) {
@@ -64,25 +65,34 @@ const GoogleTranslate = () => {
     >
       <style jsx>
         {`
-        #google_element {
+          #google_element {
             padding-top: 20px; 
           }
+
           .goog-te-combo {
             display: inline-block;
-            background-color: white; /* White background */
-            border: 3px solid blue;
-            border-radius: 0.5rem; /* Slightly more rounded */
-            padding: 0.5rem 1rem; /* Tailwind: p-2 */
-            font-size: 0.875rem; /* Tailwind: text-sm */
-            transition: all 0.3s ease; /* Smooth transition */
+            background: rgba(255, 255, 255, 0.15); 
+            border: 3px solid rgba(255, 255, 255, 0.3); 
+            border-radius: 12px; 
+            padding: 0.5rem 1rem; 
+            font-size: 0.875rem; 
+            transition: all 0.3s ease; 
             outline: none;
-            color: black; /* Black text */
-            font-weight: 500; /* Tailwind: font-medium */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Slight shadow */
+            color: white; 
+            font-weight: 500; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
           }
 
           .goog-te-combo:hover {
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.7); /* Stronger shadow on hover */
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); 
+          }
+
+          .goog-te-combo:focus {
+            color: black; 
+          }
+
+          .goog-te-combo option {
+            color: black; 
           }
 
           .goog-logo-link {
@@ -98,7 +108,7 @@ const GoogleTranslate = () => {
           }
 
           .goog-te-gadget .goog-te-combo {
-            color: blue;
+            color: white; 
           }
 
           #google_translate_element
@@ -111,8 +121,8 @@ const GoogleTranslate = () => {
           #google_translate_element
             .goog-te-gadget-simple
             .goog-te-menu-value:before {
-            content: "Translate"; /* Change the default text */
-            color: blue;
+            content: "Translate"; 
+            color: white; 
           }
 
           .goog-te-banner-frame {
@@ -122,9 +132,9 @@ const GoogleTranslate = () => {
           .goog-te-menu-frame {
             max-height: 400px !important;
             overflow-y: auto !important;
-            background-color: white; /* White background for dropdown */
-            border: 1px solid blue;
-            border-radius: 0.5rem; /* Slightly more rounded */
+            background: rgba(255, 255, 255, 0.15); 
+            border: 1px solid rgba(255, 255, 255, 0 .3); 
+            border-radius: 12px ; 
           }
 
           /* Hide the banner frame */
@@ -138,6 +148,7 @@ const GoogleTranslate = () => {
             border-style: none;
             box-shadow: none;
           }
+          
           body {
             position: relative;
             top: 0 !important;
