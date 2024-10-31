@@ -25,9 +25,8 @@
 
 .logo {
   display: inline-block;
-  margin: 0 60px; /* Space between logos */
-  height: 50px; /* Set a uniform height */
-  /* border: 2px solid greenyellow; */
+  height: 50px; 
+
 }
 
 .logo:hover {
