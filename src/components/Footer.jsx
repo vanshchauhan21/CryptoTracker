@@ -5,7 +5,6 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import logo from "../assets/logo.jpg";
 import "./ComparePage/SelectCoins/index";
 import CryptoConverter from "../pages/CryptoConverter";
-import BitcoinRainbowChart from "../pages/BitcoinRainbowChart";
 import GoogleTranslate from "./GoogleTranslate";
 
 const Footer = () => {
@@ -76,10 +75,7 @@ const Footer = () => {
               { path: "/ProfitReturnCalculator", label: "Profit Return Calculator" },
               { path: "/#", label: "Impermanent Loss Calculator" },
               { path: "/CryptoConverter", label: "Crypto Convertor" },
-              {
-                path: "/BitcoinRainbowChart",
-                label: "Bit coin Rainbow Chart",
-              },
+              { path: "/#", label: "Bit coint Rainbow Chart" },
               { path: "/#", label: "24h Cryptocurrency Market" },
             ].map(({ path, label }) => (
               <li key={label}>
@@ -151,6 +147,7 @@ const Footer = () => {
             <h2 className="brand-name">{t("crypto_tracker")}</h2>
           </div>
           <p className="brand-description">{t("track_crypto_info")}</p>
+          <GoogleTranslate />
         </div>
 
         {/* Connect Section */}
@@ -175,11 +172,8 @@ const Footer = () => {
             ))}
           </div>
         </div>
-      </div>
-
-      <hr></hr>
       {/*...................3 Newsletter Section................. */}
-      <div className="footer-section newsletter-section">
+      <div className="footer-section">
         <h3 className="section-title">{t("newsletter")}</h3>
         <p className="newsletter-description">{t("newsletter_description")}</p>
         <form onSubmit={handleSubscription}>
@@ -200,13 +194,9 @@ const Footer = () => {
           {message && <p className="subscription-message">{message}</p>}
         </form>
       </div>
-
-      <div
-        className="translate relative z-50 flex items-center"
-        style={{ marginLeft: "16px", top: "-20px" }}
-      >
-        <GoogleTranslate />
       </div>
+
+      <hr></hr>
       <div
         className="flex"
         style={{
@@ -218,6 +208,8 @@ const Footer = () => {
           marginBottom: "0.5rem",
           fontSize: "0.9rem",
           color: "#ffffff",
+          paddingTop: "2rem",
+          paddingBottom: "0.5rem",
         }}
       >
         <text>© 2024 CryptoTracker. All rights reserved.</text>
