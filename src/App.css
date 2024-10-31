@@ -29,6 +29,7 @@ display: flex;
 /* border:2px solid greenyellow; */
 justify-content: center;
 gap: 10rem;
+display: flex;
 }
 
 .footer-content-wrapper {
@@ -322,6 +323,11 @@ padding: 2rem;
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+.footer-container {
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
 .footer-content-wrapper {
   flex-direction: column;
   gap: 3rem;
@@ -423,6 +429,7 @@ padding: 2rem;
 @media (max-width: 480px) {
 .footer-container {
   padding: 0 1rem;
+  justify-content: start;
 }
 
 
