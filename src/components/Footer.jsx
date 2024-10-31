@@ -74,7 +74,7 @@ const Footer = () => {
             {[
               { path: "/#", label: "Crypto Profit Calculator" },
               { path: "/ProfitReturnCalculator", label: "Profit Return Calculator" },
-              { path: "/#", label: "Impermanent Loss Calculator" },
+              { path: "/ImpermanentLossCalculator", label: "Impermanent Loss Calculator" },
               { path: "/CryptoConverter", label: "Crypto Convertor" },
               {
                 path: "/BitcoinRainbowChart",

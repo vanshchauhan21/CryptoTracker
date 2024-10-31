@@ -36,6 +36,7 @@ import CookiesPolicy from "./pages/CookiesPolicy";
 
 import CookiePolicy from "./pages/Cookie-Policy/CookiePolicy";
 import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator";
+import ImpermanentLossCalculator from "./pages/Useful Tools/ImpermanentLossCalculator";
 
 function App() {
   const theme = createTheme({
@@ -107,10 +108,9 @@ function App() {
                 <Route path="/disclaimer" element={<Disclaimer />} />
 
                 <Route path="/ProfitReturnCalculator" element={<ProfitReturnCalculator/>} />
+                <Route path="/ImpermanentLossCalculator" element={<ImpermanentLossCalculator/>} />
 
                 <Route path="CryptoConverter" element={<CryptoConverter />} />
-
-
                 <Route path="/refund-policy" element={<RefundPolicy />} />
 
                 <Route path="/cookie-policy" element={<CookiePolicy />} />
