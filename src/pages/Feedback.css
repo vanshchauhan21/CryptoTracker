@@ -15,7 +15,9 @@
 .title {
   margin-bottom: 30px; /* Increased spacing below heading */
   font-size: 48px; /* Increased font size for the heading */
-  color: #fbfafa;
+  /* color: #fbfafa; */
+  color: #000000 !important; /* Force black color */
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5); /
 }
 
 /* Input fields styling */
@@ -123,3 +125,22 @@ textarea {
 /* .close-popup-button:hover {
     background-color: #e3e4e5;
   } */
+ 
+  .feedback-form-container h4,
+.title {
+  margin-bottom: 30px;
+  font-size: 48px;
+  color: #000000 !important;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+}
+[data-theme="dark"] .feedback-form-container h4,
+[data-theme="dark"] .title {
+  color: #000000 !important;
+}
+
+[data-theme="light"] .feedback-form-container h4,
+[data-theme="light"] .title {
+  color: #000000 !important;
+}

@@ -108,7 +108,8 @@ const Feedback = () => {
       <style>{styles}</style> {/* Inject the CSS animation styles */}
       <Container maxWidth="sm" sx={{ marginTop: 5, marginBottom: 5 }}> {/* Added marginBottom */}
         <StyledPaper>
-          <Typography variant="h4" align="center" gutterBottom>
+          <Typography variant="h4" align="center" gutterBottom className="title"
+  style={{ color: '#000000' }}>
             Feedback Form
           </Typography>
           <form onSubmit={handleSubmit}>
