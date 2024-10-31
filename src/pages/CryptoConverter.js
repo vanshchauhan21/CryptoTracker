@@ -11,6 +11,31 @@ const CryptoConverter = () => {
   const [convertedAmount, setConvertedAmount] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  const [activeLearnMoreIndex, setActiveLearnMoreIndex] = useState(null);
+  const toggleLearnMore = (index) => {
+    setActiveLearnMoreIndex(activeLearnMoreIndex === index ? null : index);
+  };
+
+   // Learn More data
+   const learnMoreData = [
+    {
+      title: "What is a Cryptocurrency Converter?",
+      content: "A cryptocurrency converter is a tool that helps users calculate the value of one cryptocurrency in terms of another cryptocurrency or fiat currency (like USD, EUR, etc.). It uses real-time market rates to provide accurate conversion values, helping traders and investors make informed decisions."
+    },
+    {
+      title: "How accurate are the conversion rates?",
+      content: "Our conversion rates are pulled in real-time from reliable cryptocurrency data providers through the CoinGecko API. While we strive for maximum accuracy, cryptocurrency prices can be volatile and may vary slightly across different exchanges. The rates are typically updated every few minutes to ensure accuracy."
+    },
+    {
+      title: "What currencies can I convert between?",
+      content: "Our converter supports major cryptocurrencies like Bitcoin (BTC), Ethereum (ETH), Cardano (ADA), Binance Coin (BNB), and others, as well as major fiat currencies including USD, EUR, GBP, JPY, and more. We regularly update our currency options based on market relevance and user demand."
+    },
+    {
+      title: "How often are the rates updated?",
+      content: "The conversion rates are updated in real-time through our API integration. However, due to the highly volatile nature of cryptocurrency markets, there might be slight delays of a few seconds to ensure data accuracy and system performance."
+    }
+  ];
+
   const fetchConversionRate = async () => {
     setLoading(true);
     try {
@@ -102,6 +127,23 @@ const CryptoConverter = () => {
             </p>
           )}
         </div>
+      </div>
+      <div className="learn-more-container">
+        <h2 className="learn-more-header">Learn More About Crypto Converter</h2>
+        {learnMoreData.map((item, index) => (
+          <div key={index} className="learn-more-item">
+            <h3 
+              className={`learn-more-title ${activeLearnMoreIndex === index ? 'active' : ''}`} 
+              onClick={() => toggleLearnMore(index)}
+            >
+              {item.title}
+              <span className="learn-more-arrow">{activeLearnMoreIndex === index ? '▲' : '▼'}</span>
+            </h3>
+            <p className={`learn-more-content ${activeLearnMoreIndex === index ? 'active' : ''}`}>
+              {item.content}
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   );
