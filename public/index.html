@@ -55,9 +55,29 @@
       content="CryptoTracker is the tracker you always needed. Compare different crypto currencies, look at their graphs - prices, total volumes, market cap, etc. Search from the top 100 Crypto currencies in real time."
     />
     <meta itemprop="image" content="https://i.ibb.co/x6FTCCy/logo.png" />
+    <style>
+      #back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1000;
+      }
+
+      #back-to-top:hover {
+        background-color: #0056b3;
+      }
+    </style>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
     <script>
       window.embeddedChatbotConfig = {
       chatbotId: "3lI2mj_t3OYwUvdeI0F10",
@@ -70,5 +90,21 @@
       domain="www.chatbase.co"
       defer>
       </script>
+    <script>
+      // Show or hide the button based on scroll position
+      window.onscroll = function() {
+        const button = document.getElementById('back-to-top');
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          button.style.display = 'block';
+        } else {
+          button.style.display = 'none';
+        }
+      };
+
+      // Scroll to the top of the page when the button is clicked
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    </script>
   </body>
 </html>
