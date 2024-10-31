@@ -64,6 +64,9 @@ const GoogleTranslate = () => {
     >
       <style jsx>
         {`
+        #google_element {
+            padding-top: 20px; 
+          }
           .goog-te-combo {
             display: inline-block;
             background-color: white; /* White background */
