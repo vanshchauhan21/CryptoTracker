@@ -63,3 +63,23 @@
   color: #0a0a0a;
   text-align: center;
 }
+
+/* Add these rules to your CryptoConverter.css file */
+
+/* Styles for dark mode */
+[data-theme="dark"] .input-field,
+[data-theme="dark"] .dropdown {
+  color: black;
+  background-color: #f0f0f0; /* Light background for contrast */
+}
+
+/* Ensure the placeholder text is also visible */
+[data-theme="dark"] .input-field::placeholder {
+  color: #666;
+}
+
+/* Optionally, you can style the dropdown options as well */
+[data-theme="dark"] .dropdown option {
+  background-color: #f0f0f0;
+  color: black;
+}
