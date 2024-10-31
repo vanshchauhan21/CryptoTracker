@@ -5,6 +5,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import logo from "../assets/logo.jpg";
 import "./ComparePage/SelectCoins/index";
 import CryptoConverter from "../pages/CryptoConverter";
+import BitcoinRainbowChart from "../pages/BitcoinRainbowChart";
 import GoogleTranslate from "./GoogleTranslate";
 
 const Footer = () => {
@@ -75,7 +76,10 @@ const Footer = () => {
               { path: "/ProfitReturnCalculator", label: "Profit Return Calculator" },
               { path: "/#", label: "Impermanent Loss Calculator" },
               { path: "/CryptoConverter", label: "Crypto Convertor" },
-              { path: "/#", label: "Bit coint Rainbow Chart" },
+              {
+                path: "/BitcoinRainbowChart",
+                label: "Bit coin Rainbow Chart",
+              },
               { path: "/#", label: "24h Cryptocurrency Market" },
             ].map(({ path, label }) => (
               <li key={label}>
