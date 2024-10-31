@@ -23,7 +23,7 @@ const ProfitReturnCalculator = () => {
           type="number"
           value={investment}
           onChange={(e) => setInvestment(e.target.value)}
-          className="w-full p-2 border rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full p-2 border rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400 text-black bg-white"
         />
       </div>
       <div className="w-full">
@@ -32,7 +32,7 @@ const ProfitReturnCalculator = () => {
           type="number"
           value={interestRate}
           onChange={(e) => setInterestRate(e.target.value)}
-          className="w-full p-2 border rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full p-2 border rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400 text-black bg-white"
         />
       </div>
       <div className="w-full">
@@ -41,7 +41,7 @@ const ProfitReturnCalculator = () => {
           type="number"
           value={duration}
           onChange={(e) => setDuration(e.target.value)}
-          className="w-full p-2 border rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full p-2 border rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400 text-black bg-white"
         />
       </div>
       <button
