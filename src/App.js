@@ -26,6 +26,7 @@ import Contributors from "./pages/Contributors";
 import PrivacyPolicy from "./pages/Privacy-Policy/PrivacyPolicy";
 import Pricing from "./pages/Pricing/Pricing";
 import Learn from "./components/Learn";
+import CryptoProfitCalculator from "./pages/CryptoProfitCalculator";
 
 import Disclaimer from "./pages/Disclaimer/Disclaimer";
 
@@ -36,6 +37,7 @@ import CookiesPolicy from "./pages/CookiesPolicy";
 
 import CookiePolicy from "./pages/Cookie-Policy/CookiePolicy";
 import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator";
+import ImpermanentLossCalculator from "./pages/Useful Tools/ImpermanentLossCalculator";
 
 function App() {
   const theme = createTheme({
@@ -105,11 +107,23 @@ function App() {
                 <Route path="/Contributors" element={<Contributors />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/disclaimer" element={<Disclaimer />} />
+                <Route
+                  path="CryptoProfitCalculator"
+                  element={<CryptoProfitCalculator />}
+                />
+
 
                 <Route path="/ProfitReturnCalculator" element={<ProfitReturnCalculator/>} />
+                <Route path="/ImpermanentLossCalculator" element={<ImpermanentLossCalculator/>} />
 
                 <Route path="CryptoConverter" element={<CryptoConverter />} />
 
+                <Route
+                  path="/ProfitReturnCalculator"
+                  element={<ProfitReturnCalculator />}
+                />
+
+                <Route path="CryptoConverter" element={<CryptoConverter />} />
 
                 <Route path="/refund-policy" element={<RefundPolicy />} />
 
