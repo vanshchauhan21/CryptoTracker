@@ -1,6 +1,11 @@
 [data-theme="dark"] body {
     background: #121212;
 }
+:root {
+  --white: #fff;
+  --black: #111;
+  --blue: #3a80e9;
+}
 
 .footer {
   background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
@@ -461,3 +466,12 @@ padding:1rem;
 
 
 
+[data-theme="dark"] {
+  --background-color: var(--black);
+  --text-color: var(--white);
+}
+
+[data-theme="light"] {
+  --background-color: var(--white);
+  --text-color: var(--black);
+}

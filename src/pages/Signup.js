@@ -37,7 +37,46 @@ export default function SignUpPage() {
       >
         <i className="fas fa-home" style={{ fontSize: "24px", color: "#333" }}></i>
       </div>
-      <SignUp />
+      <div style={{ position: "relative" }}>
+        <SignUp
+          appearance={{
+            elements: {
+              footerActionLink: {
+                display: "none",
+              },
+            },
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            bottom: "5rem",
+            width: "100%",
+            textAlign: "center",
+            fontSize: "14px",
+            color: "#333",
+          }}
+        >
+          <span>Already have an account? </span>
+          <a
+            href="/login"
+            style={{
+              color: "#3a80e9",
+              textDecoration: "none",
+              fontWeight: "bold",
+            }}
+          >
+            Sign in
+          </a>
+        </div>
+      </div>
+      <style>
+        {`
+          .cl-footerActionText {
+            display: none !important;
+          }
+        `}
+      </style>
     </div>
   );
 }
