@@ -6,6 +6,7 @@ import logo from "../assets/logo.jpg";
 import "./ComparePage/SelectCoins/index";
 import CryptoConverter from "../pages/CryptoConverter";
 import BitcoinRainbowChart from "../pages/BitcoinRainbowChart";
+import CryptoProfitCalculator from "../pages/CryptoProfitCalculator";
 import GoogleTranslate from "./GoogleTranslate";
 
 const Footer = () => {
@@ -72,8 +73,14 @@ const Footer = () => {
           <h3 className="section-title">{t("Useful Tools")}</h3>
           <ul className="link-list">
             {[
-              { path: "/#", label: "Crypto Profit Calculator" },
-              { path: "/ProfitReturnCalculator", label: "Profit Return Calculator" },
+              {
+                path: "/CryptoProfitCalculator",
+                label: "Crypto Profit Calculator",
+              },
+              {
+                path: "/ProfitReturnCalculator",
+                label: "Profit Return Calculator",
+              },
               { path: "/#", label: "Impermanent Loss Calculator" },
               { path: "/CryptoConverter", label: "Crypto Convertor" },
               {
