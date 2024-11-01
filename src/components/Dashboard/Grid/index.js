@@ -32,6 +32,8 @@ function Grid({ coin, delay }) {
             <div className="info-flex">
               <p className="coin-symbol">{coin.symbol}</p>
               <p className="coin-name">{coin.name}</p>
+         
+
             </div>
             <div
               className={`watchlist-icon ${coin.price_change_percentage_24h < 0 && "watchlist-icon-red"
@@ -84,9 +86,17 @@ function Grid({ coin, delay }) {
         </p>
         <p className="coin-name">
           Market Capital : ${coin.market_cap.toLocaleString()}
-        </p>
+      </p>
+  
+
+   
+
       </motion.div>
+    
+    
     </a>
+
+
   );
 }
 
