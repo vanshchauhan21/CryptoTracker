@@ -133,9 +133,8 @@ const Footer = () => {
           <ul className="link-list">
             {[
               { path: "/disclaimer", label: "Disclaimer" },
-              { path: "/#", label: "Term of use" },
+              { path: "/TermsOfUse", label: "Term of use" },
               { path: "/privacy-policy", label: "Privacy Policy" },
-
 
               { path: "/cookie-policy", label: "Cookie Policy" },
 
@@ -160,7 +159,10 @@ const Footer = () => {
             {[
               { path: "/#", label: "Help Center" },
               { path: "/defi-assets", label: "How to track your DeFi Assets" },
-              { path: "/profit-loss", label: "Learn about profit/loss Calculator" },
+              {
+                path: "/profit-loss",
+                label: "Learn about profit/loss Calculator",
+              },
               { path: "/#", label: "Learn about Crypto Tracker Reward" },
               { path: "/#", label: "How to Buy Crypto with Card" },
               { path: "/#", label: "How to Track NFTs on Crypto Tracker" },
@@ -200,7 +202,12 @@ const Footer = () => {
               { Icon: Linkedin, label: "LinkedIn" },
               { Icon: DiscordIcon, label: "Discord" },
             ].map(({ Icon, label }) => (
-              <a key={label} href="#" className="social-icon" aria-label={label}>
+              <a
+                key={label}
+                href="#"
+                className="social-icon"
+                aria-label={label}
+              >
                 <Icon size={20} />
               </a>
             ))}
@@ -252,12 +259,9 @@ const Footer = () => {
                 </a>
                 <span style={{ marginLeft: "8px" }}>{stars}</span>
               </div>
-
-
             </div>
           </div>
         </div>
-
 
         {/*...................3 Newsletter Section................. */}
         <div className="footer-section">
@@ -286,57 +290,57 @@ const Footer = () => {
       </div>
 
       <hr />
-<div
-  style={{
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    paddingTop: "20px",          // Add padding at the top
-    paddingBottom: "20px",
-  }}
->
-  <div
-    style={{
-      display: "flex",
-      flexDirection: "column",      // Stack image and text vertically
-      alignItems: "center",
-      justifyContent: "center",
-      backgroundColor: "#d3d3d3",
-      color: "#333",
-      padding: "10px 20px",
-      borderRadius: "8px",
-      boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
-      maxWidth: "200px",           // Set maximum width to 200px
-      textAlign: "center",
-    }}
-  >
-    <img
-      src="https://hitwebcounter.com/counter/counter.php?page=17165260&style=0006&nbdigits=5&type=page&initCount=1000"
-      alt="Visit counter"
-      style={{ border: "none", marginBottom: "8px" }} // Add margin below image
-    />
-    <span style={{ fontWeight: "bold", fontSize: "16px" }}>
-      Visitors Count
-    </span>
-  </div>
-</div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          paddingTop: "20px", // Add padding at the top
+          paddingBottom: "20px",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column", // Stack image and text vertically
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "#d3d3d3",
+            color: "#333",
+            padding: "10px 20px",
+            borderRadius: "8px",
+            boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
+            maxWidth: "200px", // Set maximum width to 200px
+            textAlign: "center",
+          }}
+        >
+          <img
+            src="https://hitwebcounter.com/counter/counter.php?page=17165260&style=0006&nbdigits=5&type=page&initCount=1000"
+            alt="Visit counter"
+            style={{ border: "none", marginBottom: "8px" }} // Add margin below image
+          />
+          <span style={{ fontWeight: "bold", fontSize: "16px" }}>
+            Visitors Count
+          </span>
+        </div>
+      </div>
 
-<div
-  className="flex"
-  style={{
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    width: "100%",
-    marginBottom: "0.5rem",
-    fontSize: "0.9rem",
-    color: "#ffffff",
-    paddingBottom: "0.5rem",
-  }}
->
-  <span>© 2024 CryptoTracker. All rights reserved.</span>
-</div>
-    </footer >
+      <div
+        className="flex"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          marginBottom: "0.5rem",
+          fontSize: "0.9rem",
+          color: "#ffffff",
+          paddingBottom: "0.5rem",
+        }}
+      >
+        <span>© 2024 CryptoTracker. All rights reserved.</span>
+      </div>
+    </footer>
   );
 };
 
