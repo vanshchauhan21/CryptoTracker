@@ -8,6 +8,7 @@ import { Link, NavLink } from "react-router-dom";
 import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 import { useTranslation } from "react-i18next";
 import MobileMenuButton from "./MobileMenuButton";
+import logo from "../../../assets/logo.jpg";
 
 function Header() {
   const { t } = useTranslation();
@@ -120,8 +121,11 @@ function Header() {
   return (
     <div className="header">
       <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
-        <h1>
-          {t("CryptoTracker")}<span style={{ color: "var(--blue)" }}>.</span>
+      <div className="nav-logo">
+        <img src={logo} alt="logo" className="logo" />
+        </div>
+        <h1 className="nav-header">
+          {t("CryptoTracker")}<span style={{ color: "var(--blue)" }}></span>
         </h1>
       </Link>
       <div className={`links ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}>
@@ -158,13 +162,13 @@ function Header() {
       <NavLink to="/dashboard">
         <Button text={t("dashboard")} />
       </NavLink>
-      
+
       {isMobile && (
         <div className="mobile-menu-button">
           <MobileMenuButton onClick={toggleMobileMenu} isOpen={mobileMenuOpen} />
         </div>
       )}
-      
+
       {!isMobile && (
         <div className="drawer-component">
           <TemporaryDrawer />
