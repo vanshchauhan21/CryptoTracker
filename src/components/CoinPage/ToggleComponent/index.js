@@ -11,9 +11,11 @@ export default function ToggleComponents({ priceType, handlePriceTypeChange }) {
     <div
       style={{
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "left",
         alignItems: "center",
-        marginBottom: "1.5rem",
+        marginBottom: "1rem",
+        marginLeft: "1rem",
+        marginTop: "1rem",
       }}
     >
       <ToggleButtonGroup
