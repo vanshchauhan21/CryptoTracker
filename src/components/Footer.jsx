@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next"; // Import hook for translations
 import { ArrowRight, Instagram, Github, Twitter, Linkedin } from "lucide-react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -15,7 +15,8 @@ const Footer = () => {
   const { t } = useTranslation(); // Destructure translation function
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-
+  const [stars, setStars] = useState(0);
+  const [visits, setVisits] = useState(0);
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
@@ -29,6 +30,29 @@ const Footer = () => {
       setMessage(t("please_enter_email")); // Use localized error message
     }
   };
+  useEffect(() => {
+    const fetchStars = async () => {
+      try {
+        const response = await fetch(
+          "https://api.github.com/repos/vanshchauhan21/CryptoTracker"
+        );
+        const data = await response.json();
+        setStars(data.stargazers_count);
+      } catch (error) {
+        console.error("Error fetching GitHub stars:", error);
+      }
+    };
+    fetchStars();
+  }, []);
+
+  useEffect(() => {
+    const storedVisits = Number(localStorage.getItem("visitCounter")) || 0;
+    setVisits(storedVisits + 1);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("visitCounter", visits);
+  }, [visits]);
 
   const DiscordIcon = ({ size = 20 }) => (
     <i
@@ -112,7 +136,7 @@ const Footer = () => {
               { path: "/#", label: "Term of use" },
               { path: "/privacy-policy", label: "Privacy Policy" },
 
-       
+
               { path: "/cookie-policy", label: "Cookie Policy" },
 
               { path: "/terms-conditions", label: "terms_conditions" },
@@ -176,17 +200,65 @@ const Footer = () => {
               { Icon: Linkedin, label: "LinkedIn" },
               { Icon: DiscordIcon, label: "Discord" },
             ].map(({ Icon, label }) => (
-              <a
-                key={label}
-                href="#"
-                className="social-icon"
-                aria-label={label}
-              >
+              <a key={label} href="#" className="social-icon" aria-label={label}>
                 <Icon size={20} />
               </a>
             ))}
           </div>
+
+          {/* GitHub Stars and Visitor Counter */}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              marginTop: "20px",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                width: "100%",
+                justifyContent: "space-between",
+                gap: "20px",
+                maxWidth: "400px",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  backgroundColor: "#d3d3d3", // Light gray background
+                  color: "#333",
+                  padding: "10px",
+                  borderRadius: "8px",
+                  width: "100%", // Match parent width (150px)
+                  height: "auto",
+                }}
+              >
+                <i className="fab fa-github" style={{ marginRight: "8px" }}></i>
+                <a
+                  href="https://github.com/vanshchauhan21/CryptoTracker"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    color: "#333",
+                    textDecoration: "none",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Star Us ⭐
+                </a>
+                <span style={{ marginLeft: "8px" }}>{stars}</span>
+              </div>
+
+
+            </div>
+          </div>
         </div>
+
+
         {/*...................3 Newsletter Section................. */}
         <div className="footer-section">
           <h3 className="section-title">{t("newsletter")}</h3>
@@ -213,25 +285,58 @@ const Footer = () => {
         </div>
       </div>
 
-      <hr></hr>
-      <div
-        className="flex"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          width: "100%",
-          marginTop: "1rem",
-          marginBottom: "0.5rem",
-          fontSize: "0.9rem",
-          color: "#ffffff",
-          paddingTop: "2rem",
-          paddingBottom: "0.5rem",
-        }}
-      >
-        <text>© 2024 CryptoTracker. All rights reserved.</text>
-      </div>
-    </footer>
+      <hr />
+<div
+  style={{
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingTop: "20px",          // Add padding at the top
+    paddingBottom: "20px",
+  }}
+>
+  <div
+    style={{
+      display: "flex",
+      flexDirection: "column",      // Stack image and text vertically
+      alignItems: "center",
+      justifyContent: "center",
+      backgroundColor: "#d3d3d3",
+      color: "#333",
+      padding: "10px 20px",
+      borderRadius: "8px",
+      boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
+      maxWidth: "200px",           // Set maximum width to 200px
+      textAlign: "center",
+    }}
+  >
+    <img
+      src="https://hitwebcounter.com/counter/counter.php?page=17165260&style=0006&nbdigits=5&type=page&initCount=1000"
+      alt="Visit counter"
+      style={{ border: "none", marginBottom: "8px" }} // Add margin below image
+    />
+    <span style={{ fontWeight: "bold", fontSize: "16px" }}>
+      Visitors Count
+    </span>
+  </div>
+</div>
+
+<div
+  className="flex"
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "100%",
+    marginBottom: "0.5rem",
+    fontSize: "0.9rem",
+    color: "#ffffff",
+    paddingBottom: "0.5rem",
+  }}
+>
+  <span>© 2024 CryptoTracker. All rights reserved.</span>
+</div>
+    </footer >
   );
 };
 
