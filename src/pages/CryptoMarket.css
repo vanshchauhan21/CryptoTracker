@@ -1,0 +1,51 @@
+.crypto-market {
+  padding: 1rem;
+  background-color: #02026c;
+  color: #eaeaea;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.crypto-market h2 {
+  color: #f7f3ec;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.crypto-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.crypto-table th,
+.crypto-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #333;
+}
+
+.crypto-table th {
+  font-weight: bold;
+  color: #f6b854;
+}
+
+.crypto-table td {
+  font-size: 1rem;
+}
+
+.coin-image {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+}
+
+.positive {
+  color: #86f689; /* Green color for positive change */
+}
+
+.negative {
+  color: #f61313; /* Red color for negative change */
+}
