@@ -160,7 +160,7 @@ const Footer = () => {
             {[
               { path: "/#", label: "Help Center" },
               { path: "/defi-assets", label: "How to track your DeFi Assets" },
-              { path: "/#", label: "Learn about profit/loss Calculator" },
+              { path: "/profit-loss", label: "Learn about profit/loss Calculator" },
               { path: "/#", label: "Learn about Crypto Tracker Reward" },
               { path: "/#", label: "How to Buy Crypto with Card" },
               { path: "/#", label: "How to Track NFTs on Crypto Tracker" },
