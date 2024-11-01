@@ -1,0 +1,45 @@
+.info-buy-char {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    /* Space between the two sections */
+    border: 2px solid #333;
+    /* Border around the parent container */
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.line-chart,
+.buy-coin-box {
+    width: 28%;
+    /* Adjusted to account for the gap */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.line-chart {
+    width: 72%;
+    /* Adjusted to account for the gap */
+    border-radius: 3rem;
+    /* border: 2px solid #3498db; Blue border for the line chart section */
+    background-color: #f0f8ff;
+    /* Light blue background */
+}
+
+.buy-coin-box {
+    /* border: 2px solid #e74c3c; Red border for the buy coin box section */
+    background-color: #fff0f0;
+    /* Light red background */
+}
+
+/* Responsive layout: stack vertically on small screens */
+@media (max-width: 768px) {
+    .info-buy-char {
+        flex-direction: column;
+    }
+
+    .line-chart,
+    .buy-coin-box {
+        width: 100%;
+    }
+}

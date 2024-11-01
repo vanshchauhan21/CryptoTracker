@@ -1,0 +1,51 @@
+.buy-crypto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+   background: linear-gradient(135deg, #0d6efd, #6610f2);
+
+    /* background-color: rgba(61, 59, 59, 0.575); */
+     color: #fff;
+    min-height: 100vh;
+    text-align: center;
+    border-radius: 3rem;
+  }
+  
+  .buy-crypto-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .buy-crypto-description {
+    font-size: 1.25rem;
+    max-width: 500px;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #f8f9fa;
+  }
+  
+  .buy-crypto-button {
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #0d6efd;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .buy-crypto-button:hover {
+    background-color: #6610f2;
+    transform: scale(1.05);
+  }
+  
+  .buy-crypto-button:active {
+    transform: scale(1);
+  }
+  
