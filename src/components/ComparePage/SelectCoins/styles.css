@@ -1,9 +1,9 @@
 .select-coins-div {
   display: flex;
-  justify-content: flex-start;
+  justify-content: right;
   align-items: center;
   gap: 1.5rem;
-  margin: 1.5rem 3rem;
+  margin: 1.5rem 1rem;
   flex-wrap: wrap;
 }
 
