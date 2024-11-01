@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
-import Header from "../components/Common/Header";
+import Header from "../../components/Common/Header";
 import axios from "axios";
 import {
   Chart as ChartJS,
