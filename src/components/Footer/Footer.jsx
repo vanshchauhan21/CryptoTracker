@@ -118,7 +118,7 @@ const Footer = () => {
                 path: "/BitcoinRainbowChart",
                 label: "Bit coint Rainbow Chart",
               },
-              { path: "/CryptoMarket", label: "24h Cryptocurrency Market" },
+              { path: "/CurrecyMarket24h", label: "24h Cryptocurrency Market" },
             ].map(({ path, label }) => (
               <li key={label}>
                 <a href={path}>
