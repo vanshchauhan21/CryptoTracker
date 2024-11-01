@@ -29,7 +29,7 @@ function SelectCoins({
   return (
     <div className="select-coins-div">
       <div className="select-flex">
-        <p style={{ color: "var(--text-color)"}}>Crypto 1</p>
+        <p style={{ color: "var(--text-color)"}}>Compare</p>
         <Select
           value={crypto1}
           onChange={(e) => onCoinChange(e, false)}
@@ -45,7 +45,7 @@ function SelectCoins({
         </Select>
       </div>
       <div className="select-flex">
-        <p style={{ color: "var(--text-color)"}}>Crypto 2</p>
+        <p style={{ color: "var(--text-color)"}}>against</p>
         <Select
           value={crypto2}
           onChange={(e) => onCoinChange(e, true)}
@@ -60,11 +60,14 @@ function SelectCoins({
             ))}
         </Select>
       </div>
+      <div className="select-flex">
+        <p style={{ color: "var(--text-color)"}}>in last</p>
       <SelectDays
         days={days}
         handleDaysChange={handleDaysChange}
         noPTag={true}
       />
+      </div>
     </div>
   );
 }
