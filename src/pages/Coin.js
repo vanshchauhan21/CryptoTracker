@@ -67,15 +67,29 @@ function Coin() {
       <Header />
       {!error && !loading && coin.id ? (
         <>
-          <div className="grey-wrapper">
+          <div
+            className="grey-wrapper"
+            style={{
+              paddingTop: "20px", 
+            }}
+          >
             <List coin={coin} delay={0.5} />
           </div>
           <div className="grey-wrapper">
-            <SelectDays handleDaysChange={handleDaysChange} days={days} />
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+              margin: "10px",
+            }}
+          >
             <ToggleComponents
               priceType={priceType}
               handlePriceTypeChange={handlePriceTypeChange}
             />
+            <SelectDays handleDaysChange={handleDaysChange} days={days} />
+            </div>
             <LineChart chartData={chartData} />
           </div>
           <Info title={coin.name} desc={coin.desc} />
