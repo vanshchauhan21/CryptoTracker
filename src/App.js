@@ -22,6 +22,7 @@ import Login from "./pages/Login";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 import Contributors from "./pages/Contributors";
+import TermsOfUse from "./pages/TermsOfUse";
 
 import PrivacyPolicy from "./pages/Privacy-Policy/PrivacyPolicy";
 import Pricing from "./pages/Pricing/Pricing";
@@ -111,6 +112,7 @@ function App() {
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/disclaimer" element={<Disclaimer />} />
                 <Route path="/profit-loss" element={<ProfitLoss />} />
+                <Route path="/TermsOfUse" element={<TermsOfUse />} />
 
                 <Route path="/defi-assets" element={<DefiAssets />} />
                 <Route path="/CryptoMarket" element={<CryptoMarket />} />
