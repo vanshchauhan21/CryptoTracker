@@ -16,7 +16,7 @@ import Feedback from "./pages/Feedback";
 import NotFoundPage from "./components/PageNotFound/PageNotFound";
 import GoogleTranslate from "./components/GoogleTranslate";
 import CryptoConverter from "./pages/CryptoConverter";
-import BitcoinRainbowChart from "./pages/BitcoinRainbowChart";
+import BitcoinRainbowChart from "./pages/BitCoinRainBow/BitcoinRainbowChart";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import { I18nextProvider } from "react-i18next";
@@ -39,6 +39,7 @@ import CookiesPolicy from "./pages/CookiesPolicy";
 import CookiePolicy from "./pages/Cookie-Policy/CookiePolicy";
 import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator";
 import ImpermanentLossCalculator from "./pages/ImpermanentLossCalculator";
+import DefiAssets from "./pages/DefiAssets/DefiAssets";
 
 function App() {
   const theme = createTheme({
@@ -108,7 +109,7 @@ function App() {
                 <Route path="/Contributors" element={<Contributors />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/disclaimer" element={<Disclaimer />} />
-
+                <Route path="/defi-assets" element={<DefiAssets />} />
                 <Route path="/CryptoMarket" element={<CryptoMarket />} />
                 <Route
                   path="CryptoProfitCalculator"

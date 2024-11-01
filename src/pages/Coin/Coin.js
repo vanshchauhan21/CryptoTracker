@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Info from "../components/CoinPage/Info";
-import LineChart from "../components/CoinPage/LineChart";
-import SelectDays from "../components/CoinPage/SelectDays";
-import ToggleComponents from "../components/CoinPage/ToggleComponent";
-import Button from "../components/Common/Button";
-import Header from "../components/Common/Header";
-import Loader from "../components/Common/Loader";
-import List from "../components/Dashboard/List";
-import { getCoinData } from "../functions/getCoinData";
-import { getPrices } from "../functions/getPrices";
-import { settingChartData } from "../functions/settingChartData";
-import { settingCoinObject } from "../functions/settingCoinObject";
-
+import Info from "../../components/CoinPage/Info";
+import LineChart from "../../components/CoinPage/LineChart";
+import SelectDays from "../../components/CoinPage/SelectDays";
+import ToggleComponents from "../../components/CoinPage/ToggleComponent";
+import Button from "../../components/Common/Button";
+import Header from "../../components/Common/Header";
+import Loader from "../../components/Common/Loader";
+import List from "../../components/Dashboard/List";
+import { getCoinData } from "../../functions/getCoinData";
+import { getPrices } from "../../functions/getPrices";
+import { settingChartData } from "../../functions/settingChartData";
+import { settingCoinObject } from "../../functions/settingCoinObject";
+import "./Coin.css";
+import BuyCryptoCoin from "../../components/CoinPage/BuyCryptoCoin/BuyCryptoCoin";
 function Coin() {
   const { id } = useParams();
   const [error, setError] = useState(false);
@@ -67,32 +68,27 @@ function Coin() {
       <Header />
       {!error && !loading && coin.id ? (
         <>
-          <div
-            className="grey-wrapper"
-            style={{
-              paddingTop: "20px", 
-            }}
-          >
+          <div className="grey-wrapper">
             <List coin={coin} delay={0.5} />
           </div>
-          <div className="grey-wrapper">
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "space-between",
-              margin: "10px",
-            }}
-          >
-            <ToggleComponents
-              priceType={priceType}
-              handlePriceTypeChange={handlePriceTypeChange}
-            />
-            <SelectDays handleDaysChange={handleDaysChange} days={days} />
+          <SelectDays handleDaysChange={handleDaysChange} days={days} />
+          <ToggleComponents
+            priceType={priceType}
+            handlePriceTypeChange={handlePriceTypeChange}
+          />
+          <div className="info-buy-char">
+            <div className="line-chart">
+              <LineChart chartData={chartData} />
+
             </div>
-            <LineChart chartData={chartData} />
+            <div className="buy-coin-box">
+              <BuyCryptoCoin />
+
+            </div>
           </div>
+
           <Info title={coin.name} desc={coin.desc} />
+
         </>
       ) : error ? (
         <div>

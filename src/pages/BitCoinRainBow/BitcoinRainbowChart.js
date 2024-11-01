@@ -1,6 +1,7 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
-import Header from "../components/Common/Header";
+import Header from "../../components/Common/Header";
+import "./BitcoinRainbowChart.css"
 import {
   Chart as ChartJS,
   LineElement,
@@ -11,6 +12,8 @@ import {
   Legend,
   LogarithmicScale,
 } from "chart.js";
+import BuyBitcoin from "../../components/Common/BuyBitCoin/BuyBitcoin";
+import BuyBitCoin from "../../components/Common/BuyBitCoin/BuyBitcoin";
 
 ChartJS.register(
   LineElement,
@@ -104,6 +107,47 @@ const BitcoinRainbowChart = () => {
         </h2>
         <Line data={data} options={options} />
       </div>
+
+
+
+
+      <div className="rainbow-chart-explanation">
+        <h2>How Rainbow Chart Works</h2>
+        <p>
+          Originally featured on
+          <a
+            href="https://www.blockchaincenter.net/en/bitcoin-rainbow-chart/"
+            rel="noopener"
+            target="_blank"
+            nofollow=""
+            noreferrer=""
+          >
+            Blockchain center
+          </a>,
+          the Bitcoin Rainbow Chart overlays color bands on top of the
+          <a
+            href="https://bitcointalk.org/index.php?topic=831547.0"
+            rel="noopener"
+            target="_blank"
+            nofollow=""
+            noreferrer=""
+          >
+            logarithmic regression
+          </a>
+          curve in an attempt to highlight market sentiment at each rainbow color stage as price moves through it.
+          Therefore highlighting potential opportunities to buy or sell.
+        </p>
+      </div>
+
+<div>
+<BuyBitCoin/>
+
+</div>
+
+
+
+
+
     </div>
   );
 };
