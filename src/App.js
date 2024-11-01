@@ -29,6 +29,7 @@ import Learn from "./components/Learn";
 import CryptoProfitCalculator from "./pages/CryptoProfitCalculator";
 
 import Disclaimer from "./pages/Disclaimer/Disclaimer";
+import CryptoMarket from "./pages/CryptoMarket";
 
 import ProgressBar from "./components/Common/ProgressBar/ProgressBar";
 import RefundPolicy from "./pages/Refund Policy/RefundPolicy";
@@ -107,6 +108,8 @@ function App() {
                 <Route path="/Contributors" element={<Contributors />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/disclaimer" element={<Disclaimer />} />
+
+                <Route path="/CryptoMarket" element={<CryptoMarket />} />
                 <Route
                   path="CryptoProfitCalculator"
                   element={<CryptoProfitCalculator />}
