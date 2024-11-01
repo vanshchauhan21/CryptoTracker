@@ -6,7 +6,7 @@ import logo from "../assets/logo.jpg";
 import "./ComparePage/SelectCoins/index";
 import CryptoConverter from "../pages/CryptoConverter";
 
-import BitcoinRainbowChart from "../pages/BitcoinRainbowChart";
+import BitcoinRainbowChart from "../pages/BitCoinRainBow/BitcoinRainbowChart";
 import CryptoProfitCalculator from "../pages/CryptoProfitCalculator";
 
 import GoogleTranslate from "./GoogleTranslate";
@@ -112,8 +112,7 @@ const Footer = () => {
               { path: "/#", label: "Term of use" },
               { path: "/privacy-policy", label: "Privacy Policy" },
 
-              { path: "/cookies-policy", label: "Cookie Policy" },
-
+       
               { path: "/cookie-policy", label: "Cookie Policy" },
 
               { path: "/terms-conditions", label: "terms_conditions" },
@@ -136,7 +135,7 @@ const Footer = () => {
           <ul className="link-list">
             {[
               { path: "/#", label: "Help Center" },
-              { path: "/#", label: "How to track your DeFi Assets" },
+              { path: "/defi-assets", label: "How to track your DeFi Assets" },
               { path: "/#", label: "Learn about profit/loss Calculator" },
               { path: "/#", label: "Learn about Crypto Tracker Reward" },
               { path: "/#", label: "How to Buy Crypto with Card" },

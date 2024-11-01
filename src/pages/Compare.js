@@ -96,7 +96,7 @@ function Compare() {
     setPriceType(newPriceType);
     const prices1 = await getPrices(crypto1, days, newPriceType);
     const prices2 = await getPrices(crypto2, days, newPriceType);
-    settingChartData(setChartData, prices1, prices2);
+    settingChartData(setChartData , prices1, prices2);
     setLoading(false);
   };
 
@@ -107,27 +107,39 @@ function Compare() {
         <Loader />
       ) : (
         <>
-          <SelectCoins
-            allCoins={allCoins}
-            crypto1={crypto1}
-            crypto2={crypto2}
-            onCoinChange={onCoinChange}
-            days={days}
-            handleDaysChange={handleDaysChange}
-          />
-          <div className="grey-wrapper">
+          <div
+            style={{
+              paddingTop: "20px", 
+            }}
+            className="grey-wrapper"
+          >
             <List coin={coin1Data} />
           </div>
           <div className="grey-wrapper">
             <List coin={coin2Data} />
           </div>
-          <div className="grey-wrapper">
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+              margin: "1rem",
+            }}
+          >
             <ToggleComponents
               priceType={priceType}
               handlePriceTypeChange={handlePriceTypeChange}
             />
-            <LineChart chartData={chartData} multiAxis={true} />
+            <SelectCoins
+              allCoins={allCoins}
+              crypto1={crypto1}
+              crypto2={crypto2}
+              onCoinChange={onCoinChange}
+              days={days}
+              handleDaysChange={handleDaysChange}
+            />
           </div>
+          <LineChart chartData={chartData} multiAxis={true} />
           <Info title={coin1Data.name} desc={coin1Data.desc} />
           <Info title={coin2Data.name} desc={coin2Data.desc} />
         </>
