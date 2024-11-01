@@ -14,7 +14,7 @@ const BuyBitCoin = () => {
                         <div className="heading-content">
                             <h2 className="heading-text-title">Buy Bitcoin, own the future</h2>
                             <p>
-                                CoinStats makes it simple and safe to buy, sell, and hold Bitcoin. Own<hr /> Bitcoin in just a few minutes.
+                                CoinStats makes it simple and safe to buy, sell, and hold Bitcoin. Own<br /> Bitcoin in just a few minutes.
                             </p>
                         </div>
                     </div>
