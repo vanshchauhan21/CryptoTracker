@@ -16,7 +16,7 @@ import Feedback from "./pages/Feedback";
 import NotFoundPage from "./components/PageNotFound/PageNotFound";
 import GoogleTranslate from "./components/GoogleTranslate";
 import CryptoConverter from "./pages/CryptoConverter";
-import BitcoinRainbowChart from "./pages/BitcoinRainbowChart";
+import BitcoinRainbowChart from "./pages/BitCoinRainBow/BitcoinRainbowChart";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import { I18nextProvider } from "react-i18next";
