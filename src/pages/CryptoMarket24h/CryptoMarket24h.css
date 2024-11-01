@@ -1,0 +1,48 @@
+.container {
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
+  }
+
+  .title {
+    color: blue;
+    font-size: 2.6rem;
+    margin-bottom: 30px;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .table th,
+  .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  .table th {
+    text-align: left;
+  }
+
+  .table td {
+    text-align: right;
+  }
+
+  .table td:first-child,
+  .table td:nth-child(2) {
+    text-align: left;
+  }
+
+  .image {
+    width: 24px;
+    margin-right: 8px;
+  }
+
+  .change-positive {
+    color: green;
+  }
+
+  .change-negative {
+    color: red;
+  }
