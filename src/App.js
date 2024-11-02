@@ -10,19 +10,22 @@ import Faq from "./pages/Faq";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useRef } from "react";
-import Footer from "./components/Footer";
+
 import TermCondition from "./pages/TermCondition";
 import Feedback from "./pages/Feedback";
 import NotFoundPage from "./components/PageNotFound/PageNotFound";
 import GoogleTranslate from "./components/GoogleTranslate";
 import CryptoConverter from "./pages/CryptoConverter";
 import BitcoinRainbowChart from "./pages/BitCoinRainBow/BitcoinRainbowChart";
+import EthereumRainbowChart from "./pages/EthereumRainbow/EthereumRainbowChart";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 import Contributors from "./pages/Contributors";
 import TermsOfUse from "./pages/TermsOfUse";
+
+import CurrecyMarket24h from "./pages/CryptoMarket24h/CryptoMarket24h";
 
 import PrivacyPolicy from "./pages/Privacy-Policy/PrivacyPolicy";
 import Pricing from "./pages/Pricing/Pricing";
@@ -42,6 +45,8 @@ import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator"
 import ImpermanentLossCalculator from "./pages/ImpermanentLossCalculator";
 import DefiAssets from "./pages/DefiAssets/DefiAssets";
 import ProfitLoss from "./pages/ProfitLoss/ProfitLoss";
+import Footer from "./components/Footer/Footer";
+import NFTShowcase from "./pages/NFTShowcase/NFTShowcase";
 
 function App() {
   const theme = createTheme({
@@ -109,6 +114,8 @@ function App() {
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/cookies-policy" element={<CookiesPolicy />} />
                 <Route path="/Contributors" element={<Contributors />} />
+                <Route path="/nft" element={<NFTShowcase />} />
+
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/disclaimer" element={<Disclaimer />} />
                 <Route path="/profit-loss" element={<ProfitLoss />} />
@@ -147,6 +154,14 @@ function App() {
                 <Route
                   path="BitcoinRainbowChart"
                   element={<BitcoinRainbowChart />}
+                />
+                <Route
+                  path="/CurrecyMarket24h"
+                  element={<CurrecyMarket24h />}
+                />
+                <Route
+                  path="EthereumRainbowChart"
+                  element={<EthereumRainbowChart />}
                 />
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>

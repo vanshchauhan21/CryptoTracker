@@ -83,8 +83,13 @@ h1 {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /*signup styling*/
@@ -99,7 +104,7 @@ h1 {
 
 /* Signup form */
 .signup-form {
-  background-color:#f4acad;
+  background-color: #f4acad;
   padding: 30px;
   width: 100%;
   max-width: 400px;
@@ -114,7 +119,8 @@ h1 {
 .authhead {
   font-size: 1.8rem;
   margin-bottom: 20px;
-  color: #000; /* Black color as requested */
+  color: #000;
+  /* Black color as requested */
 }
 
 /* Input fields */
@@ -169,7 +175,8 @@ h1 {
 }
 
 /* Error and Success messages */
-.error, .success {
+.error,
+.success {
   width: 100%;
   padding: 10px;
   margin-top: 15px;
@@ -210,6 +217,7 @@ h1 {
     font-size: 14px;
   }
 }
+
 /*login css*/
 /* Container and Form Styles */
 .login-container {
@@ -298,6 +306,7 @@ h1 {
 .signup-text a:hover {
   text-decoration: underline;
 }
+
 /*backhome button*/
 .back-home-button {
   position: fixed;
@@ -315,17 +324,20 @@ h1 {
   background-color: #333;
 }
 
-.signup-container, .login-container {
+.signup-container,
+.login-container {
   position: relative;
   min-height: 100vh;
 }
 
 .authhead {
-  color: #000; /* Black color */
+  color: #000;
+  /* Black color */
   font-size: 24px;
   margin-bottom: 20px;
   font-weight: bold;
-  text-align: center; /* Optional: center the heading */
+  text-align: center;
+  /* Optional: center the heading */
 }
 
 .text {
@@ -344,24 +356,29 @@ h1 {
   --darkgrey: #1b1b1b;
   --green: #61c96f;
   --red: #f94141;
-  --text-dark: #fff; /* Text color for dark mode */
-  --text-light: #111; /* Text color for light mode */
+  --text-dark: #fff;
+  /* Text color for dark mode */
+  --text-light: #111;
+  /* Text color for light mode */
 }
+
 [data-theme="dark"] {
   --background-color: #1b1b1b;
-  --text-color: var(--text-dark); /* White text */
+  --text-color: var(--text-dark);
+  /* White text */
   --heading1-color: var(--grey);
 }
 
 
 [data-theme="light"] {
   --background-color: #fff;
-  --text-color: var(--text-light); /* Dark text */
+  --text-color: var(--text-light);
+  /* Dark text */
   --heading1-color: #000;
 }
 
-.heading1{
-    color: var(--heading1-color) !important;
+.heading1 {
+  color: var(--heading1-color) !important;
 }
 
 html {
@@ -440,57 +457,57 @@ a {
 /* Styling the login and signup page */
 
 [data-theme="dark"] {
-    --color: #b5b5b5;
-    --cl-internal-4x6jej-bg-color: linear-gradient(rgb(0 0 0 / 3%), rgb(6 6 6 / 3%)), linear-gradient(rgb(0 0 0), rgb(0 0 0));
-    --cl-internal-1p733cp-bg-color: #000;
-    --div-login-page-bg-color: #121212;
-    --div-signup-page-bg-color: #121212;
-    --text-color: #b5b5b5;
-    --cl-internal-2iusy0-color: var(--white);
-    --fa-home-color:  rgb(197 197 197);
+  --color: #b5b5b5;
+  --cl-internal-4x6jej-bg-color: linear-gradient(rgb(0 0 0 / 3%), rgb(6 6 6 / 3%)), linear-gradient(rgb(0 0 0), rgb(0 0 0));
+  --cl-internal-1p733cp-bg-color: #000;
+  --div-login-page-bg-color: #121212;
+  --div-signup-page-bg-color: #121212;
+  --text-color: #b5b5b5;
+  --cl-internal-2iusy0-color: var(--white);
+  --fa-home-color: rgb(197 197 197);
 }
 
 [data-theme="light"] {
-    --cl-internal-1p733cp-bg-color: var(--white);
-    --cl-internal-2iusy0-color: var(--white);
+  --cl-internal-1p733cp-bg-color: var(--white);
+  --cl-internal-2iusy0-color: var(--white);
 }
 
 .cl-internal-1p733cp {
-    background-color: var(--cl-internal-1p733cp-bg-color) !important;
+  background-color: var(--cl-internal-1p733cp-bg-color) !important;
 }
 
 .cl-internal-4x6jej {
-    background: var(--cl-internal-4x6jej-bg-color) !important;
+  background: var(--cl-internal-4x6jej-bg-color) !important;
 }
 
 .cl-internal-1tpvhd8 {
-    color: var(--text-color) !important;
+  color: var(--text-color) !important;
 }
 
 .cl-internal-15di0mo {
-    color: var(--text-color) !important;
+  color: var(--text-color) !important;
 }
 
 .cl-internal-1v2koqu {
-    color: var(--text-color) !important;
+  color: var(--text-color) !important;
 }
 
 .cl-internal-1c7fjmu {
-    color: var(--text-color) !important;
+  color: var(--text-color) !important;
 }
 
 .cl-internal-2iusy0 {
-    color: var(--cl-internal-2iusy0-color) !important;
+  color: var(--cl-internal-2iusy0-color) !important;
 }
 
 div.login-page {
-    background-color: var(--div-login-page-bg-color) !important;
+  background-color: var(--div-login-page-bg-color) !important;
 }
 
 div.signup-page {
-    background-color: var(--div-login-page-bg-color) !important;
+  background-color: var(--div-login-page-bg-color) !important;
 }
 
 .fa-home {
-    color: var(--fa-home-color) !important;
+  color: var(--fa-home-color) !important;
 }
