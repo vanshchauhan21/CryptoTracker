@@ -4,10 +4,6 @@ import { ArrowRight, Instagram, Github, Twitter, Linkedin } from "lucide-react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import logo from "../assets/logo.jpg";
 import "./ComparePage/SelectCoins/index";
-import CryptoConverter from "../pages/CryptoConverter";
-
-import BitcoinRainbowChart from "../pages/BitCoinRainBow/BitcoinRainbowChart";
-import CryptoProfitCalculator from "../pages/CryptoProfitCalculator";
 
 import GoogleTranslate from "./GoogleTranslate";
 
@@ -133,7 +129,7 @@ const Footer = () => {
           <ul className="link-list">
             {[
               { path: "/disclaimer", label: "Disclaimer" },
-              { path: "/#", label: "Term of use" },
+              { path: "/TermsOfUse", label: "Term of use" },
               { path: "/privacy-policy", label: "Privacy Policy" },
 
               { path: "/cookie-policy", label: "Cookie Policy" },
