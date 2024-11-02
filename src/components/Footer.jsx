@@ -2,15 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next"; // Import hook for translations
 import { ArrowRight, Instagram, Github, Twitter, Linkedin } from "lucide-react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-// import logo from "../assets/logo.jpg";
-import logo from "../../assets/logo.jpg"
-import "../ComparePage/SelectCoins/index";
-// import CryptoConverter from "../../pages/CryptoConverter";
+import logo from "../assets/logo.jpg";
+import "./ComparePage/SelectCoins/index";
 
-// import BitcoinRainbowChart from "../../pages/BitCoinRainBow/BitcoinRainbowChart";
-// import CryptoProfitCalculator from "../../pages/CryptoProfitCalculator";
-import "./Footer.css";
-import GoogleTranslate from "../GoogleTranslate";
+import GoogleTranslate from "./GoogleTranslate";
 
 const Footer = () => {
   const { t } = useTranslation(); // Destructure translation function
@@ -71,7 +66,6 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-
       {/* .................1 links-section............... */}
       <div className="footer-container">
         <div className="footer-section">
@@ -116,10 +110,9 @@ const Footer = () => {
               { path: "/CryptoConverter", label: "Crypto Convertor" },
               {
                 path: "/BitcoinRainbowChart",
-                label: "Bitcoin Rainbow Chart",
+                label: "Bit coint Rainbow Chart",
               },
-              { path: "/CurrecyMarket24h", label: "24h Cryptocurrency Market" },
-              { path: "/EthereumRainbowChart", label: "Ethereum Rainbow Chart" },
+              { path: "/CryptoMarket", label: "24h Cryptocurrency Market" },
             ].map(({ path, label }) => (
               <li key={label}>
                 <a href={path}>
@@ -136,9 +129,8 @@ const Footer = () => {
           <ul className="link-list">
             {[
               { path: "/disclaimer", label: "Disclaimer" },
-              { path: "/#", label: "Term of use" },
+              { path: "/TermsOfUse", label: "Term of use" },
               { path: "/privacy-policy", label: "Privacy Policy" },
-
 
               { path: "/cookie-policy", label: "Cookie Policy" },
 
@@ -163,12 +155,13 @@ const Footer = () => {
             {[
               { path: "/#", label: "Help Center" },
               { path: "/defi-assets", label: "How to track your DeFi Assets" },
-              { path: "/profit-loss", label: "Learn about profit/loss Calculator" },
+              {
+                path: "/profit-loss",
+                label: "Learn about profit/loss Calculator",
+              },
               { path: "/#", label: "Learn about Crypto Tracker Reward" },
               { path: "/#", label: "How to Buy Crypto with Card" },
               { path: "/#", label: "How to Track NFTs on Crypto Tracker" },
-              { path: "/nft", label: "NFT" },
-
             ].map(({ path, label }) => (
               <li key={label}>
                 <a href={path}>
@@ -178,22 +171,9 @@ const Footer = () => {
             ))}
           </ul>
         </div>
-
-
-
-
-
       </div>
 
-
-
-
-
-
-
-
-
-      {/* .......................2 socail icons and company logo  */ }
+      {/* .......................2 socail icons and company logo  */}
       <div className="footer-content-wrapper">
         {/* Brand Section */}
         <div className="footer-brand">
@@ -218,7 +198,12 @@ const Footer = () => {
               { Icon: Linkedin, label: "LinkedIn" },
               { Icon: DiscordIcon, label: "Discord" },
             ].map(({ Icon, label }) => (
-              <a key={label} href="#" className="social-icon" aria-label={label}>
+              <a
+                key={label}
+                href="#"
+                className="social-icon"
+                aria-label={label}
+              >
                 <Icon size={20} />
               </a>
             ))}
@@ -270,12 +255,9 @@ const Footer = () => {
                 </a>
                 <span style={{ marginLeft: "8px", color: "#fff" }}>{stars}</span>
               </div>
-
-
             </div>
           </div>
         </div>
-
 
         {/*...................3 Newsletter Section................. */}
         <div className="footer-section">
@@ -309,14 +291,14 @@ const Footer = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          paddingTop: "20px",          // Add padding at the top
+          paddingTop: "20px", // Add padding at the top
           paddingBottom: "20px",
         }}
       >
         <div
           style={{
             display: "flex",
-            flexDirection: "column",      // Stack image and text vertically
+            flexDirection: "column", // Stack image and text vertically
             alignItems: "center",
             justifyContent: "center",
             backgroundColor: " rgba(255, 255, 255, 0.15)",
@@ -324,7 +306,7 @@ const Footer = () => {
             padding: "10px 20px",
             borderRadius: "8px",
             boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
-            maxWidth: "200px",           // Set maximum width to 200px
+            maxWidth: "200px", // Set maximum width to 200px
             textAlign: "center",
           }}
         >
@@ -354,7 +336,7 @@ const Footer = () => {
       >
         <span>© 2024 CryptoTracker. All rights reserved.</span>
       </div>
-    </footer >
+    </footer>
   );
 };
 
