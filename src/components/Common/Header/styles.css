@@ -76,7 +76,7 @@ body {
 .link:hover,
 .active-link {
   color: #3a80e9;
-  background-color: rgba(245, 245, 245, 0.8);
+  /* background-color: rgba(245, 245, 245, 0.8); */
   border: 2px solid #3a80e9;
 }
 
