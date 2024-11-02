@@ -1,7 +1,28 @@
 import { SignUp } from "@clerk/clerk-react";
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function SignUpPage() {
+  const [password, setPassword] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+
+  const handlePasswordChange = (e) => {
+    const newPassword = e.target.value;
+    setPassword(newPassword);
+
+    // Basic client-side password validation
+    if (newPassword.length < 8) {
+      setPasswordError("Password must be at least 8 characters long.");
+    } else if (!/[A-Z]/.test(newPassword)) {
+      setPasswordError("Password must contain at least one uppercase letter.");
+    } else if (!/[0-9]/.test(newPassword)) {
+      setPasswordError("Password must contain at least one number.");
+    } else if (!/[@$!%*?&#]/.test(newPassword)) {
+      setPasswordError("Password must contain at least one special character.");
+    } else {
+      setPasswordError(""); // Clear error if password meets all conditions
+    }
+  };
+
   const handleHomeClick = () => {
     window.location.href = '/';
   };
@@ -46,7 +67,14 @@ export default function SignUpPage() {
               },
             },
           }}
+          password={password} // Pass password state to SignUp component
+          onPasswordChange={handlePasswordChange} // Add event handler for password
         />
+        {passwordError && (
+          <div style={{ color: "red", fontSize: "14px", marginTop: "10px" }}>
+            {passwordError}
+          </div>
+        )}
         <div
           style={{
             position: "absolute",
@@ -57,7 +85,6 @@ export default function SignUpPage() {
             color: "#333",
           }}
         >
-          {/* <span>Already have an account? </span> */}
           <a
             href="/login"
             className="custom-signin-link"
@@ -83,7 +110,6 @@ export default function SignUpPage() {
             top:0.1rem;
             display: block !important;
           }
-
         `}
       </style>
     </div>
