@@ -161,7 +161,7 @@ const Footer = () => {
               },
               { path: "/#", label: "Learn about Crypto Tracker Reward" },
               { path: "/cryptocard", label: "How to Buy Crypto with Card" },
-              { path: "/#", label: "How to Track NFTs on Crypto Tracker" },
+              { path: "/trackNft", label: "How to Track NFTs on Crypto Tracker" },
             ].map(({ path, label }) => (
               <li key={label}>
                 <a href={path}>
@@ -232,7 +232,7 @@ const Footer = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  backgroundColor: "rgba(255, 255, 255, 0.15)", 
+                  backgroundColor: "rgba(255, 255, 255, 0.15)",
                   color: "#fff",
                   padding: "10px",
                   borderRadius: "8px",
