@@ -8,7 +8,7 @@ export default function SignUpPage() {
 
   return (
     <div
-    className="signup-page"
+      className="signup-page"
       style={{
         display: "flex",
         flexDirection: "column",
@@ -57,14 +57,10 @@ export default function SignUpPage() {
             color: "#333",
           }}
         >
-          <span>Already have an account? </span>
+          {/* <span>Already have an account? </span> */}
           <a
             href="/login"
-            style={{
-              color: "#3a80e9",
-              textDecoration: "none",
-              fontWeight: "bold",
-            }}
+            className="custom-signin-link"
           >
             Sign in
           </a>
@@ -72,9 +68,22 @@ export default function SignUpPage() {
       </div>
       <style>
         {`
-          .cl-footerActionText {
+          .cl-footerActionText{
+            display: !important;
+            padding-bottom:10px;
+          }
+          .cl-footerActionLink {
             display: none !important;
           }
+          .custom-signin-link {
+            color: #3a80e9;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+            top:0.1rem;
+            display: block !important;
+          }
+
         `}
       </style>
     </div>
