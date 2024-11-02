@@ -22,6 +22,7 @@ import Login from "./pages/Login";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 import Contributors from "./pages/Contributors";
+import CurrecyMarket24h from "./pages/CryptoMarket24h/CryptoMarket24h"
 
 import PrivacyPolicy from "./pages/Privacy-Policy/PrivacyPolicy";
 import Pricing from "./pages/Pricing/Pricing";
@@ -150,6 +151,8 @@ function App() {
                   path="BitcoinRainbowChart"
                   element={<BitcoinRainbowChart />}
                 />
+
+                <Route path="/CurrecyMarket24h" element={<CurrecyMarket24h />} />
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>
             </BrowserRouter>
