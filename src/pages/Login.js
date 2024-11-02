@@ -8,7 +8,7 @@ export default function SignInPage() {
 
   return (
     <div
-    className="login-page"
+      className="login-page"
       style={{
         display: "flex",
         flexDirection: "column",
@@ -38,43 +38,50 @@ export default function SignInPage() {
         <i className="fas fa-home" style={{ fontSize: "24px", color: "#333" }}></i>
       </div>
       <div style={{ position: "relative" }}>
-      <SignIn
-        appearance={{
-          elements: {
-            footerActionLink: {
-              display: "none",
+        <SignIn
+          appearance={{
+            elements: {
+              footerActionLink: {
+                display: "none",
+              },
             },
-          },
-        }}
-      />
-      <div
-        style={{
+          }}
+        />
+        <div
+          style={{
             position: "absolute",
             bottom: "5rem",
             width: "100%",
             textAlign: "center",
             fontSize: "14px",
             color: "#333",
-        }}
-      >
-        <span>Don't have an account? </span>
-        <a
-          href="/signup"
-          style={{
-            color: "#3a80e9",
-            textDecoration: "none",
-            fontWeight: "bold",
-            fontSize: "0.7rem",
           }}
         >
-          Sign up
-        </a>
+          {/* <span>Don't have an account? </span> */}
+          <a
+            href="/signup"
+            className="custom-signup-link"
+          >
+            Sign up
+          </a>
+        </div>
       </div>
-    </div>
-    <style>
+      <style>
         {`
           .cl-footerActionText {
+            display: !important;
+            padding-bottom:10px;
+          }
+          .cl-footerActionLink {
             display: none !important;
+          }
+          .custom-signup-link{
+            color: #3a80e9;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+            top:0.1rem;
+            display: block !important;
           }
         `}
       </style>
