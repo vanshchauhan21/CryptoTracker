@@ -232,8 +232,8 @@ const Footer = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  backgroundColor: "#d3d3d3", // Light gray background
-                  color: "#333",
+                  backgroundColor: "rgba(255, 255, 255, 0.15)", 
+                  color: "#fff",
                   padding: "10px",
                   borderRadius: "8px",
                   width: "100%", // Match parent width (150px)
@@ -246,14 +246,14 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
-                    color: "#333",
+                    color: "#fff",
                     textDecoration: "none",
                     fontWeight: "bold",
                   }}
                 >
                   Star Us ⭐
                 </a>
-                <span style={{ marginLeft: "8px" }}>{stars}</span>
+                <span style={{ marginLeft: "8px", color: "#fff" }}>{stars}</span>
               </div>
             </div>
           </div>
@@ -301,8 +301,8 @@ const Footer = () => {
             flexDirection: "column", // Stack image and text vertically
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "#d3d3d3",
-            color: "#333",
+            backgroundColor: " rgba(255, 255, 255, 0.15)",
+            color: "#fff",
             padding: "10px 20px",
             borderRadius: "8px",
             boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
@@ -315,7 +315,7 @@ const Footer = () => {
             alt="Visit counter"
             style={{ border: "none", marginBottom: "8px" }} // Add margin below image
           />
-          <span style={{ fontWeight: "bold", fontSize: "16px" }}>
+          <span style={{ fontWeight: "bold", fontSize: "16px", color: "#fff" }}>
             Visitors Count
           </span>
         </div>
