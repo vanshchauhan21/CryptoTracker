@@ -45,6 +45,7 @@ import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator"
 import ImpermanentLossCalculator from "./pages/ImpermanentLossCalculator";
 import DefiAssets from "./pages/DefiAssets/DefiAssets";
 import ProfitLoss from "./pages/ProfitLoss/ProfitLoss";
+import Cryptocard from "./pages/CryptoCard/Cryptocard";
 import Footer from "./components/Footer";
 import NFTShowcase from "./pages/NFTShowcase/NFTShowcase";
 
@@ -119,6 +120,7 @@ function App() {
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/disclaimer" element={<Disclaimer />} />
                 <Route path="/profit-loss" element={<ProfitLoss />} />
+                <Route path="cryptocard" element={<Cryptocard />} />
                 <Route path="/TermsOfUse" element={<TermsOfUse />} />
 
                 <Route path="/defi-assets" element={<DefiAssets />} />
