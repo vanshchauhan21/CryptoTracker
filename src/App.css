@@ -2,8 +2,16 @@
   background: #121212;
 }
 
+[data-theme="dark"] {
+  --footer-bg-color: linear-gradient(135deg, #000000 0%, #00275c 100%) !important;
+}
+
+[data-theme="light"] {
+  --footer-bg-color: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%) !important;
+}
+
 .footer {
-background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+background: var(--footer-bg-color);
 color: #fff;
 padding: 4rem 0 0;
 font-family: system-ui, -apple-system, sans-serif;
@@ -179,9 +187,9 @@ box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 .newsletter-section {
 width: 100%;
 display: flex;
-flex-direction: column; 
-align-items: center; 
-gap: 0.25rem; 
+flex-direction: column;
+align-items: center;
+gap: 0.25rem;
 margin-top: 1rem;
 }
 
