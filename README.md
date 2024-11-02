@@ -132,6 +132,15 @@ You've now mastered the art of cryptocurrency tracking. If only making money wer
 <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
 
+## Connect with Us 🤝
+
+Thank you for exploring this project! We’d love to connect and hear from you. Reach out through any of the platforms below:
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vanshchauhan21)
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/VanshChauh12028?s=09)
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/vanshchauhan21)
+
+
 
 
 
