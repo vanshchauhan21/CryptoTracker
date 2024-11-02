@@ -41,6 +41,7 @@ import RefundPolicy from "./pages/Refund Policy/RefundPolicy";
 import CookiesPolicy from "./pages/CookiesPolicy";
 
 import CookiePolicy from "./pages/Cookie-Policy/CookiePolicy";
+import TrackNft from "./pages/Track NFT/TrackNFTs.js";
 import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator";
 import ImpermanentLossCalculator from "./pages/ImpermanentLossCalculator";
 import DefiAssets from "./pages/DefiAssets/DefiAssets";
@@ -114,6 +115,7 @@ function App() {
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/cookies-policy" element={<CookiesPolicy />} />
                 <Route path="/Contributors" element={<Contributors />} />
+                <Route path="/trackNft" element={<TrackNft />} />
                 <Route path="/nft" element={<NFTShowcase />} />
 
                 <Route path="/pricing" element={<Pricing />} />
