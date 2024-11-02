@@ -110,7 +110,11 @@ const Footer = () => {
               { path: "/CryptoConverter", label: "Crypto Convertor" },
               {
                 path: "/BitcoinRainbowChart",
-                label: "Bit coint Rainbow Chart",
+                label: "Bitcoin Rainbow Chart",
+              },
+              {
+                path: "/EthereumRainbowChart",
+                label: "Ethereum Rainbow Chart",
               },
               { path: "/CryptoMarket", label: "24h Cryptocurrency Market" },
             ].map(({ path, label }) => (
