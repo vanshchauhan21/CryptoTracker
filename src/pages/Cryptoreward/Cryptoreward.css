@@ -1,0 +1,39 @@
+.crypto-rewards-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    border: 2px solid #6610f2;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.title {
+    font-size: 2em;
+    margin-bottom: 1rem;
+    color: #0d6efd;
+    text-align: center;
+}
+
+.section {
+    margin-bottom: 1.5rem;
+}
+
+.section h2 {
+    color: #6610f2;
+    margin-bottom: 0.5rem;
+}
+
+.earn-list,
+.benefits-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 0.5rem;
+}
+
+.earn-list li,
+.benefits-list li {
+    margin: 5px 0;
+}

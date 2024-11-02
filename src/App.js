@@ -47,6 +47,7 @@ import DefiAssets from "./pages/DefiAssets/DefiAssets";
 import ProfitLoss from "./pages/ProfitLoss/ProfitLoss";
 import Footer from "./components/Footer";
 import NFTShowcase from "./pages/NFTShowcase/NFTShowcase";
+import Cryptoreward from "./pages/Cryptoreward/Cryptoreward";
 
 function App() {
   const theme = createTheme({
@@ -126,6 +127,11 @@ function App() {
                 <Route
                   path="CryptoProfitCalculator"
                   element={<CryptoProfitCalculator />}
+                />
+                
+                <Route 
+                  path="/cryptoreward" 
+                  element={<Cryptoreward />}
                 />
 
                 <Route

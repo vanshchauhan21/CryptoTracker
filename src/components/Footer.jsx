@@ -159,7 +159,7 @@ const Footer = () => {
                 path: "/profit-loss",
                 label: "Learn about profit/loss Calculator",
               },
-              { path: "/#", label: "Learn about Crypto Tracker Reward" },
+              { path: "/cryptoreward", label: "Learn about Crypto Tracker Reward" },
               { path: "/#", label: "How to Buy Crypto with Card" },
               { path: "/#", label: "How to Track NFTs on Crypto Tracker" },
             ].map(({ path, label }) => (
