@@ -79,3 +79,13 @@
     padding: 1rem;
   }
 }
+
+/* Hover Effect */
+
+.learn-card:hover {
+  transform: scale(1.02); /* Slightly enlarges the card */
+  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.5); /* Blue shadow effect */
+  background-color: var(--light-blue); /* Changes the background color */
+  border-color: var(--blue); /* Changes the border color */
+  transition: all 0.3s ease; /* Smooth transition */
+}
