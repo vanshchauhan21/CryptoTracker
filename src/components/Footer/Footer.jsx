@@ -120,7 +120,6 @@ const Footer = () => {
               },
               { path: "/CurrecyMarket24h", label: "24h Cryptocurrency Market" },
               { path: "/EthereumRainbowChart", label: "Ethereum Rainbow Chart" },
-              { path: "/#", label: "24h Cryptocurrency Market" },
             ].map(({ path, label }) => (
               <li key={label}>
                 <a href={path}>
