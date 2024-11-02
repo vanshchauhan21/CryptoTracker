@@ -17,6 +17,7 @@ import NotFoundPage from "./components/PageNotFound/PageNotFound";
 import GoogleTranslate from "./components/GoogleTranslate";
 import CryptoConverter from "./pages/CryptoConverter";
 import BitcoinRainbowChart from "./pages/BitCoinRainBow/BitcoinRainbowChart";
+import EthereumRainbowChart from "./pages/EthereumRainbow/EthereumRainbowChart";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import { I18nextProvider } from "react-i18next";
@@ -151,8 +152,11 @@ function App() {
                   path="BitcoinRainbowChart"
                   element={<BitcoinRainbowChart />}
                 />
-
                 <Route path="/CurrecyMarket24h" element={<CurrecyMarket24h />} />
+                <Route
+                  path="EthereumRainbowChart"
+                  element={<EthereumRainbowChart />}
+                />
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>
             </BrowserRouter>
