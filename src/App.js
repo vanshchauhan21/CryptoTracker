@@ -10,7 +10,7 @@ import Faq from "./pages/Faq";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useRef } from "react";
-import Footer from "./components/Footer";
+
 import TermCondition from "./pages/TermCondition";
 import Feedback from "./pages/Feedback";
 import NotFoundPage from "./components/PageNotFound/PageNotFound";
@@ -41,6 +41,8 @@ import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator"
 import ImpermanentLossCalculator from "./pages/ImpermanentLossCalculator";
 import DefiAssets from "./pages/DefiAssets/DefiAssets";
 import ProfitLoss from "./pages/ProfitLoss/ProfitLoss";
+import Footer from "./components/Footer/Footer";
+import NFTShowcase from "./pages/NFTShowcase/NFTShowcase";
 
 function App() {
   const theme = createTheme({
@@ -108,6 +110,8 @@ function App() {
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/cookies-policy" element={<CookiesPolicy />} />
                 <Route path="/Contributors" element={<Contributors />} />
+                <Route path="/nft" element={<NFTShowcase />} />
+
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/disclaimer" element={<Disclaimer />} />
                 <Route path="/profit-loss" element={<ProfitLoss />} />
@@ -152,7 +156,7 @@ function App() {
           </ThemeProvider>
         </div>
         <div className="footbelow">
-          <Footer />
+        <Footer/>
         </div>
       </I18nextProvider>
     </>
