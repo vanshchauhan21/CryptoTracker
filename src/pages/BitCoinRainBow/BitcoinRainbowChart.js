@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Line } from "react-chartjs-2";
 import Header from "../../components/Common/Header";
 import "./BitcoinRainbowChart.css"
@@ -97,6 +97,31 @@ const BitcoinRainbowChart = () => {
       },
     },
   };
+  const [activeLearnMoreIndex, setActiveLearnMoreIndex] = useState(null);
+
+  const toggleLearnMore = (index) => {
+    setActiveLearnMoreIndex(activeLearnMoreIndex === index ? null : index);
+  };
+
+    // Learn More data
+    const learnMoreData = [
+      {
+        title: "What is the Bitcoin Rainbow Chart?",
+        content: "The Bitcoin Rainbow Chart is a logarithmic chart that uses color bands to suggest different market sentiments and potential price levels for Bitcoin. It's a popular tool among cryptocurrency investors for long-term price analysis."
+      },
+      {
+        title: "How to Read the Rainbow Chart",
+        content: "The chart displays different colored bands that represent various market sentiments, from 'Maximum Bubble' at the top (red) to 'Basically a Fire Sale' at the bottom (blue). The position of Bitcoin's price within these bands can suggest whether Bitcoin might be overvalued or undervalued."
+      },
+      {
+        title: "Is the Rainbow Chart Reliable?",
+        content: "While the Rainbow Chart can be a useful tool for understanding Bitcoin's price movements, it should not be considered as financial advice. It's based on historical data and logarithmic regression, but past performance doesn't guarantee future results."
+      },
+      {
+        title: "Trading Strategy with Rainbow Chart",
+        content: "Some investors use the Rainbow Chart as part of their investment strategy, buying when the price is in lower bands (blue/green) and selling when it reaches higher bands (red/orange). However, this should be combined with other analysis tools and thorough research."
+      }
+    ];
 
   return (
     <div>
@@ -144,6 +169,23 @@ const BitcoinRainbowChart = () => {
 
 </div>
 
+<div className="learn-more-container">
+        <h2 className="learn-more-header">Learn More About Bitcoin Rainbow Chart</h2>
+        {learnMoreData.map((item, index) => (
+          <div key={index} className="learn-more-item">
+            <h3 
+              className={`learn-more-title ${activeLearnMoreIndex === index ? 'active' : ''}`} 
+              onClick={() => toggleLearnMore(index)}
+            >
+              {item.title}
+              <span className="learn-more-arrow">{activeLearnMoreIndex === index ? '▲' : '▼'}</span>
+            </h3>
+            <p className={`learn-more-content ${activeLearnMoreIndex === index ? 'active' : ''}`}>
+              {item.content}
+            </p>
+          </div>
+        ))}
+      </div>
 
 
 
