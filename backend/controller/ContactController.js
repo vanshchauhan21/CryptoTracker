@@ -3,14 +3,14 @@ async function EmailController(req, resp) {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "your email",
+      user: "chauhanvansh313@gmail.com",
       pass: "your password",
     },
   });
 
   const mailOptions = {
     from: req.body.Email,
-    to: "your email",
+    to: "chauhanvansh313@gmail.com",
     subject: "CryptoTracker",
     text: `
           Name: ${req.body.Name}
