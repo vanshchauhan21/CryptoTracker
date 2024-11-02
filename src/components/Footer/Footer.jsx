@@ -2,14 +2,15 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next"; // Import hook for translations
 import { ArrowRight, Instagram, Github, Twitter, Linkedin } from "lucide-react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import logo from "../assets/logo.jpg";
-import "./ComparePage/SelectCoins/index";
-import CryptoConverter from "../pages/CryptoConverter";
+// import logo from "../assets/logo.jpg";
+import logo from "../../assets/logo.jpg"
+import "../ComparePage/SelectCoins/index";
+// import CryptoConverter from "../../pages/CryptoConverter";
 
-import BitcoinRainbowChart from "../pages/BitCoinRainBow/BitcoinRainbowChart";
-import CryptoProfitCalculator from "../pages/CryptoProfitCalculator";
-
-import GoogleTranslate from "./GoogleTranslate";
+// import BitcoinRainbowChart from "../../pages/BitCoinRainBow/BitcoinRainbowChart";
+// import CryptoProfitCalculator from "../../pages/CryptoProfitCalculator";
+import "./Footer.css";
+import GoogleTranslate from "../GoogleTranslate";
 
 const Footer = () => {
   const { t } = useTranslation(); // Destructure translation function
@@ -70,6 +71,7 @@ const Footer = () => {
 
   return (
     <footer className="footer">
+
       {/* .................1 links-section............... */}
       <div className="footer-container">
         <div className="footer-section">
@@ -164,6 +166,8 @@ const Footer = () => {
               { path: "/#", label: "Learn about Crypto Tracker Reward" },
               { path: "/#", label: "How to Buy Crypto with Card" },
               { path: "/#", label: "How to Track NFTs on Crypto Tracker" },
+              { path: "/nft", label: "NFT" },
+
             ].map(({ path, label }) => (
               <li key={label}>
                 <a href={path}>
@@ -173,9 +177,22 @@ const Footer = () => {
             ))}
           </ul>
         </div>
+
+
+
+
+
       </div>
 
-      {/* .......................2 socail icons and company logo  */}
+
+
+
+ 
+  
+
+
+
+      {/* .......................2 socail icons and company logo  */ }
       <div className="footer-content-wrapper">
         {/* Brand Section */}
         <div className="footer-brand">
@@ -286,56 +303,56 @@ const Footer = () => {
       </div>
 
       <hr />
-<div
-  style={{
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    paddingTop: "20px",          // Add padding at the top
-    paddingBottom: "20px",
-  }}
->
-  <div
-    style={{
-      display: "flex",
-      flexDirection: "column",      // Stack image and text vertically
-      alignItems: "center",
-      justifyContent: "center",
-      backgroundColor: "#d3d3d3",
-      color: "#333",
-      padding: "10px 20px",
-      borderRadius: "8px",
-      boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
-      maxWidth: "200px",           // Set maximum width to 200px
-      textAlign: "center",
-    }}
-  >
-    <img
-      src="https://hitwebcounter.com/counter/counter.php?page=17165260&style=0006&nbdigits=5&type=page&initCount=1000"
-      alt="Visit counter"
-      style={{ border: "none", marginBottom: "8px" }} // Add margin below image
-    />
-    <span style={{ fontWeight: "bold", fontSize: "16px" }}>
-      Visitors Count
-    </span>
-  </div>
-</div>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          paddingTop: "20px",          // Add padding at the top
+          paddingBottom: "20px",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",      // Stack image and text vertically
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "#d3d3d3",
+            color: "#333",
+            padding: "10px 20px",
+            borderRadius: "8px",
+            boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
+            maxWidth: "200px",           // Set maximum width to 200px
+            textAlign: "center",
+          }}
+        >
+          <img
+            src="https://hitwebcounter.com/counter/counter.php?page=17165260&style=0006&nbdigits=5&type=page&initCount=1000"
+            alt="Visit counter"
+            style={{ border: "none", marginBottom: "8px" }} // Add margin below image
+          />
+          <span style={{ fontWeight: "bold", fontSize: "16px" }}>
+            Visitors Count
+          </span>
+        </div>
+      </div>
 
-<div
-  className="flex"
-  style={{
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    width: "100%",
-    marginBottom: "0.5rem",
-    fontSize: "0.9rem",
-    color: "#ffffff",
-    paddingBottom: "0.5rem",
-  }}
->
-  <span>© 2024 CryptoTracker. All rights reserved.</span>
-</div>
+      <div
+        className="flex"
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          marginBottom: "0.5rem",
+          fontSize: "0.9rem",
+          color: "#ffffff",
+          paddingBottom: "0.5rem",
+        }}
+      >
+        <span>© 2024 CryptoTracker. All rights reserved.</span>
+      </div>
     </footer >
   );
 };
