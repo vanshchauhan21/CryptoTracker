@@ -37,7 +37,7 @@ import CryptoMarket from "./pages/CryptoMarket";
 
 import ProgressBar from "./components/Common/ProgressBar/ProgressBar";
 import RefundPolicy from "./pages/Refund Policy/RefundPolicy";
-
+import Contactus from "./pages/Contactus/Contactus";
 import CookiesPolicy from "./pages/CookiesPolicy";
 
 import CookiePolicy from "./pages/Cookie-Policy/CookiePolicy";
@@ -115,7 +115,7 @@ function App() {
                 <Route path="/cookies-policy" element={<CookiesPolicy />} />
                 <Route path="/Contributors" element={<Contributors />} />
                 <Route path="/nft" element={<NFTShowcase />} />
-
+                <Route path="/contactus" element={<Contactus />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/disclaimer" element={<Disclaimer />} />
                 <Route path="/profit-loss" element={<ProfitLoss />} />

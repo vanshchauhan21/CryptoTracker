@@ -23,8 +23,8 @@ function Header() {
       setIsMobile(window.innerWidth <= 800);
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
@@ -121,24 +121,43 @@ function Header() {
   return (
     <div className="header">
       <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
-      <div className="nav-logo">
-        <img src={logo} alt="logo" className="logo" />
+        <div className="nav-logo">
+          <img src={logo} alt="logo" className="logo" />
         </div>
         <h1 className="nav-header">
-          {t("CryptoTracker")}<span style={{ color: "var(--blue)" }}></span>
+          {t("CryptoTracker")}
+          <span style={{ color: "var(--blue)" }}></span>
         </h1>
       </Link>
-      <div className={`links ${mobileMenuOpen ? 'mobile-menu-open' : ''}`}>
-        <NavLink to="/" className={({ isActive }) => (isActive ? "active-link link" : "link")}>
+      <div className={`links ${mobileMenuOpen ? "mobile-menu-open" : ""}`}>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "active-link link" : "link")}
+        >
           {t("Home")}
         </NavLink>
-        <NavLink to="/compare" className={({ isActive }) => (isActive ? "active-link link" : "link")}>
+        <NavLink
+          to="/compare"
+          className={({ isActive }) => (isActive ? "active-link link" : "link")}
+        >
           {t("Compare")}
         </NavLink>
-        <NavLink to="/watchlist" className={({ isActive }) => (isActive ? "active-link link" : "link")}>
+        <NavLink
+          to="/watchlist"
+          className={({ isActive }) => (isActive ? "active-link link" : "link")}
+        >
           {t("Watchlist")}
         </NavLink>
-        <NavLink to="/learn" className={({ isActive }) => (isActive ? "active-link link" : "link")}>
+        <NavLink
+          to="/contactus"
+          className={({ isActive }) => (isActive ? "active-link link" : "link")}
+        >
+          {t("Contact")}
+        </NavLink>
+        <NavLink
+          to="/learn"
+          className={({ isActive }) => (isActive ? "active-link link" : "link")}
+        >
           {t("Learn")}
         </NavLink>
         <SignedIn>
@@ -148,7 +167,12 @@ function Header() {
           {/* <NavLink to="/signup" className={({ isActive }) => (isActive ? "active-link link" : "link")}>
             {t("Sign Up")}
           </NavLink> */}
-          <NavLink to="/login" className={({ isActive }) => (isActive ? "active-link link" : "link")}>
+          <NavLink
+            to="/login"
+            className={({ isActive }) =>
+              isActive ? "active-link link" : "link"
+            }
+          >
             {t("Log In")}
           </NavLink>
         </SignedOut>
@@ -165,7 +189,10 @@ function Header() {
 
       {isMobile && (
         <div className="mobile-menu-button">
-          <MobileMenuButton onClick={toggleMobileMenu} isOpen={mobileMenuOpen} />
+          <MobileMenuButton
+            onClick={toggleMobileMenu}
+            isOpen={mobileMenuOpen}
+          />
         </div>
       )}
 
