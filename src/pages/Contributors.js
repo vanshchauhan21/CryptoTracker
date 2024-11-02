@@ -84,27 +84,41 @@ function Contributors() {
       <div className="contributors-grid">
         {contributors.length > 0 ? (
           contributors.map((contributor) => (
-            <div key={contributor.id} className="contributor-card">
-              <a
-                href={contributor.html_url}
-                className="contributor-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src={contributor.avatar_url}
-                  alt={contributor.login}
-                  onError={(e) => {
-                    e.target.src = "path/to/fallback_image.png";
-                  }}
-                  className="contributor-avatar"
-                />
-              </a>
-              <h2 className="contributor-name">{contributor.login}</h2>
-              <p className="contributor-contributions">
-                Contributions: {contributor.contributions}
-              </p>
+            <div className="card-header">
+              <div className="contributor-card">
+                <a
+                  href={contributor.html_url}
+                  className="contributor-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={contributor.avatar_url}
+                    alt={contributor.login}
+                    onError={(e) => {
+                      e.target.src = "path/to/fallback_image.png";
+                    }}
+                    className="contributor-avatar"
+                  />
+                </a>
+                <h2 className="contributor-name">{contributor.login}</h2>
+                <p className="contributor-contributions">
+                  {contributor.contributions} Contributions
+                </p>
+              </div>
+              <div className="contributor-footer">
+                <a
+                  href={contributor.html_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="view-profile-button"
+                >
+                  View Profile
+                </a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400 dark:text-gray-500"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </div>
             </div>
+
           ))
         ) : (
           <p>No contributors found.</p>
