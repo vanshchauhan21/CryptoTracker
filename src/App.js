@@ -10,7 +10,7 @@ import Faq from "./pages/Faq";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useRef } from "react";
-
+import metadata from "./metadata";
 import TermCondition from "./pages/TermCondition";
 import Feedback from "./pages/Feedback";
 import NotFoundPage from "./components/PageNotFound/PageNotFound";
@@ -48,7 +48,11 @@ import DefiAssets from "./pages/DefiAssets/DefiAssets";
 import ProfitLoss from "./pages/ProfitLoss/ProfitLoss";
 import Footer from "./components/Footer";
 import NFTShowcase from "./pages/NFTShowcase/NFTShowcase";
+
+import { Helmet } from "react-helmet";
+
 import Cryptoreward from "./pages/Cryptoreward/Cryptoreward";
+
 
 function App() {
   const theme = createTheme({
@@ -93,6 +97,26 @@ function App() {
 
   return (
     <>
+     <Helmet>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta name="author" content={metadata.author} />
+        <meta name="viewport" content={metadata.viewport} />
+        <meta charSet={metadata.charset} />
+        <meta name="theme-color" content={metadata.themeColor} />
+        {/* Open Graph */}
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:type" content={metadata.openGraph.type} />
+        <meta property="og:image" content={metadata.openGraph.image} />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content={metadata.twitter.card} />
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta name="twitter:image" content={metadata.twitter.image} />
+      </Helmet>
       <I18nextProvider i18n={i18n}>
         <div className="App">
           <ProgressBar />
