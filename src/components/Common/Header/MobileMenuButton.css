@@ -1,38 +1,38 @@
 .mobile-menu-button {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 2rem;
-    height: 2rem;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    z-index: 10;
-  }
-  
-  .mobile-menu-button:focus {
-    outline: none;
-  }
-  
-  .mobile-menu-button span {
-    width: 2rem;
-    height: 0.25rem;
-    background: var(--text-color);
-    border-radius: 10px;
-    transition: all 0.3s linear;
-    position: relative;
-    transform-origin: 1px;
-  }
-  
-  .mobile-menu-button.open span:first-child {
-    transform: rotate(45deg);
-  }
-  
-  .mobile-menu-button.open span:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .mobile-menu-button.open span:nth-child(3) {
-    transform: rotate(-45deg);
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.mobile-menu-button:focus {
+  outline: none;
+}
+
+.mobile-menu-button span {
+  width: 2rem;
+  height: 0.25rem;
+  background: var(--text-color);
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+.mobile-menu-button.open span:first-child {
+  transform: rotate(45deg);
+}
+
+.mobile-menu-button.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-button.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}

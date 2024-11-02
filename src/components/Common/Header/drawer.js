@@ -45,9 +45,9 @@ export default function TemporaryDrawer() {
       </IconButton>
       <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
         <div className="drawer-div">
-          { <a href="/">
+          {<a href="/">
             <p className="link">Home</p>
-          </a> }
+          </a>}
           <a href="/compare">
             <p className="link">Compare</p>
           </a>
@@ -61,11 +61,11 @@ export default function TemporaryDrawer() {
             <p className="link">Dashboard</p>
           </a>
           <a href="/signup">
-          <p className="link">Sign Up</p>
-        </a>
-        <a href="/login">
-          <p className="link">Log In</p>
-        </a>
+            <p className="link">Sign Up</p>
+          </a>
+          <a href="/login">
+            <p className="link">Log In</p>
+          </a>
           <Switch checked={darkMode} onClick={() => changeMode()} />
         </div>
       </Drawer>

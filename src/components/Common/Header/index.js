@@ -145,9 +145,9 @@ function Header() {
           <UserButton />
         </SignedIn>
         <SignedOut>
-          <NavLink to="/signup" className={({ isActive }) => (isActive ? "active-link link" : "link")}>
+          {/* <NavLink to="/signup" className={({ isActive }) => (isActive ? "active-link link" : "link")}>
             {t("Sign Up")}
-          </NavLink>
+          </NavLink> */}
           <NavLink to="/login" className={({ isActive }) => (isActive ? "active-link link" : "link")}>
             {t("Log In")}
           </NavLink>
