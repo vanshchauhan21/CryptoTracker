@@ -54,6 +54,8 @@ import { Helmet } from "react-helmet";
 
 import Cryptoreward from "./pages/Cryptoreward/Cryptoreward";
 
+import BTCDominance from "./pages/BTCDominance/BTCDominance";
+
 
 function App() {
   const theme = createTheme({
@@ -198,7 +200,9 @@ function App() {
                   element={<EthereumRainbowChart />}
                 />
                 <Route path="*" element={<NotFoundPage />} />
+                <Route path="/btc-dominance" element={<BTCDominance />} />
               </Routes>
+              
             </BrowserRouter>
           </ThemeProvider>
         </div>
