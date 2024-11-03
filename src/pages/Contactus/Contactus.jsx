@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../components/Common/Header";
 import { TextField, Button, Box } from "@mui/material";
 import ContactUsImage from "./contactus.svg";
@@ -11,7 +11,8 @@ const Contactus = () => {
     Message: "",
   });
   const [loading, setLoading] = useState(false);
-
+  const [mode, Setmode] = useState(false);
+  const theme = localStorage.getItem("theme");
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -42,6 +43,11 @@ const Contactus = () => {
       setLoading(false);
     }
   };
+  useEffect(() => {
+    if (theme === "dark") {
+      Setmode(true);
+    }
+  }, [theme]);
 
   return (
     <>
@@ -76,6 +82,25 @@ const Contactus = () => {
               fullWidth
               value={formData.Name}
               onChange={handleChange}
+              InputLabelProps={{
+                style: { color: mode ? "white" : "black" }, // Label color
+              }}
+              InputProps={{
+                style: { color: mode ? "white" : "black" }, // Text color
+              }}
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: mode ? "white" : "black", // Border color
+                  },
+                  "&:hover fieldset": {
+                    borderColor: mode ? "white" : "gray", // Hover border color
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: mode ? "white" : "blue", // Focus border color
+                  },
+                },
+              }}
             />
             <TextField
               required
@@ -86,6 +111,25 @@ const Contactus = () => {
               fullWidth
               value={formData.Email}
               onChange={handleChange}
+              InputLabelProps={{
+                style: { color: mode ? "white" : "black" },
+              }}
+              InputProps={{
+                style: { color: mode ? "white" : "black" },
+              }}
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: mode ? "white" : "black",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: mode ? "white" : "gray",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: mode ? "white" : "blue",
+                  },
+                },
+              }}
             />
             <TextField
               required
@@ -97,6 +141,25 @@ const Contactus = () => {
               rows={4}
               value={formData.Message}
               onChange={handleChange}
+              InputLabelProps={{
+                style: { color: mode ? "white" : "black" },
+              }}
+              InputProps={{
+                style: { color: mode ? "white" : "black" },
+              }}
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: mode ? "white" : "black",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: mode ? "white" : "gray",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: mode ? "white" : "blue",
+                  },
+                },
+              }}
             />
             <Button
               variant="contained"
