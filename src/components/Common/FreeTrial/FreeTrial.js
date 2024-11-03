@@ -1,19 +1,24 @@
-import React from 'react';
-import './FreeTrial.css'; // External CSS for styling
-
-import davidBanner from '../../../assets/Free-trial.jpg';
+import React, { useEffect } from "react";
+import "./FreeTrial.css";
+import davidBanner from "../../../assets/Free-trial.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const FreeTrial = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
-    <div className="free-trial-container">
+    <div className="free-trial-container" data-aos="fade-up">
       <div className="free-trial-content">
         {/* Heading */}
-        <div className="heading-wrapper">
+        <div className="heading-wrapper" data-aos="fade-right">
           <h2 className="title">Go Premium for Free</h2>
         </div>
 
         {/* Benefits */}
-        <div className="benefits">
+        <div className="benefits" data-aos="fade-up" data-aos-delay="200">
           <Benefit text="Connect up to 100 portfolios" />
           <Benefit text="Track up to 100,000 transactions" />
           <Benefit text="View in-depth Profit & Loss analysis" />
@@ -21,15 +26,28 @@ const FreeTrial = () => {
         </div>
 
         {/* Free Trial Button */}
-        <button className="start-trial-btn">
+        <button
+          className="start-trial-btn"
+          data-aos="zoom-in"
+          data-aos-delay="400"
+        >
           Start My Free Trial
         </button>
-        <span className="plan-description">
-          After your 7-day free trial, the Premium plan will be <br/>as little as $13.99 per month 🍔
+        <span
+          className="plan-description"
+          data-aos="fade-up"
+          data-aos-delay="600"
+        >
+          After your 7-day free trial, the Premium plan will be <br />
+          as little as $13.99 per month 🍔
         </span>
 
         {/* Additional Info */}
-        <div className="additional-info">
+        <div
+          className="additional-info"
+          data-aos="fade-in"
+          data-aos-delay="800"
+        >
           <a
             href="/terms.html"
             target="_blank"
@@ -44,7 +62,7 @@ const FreeTrial = () => {
       </div>
 
       {/* David Banner Image */}
-      <div className="david-banner">
+      <div className="david-banner" data-aos="fade-left">
         <img src={davidBanner} alt="David Banner" loading="lazy" />
       </div>
     </div>
@@ -53,8 +71,14 @@ const FreeTrial = () => {
 
 // Reusable component for benefits
 const Benefit = ({ text }) => (
-  <div className="benefit">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <div className="benefit" data-aos="fade-up" data-aos-delay="300">
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <circle cx="12" cy="12" r="10" fill="var(--e80Color)" />
       <path
         d="M18.3 8.67L10.6019 16.5L5.69995 11.514L6.85908 10.335L10.6019 14.142L17.1408 7.5L18.3 8.67Z"

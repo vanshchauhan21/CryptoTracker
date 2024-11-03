@@ -1,75 +1,71 @@
 .tutorial {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    gap: 5rem;
-    /* background-color: #1a1a1a; */
-    color: #f5f5f5;
-    border-radius: 8px;
-    flex-direction: row-reverse;
-/* border: 2px solid greenyellow; */
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  gap: 5rem;
+  /* background-color: #1a1a1a; */
+  color: #f5f5f5;
+  border-radius: 8px;
+  flex-direction: row-reverse;
+  margin-top: 3rem;
+  /* border: 2px solid greenyellow; */
 }
-  
-  .tutorial-description {
-    display: flex;
-    align-items: center;
-/* border: 2px solid red; */
 
-  }
-  
-  .tutorial-description svg {
-    width: 56px;
-    height: 56px;
-    margin-right: 20px;
-    fill: #3a80e9;
-  }
-  
-  .heading-wrapper {
-    max-width: 400px;
-  }
-  
-  .title {
-    font-size: 1.8em;
-    margin: 0;
-  }
-  
-  .description {
-    font-size: 1em;
-    margin-top: 5px;
-    color: #aaa;
-  }
-  
-  .connect-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1em;
-    color: #fff;
-    background-color:  rgba(19, 113, 254, 0.788);
-    border: none;
+.tutorial-description {
+  display: flex;
+  align-items: center;
+  /* border: 2px solid red; */
+}
+
+.tutorial-description svg {
+  width: 56px;
+  height: 56px;
+  margin-right: 20px;
+  fill: #3a80e9;
+}
+
+.heading-wrapper {
+  max-width: 500px;
+}
+
+.title {
+  font-size: 1.8em;
+  margin: 0;
+}
+
+.description {
+  font-size: 1em;
+  margin-top: 5px;
+  color: #aaa;
+}
+
+.connect-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: rgba(19, 113, 254, 0.788);
+  border: none;
   box-shadow: 2px 2px 10px rgba(54, 131, 248, 0.588);
 
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .connect-button:hover {
-    background-color: #2a60c9;
-  }
-  
+  border-radius: 4px;
+  cursor: pointer;
+}
 
+.connect-button:hover {
+  background-color: #2a60c9;
+}
 
-
-  .tutorial-banner video {
-    width: 500px;
-    height: auto;
-    border-radius: 1rem;
-  }
-  .background-video{
-    pointer-events: none;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the video covers the entire area */
-    z-index: 1;
-    box-shadow: 2px 2px 10px rgba(54, 131, 248, 0.588);
-  
+.tutorial-banner video {
+  width: 500px;
+  height: auto;
+  border-radius: 1rem;
+}
+.background-video {
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire area */
+  z-index: 1;
+  box-shadow: 2px 2px 10px rgba(54, 131, 248, 0.588);
 }
