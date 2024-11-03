@@ -61,3 +61,6 @@
   [data-theme="dark"] .terms-section {
     background-color: rgba(255, 255, 255, 0.05);
   }
+  [data-theme="dark"] .terms-section p{
+    color:#ffffff;
+  }
