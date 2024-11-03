@@ -1,0 +1,138 @@
+/* Card.css */
+.card {
+  position: relative;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: black;
+  color:white;
+  /* border:blue; */
+  transition: all 0.3s ease;
+  border:2px solid #3a80e9;
+
+display: flex ;
+flex-direction: column;
+}
+
+
+.card.highlighted {
+  background-color: black; /* Dark background for highlighted card */
+  color: white;
+  border: 2px solid #3a80e9;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3a80e9; /* Indigo color */
+}
+
+.card-price {
+  margin-top: 10px;
+  display: flex;
+  align-items: baseline;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #61c96f;
+}
+
+.per-month {
+  font-size: 1rem;
+  color: white; 
+  
+}
+
+.card-description {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: white;
+  line-height: 1.5;
+}
+
+.card-features {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.checkmark {
+  color: green; /* Green checkmark */
+  margin-right: 5px;
+}
+
+.card-button {
+  margin-top: 15px;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  background-color:  #3a80e9;/* Indigo color */
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: auto; 
+}
+.card-button:hover {
+  background-color: #2d65b9; /* Darker blue for button hover */
+  transform: translateY(-2px);
+}
+
+/* Hover effect for the entire card */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Highlighted card styles */
+.card.highlighted {
+  border: 2px solid #3a80e9; /* Blue border for highlighted card */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .card {
+      width: 100%;
+      min-height: 350px;
+      margin: 1rem 0;
+  }
+
+  .price {
+      font-size: 2rem;
+  }
+
+  .card-title {
+      font-size: 1.3rem;
+  }
+
+  .card-description {
+      font-size: 0.9rem;
+  }
+
+  .feature-item {
+      font-size: 0.9rem;
+  }
+}
+
+/* Animation for price */
+.price {
+  animation: priceGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes priceGlow {
+  from {
+      text-shadow: 0 0 5px rgba(97, 201, 111, 0.3);
+  }
+  to {
+      text-shadow: 0 0 15px rgba(97, 201, 111, 0.6);
+  }
+}

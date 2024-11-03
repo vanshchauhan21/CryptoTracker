@@ -8,11 +8,11 @@ import { toast } from "react-toastify";
 export default function TemporaryDrawer() {
   const [open, setOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("theme") == "dark" ? true : false
+    localStorage.getItem("theme") === "dark" ? true : false
   );
 
   useEffect(() => {
-    if (localStorage.getItem("theme") == "dark") {
+    if (localStorage.getItem("theme") === "dark") {
       setDark();
     } else {
       setLight();
@@ -20,7 +20,7 @@ export default function TemporaryDrawer() {
   }, []);
 
   const changeMode = () => {
-    if (localStorage.getItem("theme") != "dark") {
+    if (localStorage.getItem("theme") !== "dark") {
       setDark();
     } else {
       setLight();
@@ -45,17 +45,26 @@ export default function TemporaryDrawer() {
       </IconButton>
       <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
         <div className="drawer-div">
-          <a href="/">
+          {<a href="/">
             <p className="link">Home</p>
-          </a>
+          </a>}
           <a href="/compare">
             <p className="link">Compare</p>
           </a>
           <a href="/watchlist">
             <p className="link">Watchlist</p>
           </a>
+          <a href="/learn">
+            <p className="link">Learn</p>
+          </a>
           <a href="/dashboard">
             <p className="link">Dashboard</p>
+          </a>
+          <a href="/signup">
+            <p className="link">Sign Up</p>
+          </a>
+          <a href="/login">
+            <p className="link">Log In</p>
           </a>
           <Switch checked={darkMode} onClick={() => changeMode()} />
         </div>

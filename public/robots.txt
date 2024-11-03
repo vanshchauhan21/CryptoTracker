@@ -1,3 +1,4 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /private
+Allow: /
+Sitemap: https://crypto-tracker-kappa-ebon.vercel.app/sitemap.xml

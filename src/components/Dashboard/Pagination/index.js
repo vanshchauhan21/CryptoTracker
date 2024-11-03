@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./styles.css";
 
 import Pagination from "@mui/material/Pagination";
@@ -9,15 +9,15 @@ export default function PaginationControlled({ page, handlePageChange }) {
       <Pagination
         sx={{
           "& .MuiPaginationItem-text": {
-            color: "#fff !important",
-            border: "1px solid var(--grey)",
+            color: "var(--pagination-text-color) !important",
+            border: "1px solid var(--pagination-border-color)",
           },
           "& .MuiPaginationItem-text:hover": {
-            backgroundColor: "transparent !important",
+            backgroundColor: "var(--pagination-hover-bg-color) !important",
           },
           "& .Mui-selected  ": {
-            backgroundColor: "var(--blue)",
-            borderColor: "var(--blue)",
+            backgroundColor: "var(--pagination-selected-bg-color)",
+            borderColor: "var(--pagination-selected-border-color)",
           },
           "& .MuiPaginationItem-ellipsis": {
             border: "none",

@@ -1,0 +1,91 @@
+/* src/components/Learn.css */
+
+.learn-container {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.learn-title {
+  color: var(--text-color);
+}
+
+.learn-card {
+  background-color: var(--white);
+  border: 1px solid var(--grey);
+  transition: all 0.3s ease;
+}
+
+.learn-subtitle {
+  color: var(--blue);
+}
+
+.learn-description {
+  color: var(--text-color);
+}
+
+.learn-link {
+  color: var(--blue);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.learn-link:hover {
+  opacity: 0.8;
+}
+
+/* Dark mode styles */
+[data-theme="dark"] .learn-container {
+  background-color: var(--darkgrey);
+}
+
+[data-theme="dark"] .learn-card {
+  background-color: var(--black);
+  border-color: var(--blue);
+}
+
+[data-theme="dark"] .learn-title,
+[data-theme="dark"] .learn-description {
+  color: var(--white);
+}
+
+/* Light mode styles */
+[data-theme="light"] .learn-container {
+  background-color: var(--white);
+}
+
+[data-theme="light"] .learn-card {
+  background-color: var(--white);
+  border-color: var(--grey);
+}
+
+[data-theme="light"] .learn-title,
+[data-theme="light"] .learn-description {
+  color: var(--black);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .learn-container {
+    padding: 1rem;
+ }
+
+  .learn-title {
+    font-size: 2rem;
+  }
+
+  .learn-card {
+    padding: 1rem;
+  }
+}
+
+/* Hover Effect */
+
+.learn-card:hover {
+  transform: scale(1.02); /* Slightly enlarges the card */
+  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.5); /* Blue shadow effect */
+  background-color: var(--light-blue); /* Changes the background color */
+  border-color: var(--blue); /* Changes the border color */
+  transition: all 0.3s ease; /* Smooth transition */
+}

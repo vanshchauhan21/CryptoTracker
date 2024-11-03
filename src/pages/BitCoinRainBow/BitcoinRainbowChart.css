@@ -1,0 +1,86 @@
+.rainbow-chart-explanation {
+    margin:7rem ;
+text-align: center;
+    border:2px solid rgba(130, 47, 255, 0.742) ;
+padding: 4rem;  
+border-radius: 1rem;
+}
+  
+  .rainbow-chart-explanation h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .rainbow-chart-explanation p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .rainbow-chart-explanation a {
+    color: #007bff; /* Change this to your desired link color */
+    text-decoration: none;
+  }
+  
+  .rainbow-chart-explanation a:hover {
+    text-decoration: underline;
+  }
+  
+
+  .learn-more-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border:2px solid rgba(130, 47, 255, 0.742) ;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .learn-more-header {
+    color: #3a80e9;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .learn-more-item {
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .learn-more-title {
+    background-color: #f0f0f0;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .learn-more-title:hover {
+    background-color: #e8e8e8;
+  }
+  
+  .learn-more-arrow {
+    transition: transform 0.3s ease;
+  }
+  
+  .learn-more-title.active .learn-more-arrow {
+    transform: rotate(180deg);
+  }
+  
+  .learn-more-content {
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+  }
+  
+  .learn-more-content.active {
+    max-height: 500px;
+    padding: 15px;
+  }

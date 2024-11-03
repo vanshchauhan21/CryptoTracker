@@ -1,0 +1,42 @@
+{
+    "crypto_tracker": "CryptoTracker",
+    "track_crypto_info": "Mantente actualizado con los precios y tendencias de criptomonedas en tiempo real. Rastrea, compara y toma decisiones informadas con CryptoTracker.",
+    "image_alt": "Logo",
+    "quick_links": "Enlaces Rápidos",
+    "home": "Inicio",
+    "compare": "Comparar",
+    "watchlist": "Lista de Seguimiento",
+    "dashboard": "Panel de Control",
+    "privacy_policy": "Política de Privacidad",
+    "terms_conditions": "Términos y Condiciones",
+    "faq": "Preguntas Frecuentes",
+    "connect_with_us": "Conéctate con nosotros",
+    "newsletter": "Boletín",
+    "newsletter_description": "Mantente al tanto y suscríbete al Boletín de CryptoTracker",
+    "enter_email": "Introduce tu correo electrónico",
+    "subscribe": "Suscribirse",
+    "app_shared": "¡Gracias por suscribirte!",
+    "please_enter_email": "Por favor, introduce una dirección de correo válida.",
+    "all_rights_reserved": "Todos los Derechos Reservados.",
+
+
+
+    "common": {
+      "per_month": "/mes",
+      "get_started_today": "Empieza hoy"
+    },
+    "pricing": {
+      "hobby_title": "Hobby",
+      "hobby_description": "El plan perfecto si recién estás comenzando con nuestro producto.",
+      "hobby_feature_1": "25 productos",
+      "hobby_feature_2": "Hasta 10,000 suscriptores",
+      "hobby_feature_3": "Análisis avanzados",
+      "hobby_feature_4": "Soporte 24 horas",
+      "enterprise_title": "Empresarial",
+      "enterprise_description": "Soporte y infraestructura dedicados para tu empresa.",
+      "enterprise_feature_1": "Productos ilimitados",
+      "enterprise_feature_2": "Suscriptores ilimitados",
+      "enterprise_feature_3": "Análisis avanzados",
+      "enterprise_feature_4": "Soporte dedicado"
+    }
+  }

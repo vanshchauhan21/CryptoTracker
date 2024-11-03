@@ -1,20 +1,18 @@
 export const convertNumber = (number) => {
-  const numberWithCommas = number.toLocaleString();
-  var arr = numberWithCommas.split(",");
-  if (arr.length == 5) {
-    //Trillions
-    return arr[0] + "." + arr[1].slice(0, 2) + "T";
-  } else if (arr.length == 4) {
-    //Billions
-    return arr[0] + "." + arr[1].slice(0, 2) + "B";
-  } else if (arr.length == 3) {
+  if (number >= 1e12) {
+    // Trillions
+    return (number / 1e12).toFixed(2).replace(/\.?0+$/, "") + "T";
+  } else if (number >= 1e9) {
+    // Billions
+    return (number / 1e9).toFixed(2).replace(/\.?0+$/, "") + "B";
+  } else if (number >= 1e6) {
     // Millions
-    return arr[0] + "." + arr[1].slice(0, 2) + "M";
-  } else if (arr.length == 2) {
+    return (number / 1e6).toFixed(2).replace(/\.?0+$/, "") + "M";
+  } else if (number >= 1e3) {
     // Thousands
-    return arr[0] + "." + arr[1].slice(0, 2) + "K";
+    return (number / 1e3).toFixed(2).replace(/\.?0+$/, "") + "K";
   } else {
-    // Hundreds
+    // Hundreds or less, return as is with commas
     return number.toLocaleString();
   }
 };

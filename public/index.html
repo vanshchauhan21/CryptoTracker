@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CryptoTracker.</title>
+    <title>CryptoTracker</title>
     <meta
       name="description"
       content="CryptoTracker is the tracker you always needed. Compare different crypto currencies, look at their graphs - prices, total volumes, market cap, etc. Search from the top 100 Crypto currencies in real time and add them to your watchlist aswell."
     />
     <link rel="icon" href="https://i.ibb.co/x6FTCCy/logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta charset="utf-8" />
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
     <meta
@@ -54,8 +55,67 @@
       content="CryptoTracker is the tracker you always needed. Compare different crypto currencies, look at their graphs - prices, total volumes, market cap, etc. Search from the top 100 Crypto currencies in real time."
     />
     <meta itemprop="image" content="https://i.ibb.co/x6FTCCy/logo.png" />
+    <style>
+#back-to-top {
+    position: fixed;
+    height: 55px;
+    width: 55px;
+    bottom: 1rem;
+    right: 5rem;
+    display: none;
+    background-color: rgba(0, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px;
+    color: white;
+    border: none;
+    border-radius: 27.5px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1);
+}
+
+#back-to-top:hover {
+    transform: scale(1.1);
+}
+
+.fa-chevron-up {
+    font-size: 30px;
+}
+  </style>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <button id="back-to-top" onclick="scrollToTop()">
+      <i class="fa fa-chevron-up"></i>
+  </button>
+
+    <script>
+      window.embeddedChatbotConfig = {
+      chatbotId: "3lI2mj_t3OYwUvdeI0F10",
+      domain: "www.chatbase.co"
+      }
+      </script>
+      <script
+      src="https://www.chatbase.co/embed.min.js"
+      chatbotId="3lI2mj_t3OYwUvdeI0F10"
+      domain="www.chatbase.co"
+      defer>
+      </script>
+    <script>
+      // Show or hide the button based on scroll position
+      window.onscroll = function() {
+        const button = document.getElementById('back-to-top');
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          button.style.display = 'block';
+        } else {
+          button.style.display = 'none';
+        }
+      };
+
+      // Scroll to the top of the page when the button is clicked
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    </script>
   </body>
 </html>
