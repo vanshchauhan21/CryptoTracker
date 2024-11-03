@@ -53,6 +53,7 @@ import NFTShowcase from "./pages/NFTShowcase/NFTShowcase";
 import { Helmet } from "react-helmet";
 
 import Cryptoreward from "./pages/Cryptoreward/Cryptoreward";
+// import Reward from "./pages/Reward/Reward.js";
 
 import BTCDominance from "./pages/BTCDominance/BTCDominance";
 
@@ -151,7 +152,7 @@ function App() {
                 <Route path="/profit-loss" element={<ProfitLoss />} />
                 <Route path="cryptocard" element={<Cryptocard />} />
                 <Route path="/TermsOfUse" element={<TermsOfUse />} />
-
+        
                 <Route path="/defi-assets" element={<DefiAssets />} />
                 <Route path="/CryptoMarket" element={<CryptoMarket />} />
                 <Route
