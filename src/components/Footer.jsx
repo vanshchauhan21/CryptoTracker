@@ -4,7 +4,7 @@ import { ArrowRight, Instagram, Github, Twitter, Linkedin } from "lucide-react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import logo from "../assets/logo.jpg";
 import "./ComparePage/SelectCoins/index";
-
+import "./Footer.css";
 import GoogleTranslate from "./GoogleTranslate";
 
 const Footer = () => {
@@ -121,6 +121,7 @@ const Footer = () => {
               </li>
             ))}
           </ul>
+
         </div>
 
         {/* .....................................3...................... */}
@@ -146,6 +147,29 @@ const Footer = () => {
               </li>
             ))}
           </ul>
+
+          {/* ...................................new section.................. */}
+
+
+          <h3 className="section-title">{t("News")}</h3>
+          <ul className="link-list">
+            {[
+              { path: "/#", label: "What's Trending" },
+              { path: "/defi-assets", label: "Market Updates" },
+              { path: "/defi-assets", label: "Product News" },
+              { path: "/defi-assets", label: "Company News" },
+           
+
+            ].map(({ path, label }) => (
+              <li key={label}>
+                <a href={path}>
+                  <ArrowRight size={16} /> {t(label)}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+
         </div>
 
         {/* .....................................4...................... */}
