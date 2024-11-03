@@ -156,9 +156,9 @@ function App() {
                   path="CryptoProfitCalculator"
                   element={<CryptoProfitCalculator />}
                 />
-                
-                <Route 
-                  path="/cryptoreward" 
+
+                <Route
+                  path="/cryptoreward"
                   element={<Cryptoreward />}
                 />
 
@@ -194,7 +194,7 @@ function App() {
                   element={<CurrecyMarket24h />}
                 />
                 <Route
-                  path="EthereumRainbowChart"
+                  path="/EthereumRainbowChart"
                   element={<EthereumRainbowChart />}
                 />
                 <Route path="*" element={<NotFoundPage />} />

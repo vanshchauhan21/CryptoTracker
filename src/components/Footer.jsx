@@ -110,7 +110,11 @@ const Footer = () => {
               { path: "/CryptoConverter", label: "Crypto Convertor" },
               {
                 path: "/BitcoinRainbowChart",
-                label: "Bit coint Rainbow Chart",
+                label: "Bitcoin Rainbow Chart",
+              },
+              {
+                path: "/EthereumRainbowChart",
+                label: "Ethereum Rainbow Chart",
               },
               { path: "/CryptoMarket", label: "24h Cryptocurrency Market" },
             ].map(({ path, label }) => (
@@ -186,9 +190,6 @@ const Footer = () => {
 
               { path: "/#", label: "Learn about Crypto Tracker Reward" },
               { path: "/cryptocard", label: "How to Buy Crypto with Card" },
-
-              { path: "/cryptoreward", label: "Learn about Crypto Tracker Reward" },
-              { path: "/#", label: "How to Buy Crypto with Card" },
 
               { path: "/trackNft", label: "How to Track NFTs on Crypto Tracker" },
             ].map(({ path, label }) => (
