@@ -1,39 +1,68 @@
-.crypto-rewards-container {
+:root {
+    --vision-bg-color: #f9f9f9;
+    --vision-text-color: #333;
+    --vision-title-color: #007bff;
+    --vision-border-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  [data-theme="dark"] {
+    --vision-bg-color: #121212;
+    --vision-text-color: #f5f5f5;
+    --vision-title-color: #3a80e9; /* A shade of blue for dark mode */
+    --vision-border-color: rgba(81, 50, 222, 0.5);
+  }
+  
+  .crypto-rewards-container {
     padding: 20px;
+    background-color: var(--vision-bg-color); /* Use CSS variable for background color */
+    border: 2px solid var(--vision-border-color); /* Use CSS variable for border color */
+    border-radius: 10px;
     max-width: 800px;
-    margin: 0 auto;
+    margin: auto;
     text-align: left;
     font-family: Arial, sans-serif;
-    border: 2px solid #6610f2;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    border-radius: 8px;
-}
-
-.title {
+  }
+  
+  .title {
     font-size: 2em;
     margin-bottom: 1rem;
-    color: #0d6efd;
+    color: var(--vision-title-color); /* Use CSS variable for title color */
     text-align: center;
-}
-
-.section {
+  }
+  
+  .section {
     margin-bottom: 1.5rem;
-}
-
-.section h2 {
-    color: #6610f2;
+  }
+  
+  .section h2 {
+    color: var(--vision-title-color); /* Use CSS variable for section heading color */
     margin-bottom: 0.5rem;
-}
-
-.earn-list,
-.benefits-list {
+  }
+  
+  .earn-list,
+  .benefits-list {
     list-style-type: disc;
     padding-left: 20px;
     margin-top: 0.5rem;
-}
-
-.earn-list li,
-.benefits-list li {
+  }
+  
+  .earn-list li,
+  .benefits-list li {
     margin: 5px 0;
-}
+  }
+  
+  /* Additional styles for general elements */
+  ul, ol {
+    margin-left: 20px;
+  }
+  
+  .section {
+    margin-bottom: 20px;
+  }
+  
+  .section p {
+    margin-bottom: 10px;
+  }
+  
