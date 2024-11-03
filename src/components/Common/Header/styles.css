@@ -1,79 +1,211 @@
+:root {
+  --blue: #0066ff;
+  --grey: #a0a3a8;
+  --black: #121212;
+  --white: #f5f5f5;
+}
+
+[data-theme="dark"] {
+  --background-color: var(--black);
+  --text-color: var(--white);
+  --link-hover-color: var(--blue);
+}
+
+[data-theme="light"] {
+  --background-color: var(--white);
+  --text-color: var(--black);
+  --link-hover-color: var(--blue);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header Styling */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 3rem;
+  padding: 0.75rem 2.5rem;
+  min-height: 60px;
   position: sticky;
   top: 0;
-  background-color: var(--black);
+  background-color: var(--background-color);
   z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
 }
 
+/* Header Text Styling */
 .header h1 {
-  font-size: 1.2rem;
-  margin: 0rem;
-  font-weight: 600;
+  font-size: 1.8rem;
+  font-weight: 900;
+  background: linear-gradient(45deg, #3a80e9, #b453e6);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin: 0;
+  cursor: pointer;
 }
 
+/* Navigation Links */
 .links {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
-.link {
+.link,
+.active-link {
   position: relative;
+  color: var(--text-color);
+
+
   font-size: 21px;
-  color: var(--grey);
   font-weight: 600;
   cursor: pointer;
+  padding: 10px 15px;
+  transition: background-color 0.3s, border 0.3s;
+  border: 2px solid transparent;
+  border-radius: 5px;
 }
 
-.link::after {
+.link:hover,
+.active-link {
+  color: #3a80e9;
+  /* background-color: rgba(245, 245, 245, 0.8); */
+  border: 2px solid #3a80e9;
+}
+
+.link::after,
+.active-link::after {
   content: "";
-  top: 100%;
+  position: absolute;
+  bottom: -6px;
   left: 0;
   width: 100%;
   height: 2px;
-  background: #3a80e9;
+  background: var(--link-hover-color);
   transform: scaleX(0);
   transform-origin: left;
-  position: absolute;
-  transition: transform 0.3s ease-in-out; 
+  transition: transform 0.3s ease;
 }
 
-.link:hover::after {
-  transform: scaleX(1); 
-}
-.link:hover {
-  color: #3a80e9;
-  transform: all 0.3s;
+.link:hover::after,
+.active-link:hover::after,
+.active-link::after {
+  transform: scaleX(1);
 }
 
+/* Drawer component */
 .drawer-component {
   display: none;
 }
 
+/* Button Styling */
+.button {
+  background-color: var(--blue);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: #2f6ac7;
+  transform: scale(1.05);
+}
+
+.mobile-menu-button {
+  display: none;
+}
+
+/* Mobile Responsiveness */
 @media only screen and (max-width: 800px) {
   .links {
     display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: var(--background-color);
+    padding: 20px;
+    z-index: 1000;
   }
-  .link {
-    font-size: 16px;
-}
-  .drawer-component {
+
+  .links.mobile-menu-open {
+    display: flex;
+  }
+
+  .mobile-menu-button {
     display: block;
+  }
+
+  .drawer-component {
+    display: none;
   }
 
   .header {
     padding: 0.5rem 1.5rem;
+    color: var(--text-color);
   }
 
   .drawer-div {
     width: 40vw;
-    background-color: var(--black);
+    background-color: var(--background-color);
     height: 100vh;
     padding: 0.5rem 1.5rem;
   }
+
+  .link {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: var(--background-color);
+    padding: 20px;
+    z-index: 1000;
+  }
+
+  .links.mobile-menu-open {
+    display: flex;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
+
+  .drawer-component {
+    display: none;
+  }
+}
+
+.nav-logo {
+  height: 3rem !important;
+  width: 3rem !important;
+  padding-top: 0.2rem !important;
+}
+
+.nav-header {
+  padding: 0rem 0.5rem;
+}
+
+a {
+  display: flex !important;
 }

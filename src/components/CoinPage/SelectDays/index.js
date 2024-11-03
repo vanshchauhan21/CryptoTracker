@@ -1,5 +1,5 @@
 import { MenuItem, Select } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 import "./styles.css";
 
 function SelectDays({ days, handleDaysChange, noPTag }) {
@@ -11,16 +11,37 @@ function SelectDays({ days, handleDaysChange, noPTag }) {
         onChange={(e) => handleDaysChange(e)}
         sx={{
           height: "2.5rem",
-          color: "var(--white)",
+          color: "var(--text-color)",
           "& .MuiOutlinedInput-notchedOutline": {
-            borderColor: "var(--white)",
+            borderColor: "var(--text-color)",
           },
           "& .MuiSvgIcon-root": {
-            color: "var(--white)",
+          color: "var(--text-color)"
           },
           "&:hover": {
             "&& fieldset": {
               borderColor: "#3a80e9",
+            },
+          },
+        }}
+        MenuProps={{
+          PaperProps: {
+            sx: {
+              backgroundColor: "var(--black)",
+              boxShadow: "var(--select-box-shadow)",
+              "& .MuiMenuItem-root": {
+                color: "var(--white)",
+                backgroundColor: "var(--black)",
+                "&:hover": {
+                  backgroundColor: "var(--darkgrey)",
+                },
+                "&.Mui-selected": {
+                    backgroundColor: "rgba(58, 128, 233, 0.1)",
+                },
+                "&.Mui-selected:hover": {
+                  backgroundColor: "rgba(58, 128, 233, 0.3)",
+                },
+              },
             },
           },
         }}

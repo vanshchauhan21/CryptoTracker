@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  width: 250px;
+  width: 15rem;
+  height: 22rem;
   padding: 2rem;
   background-color: var(--darkgrey);
   border-radius: 0.8rem;
@@ -68,6 +69,7 @@
   text-transform: uppercase;
   font-weight: 600;
   margin: 0rem;
+  color:aliceblue;
 }
 
 .coin-name {

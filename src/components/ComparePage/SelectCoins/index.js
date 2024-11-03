@@ -1,8 +1,7 @@
 import { MenuItem, Select } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 import SelectDays from "../../CoinPage/SelectDays";
 import "./styles.css";
-
 function SelectCoins({
   allCoins,
   crypto1,
@@ -13,12 +12,12 @@ function SelectCoins({
 }) {
   const style = {
     height: "2.5rem",
-    color: "var(--white)",
+    color: "var(--text-color)",
     "& .MuiOutlinedInput-notchedOutline": {
-      borderColor: "var(--white)",
+      borderColor: "var(--text-color)",
     },
     "& .MuiSvgIcon-root": {
-      color: "var(--white)",
+      color:  "var(--text-color)",
     },
     "&:hover": {
       "&& fieldset": {
@@ -30,14 +29,14 @@ function SelectCoins({
   return (
     <div className="select-coins-div">
       <div className="select-flex">
-        <p>Crypto 1</p>
+        <p style={{ color: "var(--text-color)"}}>Compare</p>
         <Select
           value={crypto1}
           onChange={(e) => onCoinChange(e, false)}
           sx={style}
         >
           {allCoins
-            .filter((coin) => coin.id != crypto2)
+            .filter((coin) => coin.id !== crypto2)
             .map((coin, i) => (
               <MenuItem value={coin.id} key={i}>
                 {coin.name}
@@ -46,14 +45,14 @@ function SelectCoins({
         </Select>
       </div>
       <div className="select-flex">
-        <p>Crypto 2</p>
+        <p style={{ color: "var(--text-color)"}}>against</p>
         <Select
           value={crypto2}
           onChange={(e) => onCoinChange(e, true)}
           sx={style}
         >
           {allCoins
-            .filter((coin) => coin.id != crypto1)
+            .filter((coin) => coin.id !== crypto1)
             .map((coin, i) => (
               <MenuItem value={coin.id} key={i}>
                 {coin.name}
@@ -61,11 +60,14 @@ function SelectCoins({
             ))}
         </Select>
       </div>
+      <div className="select-flex">
+        <p style={{ color: "var(--text-color)"}}>in last</p>
       <SelectDays
         days={days}
         handleDaysChange={handleDaysChange}
         noPTag={true}
       />
+      </div>
     </div>
   );
 }

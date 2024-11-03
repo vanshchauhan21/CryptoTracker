@@ -1,7 +1,29 @@
 .select-days {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: right;
   gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
+  padding-right: 1rem;
+}
+
+:root {
+  --light-box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+                      0px 8px 10px 1px rgba(0, 0, 0, 0.14),
+                      0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+  --dark-box-shadow: 0px 5px 5px -3px rgba(255, 255, 255, 0.1),
+                     0px 8px 10px 1px rgba(255, 255, 255, 0.08),
+                     0px 3px 14px 2px rgba(255, 255, 255, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --select-box-shadow: var(--dark-box-shadow);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --select-box-shadow: var(--light-box-shadow);
+  }
 }
