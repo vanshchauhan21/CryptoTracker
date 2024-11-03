@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "../../Common/Button";
 import "./styles.css";
 import gradient from "../../../assets/gradient.png";
@@ -6,27 +6,26 @@ import iphone from "../../../assets/iphone.png";
 import { motion } from "framer-motion";
 import { RWebShare } from "react-web-share";
 import { toast } from "react-toastify";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // import ProFreeSubcription from "../../../pages/Pro-Free-Subscribtion/ProFreeSubcription";
 
 import Marquee from "../../../pages/Marquee/Marquee";
 import OurVision from "../../Common/OurVision/OurVision";
 import FreeTrial from "../../Common/FreeTrial/FreeTrial";
-
 import InDepthAnalysis from "../../Common/InDepthAnalysis/InDepthAnalysis";
 
-
-
-
 function MainComponent() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS with a duration of 1000ms
+  }, []);
 
   return (
     <div className="main-wrapper">
       <div className="main-flex">
-
-
-        <div className="info-landing">
-          <h1 className="heading1">Real Time</h1>
+        <div className="info-landing" data-aos="fade-up">
+          <h1 className="heading1 text-start ml-2">Real Time</h1>
           <motion.h1
             className="heading2"
             initial={{ opacity: 0, x: 50 }}
@@ -41,8 +40,8 @@ function MainComponent() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1, duration: 1 }}
           >
-            Track crypto through a public api in real time. Visit the dashboard to
-            do so!{" "}
+            Track crypto through a public API in real time. Visit the dashboard
+            to do so!
           </motion.p>
           <motion.div
             className="btn-flex"
@@ -63,10 +62,9 @@ function MainComponent() {
             >
               <Button text={"Share App"} outlined={true} />
             </RWebShare>
-
           </motion.div>
         </div>
-        <div className="gradient-div">
+        <div className="gradient-div" data-aos="fade-left">
           <img src={gradient} alt="some image" className="gradient" />
           <motion.img
             src={iphone}
@@ -80,28 +78,21 @@ function MainComponent() {
               repeat: Infinity,
             }}
           />
-
         </div>
-
       </div>
 
-{/* ...............Marguee................. */}
+      {/* ...............Marquee................. */}
       <Marquee />
- {/* ...................Our Vision............. */}
+      {/* ...................Our Vision............. */}
       <OurVision />
 
-
-
-
       {/* .......................Free Trial............. */}
+      <FreeTrial />
 
-<FreeTrial/>
-
-{/* .............In depth Profit and Loss................... */}
-<InDepthAnalysis/>
-{/* ...................pro free ...............
-<ProFreeSubcription/> */}
-
+      {/* .............In-depth Analysis................... */}
+      <InDepthAnalysis />
+      {/* ...................Pro Free Subcription...........
+      <ProFreeSubcription data-aos="fade-down" /> */}
     </div>
   );
 }
