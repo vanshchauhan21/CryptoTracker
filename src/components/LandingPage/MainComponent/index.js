@@ -11,6 +11,7 @@ import ProFreeSubcription from "../../../pages/Pro-Free-Subscribtion/ProFreeSubc
 
 import Marquee from "../../../pages/Marquee/Marquee";
 import OurVision from "../../Common/OurVision/OurVision";
+import FreeTrial from "../../Common/FreeTrial/FreeTrial";
 
 
 
@@ -85,6 +86,13 @@ function MainComponent() {
       <Marquee />
  {/* ...................Our Vision............. */}
       <OurVision />
+
+
+
+      {/* .......................Free Trial............. */}
+
+<FreeTrial/>
+      
     </div>
   );
 }
