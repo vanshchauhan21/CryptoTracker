@@ -11,7 +11,10 @@ import { toast } from "react-toastify";
 
 import Marquee from "../../../pages/Marquee/Marquee";
 import OurVision from "../../Common/OurVision/OurVision";
+import FreeTrial from "../../Common/FreeTrial/FreeTrial";
+
 import InDepthAnalysis from "../../Common/InDepthAnalysis/InDepthAnalysis";
+
 
 
 
@@ -86,6 +89,14 @@ function MainComponent() {
       <Marquee />
  {/* ...................Our Vision............. */}
       <OurVision />
+
+
+
+
+      {/* .......................Free Trial............. */}
+
+<FreeTrial/>
+
 {/* .............In depth Profit and Loss................... */}
 <InDepthAnalysis/>
 {/* ...................pro free ...............
