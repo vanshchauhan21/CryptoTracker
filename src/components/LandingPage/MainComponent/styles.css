@@ -7,7 +7,7 @@
 
 .main-flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
   padding: 1rem 3rem;
   position: relative;
@@ -19,14 +19,12 @@
   margin: 0;
 }
 
-
 /* .heading1:hover {
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: var(--white);
   color: var(--white);
   transition: all 0.3s;
 } */
-
 
 /* [data-theme="dark"] .heading1 {
   color: var(--heading1-color-dark);
@@ -77,7 +75,6 @@
 }
 
 @media only screen and (max-width: 1350px) {
-
   .heading1,
   .heading2 {
     font-size: 5rem;
@@ -85,7 +82,6 @@
 }
 
 @media only screen and (max-width: 1050px) {
-
   .heading1,
   .heading2 {
     font-size: 4rem;
@@ -105,7 +101,6 @@
 }
 
 @media only screen and (max-width: 800px) {
-
   .heading1,
   .heading2 {
     font-size: 3rem;
@@ -173,99 +168,96 @@ clamp(minFontSize, ratio, maxFontSize)
   formula to calculate the ratio
   (max-size/design width) * 100
   example: (70/1440)*100 */
-  @media only screen and (max-width: 200px) {
+@media only screen and (max-width: 200px) {
+  .gradient,
+  .iphone {
+    left: 0px;
+  }
 
-    .gradient,
-    .iphone {
-      left: 0px;
-
-    }
-
-    .footer {
-      margin-top: 80px; /* Adjust margin for mobile */
-      margin: 1.5rem 0.5rem;
-    }
+  .footer {
+    margin-top: 80px; /* Adjust margin for mobile */
+    margin: 1.5rem 0.5rem;
+  }
 
   .main-wrapper {
     padding-bottom: 60px; /* Reduce padding on mobile */
   }
 
-    /* .iphone {
+  /* .iphone {
       left: -20px;
     } */
-  }
+}
 
-  .main-wrapper {
-    min-height: 80vh;
-    position: relative;
-    padding-bottom: 20px; /* Add padding to prevent footer overlap */
-  }
+.main-wrapper {
+  min-height: 80vh;
+  position: relative;
+  padding-bottom: 20px; /* Add padding to prevent footer overlap */
+}
 
-  .main-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding:3rem 3rem 1rem;
-    position: relative;
-  }
+.main-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 3rem 3rem 1rem;
+  position: relative;
+}
 /* Custom CSS styling for share App dialog box */
 
 .rws-backdrop {
-    background: rgba(0, 0, 0, 0.8) !important;
-    justify-content: center !important;
-    z-index: 1400 !important;
+  background: rgba(0, 0, 0, 0.8) !important;
+  justify-content: center !important;
+  z-index: 1400 !important;
 }
 
 .rws-container {
-    background-color: var(--rws-container-bg) !important;
-    max-width: 18rem !important;
-    border: var(--rws-container-border) !important;
-    border-bottom-left-radius: 0.5rem !important;
-    border-bottom-right-radius: 0.5rem !important;
+  background-color: var(--rws-container-bg) !important;
+  max-width: 18rem !important;
+  border: var(--rws-container-border) !important;
+  border-bottom-left-radius: 0.5rem !important;
+  border-bottom-right-radius: 0.5rem !important;
 }
 
 .rws-header {
-    display: flex !important;
-    justify-content: center !important;
-    background: rgba(0, 0, 0, 0.1) !important;
-    padding: 1rem 1.25rem;
-    font-size: 1rem !important;
-    font-weight: 800 !important;
-    color: var(--rws-font-color) !important;
+  display: flex !important;
+  justify-content: center !important;
+  background: rgba(0, 0, 0, 0.1) !important;
+  padding: 1rem 1.25rem;
+  font-size: 1rem !important;
+  font-weight: 800 !important;
+  color: var(--rws-font-color) !important;
 }
 
 .rws-icons {
-    background: rgba(0, 0, 0, 0.1) !important;
-    grid-template-columns: repeat(4, 1fr) !important;
-    grid-gap: 0.8rem !important;
+  background: rgba(0, 0, 0, 0.1) !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  grid-gap: 0.8rem !important;
 }
 
 .rws-close {
-    background: var(--rws-close-bg) !important;
-    border-top: var(--rws-container-border) !important;
-    border-bottom-left-radius: 0.5rem !important;
-    border-bottom-right-radius: 0.5rem !important;
-    color: var(--rws-close-font-color) !important;
+  background: var(--rws-close-bg) !important;
+  border-top: var(--rws-container-border) !important;
+  border-bottom-left-radius: 0.5rem !important;
+  border-bottom-right-radius: 0.5rem !important;
+  color: var(--rws-close-font-color) !important;
 }
 
 [data-theme="dark"] {
-    --rws-close-font-color: rgba(230, 230, 230, 255);
-    --rws-close-bg: rgba(113, 128, 150, 250);
-    --rws-font-color: var(--grey);
-    --rws-container-bg: var(--darkgrey);
-    --rws-container-border: 0.5px solid var(--rws-close-bg);
+  --rws-close-font-color: rgba(230, 230, 230, 255);
+  --rws-close-bg: rgba(113, 128, 150, 250);
+  --rws-font-color: var(--grey);
+  --rws-container-bg: var(--darkgrey);
+  --rws-container-border: 0.5px solid var(--rws-close-bg);
 }
 
 [data-theme="light"] {
-    --rws-close-font-color: var(--darkgrey);
-    --rws-close-bg: var(--grey);
-    --rws-font-color: var(--darkgrey);
-    --rws-container-bg: var(--white);
-    --rws-container-border: 0.5px solid var(--rws-close-bg);
+  --rws-close-font-color: var(--darkgrey);
+  --rws-close-bg: var(--grey);
+  --rws-font-color: var(--darkgrey);
+  --rws-container-bg: var(--white);
+  --rws-container-border: 0.5px solid var(--rws-close-bg);
 }
 
 .submit-button {
-
   transition: all 0.3s ease;
 }
 
