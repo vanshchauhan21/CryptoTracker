@@ -269,6 +269,16 @@ const Footer = () => {
                   borderRadius: "8px",
                   width: "100%", // Match parent width (150px)
                   height: "auto",
+                  transition: "transform 0.3s, box-shadow 0.3s", // Animation for hover
+                  cursor: "pointer", // Change cursor to pointer
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "scale(1.05)"; // Scale up on hover
+                  e.currentTarget.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.3)"; // Add shadow on hover
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "scale(1)"; // Scale back down
+                  e.currentTarget.style.boxShadow = "none"; // Remove shadow
                 }}
               >
                 <i className="fab fa-github" style={{ marginRight: "8px" }}></i>
@@ -280,9 +290,22 @@ const Footer = () => {
                     color: "#fff",
                     textDecoration: "none",
                     fontWeight: "bold",
+                    position: "relative", // Position for animation
                   }}
                 >
                   Star Us ⭐
+                  <span
+                    style={{
+                      position: "absolute",
+                      bottom: "-2px",
+                      left: "0",
+                      right: "0",
+                      height: "2px",
+                      backgroundColor: "#fff",
+                      transform: "scaleX(0)",
+                      transition: "transform 0.3s ease-in-out", // Animation for underline
+                    }}
+                  />
                 </a>
                 <span style={{ marginLeft: "8px", color: "#fff" }}>{stars}</span>
               </div>
