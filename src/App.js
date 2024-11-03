@@ -44,7 +44,7 @@ import CookiePolicy from "./pages/Cookie-Policy/CookiePolicy";
 import TrackNft from "./pages/Track NFT/TrackNFTs.js";
 import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator";
 import ImpermanentLossCalculator from "./pages/ImpermanentLossCalculator";
-import DefiAssets from "./pages/DefiAssets/DefiAssets";
+
 import ProfitLoss from "./pages/ProfitLoss/ProfitLoss";
 import Cryptocard from "./pages/CryptoCard/Cryptocard";
 import Footer from "./components/Footer";
@@ -56,6 +56,7 @@ import Cryptoreward from "./pages/Cryptoreward/Cryptoreward";
 // import Reward from "./pages/Reward/Reward.js";
 
 import BTCDominance from "./pages/BTCDominance/BTCDominance";
+import MarketUpdate from "./pages/MarketUpdate/MarketUpdate.js";
 
 
 function App() {
@@ -152,8 +153,9 @@ function App() {
                 <Route path="/profit-loss" element={<ProfitLoss />} />
                 <Route path="cryptocard" element={<Cryptocard />} />
                 <Route path="/TermsOfUse" element={<TermsOfUse />} />
+                <Route path="/market-update" element={<MarketUpdate />} />
         
-                <Route path="/defi-assets" element={<DefiAssets />} />
+              
                 <Route path="/CryptoMarket" element={<CryptoMarket />} />
                 <Route
                   path="CryptoProfitCalculator"

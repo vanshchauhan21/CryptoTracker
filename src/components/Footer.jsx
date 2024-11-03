@@ -160,9 +160,9 @@ const Footer = () => {
           <ul className="link-list">
             {[
               { path: "/#", label: "What's Trending" },
-              { path: "/defi-assets", label: "Market Updates" },
-              { path: "/defi-assets", label: "Product News" },
-              { path: "/defi-assets", label: "Company News" },
+              { path: "/market-update", label: "Market Updates" },
+              { path: "/", label: "Product News" },
+              { path: "/", label: "Company News" },
            
 
             ].map(({ path, label }) => (
