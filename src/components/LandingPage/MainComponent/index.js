@@ -7,11 +7,14 @@ import { motion } from "framer-motion";
 import { RWebShare } from "react-web-share";
 import { toast } from "react-toastify";
 
-import ProFreeSubcription from "../../../pages/Pro-Free-Subscribtion/ProFreeSubcription";
+// import ProFreeSubcription from "../../../pages/Pro-Free-Subscribtion/ProFreeSubcription";
 
 import Marquee from "../../../pages/Marquee/Marquee";
 import OurVision from "../../Common/OurVision/OurVision";
 import FreeTrial from "../../Common/FreeTrial/FreeTrial";
+
+import InDepthAnalysis from "../../Common/InDepthAnalysis/InDepthAnalysis";
+
 
 
 
@@ -89,10 +92,16 @@ function MainComponent() {
 
 
 
+
       {/* .......................Free Trial............. */}
 
 <FreeTrial/>
-      
+
+{/* .............In depth Profit and Loss................... */}
+<InDepthAnalysis/>
+{/* ...................pro free ...............
+<ProFreeSubcription/> */}
+
     </div>
   );
 }
