@@ -184,7 +184,7 @@ function Header() {
         />
       </div>
       <NavLink to="/dashboard">
-        <Button text={t("dashboard")} />
+        <Button text={"dashboard"} />
       </NavLink>
 
       {isMobile && (
