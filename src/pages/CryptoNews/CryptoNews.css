@@ -1,0 +1,89 @@
+/* CryptoTrendingPage.css */
+
+.trending-container {
+    padding: 20px;
+    max-width: 1200px; /* Center the container */
+    margin: auto; /* Center align the container */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.trending-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px; /* Space between list and news section */
+}
+
+.news-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center; /* Center the news cards */
+}
+
+.news-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Set a fixed width for news cards */
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.news-card:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+}
+
+.news-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.news-title {
+    margin: 8px 0;
+    font-size: 18px; /* Slightly larger font for titles */
+    color: #333; /* Darker color for better readability */
+}
+
+.news-description {
+    font-size: 14px;
+    margin: 8px 0;
+    color: #666; /* Subtle color for descriptions */
+}
+
+.news-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.news-link:hover {
+    text-decoration: underline;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center; /* Center pagination */
+    margin-top: 20px; /* Space above pagination */
+}
+
+.pagination button {
+    background-color: #007bff; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin: 0 5px; /* Space between buttons */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth color change */
+}
+
+.pagination button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.pagination button:disabled {
+    background-color: #ddd; /* Light gray for disabled */
+    cursor: not-allowed; /* Change cursor for disabled */
+}

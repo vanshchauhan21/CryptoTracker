@@ -166,16 +166,29 @@ const Footer = () => {
               </li>
             ))}
           </ul>
+        </div>
+
+
+        {/* ...................................news section.................. */}
+        {/* .....................................4...................... */}
+        <div className="footer-section">
+        <h3 className="section-title">{t("News")}</h3>
 
           {/* ...................................new section.................. */}
 
           <h3 className="section-title">{t("News")}</h3>
+
           <ul className="link-list">
             {[
               { path: "/#", label: "What's Trending" },
               { path: "/market-update", label: "Market Updates" },
               { path: "/", label: "Product News" },
               { path: "/", label: "Company News" },
+
+              { path: "/cryptonews", label: "Crypto News" },
+
+
+
             ].map(({ path, label }) => (
               <li key={label}>
                 <a href={path}>
@@ -186,7 +199,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* .....................................4...................... */}
+        {/* .....................................5...................... */}
         <div className="footer-section">
           <h3 className="section-title">{t("Support")}</h3>
           <ul className="link-list">
