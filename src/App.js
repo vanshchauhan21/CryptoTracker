@@ -60,6 +60,7 @@ import BTCDominance from "./pages/BTCDominance/BTCDominance";
 import MarketUpdate from "./pages/MarketUpdate/MarketUpdate.js";
 import HelpCenter from "./pages/HelpCenter/HelpCenter.js";
 import DefiAssets from "./pages/DefiAssets/DefiAssets.js";
+import CryptoPrices from "./pages/cryptoPrice/cryptoPrice.js";
 
 
 function App() {
@@ -201,6 +202,7 @@ function App() {
                 <Route path="/market-update" element={<MarketUpdate />} />
                 <Route path="/help-center" element={<HelpCenter />} />
                 <Route path="/cryptonews" element={<CryptoNews />} />
+                <Route path="/cryptoprice" element={<CryptoPrices />} />
                 <Route path="/CryptoMarket" element={<CryptoMarket />} />
 
                 <Route path="/defi-assets" element={<DefiAssets />} />
