@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-import '../index.css'; // Import the CSS file for styling
+import './Faq.css';
 import Header from '../components/Common/Header';
+import {  Instagram, Github, Twitter, Linkedin } from "lucide-react";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
 
 const FAQ = () => {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -8,6 +11,28 @@ const FAQ = () => {
     const toggleFAQ = (index) => {
         setActiveIndex(activeIndex === index ? null : index);
     };
+    const DiscordIcon = ({ size = 20 }) => (
+        <i 
+        className="fab fa-discord"
+        style={{
+            fontSize: size,
+            width: size,
+            height: size,
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+        }}
+        />
+    );
+
+    const socialIcons = [
+        { Icon: Instagram, label: "Instagram" },
+        { Icon: Github, label: "Github" },
+        { Icon: Twitter, label: "Twitter" },
+        { Icon: Linkedin, label: "LinkedIn" },
+        { Icon: DiscordIcon, label: "Discord" },
+    ];
+
 
     const faqData = [
       {
@@ -152,6 +177,22 @@ const FAQ = () => {
 >
     <span>Have more questions? Feel free to Connect with us on our social platforms.</span>
 </div>
+<div className="social-icons-container">
+                    {socialIcons.map(({ Icon, label }) => (
+                        <div key={label} className="social-icon-wrapper">
+                        <a
+                            key={label}
+                            href="#"
+                            className="social-icon"
+                            aria-label={label}
+                            
+                        >
+                            <Icon size={20} />
+                        </a>
+                        </div>
+                    ))}
+                </div>
+           
         </>
 
     );
