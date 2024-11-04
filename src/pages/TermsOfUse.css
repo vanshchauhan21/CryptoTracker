@@ -1,51 +1,71 @@
+/* Light mode styles */
+[data-theme="light"] {
+  --terms-bg-color: #f5f5f5;
+  --terms-text-color: #333;
+  --terms-heading-color: #0066ff;
+  --terms-border-color: transparent;
+}
+
+/* Dark mode styles */
+[data-theme="dark"] {
+  --terms-bg-color: #121212;
+  --terms-text-color: #ffffff;
+  --terms-heading-color: #3a80e9;
+  --terms-border-color: #3a80e9;
+}
+
+/* Terms container styling */
 .terms-container {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 50px auto;
   padding: 30px;
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  background-color: var(--terms-bg-color);
+  color: var(--terms-text-color);
+  border: 1px solid var(--terms-border-color);
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
+/* Title styling */
 .terms-title {
   font-size: 2.6em;
   text-align: center;
   margin-bottom: 10px;
-  color: #0f0e0e;
+  color: var(--terms-heading-color);
 }
 
+/* Last updated text styling */
 .last-updated {
   font-size: 0.9em;
   text-align: center;
-  color: #6b6a6a;
+  color: var(--terms-text-color);
   margin-bottom: 20px;
 }
 
+/* Section styling */
 .terms-section {
   margin-bottom: 30px;
-  border-left: 3px solid #227fe9;
+  border-left: 3px solid var(--terms-heading-color);
   padding-left: 25px;
 }
 
+/* Section heading styling */
 .terms-section h2 {
   font-size: 1.4em;
   margin-bottom: 10px;
-  color: #0e65c8;
+  color: var(--terms-heading-color);
 }
 
+/* Section paragraph styling */
 .terms-section p {
   font-size: 1em;
-  color: #2b2b2b;
+  color: var(--terms-text-color);
 }
 
+/* Strong text styling */
 .terms-section strong {
   font-weight: bold;
-  color: #141414;
-}
-
-[data-theme="dark"] {
-  --privacy-bg-color: #121212;
-  --privacy-text-color: #f5f5f5;
+  color: var(--terms-text-color);
 }
