@@ -1,10 +1,9 @@
+// src/pages/ProFreeSubscription.js
+
 import React from 'react';
-import PriceCard from '../../components/Common/Price Card/PriceCard';
-import "./ProFreeSubcription.css"
-const ProFreeSubcription = () => {
+import './ProFreeSubscription.css';
 
-
-    
+const ProFreeSubscription = () => {
     const pricingPlans = [
         {
             title: 'Basic',
@@ -44,16 +43,18 @@ const ProFreeSubcription = () => {
     return (
         <div className="pricing-container">
             {pricingPlans.map((plan, index) => (
-                <PriceCard
-                    key={index}
-                    title={plan.title}
-                    price={plan.price}
-                    features={plan.features}
-                    isHighlighted={plan.title === 'PRO'} // Highlight the PRO plan
-                />
+                <div key={index} className={`price-card ${plan.title === 'PRO' ? 'highlighted' : ''}`}>
+                    <h2 className="price-card-title">{plan.title}</h2>
+                    <p className="price-card-price">{plan.price}</p>
+                    <ul className="price-card-features">
+                        {plan.features.map((feature, idx) => (
+                            <li key={idx}>{feature}</li>
+                        ))}
+                    </ul>
+                </div>
             ))}
         </div>
     );
 };
 
-export default ProFreeSubcription;
+export default ProFreeSubscription;
