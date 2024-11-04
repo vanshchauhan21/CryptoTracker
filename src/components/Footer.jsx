@@ -159,7 +159,7 @@ const Footer = () => {
           <h3 className="section-title">{t("News")}</h3>
           <ul className="link-list">
             {[
-              { path: "/#", label: "What's Trending" },
+              { path: "/what's-trending", label: "What's Trending" },
               { path: "/market-update", label: "Market Updates" },
               { path: "/", label: "Product News" },
               { path: "/", label: "Company News" },
