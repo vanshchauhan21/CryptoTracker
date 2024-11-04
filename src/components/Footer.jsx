@@ -82,6 +82,7 @@ const Footer = () => {
     <footer className="footer">
       <Toaster></Toaster>
       {/* .................1 links-section............... */}
+
       <div className="footer-container">
         <div className="footer-section">
           <h3 className="section-title">{t("Explore")}</h3>
@@ -92,7 +93,7 @@ const Footer = () => {
               { path: "/watchlist", label: "Watchlist" },
               { path: "/dashboard", label: "Dashboard" },
               { path: "/#", label: "Earn" },
-              { path: "/#", label: "Blog" },
+              { path: "/blog", label: "Blog" },
               { path: "/faq", label: "FAQ" },
               { path: "/pricing", label: "Pricing" },
               { path: "/contributors", label: "Contributors" },
@@ -176,7 +177,7 @@ const Footer = () => {
             ))}
           </ul>
 
-<
+        </div>
 
         {/* ...................................news section.................. */}
         {/* .....................................4...................... */}
