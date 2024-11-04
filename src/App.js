@@ -34,6 +34,7 @@ import CryptoProfitCalculator from "./pages/CryptoProfitCalculator";
 
 import Disclaimer from "./pages/Disclaimer/Disclaimer";
 import CryptoMarket from "./pages/CryptoMarket";
+import CryptoNews from "./pages/CryptoNews/CryptoNews";
 
 import ProgressBar from "./components/Common/ProgressBar/ProgressBar";
 import RefundPolicy from "./pages/Refund Policy/RefundPolicy";
@@ -155,10 +156,9 @@ function App() {
                 <Route path="cryptocard" element={<Cryptocard />} />
                 <Route path="/TermsOfUse" element={<TermsOfUse />} />
                 <Route path="/market-update" element={<MarketUpdate />} />
-                
-                <Route path="/help-center" element={<HelpCenter />} />
 
-              
+                <Route path="/help-center" element={<HelpCenter />} />
+                <Route path="/cryptonews" element={<CryptoNews />} />
                 <Route path="/CryptoMarket" element={<CryptoMarket />} />
                 <Route
                   path="CryptoProfitCalculator"
@@ -208,7 +208,7 @@ function App() {
                 <Route path="*" element={<NotFoundPage />} />
                 <Route path="/btc-dominance" element={<BTCDominance />} />
               </Routes>
-              
+
             </BrowserRouter>
           </ThemeProvider>
         </div>
