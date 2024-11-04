@@ -57,6 +57,7 @@ import Cryptoreward from "./pages/Cryptoreward/Cryptoreward";
 
 import BTCDominance from "./pages/BTCDominance/BTCDominance";
 import MarketUpdate from "./pages/MarketUpdate/MarketUpdate.js";
+import HelpCenter from "./pages/HelpCenter/HelpCenter.js";
 
 
 function App() {
@@ -154,7 +155,9 @@ function App() {
                 <Route path="cryptocard" element={<Cryptocard />} />
                 <Route path="/TermsOfUse" element={<TermsOfUse />} />
                 <Route path="/market-update" element={<MarketUpdate />} />
-        
+                
+                <Route path="/help-center" element={<HelpCenter />} />
+
               
                 <Route path="/CryptoMarket" element={<CryptoMarket />} />
                 <Route
