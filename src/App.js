@@ -142,7 +142,14 @@ function App() {
                 <Route path="/faq" element={<Faq />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
+
+
                 <Route path="/terms-conditions" element={<TermCondition />} />
+
+
+
+
+
                 <Route path="/Feedback" element={<Feedback />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/cookies-policy" element={<CookiesPolicy />} />
@@ -154,9 +161,12 @@ function App() {
                 <Route path="/disclaimer" element={<Disclaimer />} />
                 <Route path="/profit-loss" element={<ProfitLoss />} />
                 <Route path="cryptocard" element={<Cryptocard />} />
-                <Route path="/TermsOfUse" element={<TermsOfUse />} />
-                <Route path="/market-update" element={<MarketUpdate />} />
 
+
+                <Route path="/terms-of-Use" element={<TermsOfUse />} />
+
+
+                <Route path="/market-update" element={<MarketUpdate />} />
                 <Route path="/help-center" element={<HelpCenter />} />
                 <Route path="/cryptonews" element={<CryptoNews />} />
                 <Route path="/CryptoMarket" element={<CryptoMarket />} />
