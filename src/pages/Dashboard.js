@@ -8,6 +8,8 @@ import TabsComponent from "../components/Dashboard/Tabs";
 import PaginationComponent from "../components/Dashboard/Pagination";
 import TopButton from "../components/Common/TopButton";
 // import Footer from "../components/Common/Footer/footer";
+import TopCoinsTable from "../components/Dashboard/TopCoinsTable/TopCoinsTable";
+
 
 function Dashboard() {
   const [coins, setCoins] = useState([]);
@@ -15,27 +17,41 @@ function Dashboard() {
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
   const [paginatedCoins, setPaginatedCoins] = useState([]);
+  const [topCoins, setTopCoins] = useState([]);
 
   useEffect(() => {
     // Get 100 Coins
     getData();
   }, []);
 
-  const getData = () => {
+  const getData = async () => {
     setLoading(true);
-    axios
-      .get(
+    try {
+      const response = await axios.get(
         "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
-      )
-      .then((response) => {
-        console.log("RESPONSE>>>", response.data);
-        setCoins(response.data);
-        setPaginatedCoins(response.data.slice(0, 10));
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.log("ERROR>>>", error.message);
-      });
+      );
+
+      const topCoins = response.data.slice(0, 5);
+      const coinsWithPriceData = await Promise.all(
+        topCoins.map(async (coin) => {
+          const priceResponse = await axios.get(
+            `https://api.coingecko.com/api/v3/coins/${coin.id}/market_chart?vs_currency=usd&days=7`
+          );
+          return {
+            ...coin,
+            prices: priceResponse.data.prices,
+          };
+        })
+      );
+
+      setCoins(response.data);
+      setPaginatedCoins(response.data.slice(0, 10));
+      setTopCoins(coinsWithPriceData);
+      setLoading(false);
+    } catch (error) {
+      console.log("ERROR>>>", error.message);
+      setLoading(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -73,6 +89,7 @@ function Dashboard() {
       ) : (
         <>
           <Search search={search} handleChange={handleChange} />
+          <TopCoinsTable topCoins={topCoins} />
           <TabsComponent
             coins={search ? filteredCoins : paginatedCoins}
             setSearch={setSearch}
