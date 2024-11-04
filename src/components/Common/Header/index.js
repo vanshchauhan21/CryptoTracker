@@ -119,7 +119,7 @@ function Header() {
   }));
 
   return (
-    <div className="header">
+    <div className="header ">
       <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
         <div className="nav-logo">
           <img src={logo} alt="logo" className="logo" />
@@ -129,7 +129,7 @@ function Header() {
           <span style={{ color: "var(--blue)" }}></span>
         </h1>
       </Link>
-      <div className={`links ${mobileMenuOpen ? "mobile-menu-open" : ""}`}>
+      <div className={`links ${mobileMenuOpen ? "mobile-menu-open" : ""} mb-10`}>
         <NavLink
           to="/"
           className={({ isActive }) => (isActive ? "active-link link" : "link")}
@@ -182,10 +182,10 @@ function Header() {
           onChange={changeMode}
           inputProps={{ "aria-label": "theme toggle" }}
         />
+        <NavLink to="/dashboard">
+          <Button text={"dashboard"} />
+        </NavLink>
       </div>
-      <NavLink to="/dashboard">
-        <Button text={"dashboard"} />
-      </NavLink>
 
       {isMobile && (
         <div className="mobile-menu-button">
