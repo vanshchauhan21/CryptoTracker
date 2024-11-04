@@ -19,9 +19,7 @@ function Cryptocard() {
 
                 <section className="section">
                     <h2>How to Buy Crypto with a Card on the App</h2>
-                    <p>
-                        Follow these steps to buy crypto using your card on the Crypto Tracker app:
-                    </p>
+                    <p>Follow these steps to buy crypto using your card on the Crypto Tracker app:</p>
                     <ol className="steps-list">
                         <li>Navigate to the "Buy Crypto" section in the app.</li>
                         <li>Select the cryptocurrency you want to purchase, like Bitcoin, Ethereum, or others.</li>
@@ -32,9 +30,7 @@ function Cryptocard() {
 
                 <section className="section">
                     <h2>Benefits of Buying with a Card</h2>
-                    <p>
-                        Buying with a card offers several benefits:
-                    </p>
+                    <p>Buying with a card offers several benefits:</p>
                     <ul className="benefits-list">
                         <li><strong>Instant Purchases:</strong> Get crypto instantly without waiting for lengthy transfer times.</li>
                         <li><strong>Convenience:</strong> Use your existing card without needing to set up additional accounts.</li>
@@ -44,13 +40,11 @@ function Cryptocard() {
 
                 <section className="section">
                     <h2>Important Considerations</h2>
-                    <p>
-                        Before buying crypto with a card, keep in mind:
-                    </p>
+                    <p>Before buying crypto with a card , keep the following in mind:</p>
                     <ul className="considerations-list">
-                        <li><strong>Fees:</strong> Some transactions may incur additional card processing or exchange fees.</li>
-                        <li><strong>Limits:</strong> Card providers may have daily purchase limits, affecting larger transactions.</li>
-                        <li><strong>Bank Restrictions:</strong> Some banks may restrict crypto-related transactions; ensure your bank allows it.</li>
+                        <li><strong>Transaction Fees:</strong> Be aware of potential fees associated with card transactions.</li>
+                        <li><strong>Card Limits:</strong> Check your card's spending limits to avoid any issues.</li>
+                        <li><strong>Market Volatility:</strong> Cryptocurrency prices can fluctuate rapidly, affecting your purchase.</li>
                     </ul>
                 </section>
             </div>
