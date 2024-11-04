@@ -59,6 +59,7 @@ import Cryptoreward from "./pages/Cryptoreward/Cryptoreward";
 import BTCDominance from "./pages/BTCDominance/BTCDominance";
 import MarketUpdate from "./pages/MarketUpdate/MarketUpdate.js";
 import HelpCenter from "./pages/HelpCenter/HelpCenter.js";
+import DefiAssets from "./pages/DefiAssets/DefiAssets.js";
 
 
 function App() {
@@ -104,7 +105,7 @@ function App() {
 
   return (
     <>
-     <Helmet>
+      <Helmet>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
@@ -133,13 +134,46 @@ function App() {
           <ThemeProvider theme={theme}>
             <BrowserRouter>
               <Routes>
+
+
+
+
+                {/* Please Follow Best  Practice Everyone.................. */}
+                {/* ...................................Explore Links  Routes.................. */}
+
                 <Route path="/" element={<Home />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/coin/:id" element={<Coin />} />
                 <Route path="/compare" element={<Compare />} />
                 <Route path="/watchlist" element={<Watchlist />} />
-                <Route path="/learn" element={<Learn />} />
+                <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/faq" element={<Faq />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/Contributors" element={<Contributors />} />
+
+
+
+                {/* ..........................Please Follow Best  Practice Everyone.................. */}
+                {/* ...................................Useful Links  Routes.................. */}
+                <Route path="/calculators">
+                  <Route path="crypto-profit-calculator" element={<CryptoProfitCalculator />} />
+                  <Route path="profit-return-calculator" element={<ProfitReturnCalculator />} />
+                  <Route path="impermanent-loss-calculator" element={<ImpermanentLossCalculator />} />
+                  <Route path="crypto-converter" element={<CryptoConverter />} />
+                </Route>
+
+                <Route path="/charts">
+                  <Route path="bitcoin-rainbow-chart" element={<BitcoinRainbowChart />} />
+                  <Route path="ethereum-rainbow-chart" element={<EthereumRainbowChart />} />
+                </Route>
+
+                <Route path="/market">
+                  <Route path="currency-market-24h" element={<CurrecyMarket24h />} />
+                  <Route path="btc-dominance" element={<BTCDominance />} />
+                </Route>
+
+
+
+                <Route path="/coin/:id" element={<Coin />} />
+                <Route path="/learn" element={<Learn />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
 
@@ -153,11 +187,9 @@ function App() {
                 <Route path="/Feedback" element={<Feedback />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/cookies-policy" element={<CookiesPolicy />} />
-                <Route path="/Contributors" element={<Contributors />} />
                 <Route path="/trackNft" element={<TrackNft />} />
                 <Route path="/nft" element={<NFTShowcase />} />
                 <Route path="/contactus" element={<Contactus />} />
-                <Route path="/pricing" element={<Pricing />} />
                 <Route path="/disclaimer" element={<Disclaimer />} />
                 <Route path="/profit-loss" element={<ProfitLoss />} />
                 <Route path="cryptocard" element={<Cryptocard />} />
@@ -170,26 +202,23 @@ function App() {
                 <Route path="/help-center" element={<HelpCenter />} />
                 <Route path="/cryptonews" element={<CryptoNews />} />
                 <Route path="/CryptoMarket" element={<CryptoMarket />} />
+
+                <Route path="/defi-assets" element={<DefiAssets />} />
+                
                 <Route
                   path="CryptoProfitCalculator"
                   element={<CryptoProfitCalculator />}
                 />
+
+
 
                 <Route
                   path="/cryptoreward"
                   element={<Cryptoreward />}
                 />
 
-                <Route
-                  path="/ProfitReturnCalculator"
-                  element={<ProfitReturnCalculator />}
-                />
-                <Route
-                  path="/ImpermanentLossCalculator"
-                  element={<ImpermanentLossCalculator />}
-                />
 
-                <Route path="CryptoConverter" element={<CryptoConverter />} />
+
 
                 <Route
                   path="/ProfitReturnCalculator"
@@ -203,20 +232,10 @@ function App() {
                 <Route path="/cookie-policy" element={<CookiePolicy />} />
 
                 <Route path="/GoogleTranslate" element={<GoogleTranslate />} />
-                <Route
-                  path="BitcoinRainbowChart"
-                  element={<BitcoinRainbowChart />}
-                />
-                <Route
-                  path="/CurrecyMarket24h"
-                  element={<CurrecyMarket24h />}
-                />
-                <Route
-                  path="/EthereumRainbowChart"
-                  element={<EthereumRainbowChart />}
-                />
+
+
+
                 <Route path="*" element={<NotFoundPage />} />
-                <Route path="/btc-dominance" element={<BTCDominance />} />
               </Routes>
 
             </BrowserRouter>
