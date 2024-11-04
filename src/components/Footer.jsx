@@ -6,7 +6,7 @@ import logo from "../assets/logo.jpg";
 import "./ComparePage/SelectCoins/index";
 import "./Footer.css";
 import GoogleTranslate from "./GoogleTranslate";
-
+import toast, { Toaster } from "react-hot-toast";
 const Footer = () => {
   const { t } = useTranslation(); // Destructure translation function
   const [email, setEmail] = useState("");
@@ -17,13 +17,27 @@ const Footer = () => {
     setEmail(e.target.value);
   };
 
-  const handleSubscription = (e) => {
+  const handleSubscription = async (e) => {
     e.preventDefault();
-    if (email) {
-      setMessage(t("app_shared")); // Use localized message for subscription
-      setEmail("");
-    } else {
-      setMessage(t("please_enter_email")); // Use localized error message
+    try {
+      const response = await fetch(
+        "http://localhost:5000/api/contact/newsletter",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ Email: email }),
+        }
+      );
+
+      if (response.ok) {
+        toast.success("news letter subscribed !");
+      } else {
+        toast.error("Error subscribing newsletter.");
+      }
+    } catch (error) {
+      toast.error("An error occurred. Please try again.");
     }
   };
   useEffect(() => {
@@ -66,6 +80,7 @@ const Footer = () => {
 
   return (
     <footer className="footer">
+      <Toaster></Toaster>
       {/* .................1 links-section............... */}
       <div className="footer-container">
         <div className="footer-section">
@@ -117,7 +132,7 @@ const Footer = () => {
                 label: "Ethereum Rainbow Chart",
               },
               { path: "/CryptoMarket", label: "24h Cryptocurrency Market" },
-              { path: "/btc-dominance", label: "Bitcoin Dominance Chart" }
+              { path: "/btc-dominance", label: "Bitcoin Dominance Chart" },
             ].map(({ path, label }) => (
               <li key={label}>
                 <a href={path}>
@@ -126,7 +141,6 @@ const Footer = () => {
               </li>
             ))}
           </ul>
-
         </div>
 
         {/* .....................................3...................... */}
@@ -154,17 +168,26 @@ const Footer = () => {
           </ul>
         </div>
 
+
         {/* ...................................news section.................. */}
         {/* .....................................4...................... */}
         <div className="footer-section">
         <h3 className="section-title">{t("News")}</h3>
+
+          {/* ...................................new section.................. */}
+
+          <h3 className="section-title">{t("News")}</h3>
+
           <ul className="link-list">
             {[
               { path: "/#", label: "What's Trending" },
               { path: "/market-update", label: "Market Updates" },
               { path: "/", label: "Product News" },
               { path: "/", label: "Company News" },
+
               { path: "/cryptonews", label: "Crypto News" },
+
+
 
             ].map(({ path, label }) => (
               <li key={label}>
@@ -188,10 +211,16 @@ const Footer = () => {
                 label: "Learn about profit/loss Calculator",
               },
 
-              { path: "/cryptoreward", label: "Learn about Crypto Tracker Reward" },
+              {
+                path: "/cryptoreward",
+                label: "Learn about Crypto Tracker Reward",
+              },
               { path: "/cryptocard", label: "How to Buy Crypto with Card" },
 
-              { path: "/trackNft", label: "How to Track NFTs on Crypto Tracker" },
+              {
+                path: "/trackNft",
+                label: "How to Track NFTs on Crypto Tracker",
+              },
             ].map(({ path, label }) => (
               <li key={label}>
                 <a href={path}>
@@ -273,7 +302,8 @@ const Footer = () => {
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = "scale(1.05)"; // Scale up on hover
-                  e.currentTarget.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.3)"; // Add shadow on hover
+                  e.currentTarget.style.boxShadow =
+                    "0 4px 20px rgba(0, 0, 0, 0.3)"; // Add shadow on hover
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = "scale(1)"; // Scale back down
@@ -306,7 +336,9 @@ const Footer = () => {
                     }}
                   />
                 </a>
-                <span style={{ marginLeft: "8px", color: "#fff" }}>{stars}</span>
+                <span style={{ marginLeft: "8px", color: "#fff" }}>
+                  {stars}
+                </span>
               </div>
             </div>
           </div>
