@@ -1,32 +1,54 @@
+/* Light mode styles */
+[data-theme="light"] {
+    --terms-bg-color: #f5f5f5;
+    --terms-text-color: #333;
+    --terms-heading-color: #0066ff;
+    --terms-border-color: transparent;
+}
+
+/* Dark mode styles */
+[data-theme="dark"] {
+    --terms-bg-color: #121212;
+    --terms-text-color: #ffffff;
+    --terms-heading-color: #3a80e9;
+    --terms-border-color: #3a80e9;
+}
+
+/* Disclaimer Container Styles */
 .disclaimer-container {
     padding: 30px;
     max-width: 800px;
     margin: 50px auto;
-    background-color: #f9f9f9;
+    background-color: var(--terms-bg-color); /* Use theme variable */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: 'Arial', sans-serif;
+    border: 2px solid var(--terms-border-color); /* Use theme variable */
 }
 
+/* Heading Styles */
 .disclaimer-container h1 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 2rem;
-    color: #333;
+    color: var(--terms-heading-color); /* Use theme variable */
 }
 
+/* Paragraph Styles */
 .disclaimer-container p {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 15px;
-    color: #555;
+    color: var(--terms-text-color); /* Use theme variable */
 }
 
+/* Strong Text Styles */
 .disclaimer-container strong {
-    color: #000;
+    color: var(--terms-heading-color); /* Use theme variable for strong text */
     font-weight: 600;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .disclaimer-container {
         padding: 20px;
