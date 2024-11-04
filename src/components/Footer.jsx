@@ -182,7 +182,7 @@ const Footer = () => {
           <h3 className="section-title">{t("Support")}</h3>
           <ul className="link-list">
             {[
-              { path: "/#", label: "Help Center" },
+              { path: "/help-center", label: "Help Center" },
               { path: "/defi-assets", label: "How to track your DeFi Assets" },
               {
                 path: "/profit-loss",
