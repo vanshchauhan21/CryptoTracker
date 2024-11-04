@@ -175,15 +175,15 @@ const Footer = () => {
               </li>
             ))}
           </ul>
-        </div>
 
+<
 
         {/* ...................................news section.................. */}
         {/* .....................................4...................... */}
         <div className="footer-section">
           <h3 className="section-title">{t("News")}</h3>
 
-          {/* ...................................new section.................. */}
+
 
           <h3 className="section-title">{t("News")}</h3>
 
@@ -207,6 +207,9 @@ const Footer = () => {
             ))}
           </ul>
         </div>
+
+
+
 
         {/* .....................................5...................... */}
         <div className="footer-section">
