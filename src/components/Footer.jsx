@@ -149,7 +149,7 @@ const Footer = () => {
           <ul className="link-list">
             {[
               { path: "/disclaimer", label: "Disclaimer" },
-              { path: "/TermsOfUse", label: "Term of use" },
+              { path: "/terms-of-Use", label: "Term of use" },
               { path: "/privacy-policy", label: "Privacy Policy" },
 
               { path: "/cookie-policy", label: "Cookie Policy" },
