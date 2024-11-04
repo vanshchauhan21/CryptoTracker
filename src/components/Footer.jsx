@@ -111,28 +111,37 @@ const Footer = () => {
           <ul className="link-list">
             {[
               {
-                path: "/CryptoProfitCalculator",
+                path: "/calculators/crypto-profit-calculator",
                 label: "Crypto Profit Calculator",
               },
               {
-                path: "/ProfitReturnCalculator",
+                path: "/calculators/profit-return-calculator",
                 label: "Profit Return Calculator",
               },
               {
-                path: "/ImpermanentLossCalculator",
+                path: "/calculators/impermanent-loss-calculator",
                 label: "Impermanent Loss Calculator",
               },
-              { path: "/CryptoConverter", label: "Crypto Convertor" },
               {
-                path: "/BitcoinRainbowChart",
+                path: "/calculators/crypto-converter",
+                label: "Crypto Converter",
+              },
+              {
+                path: "/charts/bitcoin-rainbow-chart",
                 label: "Bitcoin Rainbow Chart",
               },
               {
-                path: "/EthereumRainbowChart",
+                path: "/charts/ethereum-rainbow-chart",
                 label: "Ethereum Rainbow Chart",
               },
-              { path: "/CryptoMarket", label: "24h Cryptocurrency Market" },
-              { path: "/btc-dominance", label: "Bitcoin Dominance Chart" },
+              {
+                path: "/market/currency-market-24h",
+                label: "24h Cryptocurrency Market",
+              },
+              {
+                path: "/market/btc-dominance",
+                label: "Bitcoin Dominance Chart",
+              },
             ].map(({ path, label }) => (
               <li key={label}>
                 <a href={path}>
@@ -149,7 +158,7 @@ const Footer = () => {
           <ul className="link-list">
             {[
               { path: "/disclaimer", label: "Disclaimer" },
-              { path: "/TermsOfUse", label: "Term of use" },
+              { path: "/terms-of-Use", label: "Term of use" },
               { path: "/privacy-policy", label: "Privacy Policy" },
 
               { path: "/cookie-policy", label: "Cookie Policy" },
@@ -166,15 +175,15 @@ const Footer = () => {
               </li>
             ))}
           </ul>
-        </div>
 
+<
 
         {/* ...................................news section.................. */}
         {/* .....................................4...................... */}
         <div className="footer-section">
-        <h3 className="section-title">{t("News")}</h3>
+          <h3 className="section-title">{t("News")}</h3>
 
-          {/* ...................................new section.................. */}
+
 
           <h3 className="section-title">{t("News")}</h3>
 
@@ -198,6 +207,9 @@ const Footer = () => {
             ))}
           </ul>
         </div>
+
+
+
 
         {/* .....................................5...................... */}
         <div className="footer-section">

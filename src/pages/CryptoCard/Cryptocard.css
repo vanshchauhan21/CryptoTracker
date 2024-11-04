@@ -2,40 +2,59 @@
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
+    margin-top: 20px;
     text-align: left;
     font-family: Arial, sans-serif;
     border: 2px solid #6610f2;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
     border-radius: 8px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 .title {
-    font-size: 2em;
+    font-size: 2.5em; /* Increased size for better visibility */
     margin-bottom: 1rem;
-    color: #0d6efd;
+    color: #6610f2; /* Consistent color with the border */
     text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
 .section {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem; /* Increased spacing between sections */
+    padding: 15px; /* Padding for sections */
+    border-left: 4px solid #6610f2; /* Decorative left border */
+    background-color: #ffffff; /* White background for sections */
+    border-radius: 4px; /* Rounded corners */
 }
 
 .section h2 {
-    color: #6610f2;
+    color: #6610f2; /* Consistent heading color */
     margin-bottom: 0.5rem;
+    font-size: 1.8em; /* Increased heading size */
 }
 
 .steps-list,
 .benefits-list,
 .considerations-list {
-    list-style-type: disc;
-    padding-left: 20px;
+    list-style-type: disc; /* Default bullet points */
+    padding-left: 20px; /* Indentation for lists */
     margin-top: 0.5rem;
 }
 
 .steps-list li,
 .benefits-list li,
 .considerations-list li {
-    margin: 5px 0;
+    margin: 5px 0; /* Spacing between list items */
+    font-size: 1.1em; /* Slightly larger text for readability */
+    line-height: 1.5;
+    color: black; /* Improved line height for clarity */
+}
+
+.section p {
+    line-height: 1.6; /* Improved line height for better readability */
+    margin-bottom: 1rem; 
+    color:black;/* Space below paragraphs */
+}
+.buy-crypto-container{
+    margin-bottom: 20px;
 }
