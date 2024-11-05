@@ -64,6 +64,7 @@ import DefiAssets from "./pages/DefiAssets/DefiAssets.js";
 import CryptoPrices from "./pages/cryptoPrice/cryptoPrice.js";
 import Blog from "./pages/Blogs/Blog.js";
 import Crypto24HourReport from "./pages/CryptoMarket24h/Crypto24HourReport.js";
+import GeminiChat from "./pages/GeminiAIChat/GeminiAIChat.jsx";
 
 
 
@@ -180,6 +181,7 @@ function App() {
 
                 <Route path="/coin/:id" element={<Coin />} />
                 <Route path="/learn" element={<Learn />} />
+                <Route path="/geminiChat" element={<GeminiChat />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
 

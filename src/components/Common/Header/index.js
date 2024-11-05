@@ -160,6 +160,12 @@ function Header() {
         >
           {t("Learn")}
         </NavLink>
+        <NavLink
+          to="/geminiChat"
+          className={({ isActive }) => (isActive ? "active-link link" : "link")}
+        >
+          {t("Gemini Chat")}
+        </NavLink>
         <SignedIn>
           <UserButton />
         </SignedIn>
