@@ -60,7 +60,12 @@ import BTCDominance from "./pages/BTCDominance/BTCDominance";
 import MarketUpdate from "./pages/MarketUpdate/MarketUpdate.js";
 import HelpCenter from "./pages/HelpCenter/HelpCenter.js";
 import DefiAssets from "./pages/DefiAssets/DefiAssets.js";
+
+
 import CryptoPrices from "./pages/cryptoPrice/cryptoPrice.js";
+=======
+import Blog from "./pages/Blogs/Blog.js";
+
 
 
 function App() {
@@ -149,6 +154,7 @@ function App() {
                 <Route path="/faq" element={<Faq />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/Contributors" element={<Contributors />} />
+                <Route path="/blog" element={<Blog />} />
 
 
 
