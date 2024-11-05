@@ -66,6 +66,13 @@ import DefiAssets from "./pages/DefiAssets/DefiAssets.js";
 
 
 
+
+import CryptoPrices from "./pages/cryptoPrice/cryptoPrice.js";
+import Blog from "./pages/Blogs/Blog.js";
+
+
+
+
 function App() {
   const theme = createTheme({
     palette: {
@@ -152,6 +159,7 @@ function App() {
                 <Route path="/faq" element={<Faq />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/Contributors" element={<Contributors />} />
+                <Route path="/blog" element={<Blog />} />
 
 
 
@@ -209,6 +217,10 @@ function App() {
 
                 <Route path="/help-center" element={<HelpCenter />} />
                 <Route path="/cryptonews" element={<CryptoNews />} />
+
+
+
+                <Route path="/cryptoprice" element={<CryptoPrices />} />
 
                 <Route path="/CryptoMarket" element={<CryptoMarket />} />
                 <Route path="/what's-trending" element={<WhatsTrending />} />
