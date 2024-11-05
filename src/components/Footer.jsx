@@ -179,10 +179,7 @@ const Footer = () => {
 
 
         </div>
-=======
 
-</div>
-=======
         </div>
 
 
@@ -251,7 +248,6 @@ const Footer = () => {
             ))}
           </ul>
         </div>
-      </div>
 
       {/* .......................2 socail icons and company logo  */}
       <div className="footer-content-wrapper">
