@@ -83,7 +83,9 @@ const Footer = () => {
       <Toaster></Toaster>
       {/* .................1 links-section............... */}
 
+    
       <div className="footer-container">
+
         <div className="footer-section">
           <h3 className="section-title">{t("Explore")}</h3>
           <ul className="link-list">
@@ -93,7 +95,7 @@ const Footer = () => {
               { path: "/watchlist", label: "Watchlist" },
               { path: "/dashboard", label: "Dashboard" },
               { path: "/#", label: "Earn" },
-              { path: "/blog", label: "Blog" },
+              { path: "/#", label: "Blog" },
               { path: "/faq", label: "FAQ" },
               { path: "/pricing", label: "Pricing" },
               { path: "/contributors", label: "Contributors" },
@@ -106,7 +108,9 @@ const Footer = () => {
             ))}
           </ul>
         </div>
+
         {/* .....................................2...................... */}
+
         <div className="footer-section">
           <h3 className="section-title">{t("Useful Tools")}</h3>
           <ul className="link-list">
@@ -153,6 +157,7 @@ const Footer = () => {
           </ul>
         </div>
 
+
         {/* .....................................3...................... */}
         <div className="footer-section">
           <h3 className="section-title">{t("Policies")}</h3>
@@ -178,19 +183,15 @@ const Footer = () => {
           </ul>
 
 
-        </div>
 
         </div>
 
 
 
-        {/* ...................................news section.................. */}
+        </div>
+
         {/* .....................................4...................... */}
         <div className="footer-section">
-          <h3 className="section-title">{t("News")}</h3>
-
-
-
           <h3 className="section-title">{t("News")}</h3>
 
           <ul className="link-list">
@@ -248,8 +249,19 @@ const Footer = () => {
             ))}
           </ul>
         </div>
+ 
 
-      {/* .......................2 socail icons and company logo  */}
+
+
+
+      </div>
+
+
+
+
+
+
+
       <div className="footer-content-wrapper">
         {/* Brand Section */}
         <div className="footer-brand">
@@ -438,6 +450,12 @@ const Footer = () => {
       >
         <span>© 2024 CryptoTracker. All rights reserved.</span>
       </div>
+
+
+
+
+
+
     </footer>
   );
 };
