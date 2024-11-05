@@ -1,0 +1,102 @@
+:root {
+  --blue: #4811fa;
+  --grey: #a0a3a8;
+  --black: #121212;
+  --white: #f5f5f5;
+  --table-border-color: rgb(124, 26, 165);
+  --positive-color: green;
+  --negative-color: red;
+}
+
+[data-theme="dark"] {
+  --background-color: var(--black);
+  --text-color: var(--white);
+  --link-hover-color: var(--blue);
+  --table-background-color: #000000;
+  --table-text-color: var(--white);
+  --table-hover-color: #25232399;
+  --table-border-color: rgba(86, 42, 249, 0.871); /* Changed for dark mode */
+}
+
+[data-theme="light"] {
+  --background-color: var(--white);
+  --text-color: var(--black);
+  --link-hover-color: var(--blue);
+  --table-background-color: #fff;
+  --table-text-color: #0b0b0bf3;
+  --table-hover-color: #f1f1f1;
+}
+
+.Crypto-Container {
+  padding: 3rem;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1rem;
+  text-align: left;
+  background-color: var(--table-background-color);
+  color: var(--table-text-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* border: 2px solid var(--table-border-color); */
+  border-radius: 2.5rem;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  
+  box-shadow: 0 2px 8px var(--table-border-color) ;
+}
+
+th, td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.coin-logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+th {
+  background-color: var(--blue);
+  color: white;
+  font-weight: bold;
+}
+
+td {
+  font-size: 1rem;
+  color: var(--table-text-color);
+}
+
+tbody tr:hover {
+  background-color: var(--table-hover-color);
+  transform: scale(1.02);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Responsive design for mobile view */
+@media screen and (max-width: 768px) {
+  table {
+    font-size: 0.9rem;
+  }
+
+  th, td {
+    padding: 8px 10px;
+  }
+}
+
+/* Positive price change (green) */
+td.green {
+  color: var(--positive-color);
+  transition: color 0.3s ease-in-out;
+}
+
+/* Negative price change (red) */
+td.red {
+  color: var(--negative-color);
+  transition: color 0.3s ease-in-out;
+}
