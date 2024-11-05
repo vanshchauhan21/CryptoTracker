@@ -1,24 +1,38 @@
 /* Main Card Container */
 
+
+
+/* Dark Mode Variables */
+:root {
+  --blue: #0066ff;
+
+  --help-center-bg-color: #f9f9f9;
+  --help-center-text-color: #333;
+}
+
+[data-theme="dark"] {
+  --help-center-bg-color: #121212;
+  --help-center-text-color: #f5f5f5;
+  --blue:#2a2a7abd ;
+}
+
 .card-container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 1rem;
-  /* border: 1px solid #ddd; */
+ background-color: var(--help-center-bg-color);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
   padding: 1rem;
   padding-top: 2rem;
-  /* border: 2px solid rgb(0, 255, 238); */
+  border: 2px solid var(--blue);
 
 }
 
-.card-container:hover {
-  transform: scale(1.02);
-}
+
 
 /* Card Frame */
 .card-frame {
@@ -28,9 +42,12 @@
   padding: 1rem;
   justify-content: center;
   gap: 1rem;
-  /* max-width: 900px;  */
-  border: 2px solid rgba(128, 18, 224, 0.742);
+  max-width: 900px; 
+  /* background-color: #333; */
+  border: 2px solid #2a2a7abd;
   border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(99, 40, 182, 0.636);
+
 }
 
 /* Image Container */
@@ -60,6 +77,8 @@
   padding: 16px;
   /* background-color: #fff; */
   /* border: 2px solid red; */
+  /* border: 2px solid rgba(128, 18, 224, 0.742); */
+
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -68,13 +87,12 @@
 .card-title {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #333;
+  color:var(--blue);
   margin: 0;
+  cursor: pointer;
 }
 
-.card-title:hover {
-  color: #3498db;
-}
+
 
 .Desc-detail {
   padding: 2px;
