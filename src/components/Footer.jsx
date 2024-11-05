@@ -83,7 +83,7 @@ const Footer = () => {
       <Toaster></Toaster>
       {/* .................1 links-section............... */}
 
-    
+
       <div className="footer-container">
 
         <div className="footer-section">
@@ -183,6 +183,7 @@ const Footer = () => {
           </ul>
         </div>
 
+        {/* ...................................news section.................. */}
         {/* .....................................4...................... */}
         <div className="footer-section">
           <h3 className="section-title">{t("News")}</h3>
@@ -242,15 +243,7 @@ const Footer = () => {
             ))}
           </ul>
         </div>
-
-
-
       </div>
-
-
-
-
-
 
       <div className="footer-content-wrapper">
         {/* Brand Section */}

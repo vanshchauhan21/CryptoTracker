@@ -59,8 +59,6 @@ import BTCDominance from "./pages/BTCDominance/BTCDominance";
 import MarketUpdate from "./pages/MarketUpdate/MarketUpdate.js";
 import HelpCenter from "./pages/HelpCenter/HelpCenter.js";
 import DefiAssets from "./pages/DefiAssets/DefiAssets.js";
-
-
 import CryptoPrices from "./pages/cryptoPrice/cryptoPrice.js";
 import Blog from "./pages/Blogs/Blog.js";
 import Crypto24HourReport from "./pages/CryptoMarket24h/Crypto24HourReport.js";
@@ -211,7 +209,7 @@ function App() {
                 <Route path="/CryptoMarket" element={<CryptoMarket />} />
 
                 <Route path="/defi-assets" element={<DefiAssets />} />
-                
+
                 <Route
                   path="CryptoProfitCalculator"
                   element={<CryptoProfitCalculator />}
