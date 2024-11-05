@@ -16,6 +16,8 @@
   font-family: system-ui, -apple-system, sans-serif;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer::before {
@@ -46,6 +48,8 @@
   display: flex;
   justify-content: center;
   gap: 10rem;
+  /* border: 2px solid rgb(255, 47, 227); */
+/* flex-direction: row; */
 }
 
 .footer-content-wrapper {
@@ -54,6 +58,8 @@
   gap: 10rem;
   margin-top: 4rem;
   padding: 1rem;
+  /* border: 2px solid rgb(187, 228, 24); */
+
 }
 
 .footer-brand {
