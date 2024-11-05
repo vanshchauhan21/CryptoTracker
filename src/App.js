@@ -39,6 +39,7 @@ import ProgressBar from "./components/Common/ProgressBar/ProgressBar";
 import RefundPolicy from "./pages/Refund Policy/RefundPolicy";
 import Contactus from "./pages/Contactus/Contactus";
 import CookiesPolicy from "./pages/CookiesPolicy";
+import Aboutus from "./pages/Aboutus/Aboutus";
 
 import CookiePolicy from "./pages/Cookie-Policy/CookiePolicy";
 import TrackNft from "./pages/Track NFT/TrackNFTs.js";
@@ -196,6 +197,7 @@ function App() {
                 <Route path="/trackNft" element={<TrackNft />} />
                 <Route path="/nft" element={<NFTShowcase />} />
                 <Route path="/contactus" element={<Contactus />} />
+                <Route path="/aboutus" element={<Aboutus />} />
                 <Route path="/disclaimer" element={<Disclaimer />} />
                 <Route path="/profit-loss" element={<ProfitLoss />} />
                 <Route path="cryptocard" element={<Cryptocard />} />
