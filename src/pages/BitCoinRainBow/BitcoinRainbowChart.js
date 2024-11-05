@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
 import Header from "../../components/Common/Header";
 import "./BitcoinRainbowChart.css";
+import BitcoinRainbowInfo from "../../components/BitcoinRainbowInfo"; 
 import {
   Chart as ChartJS,
   LineElement,
@@ -125,7 +126,8 @@ const BitcoinRainbowChart = () => {
           <Line data={chartData} options={options} />
         )}
       </div>
-      {/* ...rest of your component... */}
+      
+      <BitcoinRainbowInfo />
     </div>
   );
 };
