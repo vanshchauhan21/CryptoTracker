@@ -1,97 +1,65 @@
-import React from "react";
-
-
-
-import "./MarketCard.css"
+import React, { useEffect, useState } from "react";
+import "./MarketCard.css";
 
 const MarketCard = () => {
-    return (
-        <div className="card-container">
+  const [news, setNews] = useState([]);
 
+  useEffect(() => {
+    // Fetch NFT market updates
+    fetch("https://min-api.cryptocompare.com/data/v2/news/?feeds=cryptocompare,cointelegraph,coindesk&extraParams=YourSite")
+      .then(response => response.json())
+      .then(data => {
+        setNews(data.Data); // Assuming the news data is in 'Data' field
+      })
+      .catch(error => console.error("Error fetching NFT market updates:", error));
+  }, []);
 
-
-            {/* ....................mian image and info both............. */}
-            <div className="card-frame">
-                {/* ................image side ................. */}    
-        
-                <div className="imag-contain">
-                    <img
-                        src="https://contenthub-static.crypto.com/wp_media/2022/11/Template_Weekly-Newsletters-02.png"
-
-                        alt="Crypto.com NFT GameFi Weekly"
-                        srcSet="
-                  https://contenthub-static.crypto.com/cdn-cgi/image/width=400,quality=75/wp_media/2022/11/Template_Weekly-Newsletters-02.png 400w,
-                  https://contenthub-static.crypto.com/cdn-cgi/image/width=600,quality=75/wp_media/2022/11/Template_Weekly-Newsletters-02.png 600w,
-                  https://contenthub-static.crypto.com/cdn-cgi/image/width=800,quality=75/wp_media/2022/11/Template_Weekly-Newsletters-02.png 800w
-                "
-                        loading="lazy"
-                        referrerPolicy="no-referrer"
-
-                    />
-
-                </div>
-                {/* .............................................info side............. */}
-                <div className="card-content">
-                    {/* .......update and date..... */}
-                    <div className="Desc-detail">
-
-                        <p className="card-more">
-                            <a
-                                href="/market-updates/nft-gaming-weekly-01-11-2024"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Market Update - Nov 01, 2024
-                            </a>
-                        </p>
-                    </div>
-
-                    {/* .........heding content....... */}
-                    <div className="Desc-detail">
-
-                        <h2 className="card-title">
-                            NFT & Blockchain Gaming Weekly – 📈 NFT market sees first
-                            positive monthly growth since March 2024; Pudgy Penguins is
-                            developing a mobile game
-                        </h2>
-                    </div>
-
-
-                    {/* .........Para content....... */}
-                    <div className="Desc-detail">
-
-                        <p>
-                            📈 NFT market sees positive monthly growth in Oct
-                            <br />
-                            🚀 Yuga Labs launches Layer-3 chain ApeChain on Arbitrium
-                            <br />
-                            🐧 Pudgy Penguins is developing a mobile game and launched its
-                            toy line in Walgreens
-                        </p>
-                    </div>
-
-                    {/* ..................time and readmore......... */}
-                    <div className="Desc-detail">
-
-                        <p className="card-more">
-                            <a
-                                href="/market-updates/nft-gaming-weekly-01-11-2024"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Read more - 1.5 minutes
-                            </a>
-                        </p>
-                    </div>
-
-
-                </div>
-
+  return (
+    <div className="card-container">
+      {news.length > 0 ? (
+        news.map((article, index) => (
+          <div className="card-frame" key={index}>
+            <div className="imag-contain">
+              <img
+                src={article.imageurl}
+                alt={article.title}
+                loading="lazy"
+                referrerPolicy="no-referrer"
+              />
             </div>
 
+            <div className="card-content">
+              <div className="Desc-detail">
+                <p className="card-more">
+                  <a href={article.url} target="_blank" rel="noopener noreferrer">
+                    {article.source_info.name} - {new Date(article.published_on * 1000).toLocaleDateString()}
+                  </a>
+                </p>
+              </div>
 
-        </div>
-    );
+              <div className="Desc-detail">
+                <h2 className="card-title">{article.title}</h2>
+              </div>
+
+              <div className="Desc-detail">
+                <p>{article.body}</p>
+              </div>
+
+              <div className="Desc-detail">
+                <p className="card-more">
+                  <a href={article.url} target="_blank" rel="noopener noreferrer">
+                    Read more - {article.source_info.name}
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        ))
+      ) : (
+        <p>Loading market updates...</p>
+      )}
+    </div>
+  );
 };
 
 export default MarketCard;
