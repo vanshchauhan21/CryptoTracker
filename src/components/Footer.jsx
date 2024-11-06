@@ -229,7 +229,7 @@ const Footer = () => {
               },
 
               {
-                path: "/cryptoreward",
+                path: "/crypto-reward",
                 label: "Learn about Crypto Tracker Reward",
               },
               { path: "/cryptocard", label: "How to Buy Crypto with Card" },
