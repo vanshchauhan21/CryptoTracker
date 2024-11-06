@@ -9,6 +9,8 @@
   /* border:blue; */
   transition: all 0.3s ease;
   border:2px solid #3a80e9;
+  padding-bottom: 40px;
+  margin-bottom: 30px;
 
 display: flex ;
 flex-direction: column;
@@ -19,6 +21,8 @@ flex-direction: column;
   background-color: black; /* Dark background for highlighted card */
   color: white;
   border: 2px solid #3a80e9;
+  padding-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .card-title {
@@ -85,6 +89,7 @@ flex-direction: column;
 .card-button:hover {
   background-color: #2d65b9; /* Darker blue for button hover */
   transform: translateY(-2px);
+   color:black;
 }
 
 /* Hover effect for the entire card */
@@ -95,6 +100,7 @@ flex-direction: column;
 
 /* Highlighted card styles */
 .card.highlighted {
+  color:black;
   border: 2px solid #3a80e9; /* Blue border for highlighted card */
 }
 
