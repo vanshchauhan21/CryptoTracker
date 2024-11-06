@@ -39,6 +39,7 @@ import ProgressBar from "./components/Common/ProgressBar/ProgressBar";
 import RefundPolicy from "./pages/Refund Policy/RefundPolicy";
 import Contactus from "./pages/Contactus/Contactus";
 import CookiesPolicy from "./pages/CookiesPolicy";
+import Aboutus from "./pages/Aboutus/Aboutus";
 
 import CookiePolicy from "./pages/Cookie-Policy/CookiePolicy";
 import TrackNft from "./pages/Track NFT/TrackNFTs.js";
@@ -58,7 +59,12 @@ import { Helmet } from "react-helmet";
 import BTCDominance from "./pages/BTCDominance/BTCDominance";
 import MarketUpdate from "./pages/MarketUpdate/MarketUpdate.js";
 import HelpCenter from "./pages/HelpCenter/HelpCenter.js";
+
+import WhatsTrending from "./pages/What'sTrending/WhatsTrending.js";
+
 import DefiAssets from "./pages/DefiAssets/DefiAssets.js";
+
+
 
 
 import CryptoPrices from "./pages/cryptoPrice/cryptoPrice.js";
@@ -66,6 +72,7 @@ import Blog from "./pages/Blogs/Blog.js";
 import Crypto24HourReport from "./pages/CryptoMarket24h/Crypto24HourReport.js";
 import GeminiChat from "./pages/GeminiAIChat/GeminiAIChat.jsx";
 import CryptoReward from "./pages/CryptoReward/CryptoReward.js";
+
 
 
 
@@ -199,6 +206,7 @@ function App() {
                 <Route path="/trackNft" element={<TrackNft />} />
                 <Route path="/nft" element={<NFTShowcase />} />
                 <Route path="/contactus" element={<Contactus />} />
+                <Route path="/aboutus" element={<Aboutus />} />
                 <Route path="/disclaimer" element={<Disclaimer />} />
                 <Route path="/profit-loss" element={<ProfitLoss />} />
                 <Route path="cryptocard" element={<Cryptocard />} />
@@ -209,12 +217,30 @@ function App() {
 
                 <Route path="/market-update" element={<MarketUpdate />} />
                 <Route path="/help-center" element={<HelpCenter />} />
+
+              
+
+
+                <Route path="/help-center" element={<HelpCenter />} />
                 <Route path="/cryptonews" element={<CryptoNews />} />
+
+
+
+
+                <Route path="/crypto-news" element={<CryptoNews />} />
+
                 <Route path="/cryptoprice" element={<CryptoPrices />} />
+
                 <Route path="/CryptoMarket" element={<CryptoMarket />} />
+                <Route path="/what's-trending" element={<WhatsTrending />} />
+             
+             
+             
+
 
                 <Route path="/defi-assets" element={<DefiAssets />} />
                 
+
                 <Route
                   path="CryptoProfitCalculator"
                   element={<CryptoProfitCalculator />}

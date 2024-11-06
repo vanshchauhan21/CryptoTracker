@@ -1,6 +1,8 @@
 import React from 'react';
 import './DefiAssets.css';
 import Header from '../../components/Common/Header';
+import Feedback from '../../components/Feedback/Feedbacksection';
+
 
 function DefiAssets() {
     return (
@@ -37,6 +39,7 @@ function DefiAssets() {
         </ul>
     </div>
 </div>
+<Feedback />
 
         </>
 
