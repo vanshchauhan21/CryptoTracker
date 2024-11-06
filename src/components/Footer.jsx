@@ -91,6 +91,7 @@ const Footer = () => {
           <ul className="link-list">
             {[
               { path: "/", label: "Home" },
+              { path: "/aboutus", label: "About Us" },
               { path: "/compare", label: "Compare" },
               { path: "/watchlist", label: "Watchlist" },
               { path: "/dashboard", label: "Dashboard" },
