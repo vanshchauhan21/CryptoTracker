@@ -32,6 +32,7 @@
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   background-color: var(--background-color);
   color: var(--text-color);
+  /* border: 2px solid red; */
 }
 
 table {
@@ -99,4 +100,108 @@ td.green {
 td.red {
   color: var(--negative-color);
   transition: color 0.3s ease-in-out;
+}
+
+
+/* ......................new-card-container............. */
+
+.new-section{
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+}
+.news-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Creates flexible columns */
+  grid-gap: 1.5rem; /* Adds spacing between the cards */
+  padding: 1rem;
+  /* border: 2px solid var(--blue); */
+}
+
+/* Card Frame */
+.card-frame {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 1rem;
+  justify-content: center;
+  gap: 1rem;
+  height: 100%;
+  border: 2px solid #2a2a7abd;
+  border-radius: 1rem;
+  /* box-shadow: 0 2px 8px rgba(99, 40, 182, 0.636); */
+  transition: transform 0.3s ease;
+}
+
+.card-frame:hover {
+  transform: scale(1.03); /* Adds a hover effect to slightly enlarge the card */
+}
+
+/* Image Container */
+.imag-contain {
+  overflow: hidden;
+  position: relative;
+  height: 200px; /* Fixed height for the image */
+}
+
+.imag-contain img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.imag-contain:hover img {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Card Content */
+.card-content {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  /* color: var(--blue); */
+  color:var(--table-text-color);
+  
+  margin: 0;
+  cursor: pointer;
+}
+
+.card-title:hover {
+  color: #3498db; /* Changes title color on hover */
+}
+
+.Desc-detail {
+  padding: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .news-card-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusts grid columns for smaller screens */
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-content {
+    padding: 12px;
+  }
+
+  .imag-contain {
+    height: 120px;
+  }
+
+  .card-title {
+    font-size: 0.95rem;
+  }
 }
