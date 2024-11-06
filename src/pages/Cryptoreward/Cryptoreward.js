@@ -1,6 +1,7 @@
 import React from 'react';
 import './Cryptoreward.css';
 import Header from '../../components/Common/Header';
+import Feedback from '../../components/Feedback/Feedbacksection';
 
 function Cryptoreward() {
   return (
@@ -66,6 +67,7 @@ function Cryptoreward() {
         </p>
       </section>
     </div>
+    <Feedback />
 
 
     </>
