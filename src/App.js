@@ -60,7 +60,7 @@ import BTCDominance from "./pages/BTCDominance/BTCDominance";
 import MarketUpdate from "./pages/MarketUpdate/MarketUpdate.js";
 import HelpCenter from "./pages/HelpCenter/HelpCenter.js";
 
-import WhatsTrending from "./pages/What'sTrending/WhatsTrending.js";
+import WhatsTrending from "./pages/WhatsTrending/WhatsTrending.js";
 
 import DefiAssets from "./pages/DefiAssets/DefiAssets.js";
 
@@ -71,7 +71,7 @@ import CryptoPrices from "./pages/cryptoPrice/cryptoPrice.js";
 import Blog from "./pages/Blogs/Blog.js";
 import Crypto24HourReport from "./pages/CryptoMarket24h/Crypto24HourReport.js";
 import GeminiChat from "./pages/GeminiAIChat/GeminiAIChat.jsx";
-
+import FearAndGreedIndex from './pages/FearAndGreedIndex/FearAndGreedIndex';
 
 
 
@@ -177,6 +177,8 @@ function App() {
                 <Route path="/charts">
                   <Route path="bitcoin-rainbow-chart" element={<BitcoinRainbowChart />} />
                   <Route path="ethereum-rainbow-chart" element={<EthereumRainbowChart />} />
+               
+                  
                 </Route>
 
                 <Route path="/market">
@@ -271,6 +273,7 @@ function App() {
 
 
                 <Route path="*" element={<NotFoundPage />} />
+                <Route path="/fear-and-greed" element={<FearAndGreedIndex />} />
               </Routes>
 
             </BrowserRouter>

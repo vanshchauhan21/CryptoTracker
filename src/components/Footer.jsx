@@ -148,6 +148,10 @@ const Footer = () => {
                 path: "/market/btc-dominance",
                 label: "Bitcoin Dominance Chart",
               },
+              {
+                path: "/fear-and-greed",
+                label: "Fear and Greed Index",
+              },
             ].map(({ path, label }) => (
               <li key={label}>
                 <a href={path}>
