@@ -1,6 +1,8 @@
 import React from 'react';
 import './TrackNFTs.css'; // Assuming you are styling with a separate CSS file
 import Header from '../../components/Common/Header';
+import Feedback from '../../components/Feedback/Feedbacksection';
+
 
 function TrackNFTs() {
   return (
@@ -50,6 +52,8 @@ function TrackNFTs() {
           </p>
         </section>
       </div>
+    <Feedback />
+
     </>
   );
 }
