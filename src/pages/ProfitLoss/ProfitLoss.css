@@ -34,3 +34,32 @@
     border-radius: 8px;
     margin-top: 0.5rem;
 }
+
+
+[data-theme="dark"] .formula {
+    background-color: rgba(58, 128, 233, 0.1);
+    border: 1px solid rgba(58, 128, 233, 0.5);
+    box-shadow: 0 0 10px rgba(58, 128, 233, 0.2);
+  }
+  
+   .formula p,
+  .formula ul li,
+  .section p {
+    color: black;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+    
+  }
+  .section{
+    color: black;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+  }
+  
+ 
+
+[data-theme="dark"] .formula:hover,
+[data-theme="dark"] .formula:hover p,
+[data-theme="dark"] .formula:hover ul,
+[data-theme="dark"] .formula:hover ul li,
+[data-theme="dark"] .section p:hover {
+  color: #ffffff;
+}
