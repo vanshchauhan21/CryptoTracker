@@ -3,15 +3,18 @@ import React from "react";
 import Header from "./Common/Header";
 import "./Learn.css"; // Import the CSS file for styling
 import Learnmorebutton from "./learn-button/Learnmorebutton";
+import Roadmap from "./Roadmap";
 const Learn = () => {
   return (
     <>
       <Header />
+      <Roadmap/>
+
       <div className="learn-container p-6">
         <h1 className="learn-title text-3xl font-bold text-center mb-8">
           Learn Cryptocurrency
         </h1>
-
+        
         <div className="space-y-8">
           {/* Crypto Trading Basics */}
           <div className="learn-card bg-white shadow-md rounded-lg p-6">
