@@ -3,6 +3,8 @@ import Header from "../components/Common/Header";
 import Loader from "../components/Common/Loader";
 
 import axios from "axios";
+import { setupContributorCardAnimations } from "../components/ContributorAnimation";
+import "../components/ContributorAnimation/ContributorAnimation.css";
 
 import ContributorCard from "../components/Common/Contributors Card/ContributorCard";
 
@@ -57,7 +59,14 @@ function Contributors() {
       }
     }
     fetchContributors();
-  }, []);
+
+    const cleanup = setupContributorCardAnimations();
+
+  
+    return cleanup;
+ 
+  }, [contributors]);
+  
 
   if (loading) {
     return (
