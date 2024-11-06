@@ -1,0 +1,1 @@
+export { setupContributorCardAnimations } from './ContributorAnimation';
