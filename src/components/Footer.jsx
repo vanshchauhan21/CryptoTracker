@@ -194,7 +194,7 @@ const Footer = () => {
               { path: "/", label: "Product News" },
               { path: "/", label: "Company News" },
 
-              { path: "/cryptonews", label: "Crypto News" },
+              { path: "/crypto-news", label: "Crypto News" },
 
 
 
