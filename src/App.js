@@ -53,7 +53,7 @@ import NFTShowcase from "./pages/NFTShowcase/NFTShowcase";
 
 import { Helmet } from "react-helmet";
 
-import Cryptoreward from "./pages/Cryptoreward/Cryptoreward";
+
 // import Reward from "./pages/Reward/Reward.js";
 
 import BTCDominance from "./pages/BTCDominance/BTCDominance";
@@ -71,6 +71,7 @@ import CryptoPrices from "./pages/cryptoPrice/cryptoPrice.js";
 import Blog from "./pages/Blogs/Blog.js";
 import Crypto24HourReport from "./pages/CryptoMarket24h/Crypto24HourReport.js";
 import GeminiChat from "./pages/GeminiAIChat/GeminiAIChat.jsx";
+import CryptoReward from "./pages/CryptoReward/CryptoReward.js";
 
 
 
@@ -248,8 +249,8 @@ function App() {
 
 
                 <Route
-                  path="/cryptoreward"
-                  element={<Cryptoreward />}
+                  path="/crypto-reward"
+                  element={<CryptoReward/>}
                 />
 
 
