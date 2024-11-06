@@ -22,8 +22,8 @@ const CryptoNews = () => {
 
     const fetchNews = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/news'); // Point to your own server
-        setNews(response.data.articles); // Adjusted to match the expected structure of your server response
+        const response = await axios.get('https://min-api.cryptocompare.com/data/v2/news/?categories=Technology,Blockchain&excludeCategories=Regulation,Mining');
+        setNews(response.data.Data); // Adjusted to match the provided JSON structure
       } catch (error) {
         console.log('Error fetching news:', error);
       }
@@ -55,37 +55,39 @@ const CryptoNews = () => {
   return (
     <div>
       <Header />
-    <div className="trending-container">
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        <>
-          <div className="news-grid">
-            {displayedNews.map((article, index) => (
-              <div className="news-card" key={index}>
-                {article.urlToImage && (
-                  <img src={article.urlToImage} alt={article.title} className="news-image" />
-                )}
-                <h3 className="news-title">{article.title}</h3>
-                <p className="news-description">{article.description}</p>
-                <a href={article.url} target="_blank" rel="noopener noreferrer" className="news-link">
-                  Read more
-                </a>
-              </div>
-            ))}
-          </div>
+      <div className="trending-container">
+        {loading ? (
+          <p>Loading...</p>
+        ) : (
+          <>
+            <div className="news-grid">
+              {displayedNews.map((article, index) => (
+                <div className="news-card" key={index}>
+                  {article.imageurl && (
+                    <img src={article.imageurl} alt={article.title} className="news-image" />
+                  )}
+                  <h3 className="news-title">{article.title}</h3>
+                  <p className="news-description">
+                    {article.body.length > 150 ? `${article.body.slice(0, 150)}...` : article.body}
+                  </p>
+                  <a href={article.url} target="_blank" rel="noopener noreferrer" className="news-link">
+                    Read more on {article.source_info.name}
+                  </a>
+                </div>
+              ))}
+            </div>
 
-          <div className="pagination">
-            <button onClick={handlePreviousPage} disabled={currentPage === 0}>
-              Previous
-            </button>
-            <button onClick={handleNextPage} disabled={(currentPage + 1) * articlesPerPage >= news.length}>
-              Next
-            </button>
-          </div>
-        </>
-      )}
-    </div>
+            <div className="pagination">
+              <button onClick={handlePreviousPage} disabled={currentPage === 0}>
+                Previous
+              </button>
+              <button onClick={handleNextPage} disabled={(currentPage + 1) * articlesPerPage >= news.length}>
+                Next
+              </button>
+            </div>
+          </>
+        )}
+      </div>
     </div>
   );
 };

@@ -25,7 +25,6 @@ import i18n from "./i18n";
 import Contributors from "./pages/Contributors";
 import TermsOfUse from "./pages/TermsOfUse";
 
-import CurrecyMarket24h from "./pages/CryptoMarket24h/CryptoMarket24h";
 
 import PrivacyPolicy from "./pages/Privacy-Policy/PrivacyPolicy";
 import Pricing from "./pages/Pricing/Pricing";
@@ -69,6 +68,8 @@ import DefiAssets from "./pages/DefiAssets/DefiAssets.js";
 
 import CryptoPrices from "./pages/cryptoPrice/cryptoPrice.js";
 import Blog from "./pages/Blogs/Blog.js";
+import Crypto24HourReport from "./pages/CryptoMarket24h/Crypto24HourReport.js";
+import GeminiChat from "./pages/GeminiAIChat/GeminiAIChat.jsx";
 
 
 
@@ -178,7 +179,7 @@ function App() {
                 </Route>
 
                 <Route path="/market">
-                  <Route path="currency-market-24h" element={<CurrecyMarket24h />} />
+                  <Route path="currency-market-24h" element={<Crypto24HourReport/>} />
                   <Route path="btc-dominance" element={<BTCDominance />} />
                 </Route>
 
@@ -186,6 +187,7 @@ function App() {
 
                 <Route path="/coin/:id" element={<Coin />} />
                 <Route path="/learn" element={<Learn />} />
+                <Route path="/geminiChat" element={<GeminiChat />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
 
@@ -212,6 +214,7 @@ function App() {
 
                 <Route path="/market-update" element={<MarketUpdate />} />
                 <Route path="/help-center" element={<HelpCenter />} />
+
               
 
 
@@ -219,6 +222,9 @@ function App() {
                 <Route path="/cryptonews" element={<CryptoNews />} />
 
 
+
+
+                <Route path="/crypto-news" element={<CryptoNews />} />
 
                 <Route path="/cryptoprice" element={<CryptoPrices />} />
 
