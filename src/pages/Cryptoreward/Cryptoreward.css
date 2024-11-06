@@ -1,68 +1,73 @@
+/* Root Variables */
 :root {
-    --vision-bg-color: #f9f9f9;
-    --vision-text-color: #333;
-    --vision-title-color: #007bff;
-    --vision-border-color: rgba(0, 0, 0, 0.1);
-  }
-  
-  [data-theme="dark"] {
-    --vision-bg-color: #121212;
-    --vision-text-color: #f5f5f5;
-    --vision-title-color: #3a80e9; /* A shade of blue for dark mode */
-    --vision-border-color: rgba(81, 50, 222, 0.5);
-  }
-  
-  .crypto-rewards-container {
-    padding: 20px;
-    background-color: var(--vision-bg-color); /* Use CSS variable for background color */
-    border: 2px solid var(--vision-border-color); /* Use CSS variable for border color */
-    border-radius: 10px;
-    max-width: 800px;
-    margin: auto;
-    text-align: left;
-    font-family: Arial, sans-serif;
+    --blue: #0066ff;
+    --grey: #a0a3a8;
+    --black: #121212;
+    --white: #f5f5f5;
+}
+
+/* Theme-specific styles */
+[data-theme="dark"] {
+    --background-color: var(--black);
+    --text-color: var(--white);
+    --link-hover-color: var(--blue);
+}
+
+[data-theme="light"] {
+    --background-color: var(--white);
+    --text-color: var(--black);
+    --link-hover-color: var(--blue);
+}
+
+/* Apply theme colors */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Main Title with Hover Effect */
+.crypto-rewards-container .title {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+/* Title Hover Effect */
+[data-theme="dark"] .crypto-rewards-container .title:hover {
+    color: var(--link-hover-color);
+}
+
+[data-theme="light"] .crypto-rewards-container .title:hover {
+    color: var(--blue);
+}
+
+/* Additional Styles for Components */
+.crypto-rewards-container {
+    padding: 2rem;
+    margin: 1.5rem;
+    background-color: var(--background-color);
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.crypto-rewards-container h2 {
+    color: var(--text-color);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+/* Light/Dark Mode Adjustments for Sections */
+.Earn-section, .Benefit-section, .Reward-section {
+    background-color: var(--grey);
+    padding: 1.5rem;
     margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .title {
-    font-size: 2em;
-    margin-bottom: 1rem;
-    color: var(--vision-title-color); /* Use CSS variable for title color */
-    text-align: center;
-  }
-  
-  .section {
-    margin-bottom: 1.5rem;
-  }
-  
-  .section h2 {
-    color: var(--vision-title-color); /* Use CSS variable for section heading color */
-    margin-bottom: 0.5rem;
-  }
-  
-  .earn-list,
-  .benefits-list {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-top: 0.5rem;
-  }
-  
-  .earn-list li,
-  .benefits-list li {
-    margin: 5px 0;
-  }
-  
-  /* Additional styles for general elements */
-  ul, ol {
-    margin-left: 20px;
-  }
-  
-  .section {
-    margin-bottom: 20px;
-  }
-  
-  .section p {
-    margin-bottom: 10px;
-  }
-  
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .Earn-section,
+[data-theme="dark"] .Benefit-section,
+[data-theme="dark"] .Reward-section {
+    background-color: #333;
+}
