@@ -208,7 +208,7 @@ function App() {
 
                 <Route path="/market-update" element={<MarketUpdate />} />
                 <Route path="/help-center" element={<HelpCenter />} />
-                <Route path="/cryptonews" element={<CryptoNews />} />
+                <Route path="/crypto-news" element={<CryptoNews />} />
                 <Route path="/cryptoprice" element={<CryptoPrices />} />
                 <Route path="/CryptoMarket" element={<CryptoMarket />} />
 
