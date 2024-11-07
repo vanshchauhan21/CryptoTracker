@@ -15,6 +15,7 @@
     "@testing-library/user-event": "^14.5.2",
     "aos": "^2.3.4",
     "axios": "^1.7.7",
+    "canvas-confetti": "^1.9.3",
     "chart.js": "^4.4.6",
     "font-awesome": "^4.7.0",
     "framer-motion": "^11.11.11",
