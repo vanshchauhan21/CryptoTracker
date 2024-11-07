@@ -1,0 +1,27 @@
+.bitcoin-rainbow-chart-container {
+    background-color: black;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .bitcoin-rainbow-chart-container h1,
+  .bitcoin-rainbow-chart-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .bitcoin-rainbow-chart-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .bitcoin-rainbow-chart-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .bitcoin-rainbow-chart-container ul li {
+    margin-bottom: 0.5rem;
+  }
+  
