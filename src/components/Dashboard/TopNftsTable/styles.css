@@ -1,0 +1,55 @@
+/* Table container styles */
+.table-container {
+    margin: 10px 0;
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center align the table horizontally */
+    overflow-x: auto; /* Allows horizontal scrolling on smaller screens */
+  }
+
+  /* NFT Table styles */
+  .top-nfts-table {
+    width: 100%;
+    max-width: 800px; /* Set a maximum width for better alignment */
+    border-collapse: collapse;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Ensures borders are rounded */
+  }
+
+  /* Table headers and cells */
+  .top-nfts-table th,
+  .top-nfts-table td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  /* Header styles */
+  .top-nfts-table th {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+
+  /* Hover effect for rows */
+  .top-nfts-table tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  /* Specific styles for NFT columns */
+  .nft-name {
+    font-weight: bold;
+    font-size: 18px;
+    color: #666;
+  }
+
+  .nft-price {
+    color: #28a745; /* Green color for prices */
+  }
+
+  .nft-change-percent {
+    color: #ff9800; /* Orange color for percentage change */
+  }
+
+  .nft-volume {
+    color: #007bff; /* Blue color for volume */
+  }

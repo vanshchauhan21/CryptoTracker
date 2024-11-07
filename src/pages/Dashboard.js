@@ -4,15 +4,15 @@ import Header from "../components/Common/Header";
 import Loader from "../components/Common/Loader";
 import Search from "../components/Dashboard/Search";
 import TabsComponent from "../components/Dashboard/Tabs";
-
 import PaginationComponent from "../components/Dashboard/Pagination";
 import TopButton from "../components/Common/TopButton";
 import Footer from "../components/Common/Footer/footer";
 import TopCoinsTable from "../components/Dashboard/TopCoinsTable/TopCoinsTable";
-
+import TopNftsTable from "../components/Dashboard/TopNftsTable/TopNftsTable"; // Import new NFT Table
 
 function Dashboard() {
   const [coins, setCoins] = useState([]);
+  const [nfts, setNfts] = useState([]); // State for NFTs
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
@@ -20,18 +20,19 @@ function Dashboard() {
   const [topCoins, setTopCoins] = useState([]);
 
   useEffect(() => {
-    // Get 100 Coins
+    // Get 100 Coins and Top NFTs
     getData();
   }, []);
 
   const getData = async () => {
     setLoading(true);
     try {
-      // Try fetching the coin data
+      // Fetch top coins (100)
       const response = await axios.get(
         "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
       );
 
+      // Top 5 coins (just like your existing code)
       const topCoins = response.data.slice(0, 5);
       const coinsWithPriceData = await Promise.all(
         topCoins.map(async (coin) => {
@@ -48,42 +49,36 @@ function Dashboard() {
       setCoins(response.data);
       setPaginatedCoins(response.data.slice(0, 10));
       setTopCoins(coinsWithPriceData);
+
+      // Fetch Top 5 NFTs data (replace this with actual API if available)
+      const nftResponse = await axios.get(
+        "https://api.example.com/top_nfts" // Placeholder for actual API
+      );
+
+      setNfts(nftResponse.data); // Assume this returns a list of NFTs with price, change %, and volume
+
       setLoading(false);
 
     } catch (error) {
-      // Handling CORS and rate limiting errors
+      // Handle errors
       if (error.response) {
-        // Handle server-side errors (status code other than 2xx)
         if (error.response.status === 429) {
           console.error("Rate limit exceeded. Try again later.");
         } else {
           console.error("API error:", error.response.data);
         }
       } else if (error.request) {
-        // Handle network errors
         console.error("Network error:", error.message);
       } else {
-        // Handle any other errors
         console.error("Error:", error.message);
       }
       setLoading(false);
     }
   };
 
-
   const handleChange = (e) => {
     setSearch(e.target.value);
-    console.log(e.target.value);
   };
-
-  // var filteredCoins = coins.filter((coin) => {
-  //   if (
-  //     coin.name.toLowerCase().includes(search.trim().toLowerCase()) ||
-  //     coin.symbol.toLowerCase().includes(search.trim().toLowerCase())
-  //   ) {
-  //     return coin;
-  //   }
-  // });
 
   var filteredCoins = coins.filter(
     (coin) =>
@@ -93,7 +88,6 @@ function Dashboard() {
 
   const handlePageChange = (event, value) => {
     setPage(value);
-    // Value = new page number
     var initialCount = (value - 1) * 10;
     setPaginatedCoins(coins.slice(initialCount, initialCount + 10));
   };
@@ -106,7 +100,13 @@ function Dashboard() {
       ) : (
         <>
           <Search search={search} handleChange={handleChange} />
+
+          {/* Top Coins Table */}
           <TopCoinsTable topCoins={topCoins} />
+
+          {/* Top 5 NFTs Table */}
+          <TopNftsTable nfts={nfts} />
+
           <TabsComponent
             coins={search ? filteredCoins : paginatedCoins}
             setSearch={setSearch}
@@ -126,15 +126,3 @@ function Dashboard() {
 }
 
 export default Dashboard;
-
-// coins == 100 coins
-
-// PaginatedCoins -> Page 1 - coins.slice(0,10)
-// PaginatedCoins -> Page 2 = coins.slice(10,20)
-// PaginatedCoins -> Page 3 = coins.slice(20,30)
-// .
-// .
-// PaginatedCoins -> Page 10 = coins.slice(90,100)
-
-// PaginatedCoins -> Page X , then initial Count = (X-1)*10
-// coins.slice(initialCount,initialCount+10)
