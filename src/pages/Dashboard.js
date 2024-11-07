@@ -50,29 +50,42 @@ function Dashboard() {
       setPaginatedCoins(response.data.slice(0, 10));
       setTopCoins(coinsWithPriceData);
 
-      // Fetch Top 5 NFTs from CoinGecko
-      const nftResponse = await axios.get(
-        "https://api.coingecko.com/api/v3/collections/markets?order=market_cap_desc&per_page=5&page=1"
-      );
+      // Fetch Top 5 NFTs from CoinGecko with retry logic
+      const nftResponse = await fetchNftsWithRetry(); // Retry logic for NFTs
 
       setNfts(nftResponse.data); // Assuming this returns a list of NFTs with price, change %, and volume
 
       setLoading(false);
-
     } catch (error) {
-      // Handle errors
-      if (error.response) {
-        if (error.response.status === 429) {
-          console.error("Rate limit exceeded. Try again later.");
-        } else {
-          console.error("API error:", error.response.data);
-        }
-      } else if (error.request) {
-        console.error("Network error:", error.message);
+      if (error.response && error.response.status === 429) {
+        console.error("Rate limit exceeded. Trying again...");
+        // Retry after a delay of 1 minute (60,000 ms)
+        setTimeout(() => {
+          getData();
+        }, 60000);  // Retry after 1 minute
       } else {
-        console.error("Error:", error.message);
+        console.error("API error:", error.message);
       }
       setLoading(false);
+    }
+  };
+
+  // Retry function for fetching NFTs
+  const fetchNftsWithRetry = async () => {
+    try {
+      const nftResponse = await axios.get(
+        "https://api.coingecko.com/api/v3/collections/markets?order=market_cap_desc&per_page=5&page=1"
+      );
+      return nftResponse;
+    } catch (error) {
+      if (error.response && error.response.status === 429) {
+        console.error("Rate limit exceeded for NFT request. Retrying...");
+        // Retry logic for NFT request with delay
+        await new Promise((resolve) => setTimeout(resolve, 60000));  // Wait 1 minute before retry
+        return fetchNftsWithRetry();  // Retry the request
+      } else {
+        throw error; // Re-throw error if it's not 429
+      }
     }
   };
 
@@ -80,6 +93,7 @@ function Dashboard() {
     setSearch(e.target.value);
   };
 
+  // Filter coins based on search term
   var filteredCoins = coins.filter(
     (coin) =>
       coin.name.toLowerCase().includes(search.trim().toLowerCase()) ||
