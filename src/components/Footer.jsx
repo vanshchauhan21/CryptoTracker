@@ -237,7 +237,7 @@ const Footer = () => {
               { path: "/cryptocard", label: "How to Buy Crypto with Card" },
 
               {
-                path: "/trackNft",
+                path: "/track-nft",
                 label: "How to Track NFTs on Crypto Tracker",
               },
             ].map(({ path, label }) => (
