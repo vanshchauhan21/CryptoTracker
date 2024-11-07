@@ -71,6 +71,7 @@ import GeminiChat from "./pages/GeminiAIChat/GeminiAIChat.jsx";
 import CryptoReward from "./pages/Cryptoreward/Cryptoreward.js";
 
 import FearAndGreedIndex from './pages/FearAndGreedIndex/FearAndGreedIndex';
+import Earn from "./pages/Earn/Earn.js";
 
 
 
@@ -162,6 +163,8 @@ function App() {
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/Contributors" element={<Contributors />} />
                 <Route path="/blog" element={<Blog />} />
+              
+                <Route path="/earn" element={<Earn />} />
 
 
 
