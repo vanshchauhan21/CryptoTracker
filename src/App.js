@@ -56,11 +56,6 @@ import MarketUpdate from "./pages/MarketUpdate/MarketUpdate.js";
 import HelpCenter from "./pages/HelpCenter/HelpCenter.js";
 
 import WhatsTrending from "./pages/WhatsTrending/WhatsTrending.js";
-
-
-import WhatsTrending from "./pages/WhatsTrending/WhatsTrending.js";
-
-
 import DefiAssets from "./pages/DefiAssets/DefiAssets.js";
 import CryptoPrices from "./pages/cryptoPrice/cryptoPrice.js";
 import Blog from "./pages/Blogs/Blog.js";
