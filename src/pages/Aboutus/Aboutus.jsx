@@ -7,6 +7,7 @@ import profitLoss from "../../assets/video.mp4";
 import davidBanner from "../../assets/Free-trial.jpg"; 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import Testimonials from '../../components/Testimonials/Testimonials';
 
 const AboutUs = () => {
   const [mode, setMode] = useState(false);
@@ -142,6 +143,7 @@ const AboutUs = () => {
           </Button>
         </Container>
       </Box>
+      <Testimonials />
     </>
   );
 };
