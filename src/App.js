@@ -24,54 +24,53 @@ import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 import Contributors from "./pages/Contributors";
 import TermsOfUse from "./pages/TermsOfUse";
-
-
 import PrivacyPolicy from "./pages/Privacy-Policy/PrivacyPolicy";
 import Pricing from "./pages/Pricing/Pricing";
 import Learn from "./components/Learn";
 import CryptoProfitCalculator from "./pages/CryptoProfitCalculator";
-
 import Disclaimer from "./pages/Disclaimer/Disclaimer";
 import CryptoMarket from "./pages/CryptoMarket";
 import CryptoNews from "./pages/CryptoNews/CryptoNews";
-
 import ProgressBar from "./components/Common/ProgressBar/ProgressBar";
 import RefundPolicy from "./pages/Refund Policy/RefundPolicy";
 import Contactus from "./pages/Contactus/Contactus";
 import CookiesPolicy from "./pages/CookiesPolicy";
 import Aboutus from "./pages/Aboutus/Aboutus";
-
 import CookiePolicy from "./pages/Cookie-Policy/CookiePolicy";
 import TrackNft from "./pages/Track NFT/TrackNFTs.js";
 import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator";
 import ImpermanentLossCalculator from "./pages/ImpermanentLossCalculator";
-
 import ProfitLoss from "./pages/ProfitLoss/ProfitLoss";
 import Cryptocard from "./pages/CryptoCard/Cryptocard";
 import Footer from "./components/Footer";
 import NFTShowcase from "./pages/NFTShowcase/NFTShowcase";
-
 import { Helmet } from "react-helmet";
 
-import Cryptoreward from "./pages/Cryptoreward/Cryptoreward";
-// import Reward from "./pages/Reward/Reward.js";
 
+
+import Cryptoreward from "./pages/Cryptoreward/Cryptoreward";
+
+// import Reward from "./pages/Reward/Reward.js";
 import BTCDominance from "./pages/BTCDominance/BTCDominance";
 import MarketUpdate from "./pages/MarketUpdate/MarketUpdate.js";
 import HelpCenter from "./pages/HelpCenter/HelpCenter.js";
 
 import WhatsTrending from "./pages/WhatsTrending/WhatsTrending.js";
 
+
+import WhatsTrending from "./pages/WhatsTrending/WhatsTrending.js";
+
+
 import DefiAssets from "./pages/DefiAssets/DefiAssets.js";
-
-
-
-
 import CryptoPrices from "./pages/cryptoPrice/cryptoPrice.js";
 import Blog from "./pages/Blogs/Blog.js";
 import Crypto24HourReport from "./pages/CryptoMarket24h/Crypto24HourReport.js";
 import GeminiChat from "./pages/GeminiAIChat/GeminiAIChat.jsx";
+
+import CryptoReward from "./pages/Cryptoreward/Cryptoreward.js";
+
 import FearAndGreedIndex from './pages/FearAndGreedIndex/FearAndGreedIndex';
+
 
 
 
@@ -219,7 +218,7 @@ function App() {
                 <Route path="/market-update" element={<MarketUpdate />} />
                 <Route path="/help-center" element={<HelpCenter />} />
 
-              
+
 
 
                 <Route path="/help-center" element={<HelpCenter />} />
@@ -234,13 +233,13 @@ function App() {
 
                 <Route path="/CryptoMarket" element={<CryptoMarket />} />
                 <Route path="/what's-trending" element={<WhatsTrending />} />
-             
-             
-             
+
+
+
 
 
                 <Route path="/defi-assets" element={<DefiAssets />} />
-                
+
 
                 <Route
                   path="CryptoProfitCalculator"
