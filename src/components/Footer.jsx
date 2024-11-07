@@ -97,7 +97,7 @@ const Footer = () => {
               { path: "/watchlist", label: "Watchlist" },
               { path: "/dashboard", label: "Dashboard" },
               { path: "/#", label: "Earn" },
-              { path: "/#", label: "Blog" },
+              { path: "/crypto-blog", label: "Blog" },
               { path: "/faq", label: "FAQ" },
               { path: "/pricing", label: "Pricing" },
               { path: "/contributors", label: "Contributors" },
