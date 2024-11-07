@@ -15,6 +15,7 @@ import Marquee from "../../../pages/Marquee/Marquee";
 import OurVision from "../../Common/OurVision/OurVision";
 import FreeTrial from "../../Common/FreeTrial/FreeTrial";
 import InDepthAnalysis from "../../Common/InDepthAnalysis/InDepthAnalysis";
+import LoveOurWebsiteCarousel from "../../LoveOurWebsite/LoveOurWebsiteCarousel";
 
 function MainComponent() {
   useEffect(() => {
@@ -93,6 +94,10 @@ function MainComponent() {
       <InDepthAnalysis />
       {/* ...................Pro Free Subcription...........
       <ProFreeSubcription data-aos="fade-down" /> */}
+
+
+      {/* ........................why do people love our website.......... */}
+      <LoveOurWebsiteCarousel />
     </div>
   );
 }
