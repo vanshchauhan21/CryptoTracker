@@ -71,6 +71,7 @@ import GeminiChat from "./pages/GeminiAIChat/GeminiAIChat.jsx";
 import CryptoReward from "./pages/Cryptoreward/Cryptoreward.js";
 
 import FearAndGreedIndex from './pages/FearAndGreedIndex/FearAndGreedIndex';
+import BitCoinRainBowCharDetail from "./pages/BitCoinRainBow/BitCoinRainBowCharDetail.js";
 
 
 
@@ -176,13 +177,16 @@ function App() {
 
                 <Route path="/charts">
                   <Route path="bitcoin-rainbow-chart" element={<BitcoinRainbowChart />} />
+                  <Route path="bitcoin-rainbow-chart-detail" element={<BitCoinRainBowCharDetail />} />
                   <Route path="ethereum-rainbow-chart" element={<EthereumRainbowChart />} />
-               
-                  
+
                 </Route>
 
+
+
+
                 <Route path="/market">
-                  <Route path="currency-market-24h" element={<Crypto24HourReport/>} />
+                  <Route path="currency-market-24h" element={<Crypto24HourReport />} />
                   <Route path="btc-dominance" element={<BTCDominance />} />
                 </Route>
 
