@@ -6,6 +6,7 @@ import logo from "../assets/logo.jpg";
 import "./ComparePage/SelectCoins/index";
 import "./Footer.css";
 import GoogleTranslate from "./GoogleTranslate";
+import { Link } from 'react-router-dom';
 import toast, { Toaster } from "react-hot-toast";
 const Footer = () => {
   const { t } = useTranslation(); // Destructure translation function
@@ -100,6 +101,7 @@ const Footer = () => {
               { path: "/faq", label: "FAQ" },
               { path: "/pricing", label: "Pricing" },
               { path: "/contributors", label: "Contributors" },
+              { path: "/crypto-quiz", label: "Cryptocurrency Quiz" },
             ].map(({ path, label }) => (
               <li key={label}>
                 <a href={path}>

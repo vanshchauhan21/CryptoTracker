@@ -42,6 +42,7 @@ import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator"
 import ImpermanentLossCalculator from "./pages/ImpermanentLossCalculator";
 import ProfitLoss from "./pages/ProfitLoss/ProfitLoss";
 import Cryptocard from "./pages/CryptoCard/Cryptocard";
+import CryptoQuiz from './pages/CryptoQuiz/CryptoQuiz';
 import Footer from "./components/Footer";
 import NFTShowcase from "./pages/NFTShowcase/NFTShowcase";
 import { Helmet } from "react-helmet";
@@ -58,7 +59,7 @@ import HelpCenter from "./pages/HelpCenter/HelpCenter.js";
 import WhatsTrending from "./pages/WhatsTrending/WhatsTrending.js";
 
 
-import WhatsTrending from "./pages/WhatsTrending/WhatsTrending.js";
+// import WhatsTrending from "./pages/WhatsTrending/WhatsTrending.js";
 
 
 import DefiAssets from "./pages/DefiAssets/DefiAssets.js";
@@ -272,6 +273,7 @@ function App() {
 
 
                 <Route path="*" element={<NotFoundPage />} />
+                <Route path="/crypto-quiz" element={<CryptoQuiz />} />
                 <Route path="/fear-and-greed" element={<FearAndGreedIndex />} />
               </Routes>
 
