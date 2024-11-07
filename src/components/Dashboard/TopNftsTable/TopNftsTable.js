@@ -20,7 +20,7 @@ function TopNftsTable({ nfts }) {
               <tr key={index}>
                 <td className="nft-name">{nft.name}</td>
                 <td className="nft-price">{nft.price ? `$${nft.price}` : "N/A"}</td>
-                <td className="nft-change-percent">{nft.changePercent ? `${nft.changePercent}%` : "N/A"}</td>
+                <td className="nft-change-percent">{nft.change ? `${nft.change}` : "N/A"}</td>
                 <td className="nft-volume">{nft.volume ? nft.volume : "N/A"}</td>
               </tr>
             ))}
