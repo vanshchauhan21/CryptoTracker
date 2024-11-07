@@ -1,0 +1,69 @@
+.carousel-container {
+    text-align: center;
+    margin: 2rem auto;
+  }
+  
+  .carousel h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+  }
+  
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
+  }
+  .carousel-card {
+    background: linear-gradient(135deg, #9b59b6, #ff6ec7); /* Initial purple-pink gradient */
+    color: var(--text-color);
+    padding: 1.5rem;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: colorChange 2s infinite alternate; /* Adding animation */
+  }
+  
+  .carousel-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+  }
+  
+  .carousel-card h3 {
+    font-size: 1.25rem;
+    color: #fff;
+  }
+  
+  .carousel-card p {
+    font-size: 1rem;
+    color: #fff;
+  }
+  
+  /* Animation to alternate between purple and pink */
+  @keyframes colorChange {
+    0% {
+      background: linear-gradient(135deg, #9b59b6, #ff6ec7); /* Purple to Pink */
+    }
+    50% {
+      background: linear-gradient(135deg, #5939f7, #ff00ff); /* Purple to Bright Pink */
+    }
+    100% {
+      background: linear-gradient(135deg, #4120ff, #3868f7); /* Bright Pink to Purple */
+    }
+  }
+  
+  /* Add support for dark and light mode */
+  [data-theme="dark"] .carousel-card {
+    background-color: #2a2a2a;
+    color: #fff;
+  }
+  
+  [data-theme="light"] .carousel-card {
+    background-color: #fff;
+    color: #333;
+  }
+  
