@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Header from "../components/Common/Header";
 import Loader from "../components/Common/Loader";
@@ -9,6 +8,7 @@ import TopButton from "../components/Common/TopButton";
 import Footer from "../components/Common/Footer/footer";
 import TopCoinsTable from "../components/Dashboard/TopCoinsTable/TopCoinsTable";
 import TopNftsTable from "../components/Dashboard/TopNftsTable/TopNftsTable"; // Import new NFT Table
+import axios from 'axios';
 
 function Dashboard() {
   const [coins, setCoins] = useState([]);
@@ -20,20 +20,22 @@ function Dashboard() {
   const [topCoins, setTopCoins] = useState([]);
 
   useEffect(() => {
-    // Get 100 Coins and Top NFTs
+    // Get 100 Coins and Top NFTs (Static data for NFTs)
     getData();
   }, []);
 
   const getData = async () => {
     setLoading(true);
+    // Static data for NFTs
+    setNfts(getStaticNFTData());
     try {
-      // Fetch top coins (100)
-      const response = await axios.get(
+      // Fetch top coins (100) - using CoinGecko API as before
+      const coinsResponse = await axios.get(
         "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
       );
 
       // Top 5 coins (just like your existing code)
-      const topCoins = response.data.slice(0, 5);
+      const topCoins = coinsResponse.data.slice(0, 5);
       const coinsWithPriceData = await Promise.all(
         topCoins.map(async (coin) => {
           const priceResponse = await axios.get(
@@ -46,58 +48,79 @@ function Dashboard() {
         })
       );
 
-      setCoins(response.data);
-      setPaginatedCoins(response.data.slice(0, 10));
+      setCoins(coinsResponse.data);
+      setPaginatedCoins(coinsResponse.data.slice(0, 10));
       setTopCoins(coinsWithPriceData);
 
-      // Fetch Top 5 NFTs from CoinGecko with retry logic
-      const nftResponse = await fetchNftsWithRetry(); // Retry logic for NFTs
 
-      setNfts(nftResponse.data); // Assuming this returns a list of NFTs with price, change %, and volume
 
       setLoading(false);
     } catch (error) {
-      if (error.response && error.response.status === 429) {
-        console.error("Rate limit exceeded. Trying again...");
-        // Retry after a delay of 1 minute (60,000 ms)
-        setTimeout(() => {
-          getData();
-        }, 60000);  // Retry after 1 minute
-      } else {
-        console.error("API error:", error.message);
-      }
+      console.log("Coin API error:", error.message);
       setLoading(false);
     }
   };
 
-  // Retry function for fetching NFTs
-  const fetchNftsWithRetry = async () => {
-    try {
-      const nftResponse = await axios.get(
-        "https://api.coingecko.com/api/v3/collections/markets?order=market_cap_desc&per_page=5&page=1"
-      );
-      return nftResponse;
-    } catch (error) {
-      if (error.response && error.response.status === 429) {
-        console.error("Rate limit exceeded for NFT request. Retrying...");
-        // Retry logic for NFT request with delay
-        await new Promise((resolve) => setTimeout(resolve, 60000));  // Wait 1 minute before retry
-        return fetchNftsWithRetry();  // Retry the request
-      } else {
-        throw error; // Re-throw error if it's not 429
-      }
-    }
+  // Static NFT data (replace this with your own NFT data)
+  const getStaticNFTData = () => {
+    return [
+      {
+        id: 1,
+        name: "CryptoPunk",
+        image_url: "https://cryptoslam.io/images/crypto-punks/7804.png",
+        price: "4200 ETH",
+        volume: "24.5 ETH",
+        change: "+10%",
+      },
+      {
+        id: 2,
+        name: "Bored Ape Yacht Club",
+        image_url: "https://cryptoslam.io/images/bored-ape-yacht-club/1208.png",
+        price: "90 ETH",
+        volume: "1500 ETH",
+        change: "-2%",
+      },
+      {
+        id: 3,
+        name: "Art Blocks Curated",
+        image_url: "https://cryptoslam.io/images/art-blocks/3561.png",
+        price: "45 ETH",
+        volume: "220 ETH",
+        change: "+5%",
+      },
+      {
+        id: 4,
+        name: "Cool Cats",
+        image_url: "https://cryptoslam.io/images/cool-cats/1234.png",
+        price: "10 ETH",
+        volume: "30 ETH",
+        change: "-1%",
+      },
+      {
+        id: 5,
+        name: "World of Women",
+        image_url: "https://cryptoslam.io/images/world-of-women/2335.png",
+        price: "7.5 ETH",
+        volume: "12.2 ETH",
+        change: "+7%",
+      },
+    ];
   };
 
   const handleChange = (e) => {
     setSearch(e.target.value);
   };
 
-  // Filter coins based on search term
   var filteredCoins = coins.filter(
     (coin) =>
       coin.name.toLowerCase().includes(search.trim().toLowerCase()) ||
       coin.symbol.toLowerCase().includes(search.trim().toLowerCase())
+  );
+
+  var filteredNfts = nfts.filter(
+    (nft) =>
+      nft.name.toLowerCase().includes(search.trim().toLowerCase()) ||
+      nft.volume.toLowerCase().includes(search.trim().toLowerCase())
   );
 
   const handlePageChange = (event, value) => {
@@ -118,8 +141,8 @@ function Dashboard() {
           {/* Top Coins Table */}
           <TopCoinsTable topCoins={topCoins} />
 
-          {/* Top 5 NFTs Table */}
-          <TopNftsTable nfts={nfts} />
+          {/* Top 5 NFTs Table (using static data) */}
+          <TopNftsTable nfts={search ? filteredNfts : nfts} />
 
           <TabsComponent
             coins={search ? filteredCoins : paginatedCoins}
