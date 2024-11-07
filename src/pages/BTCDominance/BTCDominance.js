@@ -13,6 +13,7 @@ import {
   Legend,
   Filler,
 } from "chart.js";
+import MarketStats from "../../components/MarketStats/MarketStats";
 
 ChartJS.register(
   CategoryScale,
@@ -154,6 +155,9 @@ function BTCDominance() {
           </div>
         </div>
       </div>
+
+
+      <MarketStats/>
     </>
   );
 }
