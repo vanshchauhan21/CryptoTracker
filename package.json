@@ -31,10 +31,12 @@
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.27.0",
     "react-scripts": "^5.0.1",
+    "react-slick": "^0.30.2",
     "react-toastify": "^10.0.6",
     "react-web-share": "^2.0.2",
     "reactflow": "^11.11.4",
     "sitemap": "^8.0.0",
+    "slick-carousel": "^1.8.1",
     "web-vitals": "^4.2.4"
   },
   "scripts": {
