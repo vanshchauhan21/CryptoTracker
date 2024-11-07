@@ -3,10 +3,63 @@
     max-width: 900px;
     margin: 3rem auto;
     padding: 2rem;
-    background-color: var(--white);
+    background-color: black;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    align-items: center;
   }
+  .head-btn{
+    /* border:  2px solid greenyellow; */
+display: flex;
+flex-direction: column;
+padding: 2rem;
+  }
+  .head-btn button {
+    background: linear-gradient(135deg, #9b59b6, #5843f4); /* Gradient from purple (#9b59b6) to blue (#5843f4) */
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Smooth transition effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    animation: pulse 2s infinite alternate; /* Animation to create a pulse effect */
+  }
+  
+  /* Hover effect */
+  .head-btn button:hover {
+    background: linear-gradient(135deg, #5939f7, #ff00ff); /* On hover, change to more vibrant purple-pink gradient */
+    transform: translateY(-5px); /* Slightly lift the button */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    animation: none; /* Disable pulse animation on hover */
+  }
+  
+  /* Focus effect */
+  .head-btn button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #ff6ec7; /* Add focus glow effect */
+  }
+  
+  /* Animation: Pulse effect */
+  @keyframes pulse {
+    0% {
+      transform: scale(1); /* Start at normal size */
+    }
+    50% {
+      transform: scale(1.1); /* Grow slightly */
+    }
+    100% {
+      transform: scale(1); /* Shrink back to normal size */
+    }
+  }
+
+
+
+
+
   
   .bitcoin-rainbow-info h2 {
     text-align: center;
