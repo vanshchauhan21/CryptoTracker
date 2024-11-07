@@ -1,31 +1,55 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ExpandLessRoundedIcon from "@mui/icons-material/ExpandLessRounded";
+
 function TopButton() {
-  // Get the button
-  let mybutton = document.getElementById("top-btn");
+  // Reference to the button element
+  const buttonRef = useRef(null);
+  // State to track button visibility
+  const [visible, setVisible] = useState(false);
 
-  // When the user scrolls down 20px from the top of the document, show the button
-  window.onscroll = function () {
-    scrollFunction();
-  };
-
-  function scrollFunction() {
+  // Scroll function to determine visibility of the button
+  const scrollFunction = () => {
     if (
       document.body.scrollTop > 500 ||
       document.documentElement.scrollTop > 500
     ) {
-      mybutton.style.display = "flex";
+      setVisible(true);  // Show the button
     } else {
-      mybutton.style.display = "none";
+      setVisible(false);  // Hide the button
     }
-  }
+  };
+
+  // Set up scroll event listener
+  useEffect(() => {
+    window.addEventListener("scroll", scrollFunction);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", scrollFunction);
+    };
+  }, []);
+
+  // Function to scroll to the top when the button is clicked
+  const handleClick = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
+
   return (
     <div
+      ref={buttonRef}
       className="top-btn"
-      id="top-btn"
-      onClick={() => {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
+      onClick={handleClick}
+      style={{
+        display: visible ? "flex" : "none", // Toggle visibility based on scroll position
+        position: "fixed", // Fix button at the bottom-right
+        bottom: "20px",
+        right: "20px",
+        cursor: "pointer",
+        padding: "10px",
+        borderRadius: "50%",
+        backgroundColor: "#fff", // Optional styling
+        boxShadow: "0 2px 5px rgba(0, 0, 0, 0.2)",
       }}
     >
       <ExpandLessRoundedIcon />
