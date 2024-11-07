@@ -50,12 +50,12 @@ function Dashboard() {
       setPaginatedCoins(response.data.slice(0, 10));
       setTopCoins(coinsWithPriceData);
 
-      // Fetch Top 5 NFTs data (replace this with actual API if available)
+      // Fetch Top 5 NFTs from CoinGecko
       const nftResponse = await axios.get(
-        "https://api.example.com/top_nfts" // Placeholder for actual API
+        "https://api.coingecko.com/api/v3/collections/markets?order=market_cap_desc&per_page=5&page=1"
       );
 
-      setNfts(nftResponse.data); // Assume this returns a list of NFTs with price, change %, and volume
+      setNfts(nftResponse.data); // Assuming this returns a list of NFTs with price, change %, and volume
 
       setLoading(false);
 
