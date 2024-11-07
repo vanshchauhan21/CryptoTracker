@@ -41,26 +41,50 @@ async function NewsLetterEmailController(req, resp) {
   const mailOptions = {
     from: "chauhanvansh313@gmail.com",
     to: req.body.Email,
-    subject: "CryptoTracker Newsletter",
+    subject: "Welcome to the CryptoTracker Newsletter!",
     html: `
-      <div style="font-family: Arial, sans-serif; color: #333;">
-        <div style="text-align: center; padding: 20px; background-color: #f5f5f5;">
-          <img src="cid:logoImage" alt="CryptoTracker Logo" style="width: 150px; margin-bottom: 20px;">
-          <h2 style="color: #ff6600;">Welcome to CryptoTracker!</h2>
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <!-- Header Section -->
+        <div style="background-color: #4A90E2; padding: 20px; text-align: center; color: white;">
+          <img src="cid:logoImage" alt="CryptoTracker Logo" style="width: 100px; margin-bottom: 10px; border-radius: 50%;" />
+          <h1 style="font-size: 24px; margin: 0;">Welcome to CryptoTracker!</h1>
         </div>
-        <div style="padding: 20px; border: 1px solid #e0e0e0; border-top: none;">
-          <p style="font-size: 16px;">Hello !</p>
-          <p>Thank you for reaching out to CryptoTracker!</p>
-          <p style="margin-top: 20px;">We appreciate your interest and will get back to you soon. In the meantime, keep tracking the latest trends in cryptocurrency!</p>
-          <p style="color: #888; font-size: 14px; margin-top: 30px;">Best regards,<br><strong>CryptoTracker Team</strong></p>
+  
+        <!-- Main Content -->
+        <div style="padding: 30px; background-color: #f9f9f9;">
+          <h2 style="color: #333; font-size: 20px; margin-bottom: 10px;">Hello, Crypto Enthusiast!</h2>
+          <p style="font-size: 16px; color: #555; line-height: 1.6; margin: 0 0 20px;">
+            Thank you for joining our community at CryptoTracker! We are excited to help you stay on top of the latest cryptocurrency trends and updates.
+          </p>
+          <p style="font-size: 16px; color: #555; line-height: 1.6; margin: 0 0 20px;">
+            Keep an eye on your inbox for upcoming newsletters, market insights, and exclusive updates curated just for you.
+          </p>
+  
+         <div style="text-align: center; margin-top: 20px;">
+  <a href="https://cryptotracker.com/" 
+     style="display: inline-block; padding: 12px 25px; background-color: #333; color: white; font-size: 16px; font-weight: bold; text-decoration: none; border-radius: 5px;">
+    Discover More
+  </a>
+</div>
+
+        </div>
+  
+        <!-- Footer Section -->
+        <div style="background-color: #333; color: #ccc; padding: 20px; text-align: center;">
+          <p style="margin: 0; font-size: 14px;">Best Regards, <br> <strong>CryptoTracker Team</strong></p>
+          <p style="margin: 0; font-size: 12px; margin-top: 10px;">
+            <a href="https://cryptotracker.com/unsubscribe" style="color: #ff6600; text-decoration: none;">Unsubscribe</a> | Follow us on 
+            <a href="https://twitter.com/cryptotracker" style="color: #ff6600; text-decoration: none;">Twitter</a> and 
+            <a href="https://www.linkedin.com/in/vanshchauhan21/" style="color: #ff6600; text-decoration: none;">LinkedIn</a>
+          </p>
         </div>
       </div>
     `,
     attachments: [
       {
-        filename: "cyptotracker",
-        path: "C:/Users/ayush/OneDrive/Desktop/CryptoTracker/backend/controller/logo.png",
-        cid: "logoImage",
+        filename: "cryptotracker-logo.png",
+        path: "C:/Users/ayush/OneDrive/Desktop/CryptoTracker/backend/controller/logo.png", // Ensure this path is correct
+        cid: "logoImage", // Reference this in the HTML img tag
       },
     ],
   };
