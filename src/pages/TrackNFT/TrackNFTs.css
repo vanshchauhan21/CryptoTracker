@@ -1,6 +1,6 @@
 :root {
     --blue: #0066ff;
-    --grey: #a0a3a8;
+    --grey: linear-gradient(135deg, #9b59b6, #ff6ec7, #5843f4);
     --black: #121212;
     --white: #f5f5f5;
 }
@@ -34,7 +34,6 @@ body {
 }
 
 
-
 /* Additional Styles for Components */
 .track-nfts-container {
     padding: 2rem;
@@ -54,20 +53,18 @@ body {
 
 /* Light/Dark Mode Adjustments for Sections */
 .About-NFT, .Work-NFT, .Info-NFT, .Track-NFt, .Why-Track-NFT {
-    background-color: var(--grey);
+    background: linear-gradient(135deg, #b65991, #7a5beb, #14e699);
+   
     padding: 1.5rem;
     margin-top: 1rem;
     border-radius: 8px;
     margin: 2rem;
     transition: background-color 0.3s ease;
 }
-
 [data-theme="dark"] .About-NFT,
 [data-theme="dark"] .Track-NFt,
-
 [data-theme="dark"] .Work-NFT,
 [data-theme="dark"] .Why-Track-NFT,
-
 [data-theme="dark"] .Info-NFT {
-    background-color: #333;
+    background: linear-gradient(135deg, #9b59b6, #4db1fd, #5843f4);
 }
