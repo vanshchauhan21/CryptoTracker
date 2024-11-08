@@ -1,92 +1,89 @@
-// src/pages/PrivacyPolicy.jsx
-import React from "react";
-// import Header from "../components/Common/Header";
+import React from 'react';
+import Header from '../../components/Common/Header';
+import './PrivacyPolicy.css'; // You can add a CSS file to style this page if needed
 
-import "./PrivacyPolicy.css";
-import Header from "../../components/Common/Header/index.js";
-
-
-const PrivacyPolicy = () => {
-
-
-    return (
-        <>
-            <Header className="header">
-                <h1 className="h1">Privacy Policy</h1>
-            </Header>
-
-            <div className=" container content">
-                <p>Effective Date: <strong>October 29, 2024</strong></p>
-
-                <h2 className="h2">Introduction</h2>
-                <p>
-                    Welcome to Crypto Tracker. Your privacy is important to us, and we are committed to protecting the personal information you share with us through our platform. This Privacy Policy explains how we collect, use, disclose, and protect your data when you use <a href="https://crypto-tracker-kappa-ebon.vercel.app/" className="website">Crypto Tracker</a> (the "Website"). By accessing or using our Website, you agree to the practices described in this Privacy Policy.
-                </p>
-
-                <h2 className="h2">1. Information We Collect</h2>
-                <p>We may collect the following types of information when you use our Website:</p>
-                <ul className="ul">
-                    <li><strong>Personal Information:</strong> We do not collect personal information such as your name, email address, or contact details unless you choose to provide it directly by contacting us.</li>
-                    <li>
-                        <strong>Automatically Collected Information:</strong> We may collect information about your device and browsing activity, including:
-                        <ul className="ul">
-                            <li>IP address</li>
-                            <li>Browser type and version</li>
-                            <li>Time zone settings</li>
-                            <li>Operating system</li>
-                            <li>Information about your interaction with the Website (e.g., the pages you visit)</li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <h2 className="h2">2. Use of Collected Information</h2>
-                <p>We may use the collected information for the following purposes:</p>
-                <ul className="ul">
-                    <li>To improve the functionality and user experience of the Website</li>
-                    <li>To monitor usage patterns and performance</li>
-                    <li>To enhance security and prevent potential security breaches</li>
-                    <li>To respond to user inquiries or feedback, if applicable</li>
-                </ul>
-
-                <h2 className="h2">3. Cookies</h2>
-                <p>
-                    The Website may use cookies to enhance user experience. A cookie is a small file that is placed on your device when you visit a website. You can set your browser to refuse cookies or notify you when cookies are being sent. However, certain features of the Website may not function properly without cookies.
-                </p>
-
-                <h2 className="h2">4. Data Sharing and Disclosure</h2>
-                <p>
-                    We do not sell, trade, or rent your personal information to third parties. We may share non-personally identifiable information (e.g., aggregate user statistics) with third parties to help us improve the Website’s performance.
-                </p>
-                <p>We may also disclose information in the following cases:</p>
-                <ul className="ul">
-                    <li>To comply with legal obligations or respond to legal requests</li>
-                    <li>To protect the rights, property, or safety of Crypto Tracker, its users, or others</li>
-                </ul>
-
-                <h2 className="h2">5. Security of Your Information</h2>
-                <p>
-                    We take the security of your data seriously and implement appropriate technical and organizational measures to protect it. However, no system can guarantee complete security, and we cannot ensure or warrant the security of any information you transmit to us.
-                </p>
-
-                <h2 className="h2">6. Third-Party Links</h2>
-                <p>
-                    Our Website may contain links to third-party websites. Please note that we are not responsible for the privacy practices of these external sites. We encourage you to read the privacy policies of any website you visit.
-                </p>
-
-                <h2 className="h2">7. Changes to this Privacy Policy</h2>
-                <p>
-                    We may update this Privacy Policy from time to time. When we do, we will revise the “Effective Date” at the top of this page. We encourage you to periodically review this Privacy Policy to stay informed about how we are protecting your information.
-                </p>
-
-                <h2 className="h2">8. Contact Us</h2>
-                <p>
-                    If you have any questions or concerns about this Privacy Policy or how we handle your information, feel free to reach out to us via our social media platforms.
-                </p>
-            </div>
-        </>
-    );
-
-
-};
+function PrivacyPolicy() {
+  return (
+    <>
+      <Header />
+      <div className="privacy-policy-container">
+        <h1>Privacy Policy</h1>
+        
+        <section>
+          <h2>1. Introduction</h2>
+          <p>
+            At [Your Company Name], we prioritize the privacy and security of your data. This Privacy Policy outlines the types of personal information we collect, how we use it, and the measures we take to protect it in alignment with industry standards and regulations.
+          </p>
+        </section>
+        
+        <section>
+          <h2>2. Information We Collect</h2>
+          <p>
+            We collect information necessary to provide secure and efficient services. This may include:
+          </p>
+          <ul>
+            <li>Personal Identification: Information such as name, email address, and contact information.</li>
+            <li>Financial Information: Transaction and wallet details required for managing your crypto assets.</li>
+            <li>Usage Data: Information on how you interact with our platform, including device information and IP addresses.</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2>3. How We Use Your Information</h2>
+          <p>
+            We use your information to:
+          </p>
+          <ul>
+            <li>Provide and personalize our services, including account management and portfolio tracking.</li>
+            <li>Process transactions and notify you of updates or important account information.</li>
+            <li>Improve our platform’s functionality and secure user data.</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h2>4. Data Security and Protection</h2>
+          <p>
+            We apply industry-standard encryption and secure storage practices to protect your data from unauthorized access. Your data is stored securely on our servers, with restricted access to only those employees who need it to perform their job functions.
+          </p>
+        </section>
+        
+        <section>
+          <h2>5. Sharing of Information</h2>
+          <p>
+            We do not share your personal information with third parties unless required by law or necessary for service delivery (e.g., with payment providers for transaction processing).
+          </p>
+        </section>
+        
+        <section>
+          <h2>6. Cookies and Tracking Technologies</h2>
+          <p>
+            We use cookies and similar tracking technologies to enhance your user experience and understand usage patterns. You can manage your preferences in your browser settings.
+          </p>
+        </section>
+        
+        <section>
+          <h2>7. Your Rights</h2>
+          <p>
+            You have the right to access, correct, or delete your personal information at any time. For any privacy-related inquiries, please contact our support team.
+          </p>
+        </section>
+        
+        <section>
+          <h2>8. Updates to This Policy</h2>
+          <p>
+            We may update this Privacy Policy periodically. Changes will be reflected on this page, and significant updates will be communicated to you directly.
+          </p>
+        </section>
+        
+        <section>
+          <h2>9. Contact Us</h2>
+          <p>
+            For questions regarding this Privacy Policy, please reach out to us at privacy@[yourcompany].com.
+          </p>
+        </section>
+      </div>
+    </>
+  );
+}
 
 export default PrivacyPolicy;
