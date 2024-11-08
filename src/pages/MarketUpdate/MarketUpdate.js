@@ -5,10 +5,10 @@ import MarketCard from '../../components/Common/MarketCard/MarketCard'
 function MarketUpdate() {
   return (
     <>
-     <Header/>
-     <h1>Market Update</h1>
+      <Header />
+      <h1>Market Update</h1>
 
-      <MarketCard/>
+      <MarketCard />
     </>
   )
 }
