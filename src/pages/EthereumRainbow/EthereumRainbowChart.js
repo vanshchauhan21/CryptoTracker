@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Line } from "react-chartjs-2";
 import Header from "../../components/Common/Header";
 import axios from "axios";
+import EthereumBuySection from './EthereumBuySection'; 
 import EthereumRainbowInfo from './EthereumRainbowInfo';
 import {
   Chart as ChartJS,
@@ -129,6 +130,8 @@ const EthereumRainbowChart = () => {
           Ethereum Rainbow Chart
         </h2>
         <Line data={data} options={options} />
+        <EthereumBuySection />
+        {/* <EthereumTrackSection />  */}
         <EthereumRainbowInfo />
       </div>
     </div>
