@@ -3,11 +3,23 @@ import "./FreeTrial.css";
 import davidBanner from "../../../assets/Free-trial.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useNavigate } from "react-router-dom";
 
 const FreeTrial = () => {
+  const navigate = useNavigate();
+
+
+  const handleStartTrialClick = () => {
+    navigate('/pricing');
+  };
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+
+
+
+
 
   return (
     <div className="free-trial-container" data-aos="fade-up">
@@ -30,6 +42,7 @@ const FreeTrial = () => {
           className="start-trial-btn"
           data-aos="zoom-in"
           data-aos-delay="400"
+          onClick={handleStartTrialClick} // Add the click handler here
         >
           Start My Free Trial
         </button>
