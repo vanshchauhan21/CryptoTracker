@@ -1,0 +1,16 @@
+/* StartButton.css */
+.cs-button__iO2MF {
+    background-color: #ff9332;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+  }
+  
+  .cs-button__iO2MF:hover {
+    background-color: #ff7a00;
+  }
+  
