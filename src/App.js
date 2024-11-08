@@ -37,7 +37,7 @@ import Contactus from "./pages/Contactus/Contactus";
 import CookiesPolicy from "./pages/CookiesPolicy";
 import Aboutus from "./pages/Aboutus/Aboutus";
 import CookiePolicy from "./pages/Cookie-Policy/CookiePolicy";
-import TrackNft from "./pages/Track NFT/TrackNFTs.js";
+
 import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator";
 import ImpermanentLossCalculator from "./pages/ImpermanentLossCalculator";
 import ProfitLoss from "./pages/ProfitLoss/ProfitLoss";
@@ -68,10 +68,13 @@ import Blog from "./pages/Blogs/Blog.js";
 import Crypto24HourReport from "./pages/CryptoMarket24h/Crypto24HourReport.js";
 import GeminiChat from "./pages/GeminiAIChat/GeminiAIChat.jsx";
 
-import CryptoReward from "./pages/Cryptoreward/Cryptoreward.js";
 
 import FearAndGreedIndex from './pages/FearAndGreedIndex/FearAndGreedIndex';
+
 import BitCoinRainBowCharDetail from "./pages/BitCoinRainBow/BitCoinRainBowCharDetail.js";
+
+import TrackNFTs from "./pages/TrackNFT/TrackNFTs.js";
+
 
 
 
@@ -208,7 +211,7 @@ function App() {
                 <Route path="/Feedback" element={<Feedback />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/cookies-policy" element={<CookiesPolicy />} />
-                <Route path="/trackNft" element={<TrackNft />} />
+                <Route path="/track-nft" element={<TrackNFTs />} />
                 <Route path="/nft" element={<NFTShowcase />} />
                 <Route path="/contactus" element={<Contactus />} />
                 <Route path="/aboutus" element={<Aboutus />} />
@@ -273,7 +276,7 @@ function App() {
                 <Route path="/cookie-policy" element={<CookiePolicy />} />
 
                 <Route path="/GoogleTranslate" element={<GoogleTranslate />} />
-
+              
 
 
                 <Route path="*" element={<NotFoundPage />} />
