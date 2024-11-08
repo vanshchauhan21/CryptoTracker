@@ -16,6 +16,8 @@ import OurVision from "../../Common/OurVision/OurVision";
 import FreeTrial from "../../Common/FreeTrial/FreeTrial";
 import InDepthAnalysis from "../../Common/InDepthAnalysis/InDepthAnalysis";
 import LoveOurWebsiteCarousel from "../../LoveOurWebsite/LoveOurWebsiteCarousel";
+import { AnalyticsTwoTone } from "@mui/icons-material";
+import AnalyzeAssets from "../../../pages/AnalyzeAssets/AnalyzeAssets";
 
 function MainComponent() {
   useEffect(() => {
@@ -98,6 +100,8 @@ function MainComponent() {
 
       {/* ........................why do people love our website.......... */}
       <LoveOurWebsiteCarousel />
+      {/* .............................AnalyzeAssets................. */}
+      <AnalyzeAssets/>
     </div>
   );
 }
