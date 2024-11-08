@@ -4,28 +4,36 @@ import Header from "../components/Common/Header";
 import TabsComponent from "../components/Dashboard/Tabs";
 import { get100Coins } from "../functions/get100Coins";
 
-//import animation data
+// Import animation data
 import Lottie from "react-lottie";
 import animationData from "../assets/emptyanimation.json";
 
 function Watchlist() {
-  const watchlist = JSON.parse(localStorage.getItem("watchlist"));
+  const [watchlist, setWatchlist] = useState(() => {
+    // Get the watchlist from localStorage or return an empty array as default
+    return JSON.parse(localStorage.getItem("watchlist")) || [];
+  });
+
   const [coins, setCoins] = useState([]);
 
   useEffect(() => {
-    if (watchlist) {
+    if (watchlist.length > 0) {
       getData();
     }
-  }, []);
+  }, [watchlist]); // Run this whenever the watchlist changes
 
   const getData = async () => {
-    const allCoins = await get100Coins();
-    if (allCoins) {
-      setCoins(allCoins.filter((coin) => watchlist.includes(coin.id)));
+    try {
+      const allCoins = await get100Coins();
+      if (allCoins) {
+        setCoins(allCoins.filter((coin) => watchlist.includes(coin.id)));
+      }
+    } catch (error) {
+      console.error("Error fetching coins: ", error);
     }
   };
 
-  // animation options
+  // Animation options for the Lottie component
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -38,11 +46,11 @@ function Watchlist() {
   return (
     <div>
       <Header />
-      {watchlist?.length > 0 ? (
+      {watchlist.length > 0 ? (
         <TabsComponent coins={coins} />
       ) : (
         <div className="h-[500px] flex flex-col justify-center items-center">
-          {/* animation */}
+          {/* Animation */}
           <Lottie options={defaultOptions} height={250} width={200} />
           <h1>Sorry, No Items In The Watchlist.</h1>
           <div>
