@@ -73,7 +73,7 @@ import FearAndGreedIndex from './pages/FearAndGreedIndex/FearAndGreedIndex';
 import Earn from "./pages/Earn/Earn.js";
 
 import BitCoinRainBowCharDetail from "./pages/BitCoinRainBow/BitCoinRainBowCharDetail.js";
-
+import AffiliateProgram from './pages/AffiliateProgram/AffiliateProgram';
 import TrackNFTs from "./pages/TrackNFT/TrackNFTs.js";
 
 
@@ -289,6 +289,7 @@ function App() {
                 <Route path="*" element={<NotFoundPage />} />
                 <Route path="/crypto-quiz" element={<CryptoQuiz />} />
                 <Route path="/fear-and-greed" element={<FearAndGreedIndex />} />
+                <Route path="/affiliate-program" element={<AffiliateProgram />} />
               </Routes>
 
             </BrowserRouter>

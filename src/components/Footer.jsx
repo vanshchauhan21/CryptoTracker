@@ -107,6 +107,7 @@ const Footer = () => {
               { path: "/pricing", label: "Pricing" },
               { path: "/contributors", label: "Contributors" },
               { path: "/crypto-quiz", label: "Cryptocurrency Quiz" },
+              { path: "/affiliate-program", label: "Affiliate Program" },
             ].map(({ path, label }) => (
               <li key={label}>
                 <a href={path}>
