@@ -246,6 +246,10 @@ const Footer = () => {
                 path: "/track-nft",
                 label: "How to Track NFTs on Crypto Tracker",
               },
+              {
+                path: "/Methodology",
+                label: "Methodology",
+              },
             ].map(({ path, label }) => (
               <li key={label}>
                 <a href={path}>
