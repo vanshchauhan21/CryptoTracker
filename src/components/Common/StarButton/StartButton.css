@@ -1,7 +1,9 @@
 /* StartButton.css */
 .cs-button__iO2MF {
-    background-color: #ff9332;
-    color: white;
+    /* background-color: #ff9332;
+     */
+ background: linear-gradient(135deg, #9b59b6, #4db1fd, #5843f4);   
+     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -11,6 +13,6 @@
   }
   
   .cs-button__iO2MF:hover {
-    background-color: #ff7a00;
+ background: linear-gradient(135deg, #9b59b6, #4db1fd, #43f466)
   }
   
