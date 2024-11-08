@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./MarketCard.css";
+import LottieSpinner from "../LottieSpinner/LottieSpinner";
+
 
 const MarketCard = () => {
   const [news, setNews] = useState([]);
@@ -62,7 +64,7 @@ const MarketCard = () => {
           </div>
         ))
       ) : (
-        <p>Loading market updates...</p>
+   <LottieSpinner/>
       )}
     </div>
   );
