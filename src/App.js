@@ -166,9 +166,13 @@ function App() {
                 <Route path="/faq" element={<Faq />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/Contributors" element={<Contributors />} />
+
+                <Route path="/crypto-blog" element={<Blog />} />
+
                 <Route path="/blog" element={<Blog />} />
               
                 <Route path="/earn" element={<Earn />} />
+
 
 
 
