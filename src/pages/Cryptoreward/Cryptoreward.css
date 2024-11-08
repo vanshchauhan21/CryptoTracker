@@ -1,7 +1,6 @@
-/* Root Variables */
 :root {
     --blue: #0066ff;
-    --grey: #a0a3a8;
+    --grey: linear-gradient(135deg, #9b59b6, #ff6ec7, #5843f4);
     --black: #121212;
     --white: #f5f5f5;
 }
@@ -26,48 +25,55 @@ body {
 }
 
 /* Main Title with Hover Effect */
-.crypto-rewards-container .title {
+.title-t {
     font-size: 2.5rem;
-    color: var(--text-color);
+    color: var(--text-color) !important;
     transition: color 0.3s ease;
+    text-align: center;
+   
+
 }
 
-/* Title Hover Effect */
-[data-theme="dark"] .crypto-rewards-container .title:hover {
-    color: var(--link-hover-color);
-}
-
-[data-theme="light"] .crypto-rewards-container .title:hover {
-    color: var(--blue);
-}
 
 /* Additional Styles for Components */
-.crypto-rewards-container {
+.Reward-container {
     padding: 2rem;
     margin: 1.5rem;
     background-color: var(--background-color);
     border: 2px solid #e2e8f0;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
-.crypto-rewards-container h2 {
-    color: var(--text-color);
+.Reward-container h2,p {
+    color: var(--text-color) !important;
+   
     position: relative;
     padding-bottom: 0.5rem;
+    
 }
 
+
+.Reward-container p {
+margin: 1rem 2rem;
+    
+}
+
+
 /* Light/Dark Mode Adjustments for Sections */
-.Earn-section, .Benefit-section, .Reward-section {
-    background-color: var(--grey);
+.earn-reward, .redeem-reward, .benefit-reward {
+    background: linear-gradient(135deg, #b65991, #7a5beb, #14e699);
+   
     padding: 1.5rem;
     margin-top: 1rem;
     border-radius: 8px;
+    margin: 2rem;
     transition: background-color 0.3s ease;
 }
-
-[data-theme="dark"] .Earn-section,
-[data-theme="dark"] .Benefit-section,
-[data-theme="dark"] .Reward-section {
-    background-color: #333;
+[data-theme="dark"] .About-NFT,
+[data-theme="dark"] .Track-NFt,
+[data-theme="dark"] .Work-NFT,
+[data-theme="dark"] .Why-Track-NFT,
+[data-theme="dark"] .Info-NFT {
+    background: linear-gradient(135deg, #9b59b6, #4db1fd, #5843f4);
 }
