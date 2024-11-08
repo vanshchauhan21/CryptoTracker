@@ -1,0 +1,146 @@
+
+:root {
+    --methodology-bg-light: #f4f6f9;
+    --methodology-bg-dark: #1e2433;
+    --methodology-card-bg: #ffffff;
+    --methodology-text-color: #333;
+    --methodology-icon-color: #3a80e9;
+    --methodology-transition: 0.3s ease;
+  }
+  
+  [data-theme="dark"] {
+    --methodology-bg-light: #121212;
+    --methodology-bg-dark: #1e2433;
+    --methodology-card-bg: #1f2937;
+    --methodology-text-color: #e0e0e0;
+    --methodology-icon-color: #4ecdc4;
+  }
+  
+  .methodology-page {
+    background-color: var(--methodology-bg-light);
+    min-height: 100vh;
+    color: var(--methodology-text-color);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .methodology-container {
+    max-width: 1200px;
+    margin: 0  auto;
+    padding: 2rem;
+  }
+  
+  .methodology-hero {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #3a80e9 0%, #6a11cb 100%);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .methodology-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    transition: transform var(--methodology-transition);
+  }
+  
+  .methodology-hero h1:hover {
+    transform: scale(1.05);
+  }
+  
+  .methodology-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .methodology-tabs button {
+    background: none;
+    border: 2px solid var(--methodology-icon-color);
+    color: var(--methodology-icon-color);
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background var(--methodology-transition), color var(--methodology-transition);
+  }
+  
+  .methodology-tabs button.active {
+    background: var(--methodology-icon-color);
+    color: white;
+  }
+  
+  .methodology-tab-container {
+    margin-bottom: 3rem;
+  }
+  
+  .methodology-highlights {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+  }
+  
+  .highlight-item {
+    text-align: center;
+    transition: transform var(--methodology-transition);
+  }
+  
+  .highlight-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .highlight-icon {
+    font-size: 3rem;
+    color: var(--methodology-icon-color);
+  }
+  
+  .data-sources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .data-source-card {
+    background-color: var(--methodology-card-bg);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform var(--methodology-transition);
+  }
+  
+  .data-source-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .security-features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+  }
+  
+  .security-feature {
+    display: flex;
+    align-items: center;
+  }
+  
+  .security-icon {
+    color: var(--methodology-icon-color);
+    margin-right: 0.5rem;
+  }
+  
+  .methodology-disclaimer {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    padding: 1rem;
+    background-color: var(--methodology-card-bg);
+    border-radius: 8px;
+  }
+  
+  .disclaimer-icon {
+    color: var(--methodology-icon-color);
+    font-size: 2rem;
+    margin-right: 1rem;
+  }
