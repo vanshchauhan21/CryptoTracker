@@ -46,7 +46,7 @@ import CryptoQuiz from './pages/CryptoQuiz/CryptoQuiz';
 import Footer from "./components/Footer";
 import NFTShowcase from "./pages/NFTShowcase/NFTShowcase";
 import { Helmet } from "react-helmet";
-
+import Methodology from './pages/Methodology/Methodology';
 
 
 import Cryptoreward from "./pages/Cryptoreward/Cryptoreward";
@@ -289,6 +289,7 @@ function App() {
                 <Route path="*" element={<NotFoundPage />} />
                 <Route path="/crypto-quiz" element={<CryptoQuiz />} />
                 <Route path="/fear-and-greed" element={<FearAndGreedIndex />} />
+                <Route path="/methodology" element={<Methodology />} />
               </Routes>
 
             </BrowserRouter>
