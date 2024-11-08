@@ -96,12 +96,13 @@ const Footer = () => {
               { path: "/compare", label: "Compare" },
               { path: "/watchlist", label: "Watchlist" },
               { path: "/dashboard", label: "Dashboard" },
+              { path: "/blog", label: "Blog" },
 
-              { path: "/#", label: "Earn" },
-              { path: "/crypto-blog", label: "Blog" },
+              // { path: "/#", label: "Earn" },
+              // { path: "/crypto-blog", label: "Blog" },
 
               { path: "/earn", label: "Earn" },
-              { path: "/#", label: "Blog" },
+              // { path: "/#", label: "Blog" },
 
               { path: "/faq", label: "FAQ" },
               { path: "/pricing", label: "Pricing" },

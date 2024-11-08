@@ -70,6 +70,7 @@ import WhatsTrending from "./pages/WhatsTrending/WhatsTrending.js";
 import DefiAssets from "./pages/DefiAssets/DefiAssets.js";
 import CryptoPrices from "./pages/cryptoPrice/cryptoPrice.js";
 import Blog from "./pages/Blogs/Blog.js";
+// import Blog from './pages/Blog/Blog';
 import Crypto24HourReport from "./pages/CryptoMarket24h/Crypto24HourReport.js";
 import GeminiChat from "./pages/GeminiAIChat/GeminiAIChat.jsx";
 
@@ -171,7 +172,8 @@ function App() {
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/Contributors" element={<Contributors />} />
 
-                <Route path="/crypto-blog" element={<Blog />} />
+                {/* <Route path="/crypto-blog" element={<Blog />} /> */}
+                {/* <Route path="/blog" component={Blog} />  */}
 
                 <Route path="/blog" element={<Blog />} />
 
