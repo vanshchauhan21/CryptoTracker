@@ -312,6 +312,7 @@ function App() {
 
                 <Route path="/methodology" element={<Methodology />} />
 
+
              </Routes>
 
             </BrowserRouter>
