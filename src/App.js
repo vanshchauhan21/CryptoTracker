@@ -46,6 +46,7 @@ import CryptoQuiz from './pages/CryptoQuiz/CryptoQuiz';
 import Footer from "./components/Footer";
 import NFTShowcase from "./pages/NFTShowcase/NFTShowcase";
 import { Helmet } from "react-helmet";
+import Sitemap from './pages/Sitemap/Sitemap';
 
 
 
@@ -289,6 +290,7 @@ function App() {
                 <Route path="*" element={<NotFoundPage />} />
                 <Route path="/crypto-quiz" element={<CryptoQuiz />} />
                 <Route path="/fear-and-greed" element={<FearAndGreedIndex />} />
+                <Route path="/sitemap" element={<Sitemap />} />
               </Routes>
 
             </BrowserRouter>
