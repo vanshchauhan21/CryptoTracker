@@ -14,12 +14,12 @@ function CryptoReward() {
   return (
     <>
       <Header />
-      <div className="crypto-rewards-container">
-        <h1 className="title">{cryptoRewardsData.intro.title}</h1>
+      <div className="Reward-container">
+        <h1 className="title-t">{cryptoRewardsData.intro.title}</h1>
         <p>{cryptoRewardsData.intro.description}</p>
 
         {/* Earn Rewards Section */}
-        <section className="Earn-section">
+        <div className="earn-reward">
           <h2>How to Earn Crypto Tracker Rewards</h2>
           <ul>
             {cryptoRewardsData.howToEarn.map((item, index) => (
@@ -28,10 +28,11 @@ function CryptoReward() {
               </li>
             ))}
           </ul>
-        </section>
+        </div>
 
         {/* Redeem Rewards Section */}
-        <section className="section">
+      
+        <div className="redeem-reward">
           <h2>How to Redeem Rewards</h2>
           <p>
             To redeem your rewards, follow these simple steps:
@@ -46,13 +47,12 @@ function CryptoReward() {
           <p>
             Be sure to check back regularly, as new rewards and options are added frequently to keep the experience fresh and exciting!
           </p>
-        </section>
+        </div>
 
-        {/* Feedback Section */}
-        <Feedback />
+    
 
         {/* Benefits Section */}
-        <section className="Benefit-section">
+        <div className="benefit-reward">
           <h2>Benefits of Rewards</h2>
           <ul>
             {cryptoRewardsData.benefits.map((item, index) => (
@@ -61,8 +61,10 @@ function CryptoReward() {
               </li>
             ))}
           </ul>
-        </section>
+        </div>
       </div>
+          {/* Feedback Section */}
+          <Feedback />
     </>
   );
 }
