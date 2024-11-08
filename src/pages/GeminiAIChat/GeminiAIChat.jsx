@@ -1,84 +1,92 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Container, TextField, Button, Paper, Box, List, ListItem, ListItemText, Divider, IconButton, Stack } from '@mui/material';
+import { Container, TextField, Button, Paper, Box, List, ListItem, ListItemText, Divider, IconButton, Stack, Card, CardContent } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { motion } from 'framer-motion';
 import Header from "../../components/Common/Header";
+import { Send, Trash2 } from 'react-feather';
+import ScrollArea from 'react-scrollbars-custom';
+const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 const GeminiChat = () => {
     const [userInput, setUserInput] = useState('');
     const [chatHistory, setChatHistory] = useState(() => {
-        const savedHistory = localStorage.getItem('chatHistory');
+        const savedHistory = localStorage.getItem('geminiChatHistory');
         return savedHistory ? JSON.parse(savedHistory) : [];
     });
     const chatContainerRef = useRef(null);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState(null);
+
+    const apiKey = 'AIzaSyBqKHw6cnbP1VnfQySbrsY6_81z7Xnbgpw';  
+    const genAI = new GoogleGenerativeAI(apiKey);
 
     useEffect(() => {
-        localStorage.setItem('chatHistory', JSON.stringify(chatHistory));
+        localStorage.setItem('geminiChatHistory', JSON.stringify(chatHistory));
         if (chatContainerRef.current) {
             chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
         }
     }, [chatHistory]);
 
-    const formatMessage = (htmlContent) => {
-        return <div dangerouslySetInnerHTML={{ __html: htmlContent }} />;
+    const formatMessage = (text) => {
+        return text.split('\n').map((line, i) => (
+            <React.Fragment key={i}>
+                {line}
+                <br />
+            </React.Fragment>
+        ));
     };
-
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (!userInput) return;
+        if (!userInput.trim() || isLoading) return;
 
-        const userMessage = { sender: "User", text: userInput };
-        setChatHistory((prev) => [...prev, userMessage]);
+        setIsLoading(true);
+        setError(null);
+
+        const userMessage = { role: "user", content: userInput };
+        setChatHistory(prev => [...prev, userMessage]);
         setUserInput("");
 
         try {
-            const previousMessages = chatHistory.map(msg => msg.text).join("\n");
-            const res = await fetch('http://localhost:5000/api/generate-content/', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    prompt: "Previous Responses By You: " + previousMessages + "\nMy New Query: " + userInput + "\nNote : Give response in HTML (Tags only, only inside body content)",
-                }),
-            });
-
-            if (!res.ok) {
-                throw new Error(`Server error: ${res.statusText}`);
+            if (!apiKey) {
+                throw new Error('Gemini API key not found. Please check your environment variables.');
             }
 
-            const data = await res.json();
-            const responseLines = data.generatedText.split('\n');
-            const contentWithoutHeading = responseLines.slice(1).join('\n'); // Skip the first line
+            const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+            
+            const chat = model.startChat({
+                history: chatHistory.map(msg => ({
+                    role: msg.role,
+                    parts: [{ text: msg.content }],
+                })),
+            });
 
-            const botMessage = { sender: "Gemini AI", text: contentWithoutHeading };
-            setChatHistory((prev) => [...prev, botMessage]);
-        } catch (error) {
-            console.error('Error:', error);
+            const result = await chat.sendMessage(userInput);
+            const response = await result.response;
+            const text = response.text();
+
+            const botMessage = { role: "model", content: text };
+            setChatHistory(prev => [...prev, botMessage ]);
+        } catch (err) {
+            console.error('Error:', err);
+            setError(err.message || 'Failed to get response from Gemini');
+        } finally {
+            setIsLoading(false);
         }
     };
 
     const handleClearChat = () => {
         setChatHistory([]);
-        localStorage.removeItem('chatHistory');
+        localStorage.removeItem('geminiChatHistory');
     };
 
     return (
         <>
         <Header />
-        <div
-            // className="min-h-screen flex items-center justify-center p-6 mt-14 relative"
-            // style={{
-            //     backgroundImage: `url(${img1})`,
-            //     backgroundSize: 'cover',
-            //     backgroundPosition: 'center',
-            // }}
-        >
-            {/* <div className="absolute inset-0 bg-black opacity-40 pointer-events-none"></div> */}
+        <div>
             <Container style={{ zIndex: 1, marginBottom: '2rem' }}>
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
                         <Paper elevation={3} style={{ padding: '1.5rem', borderRadius: '8px', background:"#0D71E2" }}>
@@ -101,7 +109,7 @@ const GeminiChat = () => {
                                     height: '60vh',
                                     overflowY: 'auto',
                                     padding: '1rem',
-                                    backgroundColor: '#f1f1f1',
+                                    backgroundColor: '#f5f5f5',
                                     borderRadius: '8px',
                                     marginBottom: '1rem',
                                 }}
@@ -119,7 +127,7 @@ const GeminiChat = () => {
                                                 alignItems="flex-start"
                                                 style={{
                                                     display: 'flex',
-                                                    justifyContent: msg.sender === "User" ? 'flex-end' : 'flex-start',
+                                                    justifyContent: msg.role === "user" ? 'flex-end' : 'flex-start',
                                                 }}
                                             >
                                                 <Paper
@@ -127,22 +135,36 @@ const GeminiChat = () => {
                                                     style={{
                                                         padding: '0.01rem 1rem',
                                                         borderRadius: '5px',
-                                                        backgroundColor: msg.sender === "User" ? '#0D71E2' : 'white',
-                                                        color: msg.sender === "User" ? 'white' : 'black',
+                                                        backgroundColor: msg.role === "user" ? '#0D71E2' : 'white',
+                                                        color: msg.role === "user" ? 'white' : 'black',
                                                         maxWidth: '70%',
                                                     }}
                                                 >
                                                     <ListItemText
-                                                        primary={msg.sender === "User" ? msg.text : formatMessage(msg.text)}
-                                                        secondary={msg.sender === "User" ? "" : msg.sender}
+                                                        primary={msg.role === "user" ? msg.content : formatMessage(msg.content)}
+                                                        secondary={msg.role === "user" ? "" : msg.role}
                                                         secondaryTypographyProps={{
-                                                            style: { color: msg.sender === "User" ? '#bbdefb' : '#757575' },
+                                                            style: { color: msg.role === "user" ? '#bbdefb' : '#757575' },
                                                         }}
                                                     />
                                                 </Paper>
                                             </ListItem>
                                         </motion.div>
                                     ))}
+                                    {isLoading && (
+                                        <div className="flex justify-start">
+                                            <div className="bg-gray-100 p-3 rounded-lg">
+                                                Thinking...
+                                            </div>
+                                        </div>
+                                    )}
+                                    {error && (
+                                        <div className="flex justify-center">
+                                            <div className="bg-red-100 text-red-600 p-3 rounded-lg">
+                                                {error}
+                                            </div>
+                                        </div>
+                                    )}
                                 </List>
                             </Box>
                         </motion.div>
