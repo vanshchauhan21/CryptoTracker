@@ -163,14 +163,13 @@ function App() {
                 <Route path="/compare" element={<Compare />} />
                 <Route path="/watchlist" element={<Watchlist />} />
                 <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/faq" element={<Faq />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/Contributors" element={<Contributors />} />
 
                 <Route path="/crypto-blog" element={<Blog />} />
 
                 <Route path="/blog" element={<Blog />} />
-              
+
                 <Route path="/earn" element={<Earn />} />
 
 
@@ -209,35 +208,57 @@ function App() {
                 <Route path="/login" element={<Login />} />
 
 
-                <Route path="/terms-conditions" element={<TermCondition />} />
 
 
 
 
 
-                <Route path="/Feedback" element={<Feedback />} />
-                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-                <Route path="/cookies-policy" element={<CookiesPolicy />} />
-                <Route path="/track-nft" element={<TrackNFTs />} />
                 <Route path="/nft" element={<NFTShowcase />} />
                 <Route path="/contactus" element={<Contactus />} />
                 <Route path="/aboutus" element={<Aboutus />} />
+
+
+
+
+
+
+
+
+
+
+                {/* ...........................policies.............. */}
+
                 <Route path="/disclaimer" element={<Disclaimer />} />
-                <Route path="/profit-loss" element={<ProfitLoss />} />
-                <Route path="cryptocard" element={<Cryptocard />} />
-
-
                 <Route path="/terms-of-Use" element={<TermsOfUse />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/cookies-policy" element={<CookiesPolicy />} />
+                <Route path="/terms-conditions" element={<TermCondition />} />
+                <Route path="/faq" element={<Faq />} />
+                <Route path="/Feedback" element={<Feedback />} />
+                <Route path="/refund-policy" element={<RefundPolicy />} />
 
 
+                {/* ..........................News................... */}
+                <Route path="/what's-trending" element={<WhatsTrending />} />
                 <Route path="/market-update" element={<MarketUpdate />} />
+
+
+
+                {/* ........................Support......................... */}
+
                 <Route path="/help-center" element={<HelpCenter />} />
-
-
-
-
                 <Route path="/help-center" element={<HelpCenter />} />
-                <Route path="/cryptonews" element={<CryptoNews />} />
+                <Route path="/defi-assets" element={<DefiAssets />} />
+                <Route path="/profit-loss" element={<ProfitLoss />} />
+                <Route path="/crypto-reward" element={<Cryptoreward />} />
+                <Route path="cryptocard" element={<Cryptocard />} />
+                <Route path="/track-nft" element={<TrackNFTs />} />
+
+
+
+
+
+
 
 
 
@@ -247,13 +268,11 @@ function App() {
                 <Route path="/cryptoprice" element={<CryptoPrices />} />
 
                 <Route path="/CryptoMarket" element={<CryptoMarket />} />
-                <Route path="/what's-trending" element={<WhatsTrending />} />
 
 
 
 
 
-                <Route path="/defi-assets" element={<DefiAssets />} />
 
 
                 <Route
@@ -263,10 +282,6 @@ function App() {
 
 
 
-                <Route
-                  path="/cryptoreward"
-                  element={<Cryptoreward />}
-                />
 
 
 
@@ -278,12 +293,10 @@ function App() {
 
                 <Route path="CryptoConverter" element={<CryptoConverter />} />
 
-                <Route path="/refund-policy" element={<RefundPolicy />} />
-
                 <Route path="/cookie-policy" element={<CookiePolicy />} />
 
                 <Route path="/GoogleTranslate" element={<GoogleTranslate />} />
-              
+
 
 
                 <Route path="*" element={<NotFoundPage />} />
