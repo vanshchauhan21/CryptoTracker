@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Line } from "react-chartjs-2";
 import Header from "../../components/Common/Header";
 import "./BTCDominance.css";
+import BTCDominanceInfo from '../BTCDominanceInfo/BTCDominanceInfo';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -155,7 +156,8 @@ function BTCDominance() {
           </div>
         </div>
       </div>
-
+      
+      <BTCDominanceInfo />
 
       <MarketStats/>
     </>
