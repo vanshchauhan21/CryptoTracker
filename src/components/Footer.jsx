@@ -145,6 +145,10 @@ const Footer = () => {
                 label: "CompoundInterestCalculator",
               },
               {
+                path: "/calculators/MarginCalculator",
+                label: "MarginCalculator",
+              },
+              {
                 path: "/charts/bitcoin-rainbow-chart",
                 label: "Bitcoin Rainbow Chart",
               },
