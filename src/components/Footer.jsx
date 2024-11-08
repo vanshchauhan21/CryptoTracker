@@ -96,8 +96,13 @@ const Footer = () => {
               { path: "/compare", label: "Compare" },
               { path: "/watchlist", label: "Watchlist" },
               { path: "/dashboard", label: "Dashboard" },
+
               { path: "/#", label: "Earn" },
               { path: "/crypto-blog", label: "Blog" },
+
+              { path: "/earn", label: "Earn" },
+              { path: "/#", label: "Blog" },
+
               { path: "/faq", label: "FAQ" },
               { path: "/pricing", label: "Pricing" },
               { path: "/contributors", label: "Contributors" },
@@ -237,7 +242,7 @@ const Footer = () => {
               { path: "/cryptocard", label: "How to Buy Crypto with Card" },
 
               {
-                path: "/trackNft",
+                path: "/track-nft",
                 label: "How to Track NFTs on Crypto Tracker",
               },
             ].map(({ path, label }) => (

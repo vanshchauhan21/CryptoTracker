@@ -1,12 +1,17 @@
 
 import React, { useState } from 'react';
 import './BitcoinRainbowInfo.css';
+import { useNavigate } from 'react-router-dom';
 
 const BitcoinRainbowInfo = () => {
   const [activeIndex, setActiveIndex] = useState(null);
-
+  const navigate = useNavigate();
   const toggleQuestion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
+  };
+  const handleButtonClick = () => {
+    // Programmatically navigate to the "bitcoin-rainbow-chart-detail" route
+    navigate('/charts/bitcoin-rainbow-chart-detail');
   };
 
   const questions = [
@@ -34,7 +39,14 @@ const BitcoinRainbowInfo = () => {
 
   return (
     <div className="bitcoin-rainbow-info">
-      <h2>Bitcoin Rainbow Chart Information</h2>
+      <div className='head-btn'>
+
+        <h2>Bitcoin Rainbow Chart Information</h2>
+        <button onClick={handleButtonClick}>Read More</button>
+
+
+
+      </div>
       <div className="question-list">
         {questions.map((item, index) => (
           <div key={index} className={`question-item ${activeIndex === index ? 'active' : ''}`}>
