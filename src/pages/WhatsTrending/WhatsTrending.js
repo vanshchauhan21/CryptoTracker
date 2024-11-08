@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './WhatsTrending.css'; // Ensure you have the CSS file for styling
+import Header from '../../components/Common/Header';
 
 const WhatsTrending = () => {
     const [news, setNews] = useState([]);
@@ -24,31 +25,38 @@ const WhatsTrending = () => {
     }, [url]);
 
     return (
-        <div className="whats-trending">
-            <h2>What's Trending</h2>
-            <div className='trend-content'>
+        <>
+            <Header />
+            <div className="whats-trending">
+                <h2>What's Trending</h2>
+                <div className='trend-content'>
 
-                {news.map((item) => (
-                    <div key={item.id} className="trending-item">
-                       {/* ..........for image showing........ */}
-                        <div className='trend-image'>
-                            <img src={item.imageurl} alt={item.title} className="trending-image" />
+                    {news.map((item) => (
+                        <div key={item.id} className="trending-item">
+                            {/* ..........for image showing........ */}
+                            <div className='trend-image'>
+                                <img src={item.imageurl} alt={item.title} className="trending-image" />
+                            </div>
+                            {/* .............for detail showing......... */}
+                            <div className='details-trend-content'>
+
+                                <h3 className="trending-title">{item.title}</h3>
+                                <p className="trending-body">
+                                    {item.body.split(" ").slice(0, 20).join(" ") + (item.body.split(" ").length > 20 ? "..." : "")}
+                                </p>
+
+                                <p className="trending-published">Published on: {new Date(item.published_on * 1000).toLocaleDateString()}</p>
+                            </div>
+
                         </div>
-                        {/* .............for detail showing......... */}
-                        <div className='details-trend-content'>
-
-                            <h3 className="trending-title">{item.title}</h3>
-                            <p className="trending-body">{item.body}</p>
-                            <p className="trending-published">Published on: {new Date(item.published_on * 1000).toLocaleDateString()}</p>
-                        </div>
-
-                    </div>
 
 
-                ))}
+                    ))}
+                </div>
+
             </div>
 
-        </div>
+        </>
     );
 };
 
