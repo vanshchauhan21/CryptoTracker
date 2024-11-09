@@ -40,8 +40,8 @@ export const RemotionRoot = () => {
       schema={mainSchema}
       calculateMetadata={calculateMetadata}
       defaultProps={{
-        repoOrg: "code-hike",
-        repoName: "codehike",
+        repoOrg: "vanshchauhan21",
+        repoName: "CryptoTracker",
         starCount: 100,
         duration: 15,
         stargazers: null,
