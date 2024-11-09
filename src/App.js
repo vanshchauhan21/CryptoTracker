@@ -50,6 +50,7 @@ import { Helmet } from "react-helmet";
 import CompoundInterestCalculator from "./pages/CompoundInterestCalculator.js";
 import MarginCalculator from "./pages/MarginCalculator.js";
 import PercentageChangeCalculator  from "./pages/PercentageChangeCalculator.js";
+import SIPCalculator from "./pages/SIPCalculator";
 
 import Sitemap from './pages/Sitemap/Sitemap';
 
@@ -198,6 +199,7 @@ function App() {
                   <Route path="CompoundInterestCalculator" element={<CompoundInterestCalculator />} />
                   <Route path="MarginCalculator" element={<MarginCalculator />} />
                   <Route path="PercentageChangeCalculator" element={<PercentageChangeCalculator />} />
+                  <Route path="SIPCalculator" element={<SIPCalculator />} />
                 </Route>
 
                 <Route path="/charts">
