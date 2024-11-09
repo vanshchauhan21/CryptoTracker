@@ -23,6 +23,10 @@ const FreeTrial = () => {
 
   return (
     <div className="free-trial-container" data-aos="fade-up">
+        {/* David Banner Image */}
+        <div className="david-banner" data-aos="fade-left">
+            <img src={davidBanner} alt="David Banner" loading="lazy" />
+        </div>
       <div className="free-trial-content">
         {/* Heading */}
         <div className="heading-wrapper" data-aos="fade-right">
@@ -61,22 +65,19 @@ const FreeTrial = () => {
           data-aos="fade-in"
           data-aos-delay="800"
         >
-          <a
-            href="/terms.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="link-button"
-          >
-            Terms &amp; Conditions
-          </a>
+          <div className="terms">
+            <a
+                href="/terms.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-button"
+                >
+                Terms &amp; Conditions
+            </a>
+          </div>
           <span>·</span>
           <button className="cancel-button">Cancel Anytime</button>
         </div>
-      </div>
-
-      {/* David Banner Image */}
-      <div className="david-banner" data-aos="fade-left">
-        <img src={davidBanner} alt="David Banner" loading="lazy" />
       </div>
     </div>
   );
