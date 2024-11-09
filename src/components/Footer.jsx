@@ -8,6 +8,7 @@ import "./Footer.css";
 import GoogleTranslate from "./GoogleTranslate";
 import { Link } from 'react-router-dom';
 import toast, { Toaster } from "react-hot-toast";
+import BackToTopButton from "./BackToTopButton/BackToTopButton";
 const Footer = () => {
   const { t } = useTranslation(); // Destructure translation function
   const [email, setEmail] = useState("");
@@ -477,14 +478,8 @@ const Footer = () => {
           paddingBottom: "0.5rem",
         }}
       >
-        <span>© 2024 CryptoTracker. All rights reserved.</span>
+        <span style={{fontSize: '0.7rem'}}>© 2024 CryptoTracker. All rights reserved.</span>
       </div>
-
-
-
-
-
-
     </footer>
   );
 };
