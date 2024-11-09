@@ -1,7 +1,12 @@
 import { SignIn } from "@clerk/clerk-react";
-import React from 'react';
+
 import Header from  "../components/Common/Header"
+
+import React, { useState } from 'react';
+
 export default function SignInPage() {
+  const [rememberMe, setRememberMe] = useState(false); // State for "Remember Me" checkbox
+
   const handleHomeClick = () => {
     window.location.href = '/';
   };
@@ -39,6 +44,27 @@ export default function SignInPage() {
       </div> */}
        <Header/>
       <div style={{ position: "relative" }}>
+        
+        {/* Remember Me and Forgot Password section */}
+        <div style={{ marginBottom: "1rem", textAlign: "left", width: "100%", marginLeft: "10px"}}>
+  <label style={{ fontSize: "14px", color: "#333", display: "inline-flex", alignItems: "center"}}>
+    <input
+      type="checkbox"
+      checked={rememberMe}
+      onChange={(e) => setRememberMe(e.target.checked)}
+      style={{ margin: "0", padding: "0" }}
+    />
+    Remember Me
+  </label>
+
+          <a
+            href="/forgot-password"
+            style={{ display: "block", color: "#3a80e9", textDecoration: "none", fontSize: "14px", marginTop: "-2.0rem", marginLeft: "18rem" }}
+          >
+            Forgot Password?
+          </a>
+        </div>
+
         <SignIn
           appearance={{
             elements: {
@@ -48,6 +74,7 @@ export default function SignInPage() {
             },
           }}
         />
+        
         <div
           style={{
             position: "absolute",
@@ -58,7 +85,6 @@ export default function SignInPage() {
             color: "#333",
           }}
         >
-          {/* <span>Don't have an account? </span> */}
           <a
             href="/signup"
             className="custom-signup-link"

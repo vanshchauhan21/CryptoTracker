@@ -9,6 +9,7 @@ import "../components/ContributorAnimation/ContributorAnimation.css";
 import ContributorCard from "../components/Common/Contributors Card/ContributorCard";
 
 import "./Contributors.css";
+import LottieSpinner from "../components/Common/LottieSpinner/LottieSpinner";
 
 function Contributors() {
   const [contributors, setContributors] = useState([]);
@@ -62,17 +63,17 @@ function Contributors() {
 
     const cleanup = setupContributorCardAnimations();
 
-  
+
     return cleanup;
- 
+
   }, [contributors]);
-  
+
 
   if (loading) {
     return (
       <div className="loading-message">
-        <Header />
-        Loading contributors...
+        {/* <Header /> */}
+        <LottieSpinner />
       </div>
     );
   }
@@ -80,8 +81,8 @@ function Contributors() {
   if (error) {
     return (
       <div className="error-message">
-        <Header />
-        <p>{error}</p>
+        {/* <Header /> */}
+        <LottieSpinner />
       </div>
     );
   }
@@ -130,7 +131,11 @@ function Contributors() {
 
           ))
         ) : (
-          <p>No contributors found.</p>
+
+          <div className="spinner-container">
+            <LottieSpinner />
+          </div>
+
         )}
       </div>
     </div>

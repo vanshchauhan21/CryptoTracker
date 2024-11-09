@@ -50,6 +50,7 @@ import NFTShowcase from "./pages/NFTShowcase/NFTShowcase";
 import { Helmet } from "react-helmet";
 import CompoundInterestCalculator from "./pages/CompoundInterestCalculator.js";
 import MarginCalculator from "./pages/MarginCalculator.js";
+import PercentageChangeCalculator  from "./pages/PercentageChangeCalculator.js";
 
 import Sitemap from './pages/Sitemap/Sitemap';
 
@@ -86,6 +87,7 @@ import BitCoinRainBowCharDetail from "./pages/BitCoinRainBow/BitCoinRainBowCharD
 
 import TrackNFTs from "./pages/TrackNFT/TrackNFTs.js";
 import InvestmentReturnCalculator from "./pages/Useful Tools/Investmentreturncalculator.js";
+import BackToTopButton from "./components/BackToTopButton/BackToTopButton.js";
 
 
 
@@ -198,6 +200,7 @@ function App() {
                   <Route path="crypto-converter" element={<CryptoConverter />} />
                   <Route path="CompoundInterestCalculator" element={<CompoundInterestCalculator />} />
                   <Route path="MarginCalculator" element={<MarginCalculator />} />
+                  <Route path="PercentageChangeCalculator" element={<PercentageChangeCalculator />} />
                 </Route>
 
                 <Route path="/charts">
@@ -334,7 +337,6 @@ function App() {
         <div className="footbelow">
           <Footer />  
         </div>
-        {/* <BackToTopButton /> */}
       </I18nextProvider>
     </>
   );
