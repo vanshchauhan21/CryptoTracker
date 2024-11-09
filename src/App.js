@@ -40,6 +40,7 @@ import CookiePolicy from "./pages/Cookie-Policy/CookiePolicy";
 
 import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator";
 import ImpermanentLossCalculator from "./pages/ImpermanentLossCalculator";
+import DividendCalculator  from "./pages/DividendCalculator";
 import ProfitLoss from "./pages/ProfitLoss/ProfitLoss";
 import Cryptocard from "./pages/CryptoCard/Cryptocard";
 import CryptoQuiz from './pages/CryptoQuiz/CryptoQuiz';
@@ -190,6 +191,7 @@ function App() {
                   <Route path="crypto-profit-calculator" element={<CryptoProfitCalculator />} />
                   <Route path="profit-return-calculator" element={<ProfitReturnCalculator />} />
                   <Route path="impermanent-loss-calculator" element={<ImpermanentLossCalculator />} />
+                  <Route path="DividendCalculator" element={<DividendCalculator />} />
                   <Route path="crypto-converter" element={<CryptoConverter />} />
                   <Route path="CompoundInterestCalculator" element={<CompoundInterestCalculator />} />
                   <Route path="MarginCalculator" element={<MarginCalculator />} />
