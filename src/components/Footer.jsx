@@ -5,6 +5,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import logo from "../assets/logo.jpg";
 import "./ComparePage/SelectCoins/index";
 import "./Footer.css";
+// import { Link } from 'react-router-dom';
 // import Careers from "./pages/Careers";
 import GoogleTranslate from "./GoogleTranslate";
 import { Link } from 'react-router-dom';
@@ -102,13 +103,14 @@ const Footer = () => {
               { path: "/blog", label: "Blog" },
 
               { path: "/earn", label: "Earn" },
+              { path: "/ultimate-crypto-portfolio-tracker", label: "Ultimate Crypto Portfolio Tracker" },
 
 
               // { path: "/#", label: "Earn" },
               // { path: "/crypto-blog", label: "Blog" },
 
 
-              { path: "/earn", label: "Earn" },
+              // { path: "/earn", label: "Earn" },
 
               // { path: "/earn", label: "Earn" },
 

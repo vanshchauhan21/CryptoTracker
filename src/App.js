@@ -65,7 +65,7 @@ import Cryptoreward from "./pages/Cryptoreward/Cryptoreward";
 import BTCDominance from "./pages/BTCDominance/BTCDominance";
 import MarketUpdate from "./pages/MarketUpdate/MarketUpdate.js";
 import HelpCenter from "./pages/HelpCenter/HelpCenter.js";
-
+import UltimateCryptoPortfolioTracker from './pages/UltimateCryptoPortfolioTracker/UltimateCryptoPortfolioTracker';
 import WhatsTrending from "./pages/WhatsTrending/WhatsTrending.js";
 
 
@@ -88,6 +88,7 @@ import BitCoinRainBowCharDetail from "./pages/BitCoinRainBow/BitCoinRainBowCharD
 import TrackNFTs from "./pages/TrackNFT/TrackNFTs.js";
 import InvestmentReturnCalculator from "./pages/Useful Tools/Investmentreturncalculator.js";
 import BackToTopButton from "./components/BackToTopButton/BackToTopButton.js";
+
 
 
 
@@ -328,6 +329,7 @@ function App() {
                 <Route path="/methodology" element={<Methodology />} />
                 <Route path="/earn" element={<Earn />} /> 
                 <Route path="/careers" element={<Careers />} /> 
+                <Route path="/ultimate-crypto-portfolio-tracker" element={<UltimateCryptoPortfolioTracker />} />
 
              </Routes>
 
