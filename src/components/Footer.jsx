@@ -144,8 +144,8 @@ const Footer = () => {
                 label: "Profit Return Calculator",
               },
               {
-                path: "/calculators/DividendCalculator",
-                label: "DividendCalculator",
+                path: "/calculators/investment-return-calculator",
+                label: "Investment Return Calculator",
               },
               {
                 path: "/calculators/impermanent-loss-calculator",
