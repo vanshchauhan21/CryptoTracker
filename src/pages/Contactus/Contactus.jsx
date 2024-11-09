@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Header from "../../components/Common/Header";
 import { TextField, Button, Box } from "@mui/material";
-import ContactUsImage from "./contactus.svg";
 import toast, { Toaster } from "react-hot-toast";
-
+import Lottie from "react-lottie";
+import animationData from "./contact.json";
+import "./contact.css";
 const Contactus = () => {
   const [formData, setFormData] = useState({
     Name: "",
@@ -11,8 +12,9 @@ const Contactus = () => {
     Message: "",
   });
   const [loading, setLoading] = useState(false);
-  const [mode, Setmode] = useState(false);
+  const [mode, setMode] = useState(false);
   const theme = localStorage.getItem("theme");
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -32,7 +34,7 @@ const Contactus = () => {
 
       if (response.ok) {
         toast.success("Message sent successfully!");
-        setFormData({ Name: "", Email: "", Message: "" }); // Clear form
+        setFormData({ Name: "", Email: "", Message: "" });
       } else {
         const errorData = await response.json();
         toast.error(errorData.message || "Failed to send message.");
@@ -43,11 +45,19 @@ const Contactus = () => {
       setLoading(false);
     }
   };
+
   useEffect(() => {
     if (theme === "dark") {
-      Setmode(true);
+      setMode(true);
     }
   }, [theme]);
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    isClickToPauseDisabled: true,
+  };
 
   return (
     <>
@@ -61,7 +71,12 @@ const Contactus = () => {
           <div className="mt-2 mx-auto w-54 h-1 bg-gradient-to-r bg-blue-400 rounded w-3/4"></div>
         </div>
         <div className="flex gap-10 w-full justify-center md:flex-row flex-col mt-5 items-center">
-          <img src={ContactUsImage} alt="Contact Us" width={400} height={300} />
+          <Lottie
+            options={defaultOptions}
+            height={250}
+            width={400}
+            className="!m-0"
+          />
           <Box
             component="form"
             onSubmit={handleSubmit}
@@ -83,21 +98,21 @@ const Contactus = () => {
               value={formData.Name}
               onChange={handleChange}
               InputLabelProps={{
-                style: { color: mode ? "white" : "black" }, // Label color
+                style: { color: mode ? "white" : "black" },
               }}
               InputProps={{
-                style: { color: mode ? "white" : "black" }, // Text color
+                style: { color: mode ? "white" : "black" },
               }}
               sx={{
                 "& .MuiOutlinedInput-root": {
                   "& fieldset": {
-                    borderColor: mode ? "white" : "black", // Border color
+                    borderColor: mode ? "white" : "black",
                   },
                   "&:hover fieldset": {
-                    borderColor: mode ? "white" : "gray", // Hover border color
+                    borderColor: mode ? "white" : "gray",
                   },
                   "&.Mui-focused fieldset": {
-                    borderColor: mode ? "white" : "blue", // Focus border color
+                    borderColor: mode ? "white" : "blue",
                   },
                 },
               }}
