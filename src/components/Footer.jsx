@@ -5,6 +5,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import logo from "../assets/logo.jpg";
 import "./ComparePage/SelectCoins/index";
 import "./Footer.css";
+// import Careers from "./pages/Careers";
 import GoogleTranslate from "./GoogleTranslate";
 import { Link } from 'react-router-dom';
 import toast, { Toaster } from "react-hot-toast";
@@ -118,6 +119,7 @@ const Footer = () => {
               { path: "/contributors", label: "Contributors" },
               { path: "/crypto-quiz", label: "Cryptocurrency Quiz" },
               { path: "Sitemap", label: "Site map" },
+              { path: "/careers", label: "Careers" },
               
             ].map(({ path, label }) => (
               <li key={label}>
@@ -146,6 +148,10 @@ const Footer = () => {
               {
                 path: "/calculators/investment-return-calculator",
                 label: "Investment Return Calculator",
+              },
+              {
+                path: "/calculators/PercentageChangeCalculator",
+                label: "PercentageChangeCalculator",
               },
               {
                 path: "/calculators/impermanent-loss-calculator",
@@ -202,6 +208,7 @@ const Footer = () => {
               { path: "/disclaimer", label: "Disclaimer" },
               { path: "/terms-of-Use", label: "Term of use" },
               { path: "/privacy-policy", label: "Privacy Policy" },
+              { path: "/code-of-conduct", label: "Code of Conduct" },
 
               { path: "/cookie-policy", label: "Cookie Policy" },
 

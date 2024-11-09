@@ -25,6 +25,7 @@ import i18n from "./i18n";
 import Contributors from "./pages/Contributors";
 import TermsOfUse from "./pages/TermsOfUse";
 import PrivacyPolicy from "./pages/Privacy-Policy/PrivacyPolicy";
+import CodeOfConduct from "./pages/CodeOfConduct/CodeOfConduct.js";
 import Pricing from "./pages/Pricing/Pricing";
 import Learn from "./components/Learn";
 import CryptoProfitCalculator from "./pages/CryptoProfitCalculator";
@@ -49,12 +50,13 @@ import NFTShowcase from "./pages/NFTShowcase/NFTShowcase";
 import { Helmet } from "react-helmet";
 import CompoundInterestCalculator from "./pages/CompoundInterestCalculator.js";
 import MarginCalculator from "./pages/MarginCalculator.js";
+import PercentageChangeCalculator  from "./pages/PercentageChangeCalculator.js";
 
 import Sitemap from './pages/Sitemap/Sitemap';
 
 
 import Methodology from './pages/Methodology/Methodology';
-
+import Careers from "./pages/Careers";
 
 
 import Cryptoreward from "./pages/Cryptoreward/Cryptoreward";
@@ -197,6 +199,7 @@ function App() {
                   <Route path="crypto-converter" element={<CryptoConverter />} />
                   <Route path="CompoundInterestCalculator" element={<CompoundInterestCalculator />} />
                   <Route path="MarginCalculator" element={<MarginCalculator />} />
+                  <Route path="PercentageChangeCalculator" element={<PercentageChangeCalculator />} />
                 </Route>
 
                 <Route path="/charts">
@@ -246,6 +249,7 @@ function App() {
                 <Route path="/disclaimer" element={<Disclaimer />} />
                 <Route path="/terms-of-Use" element={<TermsOfUse />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/code-of-conduct" element={<CodeOfConduct />} />
                 <Route path="/cookies-policy" element={<CookiesPolicy />} />
                 <Route path="/terms-conditions" element={<TermCondition />} />
                 <Route path="/faq" element={<Faq />} />
@@ -322,7 +326,7 @@ function App() {
 
                 <Route path="/methodology" element={<Methodology />} />
                 <Route path="/earn" element={<Earn />} /> 
-
+                <Route path="/careers" element={<Careers />} /> 
 
              </Routes>
 
@@ -332,7 +336,6 @@ function App() {
         <div className="footbelow">
           <Footer />
         </div>
-
       </I18nextProvider>
     </>
   );
