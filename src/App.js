@@ -40,12 +40,15 @@ import CookiePolicy from "./pages/Cookie-Policy/CookiePolicy";
 
 import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator";
 import ImpermanentLossCalculator from "./pages/ImpermanentLossCalculator";
+import DividendCalculator  from "./pages/DividendCalculator";
 import ProfitLoss from "./pages/ProfitLoss/ProfitLoss";
 import Cryptocard from "./pages/CryptoCard/Cryptocard";
 import CryptoQuiz from './pages/CryptoQuiz/CryptoQuiz';
 import Footer from "./components/Footer";
 import NFTShowcase from "./pages/NFTShowcase/NFTShowcase";
 import { Helmet } from "react-helmet";
+import CompoundInterestCalculator from "./pages/CompoundInterestCalculator.js";
+import MarginCalculator from "./pages/MarginCalculator.js";
 
 import Sitemap from './pages/Sitemap/Sitemap';
 
@@ -70,12 +73,13 @@ import WhatsTrending from "./pages/WhatsTrending/WhatsTrending.js";
 import DefiAssets from "./pages/DefiAssets/DefiAssets.js";
 import CryptoPrices from "./pages/cryptoPrice/cryptoPrice.js";
 import Blog from "./pages/Blogs/Blog.js";
+// import Blog from './pages/Blog/Blog';
 import Crypto24HourReport from "./pages/CryptoMarket24h/Crypto24HourReport.js";
 import GeminiChat from "./pages/GeminiAIChat/GeminiAIChat.jsx";
 
 
 import FearAndGreedIndex from './pages/FearAndGreedIndex/FearAndGreedIndex';
-import Earn from "./pages/Earn/Earn.js";
+import Earn from './pages/Earn/Earn';
 
 import BitCoinRainBowCharDetail from "./pages/BitCoinRainBow/BitCoinRainBowCharDetail.js";
 
@@ -172,11 +176,12 @@ function App() {
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/Contributors" element={<Contributors />} />
 
-                <Route path="/crypto-blog" element={<Blog />} />
+                {/* <Route path="/crypto-blog" element={<Blog />} /> */}
+                {/* <Route path="/blog" component={Blog} />  */}
 
                 <Route path="/blog" element={<Blog />} />
 
-                <Route path="/earn" element={<Earn />} />
+                {/* <Route path="/earn" element={<Earn />} /> */}
 
 
 
@@ -188,7 +193,10 @@ function App() {
                   <Route path="profit-return-calculator" element={<ProfitReturnCalculator />} />
                   <Route path="investment-return-calculator" element={<InvestmentReturnCalculator/>} />
                   <Route path="impermanent-loss-calculator" element={<ImpermanentLossCalculator />} />
+                  <Route path="DividendCalculator" element={<DividendCalculator />} />
                   <Route path="crypto-converter" element={<CryptoConverter />} />
+                  <Route path="CompoundInterestCalculator" element={<CompoundInterestCalculator />} />
+                  <Route path="MarginCalculator" element={<MarginCalculator />} />
                 </Route>
 
                 <Route path="/charts">
@@ -313,6 +321,7 @@ function App() {
                 <Route path="/sitemap" element={<Sitemap />} />
 
                 <Route path="/methodology" element={<Methodology />} />
+                <Route path="/earn" element={<Earn />} /> 
 
 
              </Routes>
@@ -323,6 +332,7 @@ function App() {
         <div className="footbelow">
           <Footer />
         </div>
+        <BackToTopButton />
       </I18nextProvider>
     </>
   );
