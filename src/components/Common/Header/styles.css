@@ -199,8 +199,9 @@ body {
 
 .nav-logo {
   height: 3rem !important;
-  width: 3rem !important;
   padding-top: 0.2rem !important;
+  display:flex;
+  align-items:center;
 }
 
 .nav-header {
