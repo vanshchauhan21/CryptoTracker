@@ -133,6 +133,10 @@ const Footer = () => {
                 label: "Profit Return Calculator",
               },
               {
+                path: "/calculators/investment-return-calculator",
+                label: "Investment Return Calculator",
+              },
+              {
                 path: "/calculators/impermanent-loss-calculator",
                 label: "Impermanent Loss Calculator",
               },
