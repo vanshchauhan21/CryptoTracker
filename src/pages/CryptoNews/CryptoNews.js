@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './CryptoNews.css';
 import Header from "../../components/Common/Header";
+import LottieSpinner from '../../components/Common/LottieSpinner/LottieSpinner';
 
 const CryptoNews = () => {
   const [trendingCoins, setTrendingCoins] = useState({});
@@ -49,6 +50,18 @@ const CryptoNews = () => {
     }
   };
 
+  if (loading) {
+    return (
+      <>
+      <Header/>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+        <LottieSpinner />
+      </div>
+      </>
+
+    )
+  }
+
   // Slice the news array to get the current page articles
   const displayedNews = news.slice(currentPage * articlesPerPage, (currentPage + 1) * articlesPerPage);
 
@@ -57,7 +70,10 @@ const CryptoNews = () => {
       <Header />
       <div className="trending-container">
         {loading ? (
-          <p>Loading...</p>
+
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+            <LottieSpinner />
+          </div>
         ) : (
           <>
             <div className="news-grid">
@@ -68,11 +84,13 @@ const CryptoNews = () => {
                   )}
                   <h3 className="news-title">{article.title}</h3>
                   <p className="news-description">
-                    {article.body.length > 150 ? `${article.body.slice(0, 150)}...` : article.body}
+                    {article.body.split(" ").length > 10
+                      ? `${article.body.split(" ").slice(0, 10).join(" ")}...`
+                      : article.body}
                   </p>
-                  <a href={article.url} target="_blank" rel="noopener noreferrer" className="news-link">
-                    Read more on {article.source_info.name}
-                  </a>
+                  <button href={article.url} target="_blank" rel="noopener noreferrer" className="news-button">
+                    Read more on
+                  </button>
                 </div>
               ))}
             </div>
