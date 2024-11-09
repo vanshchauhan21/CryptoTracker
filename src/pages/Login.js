@@ -1,6 +1,6 @@
 import { SignIn } from "@clerk/clerk-react";
 import React from 'react';
-
+import Header from  "../components/Common/Header"
 export default function SignInPage() {
   const handleHomeClick = () => {
     window.location.href = '/';
@@ -12,14 +12,14 @@ export default function SignInPage() {
       style={{
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
+    
         alignItems: "center",
         minHeight: "100vh",
         backgroundColor: "#f7fafc",
         padding: "1rem",
       }}
     >
-      <div
+      {/* <div
         style={{
           position: "absolute",
           top: "3rem",
@@ -36,7 +36,8 @@ export default function SignInPage() {
         }}
       >
         <i className="fas fa-home" style={{ fontSize: "24px", color: "#333" }}></i>
-      </div>
+      </div> */}
+       <Header/>
       <div style={{ position: "relative" }}>
         <SignIn
           appearance={{

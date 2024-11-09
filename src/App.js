@@ -330,9 +330,9 @@ function App() {
           </ThemeProvider>
         </div>
         <div className="footbelow">
-          <Footer />
+          <Footer />  
         </div>
-        <BackToTopButton />
+        {/* <BackToTopButton /> */}
       </I18nextProvider>
     </>
   );

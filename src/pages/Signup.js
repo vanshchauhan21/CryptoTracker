@@ -1,6 +1,6 @@
 import { SignUp } from "@clerk/clerk-react";
 import React, { useState } from 'react';
-
+import Header from  "../components/Common/Header"
 export default function SignUpPage() {
   const [password, setPassword] = useState("");
   const [passwordError, setPasswordError] = useState("");
@@ -33,14 +33,14 @@ export default function SignUpPage() {
       style={{
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
+       
         alignItems: "center",
         minHeight: "100vh",
         backgroundColor: "#f7fafc",
         padding: "1rem",
       }}
     >
-      <div
+      {/* <div
         style={{
           position: "absolute",
           top: "3rem",
@@ -57,7 +57,8 @@ export default function SignUpPage() {
         }}
       >
         <i className="fas fa-home" style={{ fontSize: "24px", color: "#333" }}></i>
-      </div>
+      </div> */}
+       <Header />
       <div style={{ position: "relative" }}>
         <SignUp
           appearance={{
