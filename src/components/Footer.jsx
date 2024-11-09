@@ -151,6 +151,10 @@ const Footer = () => {
                 label: "Crypto Converter",
               },
               {
+                path: "/calculators/CompoundInterestCalculator",
+                label: "CompoundInterestCalculator",
+              },
+              {
                 path: "/charts/bitcoin-rainbow-chart",
                 label: "Bitcoin Rainbow Chart",
               },
