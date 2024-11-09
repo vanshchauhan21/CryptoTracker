@@ -18,6 +18,7 @@ import InDepthAnalysis from "../../Common/InDepthAnalysis/InDepthAnalysis";
 import LoveOurWebsiteCarousel from "../../LoveOurWebsite/LoveOurWebsiteCarousel";
 import { AnalyticsTwoTone } from "@mui/icons-material";
 import AnalyzeAssets from "../../../pages/AnalyzeAssets/AnalyzeAssets";
+import Marketdata from "../../../pages/Real-timeMarket-data/Marketdata";
 
 function MainComponent() {
   useEffect(() => {
@@ -102,6 +103,8 @@ function MainComponent() {
       <LoveOurWebsiteCarousel />
       {/* .............................AnalyzeAssets................. */}
       <AnalyzeAssets/>
+      {/* .............................AnalyzeAssets................. */}
+      <Marketdata/>
     </div>
   );
 }
