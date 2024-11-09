@@ -17,7 +17,9 @@ function List({ coin, delay }) {
   return (
     <a href={`/coin/${coin.id}`}>
       <motion.tr
-        className={`list-row ${coin.price_change_percentage_24h < 0 && "list-row-red"}`}
+        className={`list-row ${
+          coin.price_change_percentage_24h < 0 && "list-row-red"
+        }`}
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: delay }}
@@ -35,13 +37,16 @@ function List({ coin, delay }) {
         <Tooltip title="Coin Info" placement="bottom-start">
           <td className="td-info">
             <div className="info-flex">
-              <p className="coin-symbol td-p">{coin.symbol}</p>
-              <p className="coin-name td-p">{coin.name}</p>
+              <p className="coin-symbol td-p !text-white">{coin.symbol}</p>
+              <p className="coin-name td-p !text-white">{coin.name}</p>
             </div>
           </td>
         </Tooltip>
 
-        <Tooltip title="Coin Price Percentage In 24hrs" placement="bottom-start">
+        <Tooltip
+          title="Coin Price Percentage In 24hrs"
+          placement="bottom-start"
+        >
           {coin.price_change_percentage_24h >= 0 ? (
             <td>
               <div className="chip-flex">
@@ -80,20 +85,18 @@ function List({ coin, delay }) {
         </Tooltip>
 
         <Tooltip title="Coin Total Volume" placement="bottom-end">
-          <td className="coin-name td-totalVolume">
+          <td className="coin-name td-totalVolume !text-white">
             {coin.total_volume.toLocaleString()}
           </td>
         </Tooltip>
 
         <Tooltip title="Coin Market Capital" placement="bottom-end">
-          <td className="coin-name td-marketCap">
+          <td className="coin-name td-marketCap !text-white">
             ${coin.market_cap.toLocaleString()}
           </td>
         </Tooltip>
 
-        <td className="coin-name mobile">
-          ${convertNumber(coin.market_cap)}
-        </td>
+        <td className="coin-name mobile">${convertNumber(coin.market_cap)}</td>
 
         <td
           className={`watchlist-icon ${
