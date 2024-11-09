@@ -81,6 +81,7 @@ import Earn from './pages/Earn/Earn';
 import BitCoinRainBowCharDetail from "./pages/BitCoinRainBow/BitCoinRainBowCharDetail.js";
 
 import TrackNFTs from "./pages/TrackNFT/TrackNFTs.js";
+import BackToTopButton from "./components/BackToTopButton/BackToTopButton.js";
 
 
 
@@ -324,6 +325,7 @@ function App() {
         <div className="footbelow">
           <Footer />
         </div>
+        <BackToTopButton />
       </I18nextProvider>
     </>
   );
