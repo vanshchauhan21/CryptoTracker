@@ -24,6 +24,7 @@ import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 import Contributors from "./pages/Contributors";
 import TermsOfUse from "./pages/TermsOfUse";
+import Licensing from "./pages/Licensing/LicensingPage.js";
 import PrivacyPolicy from "./pages/Privacy-Policy/PrivacyPolicy";
 import Pricing from "./pages/Pricing/Pricing";
 import Learn from "./components/Learn";
@@ -246,6 +247,7 @@ function App() {
                 <Route path="/disclaimer" element={<Disclaimer />} />
                 <Route path="/terms-of-Use" element={<TermsOfUse />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/licensing" element={<Licensing />} />
                 <Route path="/cookies-policy" element={<CookiesPolicy />} />
                 <Route path="/terms-conditions" element={<TermCondition />} />
                 <Route path="/faq" element={<Faq />} />
