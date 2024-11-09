@@ -46,6 +46,7 @@ import CryptoQuiz from './pages/CryptoQuiz/CryptoQuiz';
 import Footer from "./components/Footer";
 import NFTShowcase from "./pages/NFTShowcase/NFTShowcase";
 import { Helmet } from "react-helmet";
+import CompoundInterestCalculator from "./pages/CompoundInterestCalculator.js";
 
 import Sitemap from './pages/Sitemap/Sitemap';
 
@@ -189,6 +190,7 @@ function App() {
                   <Route path="profit-return-calculator" element={<ProfitReturnCalculator />} />
                   <Route path="impermanent-loss-calculator" element={<ImpermanentLossCalculator />} />
                   <Route path="crypto-converter" element={<CryptoConverter />} />
+                  <Route path="CompoundInterestCalculator" element={<CompoundInterestCalculator />} />
                 </Route>
 
                 <Route path="/charts">
