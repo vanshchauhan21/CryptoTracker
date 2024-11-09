@@ -332,7 +332,7 @@ function App() {
         <div className="footbelow">
           <Footer />
         </div>
-        <BackToTopButton />
+
       </I18nextProvider>
     </>
   );
