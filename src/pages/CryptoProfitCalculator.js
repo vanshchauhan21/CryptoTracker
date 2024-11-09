@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-// import "./CryptoProfitCalculator.css";
+import "./CryptoProfitCalculator.css";
 import Header from "../components/Common/Header";
+import SecuritySection from "../components/SecuritySection/SecuritySection"; 
 
 function CryptoProfitCalculator() {
   const [initialInvestment, setInitialInvestment] = useState("");
@@ -70,6 +71,7 @@ function CryptoProfitCalculator() {
           )}
         </div>
       </div>
+      <SecuritySection /> 
     </div>
   );
 }
