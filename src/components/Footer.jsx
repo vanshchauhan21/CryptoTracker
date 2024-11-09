@@ -5,6 +5,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import logo from "../assets/logo.jpg";
 import "./ComparePage/SelectCoins/index";
 import "./Footer.css";
+// import Careers from "./pages/Careers";
 import GoogleTranslate from "./GoogleTranslate";
 import { Link } from 'react-router-dom';
 import toast, { Toaster } from "react-hot-toast";
@@ -118,6 +119,7 @@ const Footer = () => {
               { path: "/contributors", label: "Contributors" },
               { path: "/crypto-quiz", label: "Cryptocurrency Quiz" },
               { path: "Sitemap", label: "Site map" },
+              { path: "/careers", label: "Careers" },
               
             ].map(({ path, label }) => (
               <li key={label}>

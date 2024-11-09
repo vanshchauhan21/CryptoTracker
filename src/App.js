@@ -54,7 +54,7 @@ import Sitemap from './pages/Sitemap/Sitemap';
 
 
 import Methodology from './pages/Methodology/Methodology';
-
+import Careers from "./pages/Careers";
 
 
 import Cryptoreward from "./pages/Cryptoreward/Cryptoreward";
@@ -322,7 +322,7 @@ function App() {
 
                 <Route path="/methodology" element={<Methodology />} />
                 <Route path="/earn" element={<Earn />} /> 
-
+                <Route path="/careers" element={<Careers />} /> 
 
              </Routes>
 
@@ -332,7 +332,7 @@ function App() {
         <div className="footbelow">
           <Footer />
         </div>
-        <BackToTopButton />
+        {/* <BackToTopButton /> */}
       </I18nextProvider>
     </>
   );
