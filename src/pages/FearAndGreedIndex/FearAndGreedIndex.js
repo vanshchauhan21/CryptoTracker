@@ -1,4 +1,4 @@
-// FearAndGreedIndex.js
+
 
 import React, { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 
 import CustomFearAndGreedIndicator from '../../components/CustomFearAndGreedIndicator';
 import './FearAndGreedIndex.css';
+import FearAndGreedMetrics from './FearAndGreedMetrics';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -235,6 +236,7 @@ const FearAndGreedIndex = () => {
                 <p>{description}</p>
               </div>
             ))}
+            <FearAndGreedMetrics />
           </div>
         </div>
       </div>
