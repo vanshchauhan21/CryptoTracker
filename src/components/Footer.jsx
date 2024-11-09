@@ -156,6 +156,10 @@ const Footer = () => {
                 label: "Crypto Converter",
               },
               {
+                path: "/calculators/Cryptofiat",
+                label: "Crypto to fiat Converter",
+              },
+              {
                 path: "/calculators/CompoundInterestCalculator",
                 label: "CompoundInterestCalculator",
               },
