@@ -96,18 +96,20 @@ const Footer = () => {
               { path: "/compare", label: "Compare" },
               { path: "/watchlist", label: "Watchlist" },
               { path: "/dashboard", label: "Dashboard" },
-
-              { path: "/#", label: "Earn" },
-              { path: "/crypto-blog", label: "Blog" },
-
               { path: "/earn", label: "Earn" },
-              { path: "/#", label: "Blog" },
+
+              // { path: "/#", label: "Earn" },
+              // { path: "/crypto-blog", label: "Blog" },
+
+              // { path: "/earn", label: "Earn" },
+              // { path: "/#", label: "Blog" },
 
               { path: "/faq", label: "FAQ" },
               { path: "/pricing", label: "Pricing" },
               { path: "/contributors", label: "Contributors" },
               { path: "/crypto-quiz", label: "Cryptocurrency Quiz" },
               { path: "Sitemap", label: "Site map" },
+              
             ].map(({ path, label }) => (
               <li key={label}>
                 <a href={path}>
