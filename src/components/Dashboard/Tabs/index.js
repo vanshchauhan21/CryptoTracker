@@ -8,6 +8,8 @@ import Grid from "../Grid";
 import List from "../List";
 // import { convertNumber } from "../../../functions/convertNumber";
 import Button from "../../Common/Button";
+import Lottie from "react-lottie";
+import animationData from "../../../assets/emptyanimation.json";
 
 export default function TabsComponent({ coins, setSearch }) {
   const [value, setValue] = React.useState("grid");
@@ -24,6 +26,14 @@ export default function TabsComponent({ coins, setSearch }) {
     fontFamily: "Inter,sans-serif",
     fontWeight: 600,
     textTransform: "capitalize",
+  };
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
   };
 
   return (
@@ -42,6 +52,7 @@ export default function TabsComponent({ coins, setSearch }) {
             ))
           ) : (
             <div>
+              <Lottie options={defaultOptions} height={250} width={200} />
               <h1 style={{ textAlign: "center" }}>
                 Sorry, Couldn't find the coin you're looking for 😞
               </h1>
@@ -66,6 +77,7 @@ export default function TabsComponent({ coins, setSearch }) {
             ))
           ) : (
             <div>
+              <Lottie options={defaultOptions} height={250} width={200} />
               <h1 style={{ textAlign: "center" }}>
                 Sorry, Couldn't find the coin you're looking for 😞
               </h1>

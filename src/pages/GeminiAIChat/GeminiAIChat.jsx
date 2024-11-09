@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Container, TextField, Button, Paper, Box, List, ListItem, ListItemText, Divider, IconButton, Stack, Card, CardContent } from '@mui/material';
-import SendIcon from '@mui/icons-material/Send';
+import { Container, TextField, Button, Paper, Box, List, ListItem, ListItemText, Divider, IconButton, Stack, Card, CardContent, Avatar, Typography } from '@mui/material';
+import { Send as SendIcon } from '@mui/icons-material';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -30,13 +30,20 @@ const GeminiChat = () => {
         }
     }, [chatHistory]);
 
-    const formatMessage = (text) => {
-        return text.split('\n').map((line, i) => (
-            <React.Fragment key={i}>
-                {line}
-                <br />
-            </React.Fragment>
-        ));
+    const formatMessage = (text, timestamp) => {
+        return (
+            <>
+                {text.split('\n').map((line, i) => (
+                    <React.Fragment key={i}>
+                        {line}
+                        <br />
+                    </React.Fragment>
+                ))}
+                <Typography variant="caption" display="block" align="right">
+                    {timestamp}
+                </Typography>
+            </>
+        );
     };
 
     const handleSubmit = async (e) => {
@@ -46,7 +53,11 @@ const GeminiChat = () => {
         setIsLoading(true);
         setError(null);
 
-        const userMessage = { role: "user", content: userInput };
+        const userMessage = { 
+            role: "user", 
+            content: userInput,
+            timestamp: new Date().toLocaleTimeString(),
+        };
         setChatHistory(prev => [...prev, userMessage]);
         setUserInput("");
 
@@ -66,9 +77,14 @@ const GeminiChat = () => {
 
             const result = await chat.sendMessage(userInput);
             const response = await result.response;
-            const text = response.text();
+            const rawText = response.text();
+            const text = rawText.replace(/[#_*~`]/g, ''); // Strips common Markdown characters
 
-            const botMessage = { role: "model", content: text };
+            const botMessage = { 
+                role: "model", 
+                content: text,
+                timestamp: new Date().toLocaleTimeString(),
+            };
             setChatHistory(prev => [...prev, botMessage ]);
         } catch (err) {
             console.error('Error:', err);
@@ -118,8 +134,8 @@ const GeminiChat = () => {
                                     {chatHistory.map((msg, index) => (
                                         <motion.div
                                             key={index}
-                                            initial={{ opacity: 0 }}
-                                            animate={{ opacity: 1 }}
+                                            initial={{ opacity: 0, y: 10 }}
+                                            animate={{ opacity: 1, y: 0 }}
                                             transition={{ duration: 0.3, delay: index * 0.1 }}
                                             style={{ marginBottom: '0.5rem' }}
                                         >
@@ -130,24 +146,38 @@ const GeminiChat = () => {
                                                     justifyContent: msg.role === "user" ? 'flex-end' : 'flex-start',
                                                 }}
                                             >
+                                                {msg.role !== "user" && (
+                                                    <Avatar alt="Bot" src="/bot-avatar.png" />
+                                                )}
                                                 <Paper
                                                     elevation={1}
                                                     style={{
-                                                        padding: '0.01rem 1rem',
-                                                        borderRadius: '5px',
-                                                        backgroundColor: msg.role === "user" ? '#0D71E2' : 'white',
+                                                        padding: '0.5rem 1rem',
+                                                        borderRadius: '10px',
+                                                        backgroundColor: msg.role === "user" ? '#0D71E2' : '#e0e0e0',
                                                         color: msg.role === "user" ? 'white' : 'black',
                                                         maxWidth: '70%',
+                                                        marginLeft: msg.role === "user" ? '0' : '0.5rem',
+                                                        marginRight: msg.role === "user" ? '0.5rem' : '0',
+                                                        boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
                                                     }}
                                                 >
                                                     <ListItemText
-                                                        primary={msg.role === "user" ? msg.content : formatMessage(msg.content)}
+                                                        primary={msg.role === "user" ? msg.content : formatMessage(msg.content, msg.timestamp)}
                                                         secondary={msg.role === "user" ? "" : msg.role}
                                                         secondaryTypographyProps={{
                                                             style: { color: msg.role === "user" ? '#bbdefb' : '#757575' },
                                                         }}
                                                     />
+                                                    {msg.timestamp && msg.role !== "user" && (
+                                                        <Typography variant="caption" display="block" align="right">
+                                                            {msg.timestamp}
+                                                        </Typography>
+                                                    )}
                                                 </Paper>
+                                                {msg.role === "user" && (
+                                                    <Avatar alt="User" src="/user-avatar.png" />
+                                                )}
                                             </ListItem>
                                         </motion.div>
                                     ))}
@@ -177,11 +207,26 @@ const GeminiChat = () => {
                                 onChange={(e) => setUserInput(e.target.value)}
                                 placeholder="Type a message..."
                                 style={{ backgroundColor: 'white', borderRadius: '4px' }}
+                                onKeyDown={(e) => {
+                                    if (e.key === 'Enter' && !e.shiftKey) {
+                                        handleSubmit(e);
+                                    }
+                                }}
                             />
-                            <Button type="submit" variant="contained" style={{ background: "white", color: "black" }} endIcon={<SendIcon />} onClick={handleSubmit}>
+                            <Button 
+                                type="submit" 
+                                variant="contained" 
+                                style={{ background: "#1976d2", color: "white" }}
+                                endIcon={<SendIcon />} 
+                                onClick={handleSubmit}
+                            >
                                 Send
                             </Button>
-                            <Button variant="contained" style={{background:"white",color:"black"}} onClick={handleClearChat}>
+                            <Button 
+                                variant="contained" 
+                                style={{ background: "#f44336", color:"white" }}
+                                onClick={handleClearChat}
+                            >
                                 Clear
                             </Button>
                         </Stack>

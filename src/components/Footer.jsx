@@ -8,6 +8,7 @@ import "./Footer.css";
 import GoogleTranslate from "./GoogleTranslate";
 import { Link } from 'react-router-dom';
 import toast, { Toaster } from "react-hot-toast";
+import BackToTopButton from "./BackToTopButton/BackToTopButton";
 const Footer = () => {
   const { t } = useTranslation(); // Destructure translation function
   const [email, setEmail] = useState("");
@@ -97,17 +98,27 @@ const Footer = () => {
               { path: "/watchlist", label: "Watchlist" },
               { path: "/dashboard", label: "Dashboard" },
 
-              { path: "/#", label: "Earn" },
-              { path: "/crypto-blog", label: "Blog" },
+              { path: "/blog", label: "Blog" },
 
               { path: "/earn", label: "Earn" },
-              { path: "/#", label: "Blog" },
+
+
+              // { path: "/#", label: "Earn" },
+              // { path: "/crypto-blog", label: "Blog" },
+
+
+              { path: "/earn", label: "Earn" },
+
+              // { path: "/earn", label: "Earn" },
+
+              // { path: "/#", label: "Blog" },
 
               { path: "/faq", label: "FAQ" },
               { path: "/pricing", label: "Pricing" },
               { path: "/contributors", label: "Contributors" },
               { path: "/crypto-quiz", label: "Cryptocurrency Quiz" },
               { path: "Sitemap", label: "Site map" },
+              
             ].map(({ path, label }) => (
               <li key={label}>
                 <a href={path}>
@@ -143,6 +154,14 @@ const Footer = () => {
               {
                 path: "/calculators/crypto-converter",
                 label: "Crypto Converter",
+              },
+              {
+                path: "/calculators/CompoundInterestCalculator",
+                label: "CompoundInterestCalculator",
+              },
+              {
+                path: "/calculators/MarginCalculator",
+                label: "MarginCalculator",
               },
               {
                 path: "/charts/bitcoin-rainbow-chart",
@@ -459,14 +478,8 @@ const Footer = () => {
           paddingBottom: "0.5rem",
         }}
       >
-        <span>© 2024 CryptoTracker. All rights reserved.</span>
+        <span style={{fontSize: '0.7rem'}}>© 2024 CryptoTracker. All rights reserved.</span>
       </div>
-
-
-
-
-
-
     </footer>
   );
 };
