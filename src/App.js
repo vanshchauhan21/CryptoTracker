@@ -84,7 +84,7 @@ import Earn from './pages/Earn/Earn';
 import BitCoinRainBowCharDetail from "./pages/BitCoinRainBow/BitCoinRainBowCharDetail.js";
 
 import TrackNFTs from "./pages/TrackNFT/TrackNFTs.js";
-import BackToTopButton from "./components/BackToTopButton/BackToTopButton.js";
+import InvestmentReturnCalculator from "./pages/Useful Tools/Investmentreturncalculator.js";
 
 
 
@@ -191,6 +191,7 @@ function App() {
                 <Route path="/calculators">
                   <Route path="crypto-profit-calculator" element={<CryptoProfitCalculator />} />
                   <Route path="profit-return-calculator" element={<ProfitReturnCalculator />} />
+                  <Route path="investment-return-calculator" element={<InvestmentReturnCalculator/>} />
                   <Route path="impermanent-loss-calculator" element={<ImpermanentLossCalculator />} />
                   <Route path="DividendCalculator" element={<DividendCalculator />} />
                   <Route path="crypto-converter" element={<CryptoConverter />} />
