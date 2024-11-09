@@ -25,6 +25,7 @@ import CryptoTrackerManagingTool from "../../CryptoTrackerManagingTool/CryptoTra
 import Wallet from "../../../assets/Wallet.png";
 import Bitcoin from "../../../assets/Bitcoin.png";
 import Defi from "../../../assets/Defi.png";
+import SwapWithBestRates from "../../SwapWithBestRates/SwapWithBestRates";
 
 function MainComponent() {
   useEffect(() => {
@@ -134,6 +135,9 @@ function MainComponent() {
       <AnalyzeAssets/>
       {/* .............................AnalyzeAssets................. */}
       <Marketdata/>
+      
+      {/* ................SwapWithBestRates...................... */}
+      <SwapWithBestRates/>
       {/* .........................Crypto tracker Managing Tool.............. */}
       
       <CryptoTrackerManagingTool  data={infoData} />
