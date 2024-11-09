@@ -123,13 +123,14 @@ function Header() {
       <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
         <div className="nav-logo">
           <img src={logo} alt="logo" className="logo" />
-        </div>
-        <h1 className="nav-header">
+          <h1 className="nav-header">
           {t("CryptoTracker")}
           <span style={{ color: "var(--blue)" }}></span>
         </h1>
+        </div>
+      
       </Link>
-      <div className={`links ${mobileMenuOpen ? "mobile-menu-open" : ""} mb-10`}>
+      <div className={`links ${mobileMenuOpen ? "mobile-menu-open" : ""} mb-3 mt-3`}>
         <NavLink
           to="/"
           className={({ isActive }) => (isActive ? "active-link link" : "link")}
