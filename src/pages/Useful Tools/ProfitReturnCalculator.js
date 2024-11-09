@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "../../components/Common/Header";
-
+import KnowledgeHub from "../KnowledgeHub/KnowledgeHub";
 const ProfitReturnCalculator = () => {
   const [investment, setInvestment] = useState(0);
   const [interestRate, setInterestRate] = useState(0);
@@ -55,7 +55,9 @@ const ProfitReturnCalculator = () => {
           Final Return: ${finalAmount}
         </div>
       )}
+      
     </div>
+    <KnowledgeHub />
   </>
   );
 };
