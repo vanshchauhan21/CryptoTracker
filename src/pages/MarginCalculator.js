@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./MarginCalculator.css";
 import Header from "../components/Common/Header";
+// import { Link } from 'react-router-dom';
+import KnowledgeCenter from "./KnowledgeCenter/KnowledgeCenter";
 
 function MarginCalculator() {
   const [costPrice, setCostPrice] = useState("");
@@ -20,8 +22,10 @@ function MarginCalculator() {
   };
 
   return (
-    <div>
+    <>
       <Header />
+    <div>
+    
       <div className="calculator-container">
         <h2>Margin Calculator</h2>
         <div className="input-group">
@@ -51,7 +55,10 @@ function MarginCalculator() {
           </div>
         )}
       </div>
+    
     </div>
+     <KnowledgeCenter />
+     </>
   );
 }
 
