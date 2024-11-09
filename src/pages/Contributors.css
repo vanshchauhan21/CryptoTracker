@@ -108,6 +108,15 @@ h2 {
   opacity:0.7;
 }
 
+.spinner-container,.error-message,.loading-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+  width: 100%; /* Full width */
+}
+
+
 @media (max-width: 1200px) {
   .contributor-card {
     max-width: 33.333%;
