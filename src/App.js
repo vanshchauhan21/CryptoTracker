@@ -25,6 +25,7 @@ import i18n from "./i18n";
 import Contributors from "./pages/Contributors";
 import TermsOfUse from "./pages/TermsOfUse";
 import PrivacyPolicy from "./pages/Privacy-Policy/PrivacyPolicy";
+import CodeOfConduct from "./pages/CodeOfConduct/CodeOfConduct.js";
 import Pricing from "./pages/Pricing/Pricing";
 import Learn from "./components/Learn";
 import CryptoProfitCalculator from "./pages/CryptoProfitCalculator";
@@ -246,6 +247,7 @@ function App() {
                 <Route path="/disclaimer" element={<Disclaimer />} />
                 <Route path="/terms-of-Use" element={<TermsOfUse />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/code-of-conduct" element={<CodeOfConduct />} />
                 <Route path="/cookies-policy" element={<CookiesPolicy />} />
                 <Route path="/terms-conditions" element={<TermCondition />} />
                 <Route path="/faq" element={<Faq />} />
