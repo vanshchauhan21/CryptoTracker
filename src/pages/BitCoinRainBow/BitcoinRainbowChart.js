@@ -14,6 +14,7 @@ import {
   Legend,
   LogarithmicScale,
 } from "chart.js";
+import LottieSpinner from "../../components/Common/LottieSpinner/LottieSpinner";
 
 ChartJS.register(
   LineElement,
@@ -90,6 +91,21 @@ const BitcoinRainbowChart = () => {
     fetchData();
   }, []);
 
+
+  if (loading) {
+    return (
+      <>
+      <Header/>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+        <LottieSpinner />
+      </div>
+      </>
+
+    )
+  }
+
+
+
   // Define the chart options
   const options = {
     responsive: true,
@@ -122,7 +138,10 @@ const BitcoinRainbowChart = () => {
           Bitcoin Rainbow Chart
         </h2>
         {loading ? (
-          <p>Loading chart data...</p>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+            <LottieSpinner />
+          </div>
+    
         ) : (
           <Line data={chartData} options={options} />
         )}
