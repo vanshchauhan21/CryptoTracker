@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "./MarginCalculator.css";
 import Header from "../components/Common/Header";
 // import { Link } from 'react-router-dom';
-import KnowledgeCenter from "./KnowledgeCenter/KnowledgeCenter";
 
+import KnowledgeCenter from "./CryptoKnowledgeBase/CryptoKnowledgeBase";
 function MarginCalculator() {
   const [costPrice, setCostPrice] = useState("");
   const [sellingPrice, setSellingPrice] = useState("");
@@ -57,7 +57,8 @@ function MarginCalculator() {
       </div>
     
     </div>
-     <KnowledgeCenter />
+     
+    <KnowledgeCenter />
      </>
   );
 }
