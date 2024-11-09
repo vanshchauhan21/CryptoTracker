@@ -38,10 +38,11 @@ function Grid({ coin, delay }) {
   return (
     <a href={`/coin/${coin.id}`}>
       <motion.div
-        className={`grid ${coin.price_change_percentage_24h < 0 && "grid-red"}`}
+        className={`grid ${coin.price_change_percentage_24h < 0 && "grid-red"} !text-white`}
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: delay }}
+        
       >
         <div className="img-flex">
           <img
