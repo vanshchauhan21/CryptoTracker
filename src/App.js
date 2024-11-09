@@ -49,6 +49,7 @@ import NFTShowcase from "./pages/NFTShowcase/NFTShowcase";
 import { Helmet } from "react-helmet";
 import CompoundInterestCalculator from "./pages/CompoundInterestCalculator.js";
 import MarginCalculator from "./pages/MarginCalculator.js";
+import CompoundStaking from "./pages/cics.js";
 
 import Sitemap from './pages/Sitemap/Sitemap';
 
@@ -197,6 +198,7 @@ function App() {
                   <Route path="crypto-converter" element={<CryptoConverter />} />
                   <Route path="CompoundInterestCalculator" element={<CompoundInterestCalculator />} />
                   <Route path="MarginCalculator" element={<MarginCalculator />} />
+                  <Route path="CompoundStaking" element={<CompoundStaking />} />
                 </Route>
 
                 <Route path="/charts">
@@ -332,7 +334,6 @@ function App() {
         <div className="footbelow">
           <Footer />
         </div>
-        <BackToTopButton />
       </I18nextProvider>
     </>
   );
