@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./CompoundInterestCalculator.css";
 import Header from "../components/Common/Header";
+import MasterTheMath from './CompoundInterestCalculator/MasterTheMath';
 
 function CompoundInterestCalculator() {
   const [principal, setPrincipal] = useState("");
@@ -76,6 +77,28 @@ function CompoundInterestCalculator() {
             <h3>Future Value: ${result}</h3>
           </div>
         )}
+      </div>
+      <MasterTheMath />
+      <div className="educational-info">
+        <h2>Understanding Compound Interest</h2>
+        <p>
+          Compound interest is the interest on a loan or deposit calculated based on both 
+          the initial principal and the accumulated interest from previous periods.
+        </p>
+        <h3>Key Concepts</h3>
+        <ul>
+          <li><strong>Time Factor:</strong> The longer you leave your money to grow, the more you will benefit from compound interest.</li>
+          <li><strong>Interest Rate:</strong> A higher interest rate will lead to more significant growth over time.</li>
+          <li><strong>Compounding Frequency:</strong> The more often interest is compounded, the greater the total amount of interest earned.</li>
+        </ul>
+        
+        <h3>Real-World Applications</h3>
+        <p>Understanding compound interest is crucial for effective financial planning. It can apply to various scenarios, including:</p>
+        <ul>
+          <li>Retirement accounts (e.g., 401(k), IRA)</li>
+          <li>Savings accounts</li>
+          <li>Investment portfolios</li>
+        </ul>
       </div>
     </div>
   );
