@@ -154,6 +154,10 @@ const Footer = () => {
                 label: "BreakEvenCalculator",
               },
               {
+                path: "/calculators/SlippageCalculator",
+                label: "SlippageCalculator",
+              },
+              {
                 path: "/calculators/investment-return-calculator",
                 label: "Investment Return Calculator",
               },
