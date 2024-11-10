@@ -93,6 +93,7 @@ import InterestRateChangeEstimator from "./pages/rce.js";
 
 
 import BackToTopButton from "./components/BackToTopButton/BackToTopButton.js";
+import PortFolio from "./pages/Portfolio/PortFolio.js";
 
 
 
@@ -259,6 +260,9 @@ function App() {
                 <Route path="/careers" element={<Careers />} />
                 <Route path="/ultimate-crypto-portfolio-tracker" element={<UltimateCryptoPortfolioTracker />} />
                 <Route path="/sitemap" element={<Sitemap />} />
+                
+                <Route path="/Porfolio" element={<PortFolio />} />
+
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>
             </BrowserRouter>
