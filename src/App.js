@@ -82,6 +82,16 @@ import TrackNFTs from "./pages/TrackNFT/TrackNFTs.js";
 import InvestmentReturnCalculator from "./pages/Useful Tools/Investmentreturncalculator.js";
 
 import InterestRateChangeEstimator from "./pages/rce.js";
+
+=======
+import ICOIDOPerformanceTracker from "./pages/ico.js";
+
+
+
+
+
+
+
 import BackToTopButton from "./components/BackToTopButton/BackToTopButton.js";
 
 function App() {
@@ -230,8 +240,8 @@ function App() {
                   <Route path="Cryptofiat" element={<Cryptofiat/>} />
                   <Route path="CompoundInterestCalculator" element={<CompoundInterestCalculator />} />
                   <Route path="MarginCalculator" element={<MarginCalculator />} />
-
-                  <Route path="DefiCalculator" element={<DefiCalculator />} />
+                  <Route path="ICOIDOPerformanceTracker" element={<ICOIDOPerformanceTracker/>} />
+                  <Route path="InterestRateChangeEstimator" element={<InterestRateChangeEstimator />} />
                 </Route>
                   <Route path="InterestRateChangeEstimator" element={<InterestRateChangeEstimator />} />
                 <Route
