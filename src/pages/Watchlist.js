@@ -43,11 +43,54 @@ function Watchlist() {
     },
   };
 
+  const checkPriceAlerts = () => {
+    coins.forEach((coin) => {
+      const alertPrice = localStorage.getItem(`alert-${coin.id}`);
+      if (alertPrice && parseFloat(alertPrice) <= coin.current_price) {
+        alert(
+          `Price alert! ${coin.name} has reached your target price of ${alertPrice}`
+        );
+        localStorage.removeItem(`alert-${coin.id}`); // Remove the alert after notifying
+      }
+    });
+  };
+
+  useEffect(() => {
+    if (coins.length > 0) {
+      checkPriceAlerts();
+    }
+  }, [coins]);
+
+  const addPriceAlert = (coinId, price) => {
+    localStorage.setItem(`alert-${coinId}`, price);
+    alert(`Price alert set for ${coinId} at ${price}`);
+  };
+
   return (
     <div>
       <Header />
       {watchlist.length > 0 ? (
-        <TabsComponent coins={coins} />
+        <>
+          <div className="alert-section">
+            <h2>Set Price Alerts</h2>
+            {coins.map((coin) => (
+              <div key={coin.id} className="alert-item">
+                <span>{coin.name}</span>
+                <input
+                  type="number"
+                  placeholder="Set target price"
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      addPriceAlert(coin.id, e.target.value);
+                      e.target.value = ""; // Clear the input field after setting the alert
+                    }
+                  }}
+                />
+              </div>
+            ))}
+          </div>
+          <TabsComponent coins={coins} />
+        </>
       ) : (
         <div className="h-[500px] flex flex-col justify-center items-center">
           {/* Animation */}

@@ -40,19 +40,16 @@ import Aboutus from "./pages/Aboutus/Aboutus";
 import CookiePolicy from "./pages/Cookie-Policy/CookiePolicy";
 import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator";
 import ImpermanentLossCalculator from "./pages/ImpermanentLossCalculator";
-
-import DollarCostAveraging from "./pages/dca.js";
-
-
-
-// import DividendCalculator  from "./pages/DividendCalculator";
+import DividendCalculator  from "./pages/DividendCalculator";
 import GasFreeEstimator  from "./pages/gfe.js";
-
 import DividendCalculator from "./pages/DividendCalculator";
-
+import GasFreeEstimator from "./pages/gfe.js";
+import DollarCostAveraging from "./pages/dca.js";
+import DividendCalculator  from "./pages/DividendCalculator";
+import GasFreeEstimator  from "./pages/gfe.js";
 import ProfitLoss from "./pages/ProfitLoss/ProfitLoss";
 import Cryptocard from "./pages/CryptoCard/Cryptocard";
-import CryptoQuiz from './pages/CryptoQuiz/CryptoQuiz';
+import CryptoQuiz from "./pages/CryptoQuiz/CryptoQuiz";
 import Footer from "./components/Footer.jsx";
 import NFTShowcase from "./pages/NFTShowcase/NFTShowcase";
 import { Helmet } from "react-helmet";
@@ -61,32 +58,32 @@ import Cryptofiat from "./pages/Cryptofiat.js";
 import MarginCalculator from "./pages/MarginCalculator.js";
 
 import DefiCalculator from "./pages/defi.js";
-
-
 import CompoundStaking from "./pages/cics.js";
 
-import Sitemap from './pages/Sitemap/Sitemap';
-import Methodology from './pages/Methodology/Methodology';
+import Sitemap from "./pages/Sitemap/Sitemap";
+import Methodology from "./pages/Methodology/Methodology";
 import Careers from "./pages/Careers";
 import Cryptoreward from "./pages/Cryptoreward/Cryptoreward";
 import BTCDominance from "./pages/BTCDominance/BTCDominance";
 import MarketUpdate from "./pages/MarketUpdate/MarketUpdate.js";
 import HelpCenter from "./pages/HelpCenter/HelpCenter.js";
-import UltimateCryptoPortfolioTracker from './pages/UltimateCryptoPortfolioTracker/UltimateCryptoPortfolioTracker';
+import UltimateCryptoPortfolioTracker from "./pages/UltimateCryptoPortfolioTracker/UltimateCryptoPortfolioTracker";
 import WhatsTrending from "./pages/WhatsTrending/WhatsTrending.js";
 import DefiAssets from "./pages/DefiAssets/DefiAssets.js";
 import CryptoPrices from "./pages/cryptoPrice/cryptoPrice.js";
 import Blog from "./pages/Blogs/Blog.js";
 import Crypto24HourReport from "./pages/CryptoMarket24h/Crypto24HourReport.js";
 import GeminiChat from "./pages/GeminiAIChat/GeminiAIChat.jsx";
-import FearAndGreedIndex from './pages/FearAndGreedIndex/FearAndGreedIndex';
-import Earn from './pages/Earn/Earn';
+import FearAndGreedIndex from "./pages/FearAndGreedIndex/FearAndGreedIndex";
+import Earn from "./pages/Earn/Earn";
 import BitCoinRainBowCharDetail from "./pages/BitCoinRainBow/BitCoinRainBowCharDetail.js";
-import AffiliateProgram from './pages/AffiliateProgram/AffiliateProgram';
+import AffiliateProgram from "./pages/AffiliateProgram/AffiliateProgram";
 import TrackNFTs from "./pages/TrackNFT/TrackNFTs.js";
 import InvestmentReturnCalculator from "./pages/Useful Tools/Investmentreturncalculator.js";
 
 import InterestRateChangeEstimator from "./pages/rce.js";
+
+=======
 import ICOIDOPerformanceTracker from "./pages/ico.js";
 
 
@@ -94,9 +91,8 @@ import ICOIDOPerformanceTracker from "./pages/ico.js";
 
 
 
+
 import BackToTopButton from "./components/BackToTopButton/BackToTopButton.js";
-
-
 
 function App() {
   const theme = createTheme({
@@ -148,14 +144,20 @@ function App() {
         <meta name="theme-color" content={metadata.themeColor} />
         {/* Open Graph */}
         <meta property="og:title" content={metadata.openGraph.title} />
-        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta
+          property="og:description"
+          content={metadata.openGraph.description}
+        />
         <meta property="og:url" content={metadata.openGraph.url} />
         <meta property="og:type" content={metadata.openGraph.type} />
         <meta property="og:image" content={metadata.openGraph.image} />
         {/* Twitter Card */}
         <meta name="twitter:card" content={metadata.twitter.card} />
         <meta name="twitter:title" content={metadata.twitter.title} />
-        <meta name="twitter:description" content={metadata.twitter.description} />
+        <meta
+          name="twitter:description"
+          content={metadata.twitter.description}
+        />
         <meta name="twitter:image" content={metadata.twitter.image} />
       </Helmet>
       <I18nextProvider i18n={i18n}>
@@ -175,6 +177,51 @@ function App() {
                 <Route path="/contributors" element={<Contributors />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/calculators">
+                  <Route
+                    path="crypto-profit-calculator"
+                    element={<CryptoProfitCalculator />}
+                  />
+                  <Route
+                    path="profit-return-calculator"
+                    element={<ProfitReturnCalculator />}
+                  />
+                  <Route
+                    path="investment-return-calculator"
+                    element={<InvestmentReturnCalculator />}
+                  />
+                  <Route
+                    path="impermanent-loss-calculator"
+                    element={<ImpermanentLossCalculator />}
+                  />
+
+                  <Route
+                    path="DividendCalculator"
+                    element={<DividendCalculator />}
+                  />
+                  <Route
+                    path="GasFreeEstimator"
+                    element={<GasFreeEstimator />}
+                  />
+
+                  <Route
+                    path="dividend-calculator"
+                    element={<DividendCalculator />}
+                  />
+
+                  <Route
+                    path="crypto-converter"
+                    element={<CryptoConverter />}
+                  />
+
+                  <Route path="Cryptofiat" element={<Cryptofiat />} />
+                  <Route
+                    path="CompoundInterestCalculator"
+                    element={<CompoundInterestCalculator />}
+                  />
+                  <Route
+                    path="MarginCalculator"
+                    element={<MarginCalculator />}
+                  />
                   <Route path="crypto-profit-calculator" element={<CryptoProfitCalculator />} />
                   <Route path="profit-return-calculator" element={<ProfitReturnCalculator />} />
                   <Route path="investment-return-calculator" element={<InvestmentReturnCalculator />} />
@@ -196,26 +243,44 @@ function App() {
                   <Route path="ICOIDOPerformanceTracker" element={<ICOIDOPerformanceTracker/>} />
                   <Route path="InterestRateChangeEstimator" element={<InterestRateChangeEstimator />} />
                 </Route>
-
                   <Route path="InterestRateChangeEstimator" element={<InterestRateChangeEstimator />} />
+                <Route
+                  path="InterestRateChangeEstimator"
+                  element={<InterestRateChangeEstimator />}
+                />
 
-
-                  <Route path="cryptofiat" element={<Cryptofiat />} />
-                  <Route path="compound-interest-calculator" element={<CompoundInterestCalculator />} />
-                  <Route path="margin-calculator" element={<MarginCalculator />} />
-                  <Route path="compound-staking" element={<CompoundStaking />} />
-
-
+                <Route path="cryptofiat" element={<Cryptofiat />} />
+                <Route
+                  path="compound-interest-calculator"
+                  element={<CompoundInterestCalculator />}
+                />
+                <Route
+                  path="margin-calculator"
+                  element={<MarginCalculator />}
+                />
+                <Route path="compound-staking" element={<CompoundStaking />} />
 
 
                 {/* </Route> */}
                 <Route path="/charts">
-                  <Route path="bitcoin-rainbow-chart" element={<BitcoinRainbowChart />} />
-                  <Route path="bitcoin-rainbow-chart-detail" element={<BitCoinRainBowCharDetail />} />
-                  <Route path="ethereum-rainbow-chart" element={<EthereumRainbowChart />} />
+                  <Route
+                    path="bitcoin-rainbow-chart"
+                    element={<BitcoinRainbowChart />}
+                  />
+                  <Route
+                    path="bitcoin-rainbow-chart-detail"
+                    element={<BitCoinRainBowCharDetail />}
+                  />
+                  <Route
+                    path="ethereum-rainbow-chart"
+                    element={<EthereumRainbowChart />}
+                  />
                 </Route>
                 <Route path="/market">
-                  <Route path="currency-market-24h" element={<Crypto24HourReport />} />
+                  <Route
+                    path="currency-market-24h"
+                    element={<Crypto24HourReport />}
+                  />
                   <Route path="btc-dominance" element={<BTCDominance />} />
                 </Route>
                 <Route path="/coin/:id" element={<Coin />} />
@@ -250,13 +315,19 @@ function App() {
                 <Route path="/google-translate" element={<GoogleTranslate />} />
                 <Route path="/crypto-quiz" element={<CryptoQuiz />} />
                 <Route path="/fear-and-greed" element={<FearAndGreedIndex />} />
-                <Route path="/affiliate-program" element={<AffiliateProgram />} />
+                <Route
+                  path="/affiliate-program"
+                  element={<AffiliateProgram />}
+                />
                 <Route path="/methodology" element={<Methodology />} />
                 <Route path="/sitemap" element={<Sitemap />} />
                 <Route path="/methodology" element={<Methodology />} />
                 <Route path="/earn" element={<Earn />} />
                 <Route path="/careers" element={<Careers />} />
-                <Route path="/ultimate-crypto-portfolio-tracker" element={<UltimateCryptoPortfolioTracker />} />
+                <Route
+                  path="/ultimate-crypto-portfolio-tracker"
+                  element={<UltimateCryptoPortfolioTracker />}
+                />
                 <Route path="/sitemap" element={<Sitemap />} />
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>
