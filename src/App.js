@@ -159,6 +159,7 @@ function App() {
           <ThemeProvider theme={theme}>
             <BrowserRouter>
               <Routes>
+                
                 <Route path="/" element={<Home />} />
                 <Route path="/compare" element={<Compare />} />
                 <Route path="/watchlist" element={<Watchlist />} />
@@ -174,7 +175,7 @@ function App() {
 
                   <Route path="dollar-cost-averaging" element={<DollarCostAveraging />} />
 
-     <Route path="DividendCalculator" element={<DividendCalculator />} />
+                   <Route path="DividendCalculator" element={<DividendCalculator />} />
                   <Route path="GasFreeEstimator" element={<GasFreeEstimator />} />
                   <Route path="dividend-calculator" element={<DividendCalculator />} />
 
