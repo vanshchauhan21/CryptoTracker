@@ -67,6 +67,22 @@ function ICOIDOPerformanceTracker() {
           </div>
         )}
       </div>
+      <div className="info-section">
+        <h2>Understanding ICOs and IDOs</h2>
+        <p>
+          An Initial Coin Offering (ICO) is a fundraising mechanism in which new projects sell their underlying crypto tokens in exchange for bitcoin, ether, or other cryptocurrencies. It is often used by startups to bypass the rigorous and regulated capital-raising process required by venture capitalists or banks.
+        </p>
+        <h3>Key Features of ICOs</h3>
+        <ul>
+          <li>Token Sale: Investors purchase tokens at a set price.</li>
+          <li>Whitepaper: A document that outlines the project’s goals, technology, and use cases.</li>
+          <li>Smart Contracts: ICOs typically use smart contracts to manage the sale and distribution of tokens.</li>
+        </ul>
+        <h3>What is an IDO?</h3>
+        <p>
+          An Initial DEX Offering (IDO) is a fundraising method where tokens are directly sold to investors on a decentralized exchange (DEX). IDOs provide immediate liquidity for the tokens, allowing investors to trade right after the sale.
+        </p>
+      </div>
     </div>
   );
 }
