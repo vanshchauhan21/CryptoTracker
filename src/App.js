@@ -97,6 +97,11 @@ import CrossChainBridgeFeeOptimizer from "./pages/bfo.js";
 
 
 
+ 
+import BackToTopButton from "./components/BackToTopButton/BackToTopButton.js";
+import CosmosWalletTracker from "./pages/CosmosWalletTracker/CosmosWalletTracker.js";
+=======
+
 
 
 
@@ -335,6 +340,7 @@ function App() {
                 />
                 <Route path="/methodology" element={<Methodology />} />
                 <Route path="/sitemap" element={<Sitemap />} />
+                <Route path="/cosmos" element={<CosmosWalletTracker />} />
                 <Route path="/methodology" element={<Methodology />} />
                 <Route path="/earn" element={<Earn />} />
                 <Route path="/careers" element={<Careers />} />
