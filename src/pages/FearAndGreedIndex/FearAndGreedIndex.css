@@ -307,3 +307,38 @@ h1 {
   color: #3a80e9;
   text-align: center;
 } */
+
+.information-section {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 8px;
+  background: #f9f9f9; /* Light background */
+}
+
+.information-section h2 {
+  color: #6610f2; /* Heading color */
+  font-size: 2.5em;
+  margin-bottom: 1rem;
+}
+
+.information-section h3 {
+  color: #333; /* Subheading color */
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.information-section p,
+.information-section ul {
+  color: #333; /* Text color */
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.information-section ul {
+  padding-left: 20px; /* Indentation for lists */
+}
+
+.information-section ul li {
+  margin-bottom: 0.5rem; /* Spacing between list items */
+}

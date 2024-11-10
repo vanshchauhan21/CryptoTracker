@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./ImpermanentLossCalculator.css";
 import Header from "../components/Common/Header";
+import Feedback from '../components/Feedback/Feedbacksection';
 
 const ImpermanentLossCalculator = () => {
   const [initialPriceA, setInitialPriceA] = useState("");
@@ -108,7 +109,32 @@ const ImpermanentLossCalculator = () => {
             </p>
           </div>
         ))}
+        </div>
+        <div className="key-insights">
+        <h2>Key Insights on Impermanent Loss</h2>
+        <p>
+          Impermanent loss occurs when the price of tokens in a liquidity pool diverges from their original price at the time of deposit. This loss is termed "impermanent" because it may be mitigated if the prices return to their original state.
+        </p>
+        <h3>Implications for Liquidity Providers</h3>
+        <p>
+          As a liquidity provider, you earn fees from trades that occur in the pool. However, if the price divergence is significant, your potential gains from trading fees may not compensate for the losses incurred due to impermanent loss. Understanding this risk is crucial for making informed decisions about providing liquidity.
+        </p>
+        <h3>Tips for Minimizing Potential Risks</h3>
+        <ul>
+          <li>Choose Stable Pairs: Providing liquidity for stablecoin pairs can significantly reduce the risk of impermanent loss.</li>
+          <li>Monitor Market Conditions: Stay updated on market trends and price movements to make timely decisions about your liquidity positions.</li>
+          <li>Consider Using Impermanent Loss Protection: Some platforms offer insurance or protection mechanisms against impermanent loss.</li>
+          <li>Understand the Liquidity Pool's Fee Structure: Higher trading fees can help offset impermanent loss, so evaluate the fee structure before providing liquidity.</li>
+        </ul>
+        <h3>Conclusion</h3>
+        <p>
+          While providing liquidity can be profitable, it is essential to understand the concept of impermanent loss and its implications. By being informed and taking proactive measures, you can mitigate risks and enhance your overall liquidity provision strategy.
+        </p>
       </div>
+      
+
+
+      <Feedback />
     </div>
   );
 };
