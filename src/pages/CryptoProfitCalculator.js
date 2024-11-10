@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./CryptoProfitCalculator.css";
 import Header from "../components/Common/Header";
+import CryptoProfitCalculatorInfo from "../components/CryptoProfitCalculatorInfo";
 import SecuritySection from "../components/SecuritySection/SecuritySection"; 
 
 function CryptoProfitCalculator() {
@@ -71,6 +72,7 @@ function CryptoProfitCalculator() {
           )}
         </div>
       </div>
+      <CryptoProfitCalculatorInfo />
       <SecuritySection /> 
     </div>
   );

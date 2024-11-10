@@ -25,7 +25,11 @@ import CryptoTrackerManagingTool from "../../CryptoTrackerManagingTool/CryptoTra
 import Wallet from "../../../assets/Wallet.png";
 import Bitcoin from "../../../assets/Bitcoin.png";
 import Defi from "../../../assets/Defi.png";
+
 import PortfolioComparison from "../../../pages/AnalyzeAssets/PortfolioComparison";
+
+
+import SwapWithBestRates from "../../SwapWithBestRates/SwapWithBestRates";
 
 
 function MainComponent() {
@@ -137,6 +141,9 @@ function MainComponent() {
   <PortfolioComparison/>
       {/* .............................AnalyzeAssets................. */}
       <Marketdata/>
+      
+      {/* ................SwapWithBestRates...................... */}
+      <SwapWithBestRates/>
       {/* .........................Crypto tracker Managing Tool.............. */}
       
       <CryptoTrackerManagingTool  data={infoData} />
