@@ -124,13 +124,16 @@ function Header() {
         <div className="nav-logo">
           <img src={logo} alt="logo" className="logo" />
           <h1 className="nav-header">
-          {t("CryptoTracker")}
-          <span style={{ color: "var(--blue)" }}></span>
-        </h1>
+            {t("CryptoTracker")}
+            <span style={{ color: "var(--blue)" }}></span>
+          </h1>
         </div>
-      
       </Link>
-      <div className={`links ${mobileMenuOpen ? "mobile-menu-open" : ""} mb-3 mt-3`}>
+      <div
+        className={`links ${
+          mobileMenuOpen ? "mobile-menu-open" : ""
+        } mb-3 mt-3`}
+      >
         <NavLink
           to="/"
           className={({ isActive }) => (isActive ? "active-link link" : "link")}
@@ -160,6 +163,12 @@ function Header() {
           className={({ isActive }) => (isActive ? "active-link link" : "link")}
         >
           {t("Learn")}
+        </NavLink>
+        <NavLink
+          to="/news"
+          className={({ isActive }) => (isActive ? "active-link link" : "link")}
+        >
+          {t("News")}
         </NavLink>
         <NavLink
           to="/geminiChat"

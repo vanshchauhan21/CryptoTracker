@@ -28,6 +28,7 @@ import PrivacyPolicy from "./pages/Privacy-Policy/PrivacyPolicy";
 import CodeOfConduct from "./pages/CodeOfConduct/CodeOfConduct.js";
 import Pricing from "./pages/Pricing/Pricing";
 import Learn from "./components/Learn";
+import News from "./components/News";
 import CryptoProfitCalculator from "./pages/CryptoProfitCalculator";
 import Disclaimer from "./pages/Disclaimer/Disclaimer";
 import CryptoMarket from "./pages/CryptoMarket";
@@ -285,6 +286,7 @@ function App() {
                 </Route>
                 <Route path="/coin/:id" element={<Coin />} />
                 <Route path="/learn" element={<Learn />} />
+                <Route path="/news" element={<News />} />
                 <Route path="/geminiChat" element={<GeminiChat />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
