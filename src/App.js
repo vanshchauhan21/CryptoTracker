@@ -75,9 +75,12 @@ import InvestmentReturnCalculator from "./pages/Useful Tools/Investmentreturncal
 import InterestRateChangeEstimator from "./pages/rce.js";
 
 
+=======
+
 
 
 import BackToTopButton from "./components/BackToTopButton/BackToTopButton.js";
+
 
 
 function App() {
@@ -164,15 +167,21 @@ function App() {
                   <Route path="dividend-calculator" element={<DividendCalculator />} />
                   <Route path="crypto-converter" element={<CryptoConverter />} />
 
+=======
+
                   <Route path="Cryptofiat" element={<Cryptofiat/>} />
                   <Route path="CompoundInterestCalculator" element={<CompoundInterestCalculator />} />
                   <Route path="MarginCalculator" element={<MarginCalculator />} />
                   <Route path="InterestRateChangeEstimator" element={<InterestRateChangeEstimator />} />
 =======
+
                   <Route path="cryptofiat" element={<Cryptofiat />} />
                   <Route path="compound-interest-calculator" element={<CompoundInterestCalculator />} />
                   <Route path="margin-calculator" element={<MarginCalculator />} />
                   <Route path="compound-staking" element={<CompoundStaking />} />
+
+=======
+
 
                 </Route>
                 <Route path="/charts">
