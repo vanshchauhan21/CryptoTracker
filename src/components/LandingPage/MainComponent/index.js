@@ -20,7 +20,7 @@ import { AnalyticsTwoTone } from "@mui/icons-material";
 import AnalyzeAssets from "../../../pages/AnalyzeAssets/AnalyzeAssets";
 import Marketdata from "../../../pages/Real-timeMarket-data/Marketdata";
 import CryptoTrackerManagingTool from "../../CryptoTrackerManagingTool/CryptoTrackerManagingTool";
- 
+
 
 import Wallet from "../../../assets/Wallet.png";
 import Bitcoin from "../../../assets/Bitcoin.png";
@@ -30,6 +30,7 @@ import PortfolioComparison from "../../../pages/AnalyzeAssets/PortfolioCompariso
 
 
 import SwapWithBestRates from "../../SwapWithBestRates/SwapWithBestRates";
+import PlatformStatistics from "../../PlatformStatistics/PlatformStatistics";
 
 
 function MainComponent() {
@@ -55,8 +56,8 @@ function MainComponent() {
       description: 'Research, track, and manage any coin, set custom crypto alerts and more.',
     },
   ];
-  
-  
+
+
 
 
 
@@ -137,16 +138,22 @@ function MainComponent() {
       {/* ........................why do people love our website.......... */}
       <LoveOurWebsiteCarousel />
       {/* .............................AnalyzeAssets................. */}
-      <AnalyzeAssets/>
-  <PortfolioComparison/>
+      <AnalyzeAssets />
+      <PortfolioComparison />
       {/* .............................AnalyzeAssets................. */}
-      <Marketdata/>
-      
+      <Marketdata />
+
       {/* ................SwapWithBestRates...................... */}
-      <SwapWithBestRates/>
+      <SwapWithBestRates />
       {/* .........................Crypto tracker Managing Tool.............. */}
-      
-      <CryptoTrackerManagingTool  data={infoData} />
+
+      <CryptoTrackerManagingTool data={infoData} />
+
+
+
+      {/* ................................................Platform statistics.............. */}
+      <PlatformStatistics />
+
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./ImpermanentLossCalculator.css";
 import Header from "../components/Common/Header";
+import Feedback from '../components/Feedback/Feedbacksection';
 
 const ImpermanentLossCalculator = () => {
   const [initialPriceA, setInitialPriceA] = useState("");
@@ -109,6 +110,7 @@ const ImpermanentLossCalculator = () => {
           </div>
         ))}
       </div>
+      <Feedback />
     </div>
   );
 };

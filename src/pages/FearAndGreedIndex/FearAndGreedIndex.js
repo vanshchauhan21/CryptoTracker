@@ -237,6 +237,35 @@ const FearAndGreedIndex = () => {
               </div>
             ))}
             <FearAndGreedMetrics />
+            <div className="information-section">
+  <h2>What is the Fear and Greed Index?</h2>
+  <p>
+    The Fear and Greed Index is a sentiment analysis tool that measures the emotions and behaviors of investors in the cryptocurrency market. It ranges from 0 to 100, where lower values indicate fear and higher values indicate greed.
+  </p>
+  <h3>Why is it Important?</h3>
+  <p>
+    Understanding market sentiment is crucial for making informed investment decisions. The Fear and Greed Index helps investors gauge whether the market is overbought or oversold, potentially signaling buying or selling opportunities.
+  </p>
+  <h3>How is it Calculated?</h3>
+  <p>
+    The index is calculated using various factors, including:
+  </p>
+  <ul>
+    <li><strong>Market Volatility:</strong> Measures price fluctuations; high volatility indicates fear.</li>
+    <li><strong>Trading Volume:</strong> High trading volumes can indicate greed.</li>
+    <li><strong>Social Media Sentiment:</strong> Analyzes public sentiment on platforms like Twitter.</li>
+    <li><strong>Surveys:</strong> Collects data from investors about their feelings towards the market.</li>
+    <li><strong>Market Dominance:</strong> Observes the market dominance of major cryptocurrencies like Bitcoin.</li>
+  </ul>
+  <h3>Understanding the Index Ranges</h3>
+  <ul>
+    <li><strong>0-20:</strong> Extreme Fear - Potential buying opportunity.</li>
+    <li><strong>21-40:</strong> Fear - Caution advised.</li>
+    <li><strong>41-60:</strong> Neutral - Market stability.</li>
+    <li><strong>61-80:</strong> Greed - Market may be overvalued.</li>
+    <li><strong>81-100:</strong> Extreme Greed - Caution advised; potential market bubble.</li>
+  </ul>
+</div>
           </div>
         </div>
       </div>
