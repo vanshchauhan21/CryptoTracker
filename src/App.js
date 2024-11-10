@@ -42,6 +42,10 @@ import CookiePolicy from "./pages/Cookie-Policy/CookiePolicy";
 import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator";
 import ImpermanentLossCalculator from "./pages/ImpermanentLossCalculator";
 
+import DollarCostAveraging from "./pages/dca.js";
+=======
+
+
 import DividendCalculator  from "./pages/DividendCalculator";
 import GasFreeEstimator  from "./pages/gfe.js";
 =======
@@ -176,7 +180,10 @@ function App() {
                   <Route path="investment-return-calculator" element={<InvestmentReturnCalculator />} />
                   <Route path="impermanent-loss-calculator" element={<ImpermanentLossCalculator />} />
 
-                  <Route path="DividendCalculator" element={<DividendCalculator />} />
+                  <Route path="dollar-cost-averaging" element={<DollarCostAveraging />} />
+=======
+
+     <Route path="DividendCalculator" element={<DividendCalculator />} />
                   <Route path="GasFreeEstimator" element={<GasFreeEstimator />} />
 =======
                   <Route path="dividend-calculator" element={<DividendCalculator />} />
@@ -227,6 +234,7 @@ function App() {
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/code-of-conduct" element={<CodeOfConduct />} />
                 <Route path="/licensing" element={<Licensing />} />
+                <Route path="/code-of-conduct" element={<CodeOfConduct />} />
                 <Route path="/cookies-policy" element={<CookiesPolicy />} />
                 <Route path="/terms-conditions" element={<TermCondition />} />
                 <Route path="/faq" element={<Faq />} />
