@@ -152,6 +152,10 @@ const Footer = () => {
                 label: "Impermanent Loss Calculator",
               },
               {
+                path: "/calculators/dollar-cost-averaging",
+                label: "Dollar cost averaging Calculator",
+              },
+              {
                 path: "/calculators/crypto-converter",
                 label: "Crypto Converter",
               },
