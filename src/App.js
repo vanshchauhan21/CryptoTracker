@@ -89,6 +89,7 @@ import AffiliateProgram from './pages/AffiliateProgram/AffiliateProgram';
 import TrackNFTs from "./pages/TrackNFT/TrackNFTs.js";
 import InvestmentReturnCalculator from "./pages/Useful Tools/Investmentreturncalculator.js";
 import BackToTopButton from "./components/BackToTopButton/BackToTopButton.js";
+import CosmosWalletTracker from "./pages/CosmosWalletTracker/Cosmos.js";
 
 
 
@@ -185,7 +186,8 @@ function App() {
                 {/* <Route path="/blog" component={Blog} />  */}
 
                 <Route path="/blog" element={<Blog />} />
-
+                
+                <Route path="/cosmos" element={<CosmosWalletTracker />} />
                 {/* <Route path="/earn" element={<Earn />} /> */}
 
 
