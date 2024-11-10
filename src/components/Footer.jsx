@@ -166,13 +166,8 @@ const Footer = () => {
                 label: "Crypto Converter",
               },
               {
-
-                path: "/calculators/Cryptofiat",
-                label: "Crypto to fiat Converter",
-
-                path: "/calculators/CompoundStaking",
-                label: "Compound Interest Calculator for Crypto Staking",
-
+                path: "/calculators/DefiCalculator",
+                label: "DeFi Yield Estimator",
               },
               {
                 path: "/calculators/CompoundInterestCalculator",
