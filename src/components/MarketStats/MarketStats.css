@@ -80,3 +80,48 @@
     font-size: 0.9em;
     line-height: 1.5;
 }
+.btc-dominance-chart-container {
+    padding: 20px;
+    background-color: #fff; /* Background color for the main container */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Center the container */
+    max-width: 800px; /* Limit the maximum width */
+  }
+  
+  .market-statistics-section {
+    margin-top: 20px;
+    padding: 20px; /* Increased padding for better spacing */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .market-statistics-section h2 {
+    color: #333; /* Dark color for the heading */
+    font-size: 1.8rem; /* Larger font size for emphasis */
+    margin-bottom: 15px; /* Spacing below the heading */
+    border-bottom: 2px solid #3a80e9; /* Underline effect */
+    padding-bottom: 10px; /* Padding below the heading */
+  }
+  
+  .market-stats {
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Space between items */
+  }
+  
+  .market-stats p {
+    font-size: 1rem; /* Standard font size */
+    color: #555; /* Gray color for text */
+    margin: 0; /* Remove default margin */
+    padding: 8px; /* Padding for better touch targets */
+    border: 1px solid #e0e0e0; /* Border around each statistic */
+    border-radius: 4px; /* Rounded corners for each statistic */
+    background-color: #fff; /* White background for each statistic */
+    transition: background-color 0.3s; /* Smooth background color transition */
+  }
+  
+  .market-stats p:hover {
+    background-color: #e9f5ff; /* Light blue background on hover */
+  }
