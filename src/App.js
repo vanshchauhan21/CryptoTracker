@@ -71,7 +71,17 @@ import BitCoinRainBowCharDetail from "./pages/BitCoinRainBow/BitCoinRainBowCharD
 import AffiliateProgram from './pages/AffiliateProgram/AffiliateProgram';
 import TrackNFTs from "./pages/TrackNFT/TrackNFTs.js";
 import InvestmentReturnCalculator from "./pages/Useful Tools/Investmentreturncalculator.js";
+
+import InterestRateChangeEstimator from "./pages/rce.js";
+
+
+=======
+
+
+
 import BackToTopButton from "./components/BackToTopButton/BackToTopButton.js";
+
+
 
 function App() {
   const theme = createTheme({
@@ -156,10 +166,23 @@ function App() {
                   <Route path="impermanent-loss-calculator" element={<ImpermanentLossCalculator />} />
                   <Route path="dividend-calculator" element={<DividendCalculator />} />
                   <Route path="crypto-converter" element={<CryptoConverter />} />
+
+=======
+
+                  <Route path="Cryptofiat" element={<Cryptofiat/>} />
+                  <Route path="CompoundInterestCalculator" element={<CompoundInterestCalculator />} />
+                  <Route path="MarginCalculator" element={<MarginCalculator />} />
+                  <Route path="InterestRateChangeEstimator" element={<InterestRateChangeEstimator />} />
+=======
+
                   <Route path="cryptofiat" element={<Cryptofiat />} />
                   <Route path="compound-interest-calculator" element={<CompoundInterestCalculator />} />
                   <Route path="margin-calculator" element={<MarginCalculator />} />
                   <Route path="compound-staking" element={<CompoundStaking />} />
+
+=======
+
+
                 </Route>
                 <Route path="/charts">
                   <Route path="bitcoin-rainbow-chart" element={<BitcoinRainbowChart />} />
@@ -204,9 +227,6 @@ function App() {
                 <Route path="/fear-and-greed" element={<FearAndGreedIndex />} />
                 <Route path="/affiliate-program" element={<AffiliateProgram />} />
                 <Route path="/methodology" element={<Methodology />} />
-
-             
-
                 <Route path="/sitemap" element={<Sitemap />} />
                 <Route path="/methodology" element={<Methodology />} />
                 <Route path="/earn" element={<Earn />} />
