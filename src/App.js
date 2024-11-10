@@ -41,6 +41,7 @@ import CookiePolicy from "./pages/Cookie-Policy/CookiePolicy";
 import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator";
 import ImpermanentLossCalculator from "./pages/ImpermanentLossCalculator";
 import DividendCalculator  from "./pages/DividendCalculator";
+import GasFreeEstimator  from "./pages/gfe.js";
 import ProfitLoss from "./pages/ProfitLoss/ProfitLoss";
 import Cryptocard from "./pages/CryptoCard/Cryptocard";
 import CryptoQuiz from './pages/CryptoQuiz/CryptoQuiz';
@@ -194,6 +195,7 @@ function App() {
                   <Route path="investment-return-calculator" element={<InvestmentReturnCalculator/>} />
                   <Route path="impermanent-loss-calculator" element={<ImpermanentLossCalculator />} />
                   <Route path="DividendCalculator" element={<DividendCalculator />} />
+                  <Route path="GasFreeEstimator" element={<GasFreeEstimator />} />
                   <Route path="crypto-converter" element={<CryptoConverter />} />
                   <Route path="CompoundInterestCalculator" element={<CompoundInterestCalculator />} />
                   <Route path="MarginCalculator" element={<MarginCalculator />} />
@@ -332,7 +334,6 @@ function App() {
         <div className="footbelow">
           <Footer />
         </div>
-        <BackToTopButton />
       </I18nextProvider>
     </>
   );

@@ -152,6 +152,10 @@ const Footer = () => {
                 label: "Impermanent Loss Calculator",
               },
               {
+                path: "/calculators/GasFreeEstimator",
+                label: " Gas Free Estimator",
+              },
+              {
                 path: "/calculators/crypto-converter",
                 label: "Crypto Converter",
               },
