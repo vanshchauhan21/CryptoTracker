@@ -113,6 +113,22 @@ const SIPCalculator = () => {
           </div>
         )}
       </div>
+      <section className="info-section">
+        <h2>What is a SIP?</h2>
+        <p>
+          A Systematic Investment Plan (SIP) is a disciplined way of investing in mutual funds. 
+          It allows investors to invest a fixed amount regularly (monthly, quarterly, etc.) 
+          instead of making a lump sum investment. This approach helps in averaging the cost 
+          of investment and reduces the impact of market volatility.
+        </p>
+        <h3>Benefits of SIP:</h3>
+        <ul>
+          <li>Rupee Cost Averaging: Invests at different price levels.</li>
+          <li>Disciplined Savings: Encourages regular saving habits.</li>
+          <li>Flexibility: You can start with a small amount and increase it over time.</li>
+          <li>Potential for Higher Returns: Long-term investment can yield good returns.</li>
+        </ul>
+      </section>
     </div>
   );
 };
