@@ -71,7 +71,14 @@ import BitCoinRainBowCharDetail from "./pages/BitCoinRainBow/BitCoinRainBowCharD
 import AffiliateProgram from './pages/AffiliateProgram/AffiliateProgram';
 import TrackNFTs from "./pages/TrackNFT/TrackNFTs.js";
 import InvestmentReturnCalculator from "./pages/Useful Tools/Investmentreturncalculator.js";
+
+import InterestRateChangeEstimator from "./pages/rce.js";
+
+
+
+
 import BackToTopButton from "./components/BackToTopButton/BackToTopButton.js";
+
 
 function App() {
   const theme = createTheme({
@@ -156,10 +163,17 @@ function App() {
                   <Route path="impermanent-loss-calculator" element={<ImpermanentLossCalculator />} />
                   <Route path="dividend-calculator" element={<DividendCalculator />} />
                   <Route path="crypto-converter" element={<CryptoConverter />} />
+
+                  <Route path="Cryptofiat" element={<Cryptofiat/>} />
+                  <Route path="CompoundInterestCalculator" element={<CompoundInterestCalculator />} />
+                  <Route path="MarginCalculator" element={<MarginCalculator />} />
+                  <Route path="InterestRateChangeEstimator" element={<InterestRateChangeEstimator />} />
+=======
                   <Route path="cryptofiat" element={<Cryptofiat />} />
                   <Route path="compound-interest-calculator" element={<CompoundInterestCalculator />} />
                   <Route path="margin-calculator" element={<MarginCalculator />} />
                   <Route path="compound-staking" element={<CompoundStaking />} />
+
                 </Route>
                 <Route path="/charts">
                   <Route path="bitcoin-rainbow-chart" element={<BitcoinRainbowChart />} />
