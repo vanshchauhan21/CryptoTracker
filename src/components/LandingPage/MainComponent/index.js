@@ -25,7 +25,12 @@ import CryptoTrackerManagingTool from "../../CryptoTrackerManagingTool/CryptoTra
 import Wallet from "../../../assets/Wallet.png";
 import Bitcoin from "../../../assets/Bitcoin.png";
 import Defi from "../../../assets/Defi.png";
+
+import PortfolioComparison from "../../../pages/AnalyzeAssets/PortfolioComparison";
+
+
 import SwapWithBestRates from "../../SwapWithBestRates/SwapWithBestRates";
+
 
 function MainComponent() {
   useEffect(() => {
@@ -133,6 +138,7 @@ function MainComponent() {
       <LoveOurWebsiteCarousel />
       {/* .............................AnalyzeAssets................. */}
       <AnalyzeAssets/>
+  <PortfolioComparison/>
       {/* .............................AnalyzeAssets................. */}
       <Marketdata/>
       
