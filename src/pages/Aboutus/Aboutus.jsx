@@ -9,6 +9,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Testimonials from '../../components/Testimonials/Testimonials';
 import Stats from './Stats';
+import Contributors from '../contributor';
+
 const AboutUs = () => {
   const [mode, setMode] = useState(false);
   const theme = localStorage.getItem("theme");
@@ -98,7 +100,7 @@ const AboutUs = () => {
                   {section.content}
                 </Typography>
               </Grid>
-              <Grid item xs={12} md={6} order={{ xs: 1, md: index % 2 === 0 ? 2 : 1 }} data-aos={section.aosImage}>
+              <Grid item xs ={12} md={6} order={{ xs: 1, md: index % 2 === 0 ? 2 : 1 }} data-aos={section.aosImage}>
                 {section.video ? (
                   <video
                     className="background-video"
@@ -125,9 +127,13 @@ const AboutUs = () => {
           </Container>
         </Box>
       ))}
-      <div className="bg-white p-4 rounded-lg shadow-md max-w-5xl mx-auto mb-12 d-flex justify-center">
-        <div className="text-center text-3xl font-bold  mb-4">Our Stats</div>
-        <Stats />
+<div className="bg-white p-4 rounded-lg shadow-md max-w-6xl mx-auto mb-12 mt-6 d-flex justify-center">
+  <div className="text-center text-3xl font-bold mb-4">Our Stats</div>
+  <Stats />
+</div>
+      <div className="bg-white p-4 rounded-lg shadow-md max-w-6xl mx-auto mb-12 d-flex justify-center">
+        {/* <div className="text-center text-3xl font-bold mb-4">Meet Our Contributors</div> */}
+        <Contributors />
       </div>
       {/* Call to Action */}
       <Box sx={{ py: 6, textAlign: 'center' }}>
