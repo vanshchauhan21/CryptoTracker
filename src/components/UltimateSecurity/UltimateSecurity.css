@@ -1,0 +1,58 @@
+.ultimate-security-section {
+    padding: 2rem;
+
+  }
+  
+  .ultimate-security-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+
+
+
+  .ultimate-security-title b {
+    background-image: linear-gradient(135deg, #9b59b6, #4db1fd, #5843f4);
+    background-clip: text;
+    -webkit-background-clip: text; /* For WebKit browsers */
+    color: transparent;
+}
+
+  .ultimate-security-description {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 0.5rem;
+  }
+  
+  .ultimate-security-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .security-feature-item {
+    display: flex;
+    align-items: flex-start;
+    max-width: 300px;
+    gap: 1rem;
+    text-align: left;
+  }
+  
+  .security-feature-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .security-feature-title {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .security-feature-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.3rem;
+  }
+  

@@ -99,6 +99,7 @@ const Footer = () => {
               { path: "/compare", label: "Compare" },
               { path: "/watchlist", label: "Watchlist" },
               { path: "/dashboard", label: "Dashboard" },
+              { path: "/Porfolio", label: "Portfolio" },
 
               { path: "/blog", label: "Blog" },
 
@@ -151,12 +152,20 @@ const Footer = () => {
                 label: "Profit Return Calculator",
               },
               {
+                path: "/calculators/BreakEvenCalculator",
+                label: "BreakEvenCalculator",
+              },
+              {
                 path: "/calculators/investment-return-calculator",
                 label: "Investment Return Calculator",
               },
               {
                 path: "/calculators/PercentageChangeCalculator",
                 label: "PercentageChangeCalculator",
+              },
+              {
+                path: "/calculators/SIPCalculator",
+                label: "SIPCalculator",
               },
               {
                 path: "/calculators/impermanent-loss-calculator",
@@ -186,6 +195,18 @@ const Footer = () => {
               {
                 path: "/calculators/InterestRateChangeEstimator",
                 label: "Interest Rate Change Estimator",
+              },
+              {
+                path: "/calculators/ICOIDOPerformanceTracker ",
+                label: "ICO/IDO Performance Tracker",
+              },
+              {
+                path: "/calculators/CrossChainBridgeFeeOptimizer",
+                label: "Cross-Chain Bridge Fee Optimizer",
+              },
+              {
+                path: "/calculators/CustomizableCryptoWatchlist",
+                label: "Customizable Crypto Watchlist",
               },
               {
                 path: "/calculators/MarginCalculator",

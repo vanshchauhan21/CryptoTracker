@@ -120,4 +120,36 @@
     font-size: 18px;
     font-weight: bold;
   }
-  
+  .info-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for the info section */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.info-section h2 {
+    font-size: 1.8rem;
+    color: #333; /* Dark text for headings */
+    margin-bottom: 10px;
+}
+
+.info-section h3 {
+    font-size: 1.5rem;
+    color: #555; /* Slightly lighter color for subheadings */
+    margin-top: 15px;
+}
+
+.info-section p,
+.info-section ul {
+    color: #666; /* Dark gray for text */
+    line-height: 1.6; /* Improved readability */
+}
+
+.info-section ul {
+    margin-left: 20px; /* Indentation for list */
+}
+
+.info-section li {
+    margin-bottom: 5px; /* Spacing between list items */
+}

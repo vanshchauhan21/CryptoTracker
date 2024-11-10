@@ -86,7 +86,24 @@ function GasFeeEstimator() {
           )}
         </div>
       </div>
-    </div>
+      <div className="info-section">
+          <h2>Understanding Gas Fees</h2>
+          <p>
+            Gas fees are payments made by users to compensate for the computing energy required to process transactions on the Ethereum blockchain. 
+            These fees are essential for ensuring that transactions are prioritized and processed by miners.
+          </p>
+          <h3>Factors Affecting Gas Fees</h3>
+          <ul>
+            <li>Network congestion: Higher activity on the network can lead to increased fees.</li>
+            <li>Transaction complexity: More complex transactions require more computational resources.</li>
+            <li>Gas price: The price per unit of gas you are willing to pay can influence how quickly your transaction is processed.</li>
+          </ul>
+          <p>
+            To minimize gas fees, consider using the network during off-peak hours and optimizing your transactions.
+          </p>
+        </div>
+      </div>
+    // </div>
   );
 }
 
