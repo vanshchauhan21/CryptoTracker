@@ -56,7 +56,7 @@
   input {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     border: 1px solid var(--input-border-light);
     border-radius: 5px;
     background-color: var(--bg-light);
@@ -73,7 +73,7 @@
   
   /* Button styling */
   button {
-    width: 100%;
+    /* width: 100%; */
     padding: 12px;
     background-color: var(--button-bg-light);
     color: var(--button-text);
