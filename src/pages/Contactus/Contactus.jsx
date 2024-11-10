@@ -5,6 +5,7 @@ import toast, { Toaster } from "react-hot-toast";
 import Lottie from "react-lottie";
 import animationData from "./contact.json";
 import "./contact.css";
+
 const Contactus = () => {
   const [formData, setFormData] = useState({
     Name: "",
@@ -12,8 +13,7 @@ const Contactus = () => {
     Message: "",
   });
   const [loading, setLoading] = useState(false);
-  const [mode, setMode] = useState(false);
-  const theme = localStorage.getItem("theme");
+  const [mode, setMode] = useState(localStorage.getItem("theme") === "dark");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -47,10 +47,16 @@ const Contactus = () => {
   };
 
   useEffect(() => {
-    if (theme === "dark") {
-      setMode(true);
-    }
-  }, [theme]);
+    const handleThemeChange = () => {
+      setMode(localStorage.getItem("theme") === "dark");
+    };
+
+    window.addEventListener("storage", handleThemeChange);
+
+    return () => {
+      window.removeEventListener("storage", handleThemeChange);
+    };
+  }, []);
 
   const defaultOptions = {
     loop: true,
