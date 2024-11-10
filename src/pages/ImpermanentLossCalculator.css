@@ -188,3 +188,47 @@
   background-color:#2c2c2c;
   color: #ffffff;
 }
+.give-us-star {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.give-us-star:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.star-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.star-description {
+  margin: 10px 0;
+  color: #666;
+  font-size: 16px;
+}
+
+.star-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.star-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
