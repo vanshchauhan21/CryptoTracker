@@ -4,9 +4,10 @@
     padding: 20px;
     max-width: 1200px; /* Center the container */
     margin: auto; /* Center align the container */
-    background-color: #f9f9f9; /* Light background for contrast */
+    /* background-color: #f9f9f9; Light background for contrast */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
 }
 
 .trending-list {
@@ -16,29 +17,39 @@
 }
 
 .news-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
     gap: 16px;
-    justify-content: center; /* Center the news cards */
+    justify-items: center; /* Center-align the news cards */
+
 }
 
 .news-card {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 16px;
+    align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 300px; /* Set a fixed width for news cards */
+    width: 100%; /* Make the card responsive to the grid layout */
+    max-width: 300px; /* Limit maximum width of each card */
     transition: transform 0.2s; /* Smooth hover effect */
+    background: linear-gradient(135deg, #9b59b6, #4db1fd, #5843f4);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
+
 
 .news-card:hover {
     transform: scale(1.02); /* Slight zoom on hover */
 }
 
 .news-image {
-    width: 100%;
+    width: 80%;
     height: auto;
     border-radius: 4px;
+    display: block;
+    margin: 0 auto;
 }
 
 .news-title {
@@ -86,4 +97,10 @@
 .pagination button:disabled {
     background-color: #ddd; /* Light gray for disabled */
     cursor: not-allowed; /* Change cursor for disabled */
+}
+
+
+.news-button{
+    background-color: black;
+    color: white;
 }
