@@ -85,6 +85,7 @@ import BitCoinRainBowCharDetail from "./pages/BitCoinRainBow/BitCoinRainBowCharD
 
 import TrackNFTs from "./pages/TrackNFT/TrackNFTs.js";
 import InvestmentReturnCalculator from "./pages/Useful Tools/Investmentreturncalculator.js";
+import InterestRateChangeEstimator from "./pages/rce.js";
 
 
 
@@ -197,6 +198,7 @@ function App() {
                   <Route path="crypto-converter" element={<CryptoConverter />} />
                   <Route path="CompoundInterestCalculator" element={<CompoundInterestCalculator />} />
                   <Route path="MarginCalculator" element={<MarginCalculator />} />
+                  <Route path="InterestRateChangeEstimator" element={<InterestRateChangeEstimator />} />
                 </Route>
 
                 <Route path="/charts">
@@ -332,7 +334,6 @@ function App() {
         <div className="footbelow">
           <Footer />
         </div>
-        <BackToTopButton />
       </I18nextProvider>
     </>
   );
