@@ -330,7 +330,7 @@ function App() {
 
                 <Route path="/methodology" element={<Methodology />} />
 
-              </Routes>
+           
 
                 <Route path="/sitemap" element={<Sitemap />} />
 
@@ -339,6 +339,7 @@ function App() {
                 <Route path="/careers" element={<Careers />} /> 
                 <Route path="/ultimate-crypto-portfolio-tracker" element={<UltimateCryptoPortfolioTracker />} />
 
+             {/* <Routes /> */}
              </Routes>
 
 
