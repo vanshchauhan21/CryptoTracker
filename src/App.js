@@ -100,6 +100,7 @@ import CrossChainBridgeFeeOptimizer from "./pages/bfo.js";
 
 
 import BackToTopButton from "./components/BackToTopButton/BackToTopButton.js";
+import PortFolio from "./pages/Portfolio/PortFolio.js";
 
 function App() {
   const theme = createTheme({
@@ -340,6 +341,9 @@ function App() {
                   element={<UltimateCryptoPortfolioTracker />}
                 />
                 <Route path="/sitemap" element={<Sitemap />} />
+                
+                <Route path="/Porfolio" element={<PortFolio />} />
+
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>
             </BrowserRouter>
