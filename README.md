@@ -20,6 +20,24 @@ CryptoTracker is a web application that allows users to track and monitor crypto
 - 🗃️ **Git**: Version control for tracking code changes.
 - 🧑‍💻 **GitHub**: Collaboration and hosting repository for the project.
 
+# Table of Contents
+
+1. [Project Overview](#project-overview)
+2. [Tech Stack](#🛠️-tech-stack)
+3. [Features](#features)
+4. [Getting Started](#getting-started)
+   - [Prerequisites](#prerequisites)
+   - [Installation](#installation)
+5. [Running Locally](#running-locally)
+6. [Contributing](#🚀-how-to-contribute-to-this-project-🚀)
+   - [Contribution Steps](#contribution-steps)
+7. [GitHub Repository Stats](#📈-github-repository-stats)
+8. [License](#📄-license)
+9. [Connect with Us](#connect-with-us-🤝)
+10. [Contributors](#💗-contributors)
+11. [Stargazers and Forkers](#stargazers-❤️)
+12. [Back to Top](#back-to-top)
+
 
 ## ✨ Features 
 
