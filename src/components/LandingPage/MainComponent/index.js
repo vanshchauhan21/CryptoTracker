@@ -31,6 +31,7 @@ import PortfolioComparison from "../../../pages/AnalyzeAssets/PortfolioCompariso
 
 import SwapWithBestRates from "../../SwapWithBestRates/SwapWithBestRates";
 import PlatformStatistics from "../../PlatformStatistics/PlatformStatistics";
+import UltimateSecurity from "../../UltimateSecurity/UltimateSecurity";
 
 
 function MainComponent() {
@@ -154,6 +155,8 @@ function MainComponent() {
       {/* ................................................Platform statistics.............. */}
       <PlatformStatistics />
 
+      {/* ..............................................UltimateSecurity............ */}
+<UltimateSecurity />
     </div>
   );
 }
