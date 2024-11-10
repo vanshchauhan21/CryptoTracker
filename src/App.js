@@ -204,6 +204,11 @@ function App() {
                 <Route path="/fear-and-greed" element={<FearAndGreedIndex />} />
                 <Route path="/affiliate-program" element={<AffiliateProgram />} />
                 <Route path="/methodology" element={<Methodology />} />
+
+             
+
+                <Route path="/sitemap" element={<Sitemap />} />
+                <Route path="/methodology" element={<Methodology />} />
                 <Route path="/earn" element={<Earn />} />
                 <Route path="/careers" element={<Careers />} />
                 <Route path="/ultimate-crypto-portfolio-tracker" element={<UltimateCryptoPortfolioTracker />} />
