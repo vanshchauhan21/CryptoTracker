@@ -49,6 +49,7 @@ import NFTShowcase from "./pages/NFTShowcase/NFTShowcase";
 import { Helmet } from "react-helmet";
 import CompoundInterestCalculator from "./pages/CompoundInterestCalculator.js";
 import MarginCalculator from "./pages/MarginCalculator.js";
+import CustomizableCryptoWatchlist from "./pages/ccw.js";
 
 import Sitemap from './pages/Sitemap/Sitemap';
 
@@ -87,6 +88,7 @@ import TrackNFTs from "./pages/TrackNFT/TrackNFTs.js";
 import InvestmentReturnCalculator from "./pages/Useful Tools/Investmentreturncalculator.js";
 import InterestRateChangeEstimator from "./pages/rce.js";
 import ICOIDOPerformanceTracker from "./pages/ico.js";
+import CrossChainBridgeFeeOptimizer from "./pages/bfo.js";
 
 
 
@@ -201,6 +203,8 @@ function App() {
                   <Route path="MarginCalculator" element={<MarginCalculator />} />
                   <Route path="ICOIDOPerformanceTracker" element={<ICOIDOPerformanceTracker/>} />
                   <Route path="InterestRateChangeEstimator" element={<InterestRateChangeEstimator />} />
+                  <Route path="CustomizableCryptoWatchlist" element={<CustomizableCryptoWatchlist />} />
+                  <Route path="CrossChainBridgeFeeOptimizer" element={<CrossChainBridgeFeeOptimizer />} />
                 </Route>
 
                 <Route path="/charts">

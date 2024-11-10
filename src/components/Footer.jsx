@@ -168,6 +168,14 @@ const Footer = () => {
                 label: "ICO/IDO Performance Tracker",
               },
               {
+                path: "/calculators/CrossChainBridgeFeeOptimizer",
+                label: "Cross-Chain Bridge Fee Optimizer",
+              },
+              {
+                path: "/calculators/CustomizableCryptoWatchlist",
+                label: "Customizable Crypto Watchlist",
+              },
+              {
                 path: "/calculators/MarginCalculator",
                 label: "MarginCalculator",
               },
