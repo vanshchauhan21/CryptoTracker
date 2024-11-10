@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./CompoundInterestCalculator.css";
 import Header from "../components/Common/Header";
+import MasterTheMath from './CompoundInterestCalculator/MasterTheMath';
 
 function CompoundInterestCalculator() {
   const [principal, setPrincipal] = useState("");
@@ -77,6 +78,7 @@ function CompoundInterestCalculator() {
           </div>
         )}
       </div>
+      <MasterTheMath />
     </div>
   );
 }
