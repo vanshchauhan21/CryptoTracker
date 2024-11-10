@@ -38,59 +38,46 @@ import Contactus from "./pages/Contactus/Contactus";
 import CookiesPolicy from "./pages/CookiesPolicy";
 import Aboutus from "./pages/Aboutus/Aboutus";
 import CookiePolicy from "./pages/Cookie-Policy/CookiePolicy";
-
 import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator";
 import ImpermanentLossCalculator from "./pages/ImpermanentLossCalculator";
-import DividendCalculator  from "./pages/DividendCalculator";
+import DividendCalculator from "./pages/DividendCalculator";
 import ProfitLoss from "./pages/ProfitLoss/ProfitLoss";
 import Cryptocard from "./pages/CryptoCard/Cryptocard";
 import CryptoQuiz from './pages/CryptoQuiz/CryptoQuiz';
-import Footer from "./components/Footer";
+import Footer from "./components/Footer.jsx";
 import NFTShowcase from "./pages/NFTShowcase/NFTShowcase";
 import { Helmet } from "react-helmet";
 import CompoundInterestCalculator from "./pages/CompoundInterestCalculator.js";
 import Cryptofiat from "./pages/Cryptofiat.js";
 import MarginCalculator from "./pages/MarginCalculator.js";
 import CompoundStaking from "./pages/cics.js";
-
 import Sitemap from './pages/Sitemap/Sitemap';
-
-
 import Methodology from './pages/Methodology/Methodology';
 import Careers from "./pages/Careers";
-
-
 import Cryptoreward from "./pages/Cryptoreward/Cryptoreward";
-
-// import Reward from "./pages/Reward/Reward.js";
 import BTCDominance from "./pages/BTCDominance/BTCDominance";
 import MarketUpdate from "./pages/MarketUpdate/MarketUpdate.js";
 import HelpCenter from "./pages/HelpCenter/HelpCenter.js";
 import UltimateCryptoPortfolioTracker from './pages/UltimateCryptoPortfolioTracker/UltimateCryptoPortfolioTracker';
 import WhatsTrending from "./pages/WhatsTrending/WhatsTrending.js";
-
-
-// import WhatsTrending from "./pages/WhatsTrending/WhatsTrending.js";
-
-
 import DefiAssets from "./pages/DefiAssets/DefiAssets.js";
 import CryptoPrices from "./pages/cryptoPrice/cryptoPrice.js";
 import Blog from "./pages/Blogs/Blog.js";
-// import Blog from './pages/Blog/Blog';
 import Crypto24HourReport from "./pages/CryptoMarket24h/Crypto24HourReport.js";
 import GeminiChat from "./pages/GeminiAIChat/GeminiAIChat.jsx";
-
-
 import FearAndGreedIndex from './pages/FearAndGreedIndex/FearAndGreedIndex';
 import Earn from './pages/Earn/Earn';
-
 import BitCoinRainBowCharDetail from "./pages/BitCoinRainBow/BitCoinRainBowCharDetail.js";
 import AffiliateProgram from './pages/AffiliateProgram/AffiliateProgram';
 import TrackNFTs from "./pages/TrackNFT/TrackNFTs.js";
 import InvestmentReturnCalculator from "./pages/Useful Tools/Investmentreturncalculator.js";
+
 import InterestRateChangeEstimator from "./pages/rce.js";
 
 
+
+
+import BackToTopButton from "./components/BackToTopButton/BackToTopButton.js";
 
 
 function App() {
@@ -102,11 +89,10 @@ function App() {
     },
   });
 
-  // Use useRef to keep track of the cursor element
   const cursorRef = useRef(null);
 
   useEffect(() => {
-    const cursor = cursorRef.current; // Access the cursor DOM element
+    const cursor = cursorRef.current;
 
     const moveCursor = (e) => {
       cursor.style.left = `${e.clientX}px`;
@@ -121,18 +107,16 @@ function App() {
       cursor.style.transform = "scale(1)";
     };
 
-    // Attach event listeners
     document.body.addEventListener("mousemove", moveCursor);
     document.body.addEventListener("mousedown", handleMouseDown);
     document.body.addEventListener("mouseup", handleMouseUp);
 
-    // Cleanup event listeners on component unmount
     return () => {
       document.body.removeEventListener("mousemove", moveCursor);
       document.body.removeEventListener("mousedown", handleMouseDown);
       document.body.removeEventListener("mouseup", handleMouseUp);
     };
-  }, []); // Empty dependency array means this runs once on mount
+  }, []);
 
   return (
     <>
@@ -165,181 +149,83 @@ function App() {
           <ThemeProvider theme={theme}>
             <BrowserRouter>
               <Routes>
-
-
-
-
-                {/* Please Follow Best  Practice Everyone.................. */}
-                {/* ...................................Explore Links  Routes.................. */}
-
                 <Route path="/" element={<Home />} />
                 <Route path="/compare" element={<Compare />} />
                 <Route path="/watchlist" element={<Watchlist />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/pricing" element={<Pricing />} />
-                <Route path="/Contributors" element={<Contributors />} />
-
-                {/* <Route path="/crypto-blog" element={<Blog />} /> */}
-                {/* <Route path="/blog" component={Blog} />  */}
-
+                <Route path="/contributors" element={<Contributors />} />
                 <Route path="/blog" element={<Blog />} />
-
-                {/* <Route path="/earn" element={<Earn />} /> */}
-
-
-
-
-                {/* ..........................Please Follow Best  Practice Everyone.................. */}
-                {/* ...................................Useful Links  Routes.................. */}
                 <Route path="/calculators">
                   <Route path="crypto-profit-calculator" element={<CryptoProfitCalculator />} />
                   <Route path="profit-return-calculator" element={<ProfitReturnCalculator />} />
-                  <Route path="investment-return-calculator" element={<InvestmentReturnCalculator/>} />
+                  <Route path="investment-return-calculator" element={<InvestmentReturnCalculator />} />
                   <Route path="impermanent-loss-calculator" element={<ImpermanentLossCalculator />} />
-                  <Route path="DividendCalculator" element={<DividendCalculator />} />
+                  <Route path="dividend-calculator" element={<DividendCalculator />} />
                   <Route path="crypto-converter" element={<CryptoConverter />} />
+
                   <Route path="Cryptofiat" element={<Cryptofiat/>} />
                   <Route path="CompoundInterestCalculator" element={<CompoundInterestCalculator />} />
                   <Route path="MarginCalculator" element={<MarginCalculator />} />
                   <Route path="InterestRateChangeEstimator" element={<InterestRateChangeEstimator />} />
-                </Route>
+=======
+                  <Route path="cryptofiat" element={<Cryptofiat />} />
+                  <Route path="compound-interest-calculator" element={<CompoundInterestCalculator />} />
+                  <Route path="margin-calculator" element={<MarginCalculator />} />
+                  <Route path="compound-staking" element={<CompoundStaking />} />
 
+                </Route>
                 <Route path="/charts">
                   <Route path="bitcoin-rainbow-chart" element={<BitcoinRainbowChart />} />
                   <Route path="bitcoin-rainbow-chart-detail" element={<BitCoinRainBowCharDetail />} />
                   <Route path="ethereum-rainbow-chart" element={<EthereumRainbowChart />} />
-
                 </Route>
-
-
-
-
                 <Route path="/market">
                   <Route path="currency-market-24h" element={<Crypto24HourReport />} />
                   <Route path="btc-dominance" element={<BTCDominance />} />
                 </Route>
-
-
-
                 <Route path="/coin/:id" element={<Coin />} />
                 <Route path="/learn" element={<Learn />} />
                 <Route path="/geminiChat" element={<GeminiChat />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
-
-
-
-
-
-
-
                 <Route path="/nft" element={<NFTShowcase />} />
                 <Route path="/contactus" element={<Contactus />} />
-                <Route path="/aboutus" element={<Aboutus />} />
-
-
-
-
-
-
-
-
-
-
-                {/* ...........................policies.............. */}
-
+                <Route path="/about us" element={<Aboutus />} />
                 <Route path="/disclaimer" element={<Disclaimer />} />
-                <Route path="/terms-of-Use" element={<TermsOfUse />} />
+                <Route path="/terms-of-use" element={<TermsOfUse />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/code-of-conduct" element={<CodeOfConduct />} />
                 <Route path="/cookies-policy" element={<CookiesPolicy />} />
                 <Route path="/terms-conditions" element={<TermCondition />} />
                 <Route path="/faq" element={<Faq />} />
-                <Route path="/Feedback" element={<Feedback />} />
+                <Route path="/feedback" element={<Feedback />} />
                 <Route path="/refund-policy" element={<RefundPolicy />} />
-
-
-                {/* ..........................News................... */}
                 <Route path="/what's-trending" element={<WhatsTrending />} />
                 <Route path="/market-update" element={<MarketUpdate />} />
-
-
-
-                {/* ........................Support......................... */}
-
-                <Route path="/help-center" element={<HelpCenter />} />
                 <Route path="/help-center" element={<HelpCenter />} />
                 <Route path="/defi-assets" element={<DefiAssets />} />
                 <Route path="/profit-loss" element={<ProfitLoss />} />
                 <Route path="/crypto-reward" element={<Cryptoreward />} />
-                <Route path="cryptocard" element={<Cryptocard />} />
+                <Route path="/cryptocard" element={<Cryptocard />} />
                 <Route path="/track-nft" element={<TrackNFTs />} />
-
-
-
-
-
-
-
-
-
-
                 <Route path="/crypto-news" element={<CryptoNews />} />
-
                 <Route path="/cryptoprice" element={<CryptoPrices />} />
-
-                <Route path="/CryptoMarket" element={<CryptoMarket />} />
-
-
-
-
-
-
-
-                <Route
-                  path="CryptoProfitCalculator"
-                  element={<CryptoProfitCalculator />}
-                />
-
-
-
-
-
-
-
-                <Route
-                  path="/ProfitReturnCalculator"
-                  element={<ProfitReturnCalculator />}
-                />
-
-                <Route path="CryptoConverter" element={<CryptoConverter />} />
+                <Route path="/cryptomarket" element={<CryptoMarket />} />
                 <Route path="/cookie-policy" element={<CookiePolicy />} />
-
-                <Route path="/GoogleTranslate" element={<GoogleTranslate />} />
-
-
-
-                <Route path="*" element={<NotFoundPage />} />
+                <Route path="/google-translate" element={<GoogleTranslate />} />
                 <Route path="/crypto-quiz" element={<CryptoQuiz />} />
                 <Route path="/fear-and-greed" element={<FearAndGreedIndex />} />
-
-
                 <Route path="/affiliate-program" element={<AffiliateProgram />} />
-
                 <Route path="/methodology" element={<Methodology />} />
-
-             
-
                 <Route path="/sitemap" element={<Sitemap />} />
-
                 <Route path="/methodology" element={<Methodology />} />
-                <Route path="/earn" element={<Earn />} /> 
-                <Route path="/careers" element={<Careers />} /> 
+                <Route path="/earn" element={<Earn />} />
+                <Route path="/careers" element={<Careers />} />
                 <Route path="/ultimate-crypto-portfolio-tracker" element={<UltimateCryptoPortfolioTracker />} />
-
-             </Routes>
-
-
+                <Route path="/sitemap" element={<Sitemap />} />
+                <Route path="*" element={<NotFoundPage />} />
+              </Routes>
             </BrowserRouter>
           </ThemeProvider>
         </div>
