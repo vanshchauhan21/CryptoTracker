@@ -86,6 +86,7 @@ import BitCoinRainBowCharDetail from "./pages/BitCoinRainBow/BitCoinRainBowCharD
 import AffiliateProgram from "./pages/AffiliateProgram/AffiliateProgram";
 import TrackNFTs from "./pages/TrackNFT/TrackNFTs.js";
 import InvestmentReturnCalculator from "./pages/Useful Tools/Investmentreturncalculator.js";
+import BreakEvenCalculator from "./pages/BreakEvenCalculator";
 
 import InterestRateChangeEstimator from "./pages/rce.js";
 
@@ -232,6 +233,7 @@ function App() {
                   />
                   <Route path="crypto-profit-calculator" element={<CryptoProfitCalculator />} />
                   <Route path="profit-return-calculator" element={<ProfitReturnCalculator />} />
+                  <Route path="BreakEvenCalculator" element={<BreakEvenCalculator />} />
                   <Route path="SIPCalculator" element={<SIPCalculator />} />
                   <Route path="investment-return-calculator" element={<InvestmentReturnCalculator />} />
                   <Route path="impermanent-loss-calculator" element={<ImpermanentLossCalculator />} />
