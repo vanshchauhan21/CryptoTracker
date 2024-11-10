@@ -111,6 +111,20 @@ const ImpermanentLossCalculator = () => {
         ))}
       </div>
       <Feedback />
+      <div className="give-us-star">
+        <h2 className="star-title">Give Us a Star!</h2>
+        <p className="star-description">
+          If you found this calculator helpful, please consider giving us a star on GitHub!
+        </p>
+        <a
+          href="https://github.com/your-repo-url" // Replace with your GitHub repository URL
+          target="_blank"
+          rel="noopener noreferrer"
+          className="star-button"
+        >
+          ⭐ Give a Star
+        </a>
+      </div>
     </div>
   );
 };
