@@ -26,6 +26,10 @@
   color: #6610f2;
   margin-bottom: 0.5rem;
 }
+.section:hover h2 {
+  color: #10f279; 
+  transition: color 0.3s ease; 
+}
 
 .formula {
   padding: 1rem;
