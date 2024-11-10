@@ -165,7 +165,7 @@ const Footer = () => {
 
                 path: "/calculators/dollar-cost-averaging",
                 label: "Dollar cost averaging Calculator",
-=======
+
                 path: "/calculators/GasFreeEstimator",
                 label: " Gas Free Estimator",
 
