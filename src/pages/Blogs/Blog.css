@@ -9,6 +9,7 @@
     background: #f9f9f9; 
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5%;
 }
 
 .blog-container h1 {
@@ -48,3 +49,5 @@
         flex-direction: column; 
     }
 }
+[data-theme="dark"] .blog-container { background: #121212; }
+[data-theme="dark"] .sidebar { background: #2a2a2a; }
