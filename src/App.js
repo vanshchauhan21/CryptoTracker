@@ -45,10 +45,10 @@ import DollarCostAveraging from "./pages/dca.js";
 
 
 
-import DividendCalculator  from "./pages/DividendCalculator";
+// import DividendCalculator  from "./pages/DividendCalculator";
 import GasFreeEstimator  from "./pages/gfe.js";
 
-// import DividendCalculator from "./pages/DividendCalculator";
+import DividendCalculator from "./pages/DividendCalculator";
 
 import ProfitLoss from "./pages/ProfitLoss/ProfitLoss";
 import Cryptocard from "./pages/CryptoCard/Cryptocard";
@@ -87,6 +87,7 @@ import TrackNFTs from "./pages/TrackNFT/TrackNFTs.js";
 import InvestmentReturnCalculator from "./pages/Useful Tools/Investmentreturncalculator.js";
 
 import InterestRateChangeEstimator from "./pages/rce.js";
+
 
 
 
@@ -165,7 +166,6 @@ function App() {
           <ThemeProvider theme={theme}>
             <BrowserRouter>
               <Routes>
-                
                 <Route path="/" element={<Home />} />
                 <Route path="/compare" element={<Compare />} />
                 <Route path="/watchlist" element={<Watchlist />} />
@@ -181,13 +181,12 @@ function App() {
 
                   <Route path="dollar-cost-averaging" element={<DollarCostAveraging />} />
 
-                   <Route path="DividendCalculator" element={<DividendCalculator />} />
+     <Route path="DividendCalculator" element={<DividendCalculator />} />
                   <Route path="GasFreeEstimator" element={<GasFreeEstimator />} />
 
                   <Route path="dividend-calculator" element={<DividendCalculator />} />
 
                   <Route path="crypto-converter" element={<CryptoConverter />} />
-
 
 
                   <Route path="Cryptofiat" element={<Cryptofiat/>} />
@@ -204,7 +203,6 @@ function App() {
                   <Route path="compound-interest-calculator" element={<CompoundInterestCalculator />} />
                   <Route path="margin-calculator" element={<MarginCalculator />} />
                   <Route path="compound-staking" element={<CompoundStaking />} />
-
 
 
 
