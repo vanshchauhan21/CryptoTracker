@@ -1,0 +1,45 @@
+.platform-statistics-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .platform-statistics-item {
+    flex: 1;
+    min-width: 220px;
+    max-width: 250px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px linear-gradient(135deg, #9b59b6, #4db1fd, #5843f4);;
+
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .platform-statistics-header {
+    margin: 0;
+  }
+  
+  .platform-statistics-inner {
+    font-family: Arial, sans-serif;
+  }
+  
+  .platform-statistics-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .platform-statistics-highlighted {
+   background:linear-gradient(135deg, #9b59b6, #4db1fd, #5843f4);
+   padding: 0.5rem;
+  }
+  
+  .platform-statistics-description {
+    font-size: 1em;
+    color: #666;
+    margin-top: 8px;
+  }
+  
