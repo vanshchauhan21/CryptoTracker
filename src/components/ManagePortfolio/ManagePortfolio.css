@@ -1,0 +1,59 @@
+.manage-portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 5rem ;
+margin: 3rem 5rem;
+    /* border: 2px solid red; */
+ 
+  }
+  
+  .manage-portfolio__heading-wrapper {
+    margin-bottom: 16px;
+  }
+  
+  .manage-portfolio__title-container {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  
+  .manage-portfolio__title {
+    margin: 0;
+    line-height: 1.4;
+    color: white;
+  }
+  .manage-portfolio__title b {
+    background-image: linear-gradient(135deg, #9b59b6, #4db1fd, #5843f4);
+    background-clip: text;
+    -webkit-background-clip: text; /* For WebKit browsers */
+    color: transparent;
+}
+  .manage-portfolio__get-started-button {
+    padding: 8px 16px;
+ max-width: 300px;
+    background: linear-gradient(135deg, #9b59b6, #4db1fd, #5843f4);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 16px 0;
+    transition: background-color 0.3s;
+  }
+  
+  .manage-portfolio__get-started-button:hover {
+    background: linear-gradient(135deg, #9b59b6, #4db1fd, #90f443);
+  }
+  
+  .manage-portfolio__banner {
+    margin-top: 24px;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .manage-portfolio__banner img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  

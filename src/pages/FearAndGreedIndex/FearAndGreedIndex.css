@@ -311,34 +311,63 @@ h1 {
 .information-section {
   margin-top: 30px;
   padding: 20px;
-  border: 1px solid #ddd; /* Light border */
+  border: 1px solid #ddd; 
   border-radius: 8px;
-  background: #f9f9f9; /* Light background */
+  background: #f9f9f9; 
+  transition: background 0.3s, color 0.3s; 
 }
 
 .information-section h2 {
-  color: #6610f2; /* Heading color */
+  color: #6610f2; 
   font-size: 2.5em;
   margin-bottom: 1rem;
 }
 
 .information-section h3 {
-  color: #333; /* Subheading color */
+  color: #333; 
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
 .information-section p,
 .information-section ul {
-  color: #333; /* Text color */
+  color: #333; 
   line-height: 1.6;
   margin-bottom: 1rem;
 }
 
 .information-section ul {
-  padding-left: 20px; /* Indentation for lists */
+  padding-left: 20px;
 }
 
 .information-section ul li {
-  margin-bottom: 0.5rem; /* Spacing between list items */
+  margin-bottom: 0.5rem; 
+}
+
+/* Dark mode styles */
+[data-theme="dark"] .information-section {
+  background: #2a2a2a; 
+  border: 1px solid #444; 
+  color: #e0e0e0; 
+}
+
+[data-theme="dark"] .information-section h2 {
+  color: #4a90e2;
+}
+
+[data-theme="dark"] .information-section h3 {
+  color: #e0e0e0; 
+}
+
+[data-theme="dark"] .information-section p,
+[data-theme="dark"] .information-section ul {
+  color: #e0e0e0; 
+}
+
+[data-theme="dark"] .information-section ul {
+  padding-left: 20px; 
+}
+
+[data-theme="dark"] .information-section ul li {
+  margin-bottom: 0.5rem; 
 }
