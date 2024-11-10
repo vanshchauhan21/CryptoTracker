@@ -49,6 +49,7 @@ import Footer from "./components/Footer";
 import NFTShowcase from "./pages/NFTShowcase/NFTShowcase";
 import { Helmet } from "react-helmet";
 import CompoundInterestCalculator from "./pages/CompoundInterestCalculator.js";
+import Cryptofiat from "./pages/Cryptofiat.js";
 import MarginCalculator from "./pages/MarginCalculator.js";
 import CompoundStaking from "./pages/cics.js";
 
@@ -199,6 +200,7 @@ function App() {
                   <Route path="impermanent-loss-calculator" element={<ImpermanentLossCalculator />} />
                   <Route path="DividendCalculator" element={<DividendCalculator />} />
                   <Route path="crypto-converter" element={<CryptoConverter />} />
+                  <Route path="Cryptofiat" element={<Cryptofiat/>} />
                   <Route path="CompoundInterestCalculator" element={<CompoundInterestCalculator />} />
                   <Route path="MarginCalculator" element={<MarginCalculator />} />
                   <Route path="CompoundStaking" element={<CompoundStaking />} />
@@ -313,7 +315,6 @@ function App() {
                 />
 
                 <Route path="CryptoConverter" element={<CryptoConverter />} />
-
                 <Route path="/cookie-policy" element={<CookiePolicy />} />
 
                 <Route path="/GoogleTranslate" element={<GoogleTranslate />} />
