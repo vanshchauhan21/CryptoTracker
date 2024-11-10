@@ -1,34 +1,20 @@
-/* Card.css */
+/* Base Card Styles */
 .card {
   position: relative;
   border-radius: 20px;
   padding: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  background-color: black;
-  color:white;
-  /* border:blue; */
   transition: all 0.3s ease;
-  border:2px solid #3a80e9;
+  border: 2px solid;
   padding-bottom: 40px;
   margin-bottom: 30px;
-
-display: flex ;
-flex-direction: column;
-}
-
-
-.card.highlighted {
-  background-color: black; /* Dark background for highlighted card */
-  color: white;
-  border: 2px solid #3a80e9;
-  padding-bottom: 40px;
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #3a80e9; /* Indigo color */
 }
 
 .card-price {
@@ -40,19 +26,16 @@ flex-direction: column;
 .price {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #61c96f;
+  animation: priceGlow 2s ease-in-out infinite alternate;
 }
 
 .per-month {
   font-size: 1rem;
-  color: white; 
-  
 }
 
 .card-description {
   margin-top: 15px;
-  font-size: 1rem;
-  color: white;
+  font-size: 1.3rem;
   line-height: 1.5;
 }
 
@@ -66,11 +49,9 @@ flex-direction: column;
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-  color: white;
 }
 
 .checkmark {
-  color: green; /* Green checkmark */
   margin-right: 5px;
 }
 
@@ -80,16 +61,12 @@ flex-direction: column;
   padding: 10px;
   text-align: center;
   border-radius: 5px;
-  background-color:  #3a80e9;/* Indigo color */
-  color: white;
   text-decoration: none;
   transition: all 0.3s ease;
-  margin-top: auto; 
+  margin-top: auto;
 }
 .card-button:hover {
-  background-color: #2d65b9; /* Darker blue for button hover */
   transform: translateY(-2px);
-   color:black;
 }
 
 /* Hover effect for the entire card */
@@ -98,47 +75,111 @@ flex-direction: column;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Highlighted card styles */
-.card.highlighted {
-  color:black;
-  border: 2px solid #3a80e9; /* Blue border for highlighted card */
+/* Light Mode */
+[data-theme="light"] .card {
+  background-color: white;
+  color: black;
+  border-color: #3a80e9;
+}
+
+[data-theme="light"] .card-title {
+  font-size: 1.8rem;
+  color: #3a80e9; /* Indigo color */
+}
+
+[data-theme="light"] .price {
+  color: #61c96f; /* Green color */
+}
+
+[data-theme="light"] .per-month,
+[data-theme="light"] .card-description,
+[data-theme="light"] .feature-item,
+[data-theme="light"] .checkmark {
+  color: black;
+}
+
+[data-theme="light"] .checkmark {
+  color: green; /* Green checkmark */
+}
+
+[data-theme="light"] .card-button {
+  background-color: #3a80e9; /* Indigo color */
+  color: white;
+}
+
+[data-theme="light"] .card-button:hover {
+  background-color: #2d65b9; /* Darker blue */
+  color: black;
+}
+
+/* Dark Mode */
+[data-theme="dark"] .card {
+  background-color: black;
+  color: white;
+  border-color: #3a80e9;
+}
+
+[data-theme="dark"] .card-title {
+  font-size: 1.8rem;
+  color: #3a80e9;
+}
+
+[data-theme="dark"] .price {
+  color: #61c96f;
+}
+
+[data-theme="dark"] .per-month,
+[data-theme="dark"] .card-description,
+[data-theme="dark"] .feature-item,
+[data-theme="dark"] .checkmark {
+  color: white;
+}
+
+[data-theme="dark"] .checkmark {
+  color: #61c96f; /* Light green checkmark */
+}
+
+[data-theme="dark"] .card-button {
+  background-color: #3a80e9;
+  color: white;
+}
+
+[data-theme="dark"] .card-button:hover {
+  background-color: #2d65b9;
+  color: white;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
   .card {
-      width: 100%;
-      min-height: 350px;
-      margin: 1rem 0;
+    width: 100%;
+    min-height: 350px;
+    margin: 1rem 0;
   }
 
   .price {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .card-title {
-      font-size: 1.3rem;
+    font-size: 1.3rem;
   }
 
   .card-description {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
 
   .feature-item {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
 }
 
 /* Animation for price */
-.price {
-  animation: priceGlow 2s ease-in-out infinite alternate;
-}
-
 @keyframes priceGlow {
   from {
-      text-shadow: 0 0 5px rgba(97, 201, 111, 0.3);
+    text-shadow: 0 0 5px rgba(97, 201, 111, 0.3);
   }
   to {
-      text-shadow: 0 0 15px rgba(97, 201, 111, 0.6);
+    text-shadow: 0 0 15px rgba(97, 201, 111, 0.6);
   }
 }

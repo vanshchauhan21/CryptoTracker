@@ -1,0 +1,60 @@
+.swapWithBestRates__container {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 20px;
+    /* border: 2px solid red; */
+justify-content: center;
+margin: 2rem 5rem;
+}
+
+.swapWithBestRatesDescription__container {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.headingWrapper__container {
+    margin-bottom: 15px;
+}
+
+.title__main {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.description__text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+}
+
+.csButton__startSwapping {
+   
+background: linear-gradient(135deg, #9b59b6, #4db1fd, #5843f4);
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.csButton__startSwapping:hover {
+background: linear-gradient(135deg, #9b59b6, #4db1fd, #43f455);
+  
+}
+
+.tutorialBanner__container {
+    position: relative;
+    flex: 1;
+    height: 100%;
+}
+
+.swapBanner__image {
+    position: absolute;
+    inset: 0;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}

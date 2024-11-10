@@ -5,6 +5,8 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import logo from "../assets/logo.jpg";
 import "./ComparePage/SelectCoins/index";
 import "./Footer.css";
+// import { Link } from 'react-router-dom';
+// import Careers from "./pages/Careers";
 import GoogleTranslate from "./GoogleTranslate";
 import { Link } from 'react-router-dom';
 import toast, { Toaster } from "react-hot-toast";
@@ -101,13 +103,14 @@ const Footer = () => {
               { path: "/blog", label: "Blog" },
 
               { path: "/earn", label: "Earn" },
+              { path: "/ultimate-crypto-portfolio-tracker", label: "Ultimate Crypto Portfolio Tracker" },
 
 
               // { path: "/#", label: "Earn" },
               // { path: "/crypto-blog", label: "Blog" },
 
 
-              { path: "/earn", label: "Earn" },
+              // { path: "/earn", label: "Earn" },
 
               // { path: "/earn", label: "Earn" },
 
@@ -117,8 +120,11 @@ const Footer = () => {
               { path: "/pricing", label: "Pricing" },
               { path: "/contributors", label: "Contributors" },
               { path: "/crypto-quiz", label: "Cryptocurrency Quiz" },
+
+              { path: "/affiliate-program", label: "Affiliate Program" },
+
               { path: "Sitemap", label: "Site map" },
-              
+
             ].map(({ path, label }) => (
               <li key={label}>
                 <a href={path}>
@@ -148,6 +154,10 @@ const Footer = () => {
                 label: "Investment Return Calculator",
               },
               {
+                path: "/calculators/PercentageChangeCalculator",
+                label: "PercentageChangeCalculator",
+              },
+              {
                 path: "/calculators/impermanent-loss-calculator",
                 label: "Impermanent Loss Calculator",
               },
@@ -156,8 +166,13 @@ const Footer = () => {
                 label: "Crypto Converter",
               },
               {
+
                 path: "/calculators/Cryptofiat",
                 label: "Crypto to fiat Converter",
+
+                path: "/calculators/CompoundStaking",
+                label: "Compound Interest Calculator for Crypto Staking",
+
               },
               {
                 path: "/calculators/CompoundInterestCalculator",
@@ -206,6 +221,7 @@ const Footer = () => {
               { path: "/disclaimer", label: "Disclaimer" },
               { path: "/terms-of-Use", label: "Term of use" },
               { path: "/privacy-policy", label: "Privacy Policy" },
+              { path: "/code-of-conduct", label: "Code of Conduct" },
 
               { path: "/cookie-policy", label: "Cookie Policy" },
 
