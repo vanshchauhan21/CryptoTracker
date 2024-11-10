@@ -1,3 +1,45 @@
 div[role="button"] {
   margin: 0 !important;
 }
+.contact-page {
+  max-width: 800 px; /* Maximum width for the contact page */
+  margin: 0 auto; /* Center the contact page */
+  padding: 20px; /* Padding around the content */
+  background-color: #f4f4f4; /* Light background for the contact page */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+/* Dark mode styles for contact page */
+[data-theme="dark"] .contact-page {
+  background-color: #1e1e1e; /* Dark background for the contact page */
+  color: #ffffff; /* Light text color */
+}
+
+/* Contact information section */
+.contact-info {
+  margin-bottom: 40px; /* Space below contact info */
+  text-align: center; /* Center the text */
+}
+
+.contact-info h2 {
+  font-size: 36px; /* Heading size */
+  margin-bottom: 10px; /* Space below heading */
+}
+
+/* Contact details */
+.contact-details {
+  font-size: 18px; /* Font size for contact details */
+  line-height: 1.5; /* Line height for readability */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .feedback-form-container {
+    width: 90%; /* Full width on smaller screens */
+  }
+
+  .contact-page {
+    padding: 10px; /* Less padding on smaller screens */
+  }
+}
