@@ -57,7 +57,11 @@ import { Helmet } from "react-helmet";
 import CompoundInterestCalculator from "./pages/CompoundInterestCalculator.js";
 import Cryptofiat from "./pages/Cryptofiat.js";
 import MarginCalculator from "./pages/MarginCalculator.js";
+
+import CustomizableCryptoWatchlist from "./pages/ccw.js";
+=======
 import SIPCalculator from "./pages/SIPCalculator.js";
+
 
 import DefiCalculator from "./pages/defi.js";
 import CompoundStaking from "./pages/cics.js";
@@ -87,6 +91,7 @@ import InterestRateChangeEstimator from "./pages/rce.js";
 
 =======
 import ICOIDOPerformanceTracker from "./pages/ico.js";
+import CrossChainBridgeFeeOptimizer from "./pages/bfo.js";
 
 
 
@@ -245,6 +250,8 @@ function App() {
                   <Route path="MarginCalculator" element={<MarginCalculator />} />
                   <Route path="ICOIDOPerformanceTracker" element={<ICOIDOPerformanceTracker/>} />
                   <Route path="InterestRateChangeEstimator" element={<InterestRateChangeEstimator />} />
+                  <Route path="CustomizableCryptoWatchlist" element={<CustomizableCryptoWatchlist />} />
+                  <Route path="CrossChainBridgeFeeOptimizer" element={<CrossChainBridgeFeeOptimizer />} />
                 </Route>
                   <Route path="InterestRateChangeEstimator" element={<InterestRateChangeEstimator />} />
                 <Route
