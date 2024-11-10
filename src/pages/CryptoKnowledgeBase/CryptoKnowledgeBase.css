@@ -1,0 +1,110 @@
+/* Base styles for light mode */
+.crypto-knowledge-base-container { /* Main container */
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    background: #ffffff; /* Light background */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), 0 4px 30px rgba(0, 0, 0, 0.2); /* Multiple shadows for depth */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Transition for hover effect */
+}
+
+.crypto-knowledge-base-container:hover {
+    transform: translateY(-8px) scale(1.03); /* Enhanced 3D lift effect */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+.crypto-knowledge-base-title { /* Title styles */
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #3a80e9; /* Primary color */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+    transition: color 0.4s ease, transform 0.4s ease; /* Smooth color transition */
+    font-weight: bold; /* Bold title for emphasis */
+}
+
+.crypto-knowledge-base-title:hover {
+    color: #2a6ad9; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.crypto-knowledge-base-section { /* Section styles */
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0; /* Light border */
+    border-radius: 8px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f9f9f9, #e6f7ff); /* Subtle gradient background */
+    transition: background 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease; /* Transition for background and transform */
+}
+
+.crypto-knowledge-base-section:hover {
+    background: #e6f7ff; /* Light blue background on hover */
+    transform: translateY(-5px) rotate(1deg); /* Slight lift and rotation effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.crypto-knowledge-base-section h3 { /* Heading styles */
+    font-size: 2rem;
+    margin-top: 20px;
+    color: #333; /* Dark text for headings */
+    transition: color 0.4s ease, transform 0.4s ease; /* Smooth color transition */
+    font-weight: 600; /* Slightly bolder headings */
+}
+
+.crypto-knowledge-base-section h3:hover {
+    color: #3a80e9; /* Change color on hover */
+    transform: translateX(2px); /* Slight horizontal movement on hover */
+}
+
+.crypto-knowledge-base-section p { /* Paragraph styles */
+    font-size: 1rem;
+    line-height: 1.8; /* Increased line height for readability */
+    color: #1a1a1a; /* Dark text for paragraphs */
+    letter-spacing: 0.5px; /* Slight letter spacing for better readability */
+    transition: color 0.4s ease; /* Smooth color transition */
+}
+
+.crypto-knowledge-base-section p:hover {
+    color: #555; /* Change color on hover */
+}
+
+/* Dark mode styles */
+[data-theme="dark"] .crypto-knowledge-base-container { /* Dark mode for main container */
+    background: #1e1e1e; /* Dark background */
+    color: #f5f5f5; /* Light text color */
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1), 0 4px 30px rgba(255, 255, 255, 0.2); /* Light shadows for depth */
+}
+
+[data-theme="dark"] .crypto-knowledge-base-title { /* Dark mode for title */
+    color: #3a80e9; /* Primary color */
+}
+
+[data-theme="dark"] .crypto-knowledge-base-section { /* Dark mode for sections */
+    background: #2a2a2a; /* Dark background for sections */
+    border: 1px solid #444; /* Darker border */
+}
+
+[data-theme="dark"] .crypto-knowledge-base-section h3 { /* Dark mode for headings */
+    color: #ffffff; /* Light text for headings */
+}
+
+[data-theme="dark"] .crypto-knowledge-base-section p { /* Dark mode for paragraphs */
+    color: #dcdcdc; /* Light text for paragraphs */
+}
+
+[data-theme="dark"] .crypto-knowledge-base-section:hover { /* Dark mode hover effect for sections */
+    background: #3a3a3a; /* Slightly lighter background on hover */
+}
+
+[data-theme="dark"] .crypto-knowledge-base-title:hover { /* Dark mode hover effect for title */
+    color: #4a90e2; /* Lighter shade on hover */
+}
+
+[data-theme="dark"] .crypto-knowledge-base-section h3:hover { /* Dark mode hover effect for section headings */
+    color: #4a90e2; /* Lighter shade on hover */
+}
+
+[data-theme="dark"] .crypto-knowledge-base-section p:hover { /* Dark mode hover effect for paragraphs */
+    color: #ffffff; /* Change color on hover */
+}
