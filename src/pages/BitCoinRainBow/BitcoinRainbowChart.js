@@ -3,6 +3,7 @@ import { Line } from "react-chartjs-2";
 import Header from "../../components/Common/Header";
 import "./BitcoinRainbowChart.css";
 import BuyBitcoinSection from '../../components/BuyBitcoinSection/BuyBitcoinSection';
+import Feedback from '../../components/Feedback/Feedbacksection';
 import BitcoinRainbowInfo from "../../components/BitcoinRainbowInfo"; 
 import {
   Chart as ChartJS,
@@ -14,6 +15,7 @@ import {
   Legend,
   LogarithmicScale,
 } from "chart.js";
+import LottieSpinner from "../../components/Common/LottieSpinner/LottieSpinner";
 
 ChartJS.register(
   LineElement,
@@ -90,6 +92,21 @@ const BitcoinRainbowChart = () => {
     fetchData();
   }, []);
 
+
+  if (loading) {
+    return (
+      <>
+      <Header/>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+        <LottieSpinner />
+      </div>
+      </>
+
+    )
+  }
+
+
+
   // Define the chart options
   const options = {
     responsive: true,
@@ -122,13 +139,17 @@ const BitcoinRainbowChart = () => {
           Bitcoin Rainbow Chart
         </h2>
         {loading ? (
-          <p>Loading chart data...</p>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+            <LottieSpinner />
+          </div>
+    
         ) : (
           <Line data={chartData} options={options} />
         )}
       </div>
       <BuyBitcoinSection />
       <BitcoinRainbowInfo />
+      <Feedback />
     </div>
   );
 };
