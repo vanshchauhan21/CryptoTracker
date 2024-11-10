@@ -1,0 +1,55 @@
+/* AnalyzeAssets.css */
+.tutorialV2__oZoVu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  margin: 5rem 2rem;
+  padding: 4rem 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.tutorialV2__oZoVu:hover {
+  transform: translateY(-10px); /* Slight upward movement */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow effect on hover */
+}
+
+.heading-wrapper__PsGv8 {
+  font-size: 1.5rem;
+}
+
+.title__fU7gu {
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.title__fU7gu:hover {
+  color: var(--hover-color, #ff9432); /* Change color on hover */
+}
+
+.description__e7VeV {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.description__e7VeV:hover {
+  color: var(--hover-color, #ff9432); /* Change color on hover */
+}
+
+.tutorialV2Description__CXkQB {
+  max-width: 50%;
+}
+
+.tutorialBanner__b9zhX img {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Add smooth transformation and filter effect */
+}
+
+.tutorialBanner__b9zhX img:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  filter: brightness(1.1); /* Slight brightness increase */
+}

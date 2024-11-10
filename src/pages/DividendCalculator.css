@@ -1,0 +1,104 @@
+/* Base styles for light and dark mode */
+:root {
+    --bg-light: #ffffff;
+    --bg-dark: #1e1e1e;
+    --card-bg-light: #f3f3f3;
+    --card-bg-dark: #333333;
+    --text-light: #000000;
+    --text-dark: #ffffff;
+    --label-light: #555555;
+    --label-dark: #dddddd;
+    --button-bg-light: #007bff;
+    --button-bg-dark: #0056b3;
+    --button-text: #ffffff;
+    --input-border-light: #cccccc;
+    --input-border-dark: #444444;
+  }
+  
+  /* Base body styles */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Dark mode styles */
+  body.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
+  
+  /* Heading styling */
+  .calculator-card h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: inherit;
+  }
+  
+  /* Label styling */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--label-light);
+    transition: color 0.3s;
+  }
+  
+  /* Dark mode label */
+  body.dark-mode label {
+    color: var(--label-dark);
+  }
+  
+  /* Input field styling */
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--input-border-light);
+    border-radius: 5px;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  /* Dark mode input */
+  body.dark-mode input {
+    background-color: var(--card-bg-dark);
+    border: 1px solid var(--input-border-dark);
+    color: var(--text-dark);
+  }
+  
+  /* Button styling */
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--button-bg-light);
+    color: var(--button-text);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Dark mode button */
+  body.dark-mode button {
+    background-color: var(--button-bg-dark);
+  }
+  
+  /* Button hover */
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Result display */
+  .result {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  

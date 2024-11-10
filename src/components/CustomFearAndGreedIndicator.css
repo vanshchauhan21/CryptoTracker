@@ -1,0 +1,76 @@
+
+
+.custom-fear-greed-indicator {
+    padding: 20px;
+    background: linear-gradient(135deg, #1a1a1a, #3a3a3a);
+    border-radius: 15px;
+    color: #FFFFFF;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    transform: perspective(1000px);
+  }
+  
+  .title {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  .indicator-value {
+    font-size: 3em;
+    margin: 10px 0;
+    animation: pulse 1s infinite;
+  }
+  
+  .category {
+    display: block;
+    font-size: 1.2em;
+    color: #999999;
+    margin-top: 5px;
+  }
+  
+  .indicator-bar-container {
+    background-color: #333333;
+    border-radius: 10px;
+    height: 30px;
+    overflow: hidden;
+    margin-top: 10px;
+    position: relative;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: translateZ(0);
+  }
+  
+  .indicator-bar {
+    height: 100%;
+    transition: width 0.5s ease, background-color 0.5s ease;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: translateZ(0);
+  }
+  
+  .last-updated {
+    font-size: 0.9em;
+    color: #999999;
+    margin-top: 10px;
+  }
+  
+  /* Animation for the indicator value */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* 3D hover effect */
+  .custom-fear-greed-indicator:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  }

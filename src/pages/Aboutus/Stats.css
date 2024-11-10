@@ -1,0 +1,57 @@
+
+
+.stats-section {
+    display: flex; /* Keep items in a single row */
+    justify-content: space-between; /* Space items evenly */
+    padding: 20px;
+}
+
+.stat-item {
+    text-align: center; /* Center content within each item */
+    flex: 1 1 45%; /* Allow items to take 45% of the row space */
+    margin: 10px; /* Add margin for spacing */
+}
+
+.stat-number {
+    font-size: 2rem; /* Default size for numbers */
+    font-weight: 600;
+}
+
+.stat-title {
+    margin-top: 10px;
+    font-size: 1rem; /* Default size for titles */
+    color: #555;
+}
+
+.card{
+    background-color: white;
+    color: black;
+    padding-bottom: 20px;
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+    .stats-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns in each row */
+        gap: 20px; /* Space between grid items */
+        padding: 10px;
+    }
+
+    .stat-item {
+        flex: 1 1 auto; /* Remove the width restriction in grid mode */
+        max-width: 100%; /* Make sure each item fits within grid cell */
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .stat-title {
+        font-size: 1.2rem;
+    }
+    .card{
+        min-height: 90px;
+        max-width: 150px;
+    }
+    
+}

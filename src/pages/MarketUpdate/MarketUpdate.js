@@ -3,10 +3,15 @@ import Header from '../../components/Common/Header'
 import MarketCard from '../../components/Common/MarketCard/MarketCard'
 
 function MarketUpdate() {
+
+
+
   return (
     <>
-     <Header/>
-      <MarketCard/>
+      <Header />
+      <h1>Market Update</h1>
+
+      <MarketCard />
     </>
   )
 }

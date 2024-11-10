@@ -17,6 +17,8 @@ body {
     border-radius: 8px;
     color: var(--privacy-text-color);
     transition: border 0.3s ease;
+    border: 2px solid greenyellow;
+
   }
 
   Header
