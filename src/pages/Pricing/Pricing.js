@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import "./Pricing.css";
 import Header from '../../components/Common/Header';
 import PriceCard from '../../components/Common/Price Card/PriceCard';
+import SecuritySection from '../../components/SecuritySection/SecuritySection';
 
 function Pricing() {
   const { t } = useTranslation();
@@ -26,6 +27,7 @@ function Pricing() {
             t('pricing.hobby_feature_3'),
             t('pricing.hobby_feature_4'),
           ]}
+          isHighlighted
         />
         <PriceCard
           title={t('pricing.enterprise_title')}
@@ -39,7 +41,13 @@ function Pricing() {
           ]}
           isHighlighted
         />
+
       </div>
+<div>
+<SecuritySection/>
+
+</div>
+
     </>
   );
 }
