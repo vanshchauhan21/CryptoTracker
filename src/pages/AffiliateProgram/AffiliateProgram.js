@@ -101,6 +101,10 @@ function AffiliateProgram() {
             <strong>Start Earning Today - No Technical Skills Required!</strong>
           </div>
         </section>
+        <section className="affiliate-overview">
+        <h2>Join the CryptoTracker Affiliate Program</h2>
+        <p>Our Affiliate Program is designed for individuals who want to earn money by sharing their love for cryptocurrency. As an affiliate, you can earn commissions for every new user you bring to CryptoTracker.</p>
+      </section>
 
         {/* Join Steps */}
         <section className="section">
@@ -115,6 +119,7 @@ function AffiliateProgram() {
             ))}
           </div>
         </section>
+
 
         {/* Commission Structure */}
         <section className="section">
