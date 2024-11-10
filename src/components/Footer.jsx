@@ -158,6 +158,10 @@ const Footer = () => {
                 label: "PercentageChangeCalculator",
               },
               {
+                path: "/calculators/SIPCalculator",
+                label: "SIPCalculator",
+              },
+              {
                 path: "/calculators/impermanent-loss-calculator",
                 label: "Impermanent Loss Calculator",
               },
