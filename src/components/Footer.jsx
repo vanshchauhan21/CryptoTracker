@@ -99,6 +99,7 @@ const Footer = () => {
               { path: "/compare", label: "Compare" },
               { path: "/watchlist", label: "Watchlist" },
               { path: "/dashboard", label: "Dashboard" },
+              { path: "/Porfolio", label: "Portfolio" },
 
               { path: "/blog", label: "Blog" },
 
