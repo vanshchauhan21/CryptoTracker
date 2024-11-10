@@ -10,7 +10,9 @@ import { removeItemToWatchlist } from "../../../functions/removeItemToWatchlist"
 
 function Grid({ coin, delay }) {
   // Initialize watchlist and coin added state
-  const [watchlist, setWatchlist] = useState(() => JSON.parse(localStorage.getItem("watchlist")) || []);
+  const [watchlist, setWatchlist] = useState(
+    () => JSON.parse(localStorage.getItem("watchlist")) || []
+  );
   const [isCoinAdded, setIsCoinAdded] = useState(watchlist.includes(coin.id));
 
   // Effect to update watchlist in localStorage when it changes
@@ -38,7 +40,9 @@ function Grid({ coin, delay }) {
   return (
     <a href={`/coin/${coin.id}`}>
       <motion.div
-        className={`grid ${coin.price_change_percentage_24h < 0 && "grid-red"}`}
+        className={`grid ${
+          coin.price_change_percentage_24h < 0 && "grid-red"
+        } `}
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: delay }}
@@ -50,13 +54,15 @@ function Grid({ coin, delay }) {
             alt={`${coin.name} logo`}
           />
 
-          <div className="icon-flex">
+          <div className="icon-flex !text-white">
             <div className="info-flex">
-              <p className="coin-symbol">{coin.symbol}</p>
-              <p className="coin-name">{coin.name}</p>
+              <p className="coin-symbol !text-white">{coin.symbol}</p>
+              <p className="coin-name !text-white">{coin.name}</p>
             </div>
             <div
-              className={`watchlist-icon ${coin.price_change_percentage_24h < 0 && "watchlist-icon-red"}`}
+              className={`watchlist-icon ${
+                coin.price_change_percentage_24h < 0 && "watchlist-icon-red"
+              }`}
               onClick={(e) => toggleWatchlist(e, coin.id)} // Pass event and coin ID to toggle watchlist
             >
               {isCoinAdded ? <StarIcon /> : <StarOutlineIcon />}
@@ -64,20 +70,38 @@ function Grid({ coin, delay }) {
           </div>
         </div>
 
-        <div className="chip-flex">
-          <div className={`price-chip ${coin.price_change_percentage_24h < 0 ? 'red' : ''}`}>
+        <div className="chip-flex ">
+          <div
+            className={`price-chip ${
+              coin.price_change_percentage_24h < 0 ? "red" : "green"
+            }`}
+          >
             {coin.price_change_percentage_24h.toFixed(2)}%
           </div>
-          <div className={`chip-icon ${coin.price_change_percentage_24h < 0 ? 'red' : ''}`}>
-            {coin.price_change_percentage_24h >= 0 ? <TrendingUpRoundedIcon /> : <TrendingDownRoundedIcon />}
+          <div
+            className={`chip-icon ${
+              coin.price_change_percentage_24h < 0 ? "red" : "green"
+            }`}
+          >
+            {coin.price_change_percentage_24h >= 0 ? (
+              <TrendingUpRoundedIcon />
+            ) : (
+              <TrendingDownRoundedIcon />
+            )}
           </div>
         </div>
 
-        <p className={coin.price_change_percentage_24h >= 0 ? "current-price" : "current-price-red"}>
+        <p
+          className={
+            coin.price_change_percentage_24h >= 0
+              ? "current-price !text-white"
+              : "current-price-red"
+          }
+        >
           ${coin.current_price.toLocaleString()}
         </p>
 
-        <p className="coin-name">
+        <p className="coin-name !text-white">
           Total Volume : {coin.total_volume.toLocaleString()}
         </p>
         <p className="coin-name">

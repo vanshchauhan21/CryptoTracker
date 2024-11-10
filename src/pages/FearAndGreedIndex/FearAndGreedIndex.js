@@ -1,10 +1,14 @@
-// FearAndGreedIndex.js
+
 
 import React, { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import axios from 'axios';
 import Header from '../../components/Common/Header';
+import { Link } from 'react-router-dom'; 
+
+import CustomFearAndGreedIndicator from '../../components/CustomFearAndGreedIndicator';
 import './FearAndGreedIndex.css';
+import FearAndGreedMetrics from './FearAndGreedMetrics';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -173,15 +177,18 @@ const FearAndGreedIndex = () => {
   return (
     <>
       <Header />
+   
+ 
       <div className="fear-greed-container">
         <h1>Crypto Fear & Greed Index</h1>
-        
-        {currentIndex !== null && (
+        {/* <Link to="/advanced-fear-greed" className="nav-link">View Advanced Fear and Greed Indicator</Link> */}
+        <CustomFearAndGreedIndicator />
+        {/* {currentIndex !== null && (
           <div className={`current-index ${getIndexClass(currentIndex)}`}>
             <h2>Current Index: {currentIndex}</h2>
             <p className="index-category">{getIndexCategory(currentIndex)}</p>
           </div>
-        )}
+        )} */}
 
         <div className="timeframe-selector">
           {timeframeOptions.map(({ value, label }) => (
@@ -212,6 +219,7 @@ const FearAndGreedIndex = () => {
         {!loading && !error && fearAndGreedData && (
           <div className="chart-container">
             <Line data={fearAndGreedData} options={options} />
+            
           </div>
         )}
 
@@ -228,6 +236,7 @@ const FearAndGreedIndex = () => {
                 <p>{description}</p>
               </div>
             ))}
+            <FearAndGreedMetrics />
           </div>
         </div>
       </div>

@@ -7,6 +7,8 @@
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@fortawesome/fontawesome-free": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@google/generative-ai": "^0.21.0",
     "@mui/icons-material": "^6.1.6",
     "@mui/lab": "^6.0.0-beta.14",
@@ -21,9 +23,11 @@
     "font-awesome": "^4.7.0",
     "framer-motion": "^11.11.11",
     "i18next": "^23.16.4",
+    "lottie-react": "^2.4.0",
     "lucide-react": "^0.454.0",
     "react": "^18.3.1",
     "react-chartjs-2": "^5.2.0",
+    "react-countup": "^6.5.3",
     "react-dom": "^18.3.1",
     "react-feather": "^2.0.10",
     "react-helmet": "^6.1.0",
@@ -37,6 +41,7 @@
     "react-scrollbars-custom": "^4.1.1",
     "react-slick": "^0.30.2",
     "react-toastify": "^10.0.6",
+    "react-visibility-sensor": "^5.1.1",
     "react-web-share": "^2.0.2",
     "reactflow": "^11.11.4",
     "sitemap": "^8.0.0",
@@ -68,6 +73,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.14"

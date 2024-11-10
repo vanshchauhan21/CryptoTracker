@@ -3,14 +3,30 @@ import "./FreeTrial.css";
 import davidBanner from "../../../assets/Free-trial.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useNavigate } from "react-router-dom";
 
 const FreeTrial = () => {
+  const navigate = useNavigate();
+
+
+  const handleStartTrialClick = () => {
+    navigate('/pricing');
+  };
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
+
+
+
+
   return (
     <div className="free-trial-container" data-aos="fade-up">
+        {/* David Banner Image */}
+        <div className="david-banner" data-aos="fade-left">
+            <img src={davidBanner} alt="David Banner" loading="lazy" />
+        </div>
       <div className="free-trial-content">
         {/* Heading */}
         <div className="heading-wrapper" data-aos="fade-right">
@@ -30,6 +46,7 @@ const FreeTrial = () => {
           className="start-trial-btn"
           data-aos="zoom-in"
           data-aos-delay="400"
+          onClick={handleStartTrialClick} // Add the click handler here
         >
           Start My Free Trial
         </button>
@@ -48,22 +65,19 @@ const FreeTrial = () => {
           data-aos="fade-in"
           data-aos-delay="800"
         >
-          <a
-            href="/terms.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="link-button"
-          >
-            Terms &amp; Conditions
-          </a>
+          <div className="terms">
+            <a
+                href="/terms.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-button"
+                >
+                Terms &amp; Conditions
+            </a>
+          </div>
           <span>·</span>
           <button className="cancel-button">Cancel Anytime</button>
         </div>
-      </div>
-
-      {/* David Banner Image */}
-      <div className="david-banner" data-aos="fade-left">
-        <img src={davidBanner} alt="David Banner" loading="lazy" />
       </div>
     </div>
   );

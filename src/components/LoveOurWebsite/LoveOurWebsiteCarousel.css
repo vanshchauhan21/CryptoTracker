@@ -10,12 +10,17 @@
   }
   
   .carousel {
-    display: flex;
-    overflow-x: auto;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 0.1fr));
+    margin: 0 auto;
     padding: 1rem;
+
+    justify-items: center;
     justify-content: center;
+    gap: 1rem;
   }
+
+
   .carousel-card {
     background: linear-gradient(135deg, #9b59b6, #ff6ec7); /* Initial purple-pink gradient */
     color: var(--text-color);
@@ -66,4 +71,18 @@
     background-color: #fff;
     color: #333;
   }
+
+  @media screen and (max-width: 1100px) {
+    .carousel {
+      grid-template-columns: 0.1fr 0.1fr;
+      grid-auto-rows: 250px;
+      column-gap: 2rem;
+    }
+  }
   
+  @media screen and (max-width: 550px) {
+    .carousel {
+      grid-template-columns: 0.1fr;
+      grid-auto-rows: 250px;
+    }
+  }

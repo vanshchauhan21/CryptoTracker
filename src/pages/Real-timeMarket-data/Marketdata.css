@@ -1,0 +1,72 @@
+/* RealTimeMarketData.css */
+.marketData__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    margin: 5rem 2rem;
+    padding: 4rem 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.marketData__container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.headingWrapper {
+    font-size: 1.5rem;
+}
+
+.title {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.title:hover {
+    color: var(--hover-color, #ff9432);
+}
+
+.description {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.description:hover {
+    color: var(--hover-color, #ff9432);
+}
+
+.marketDataDescription {
+    max-width: 50%;
+}
+
+.marketBanner img {
+    width: 100%;
+    border-radius: 20px;
+    height: auto;
+    margin-top: 30px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.marketBanner img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.marketStats {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #333;
+}
+.marketStats h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.marketStats p {
+    margin: 0.3rem 0;
+}

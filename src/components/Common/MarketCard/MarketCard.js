@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./MarketCard.css";
+import LottieSpinner from "../LottieSpinner/LottieSpinner";
+
 
 const MarketCard = () => {
   const [news, setNews] = useState([]);
@@ -15,10 +17,12 @@ const MarketCard = () => {
   }, []);
 
   return (
+
     <div className="card-container">
       {news.length > 0 ? (
         news.map((article, index) => (
           <div className="card-frame" key={index}>
+
             <div className="imag-contain">
               <img
                 src={article.imageurl}
@@ -38,11 +42,15 @@ const MarketCard = () => {
               </div>
 
               <div className="Desc-detail">
-                <h2 className="card-title">{article.title}</h2>
+                <h3 className="card-title">
+                  {article.title.split(" ").slice(0, 10).join(" ") + (article.title.split(" ").length > 10 ? "..." : "")}
+                </h3>
+
               </div>
 
               <div className="Desc-detail">
-                <p>{article.body}</p>
+                <p className="para-article">{article.body.split(" ").slice(0, 15).join(" ") + "..."}</p>
+
               </div>
 
               <div className="Desc-detail">
@@ -56,7 +64,7 @@ const MarketCard = () => {
           </div>
         ))
       ) : (
-        <p>Loading market updates...</p>
+   <LottieSpinner/>
       )}
     </div>
   );

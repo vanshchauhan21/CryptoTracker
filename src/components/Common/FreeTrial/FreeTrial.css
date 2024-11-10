@@ -1,8 +1,9 @@
 .free-trial-container {
   display: flex;
-  align-items: center;
+  margin: 0 auto;
   justify-content: center;
-  gap: 5rem;
+  align-items: center;
+  gap: 10rem;
 }
 
 .free-trial-content {
@@ -121,7 +122,7 @@
 }
 
 .david-banner img {
-  max-width: 600px;
+  width: 600px;
   border-radius: 3rem;
   transition: transform 0.3s ease, opacity 0.3s ease;
   opacity: 0.9;
@@ -135,4 +136,39 @@
   opacity: 1;
   box-shadow: 2px 2px 10px rgba(58, 128, 233, 0.5);
 
+}
+
+
+@media screen and (max-width: 1300px) {
+    .free-trial-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .free-trial-content {
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+    }
+
+    .david-banner {
+        margin-left: 0rem;
+    }
+
+    .benefit {
+        justify-content: center;
+    }
+
+    .additional-info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin-top: 0rem;
+        margin-left: -0.5rem;
+    }
+
+    .start-trial-btn {
+        margin-left: -1rem;
+    }
 }

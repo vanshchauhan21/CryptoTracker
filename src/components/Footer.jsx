@@ -5,9 +5,11 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import logo from "../assets/logo.jpg";
 import "./ComparePage/SelectCoins/index";
 import "./Footer.css";
+// import Careers from "./pages/Careers";
 import GoogleTranslate from "./GoogleTranslate";
 import { Link } from 'react-router-dom';
 import toast, { Toaster } from "react-hot-toast";
+import BackToTopButton from "./BackToTopButton/BackToTopButton";
 const Footer = () => {
   const { t } = useTranslation(); // Destructure translation function
   const [email, setEmail] = useState("");
@@ -97,11 +99,20 @@ const Footer = () => {
               { path: "/watchlist", label: "Watchlist" },
               { path: "/dashboard", label: "Dashboard" },
 
-              { path: "/#", label: "Earn" },
-              { path: "/crypto-blog", label: "Blog" },
+              { path: "/blog", label: "Blog" },
 
               { path: "/earn", label: "Earn" },
-              { path: "/#", label: "Blog" },
+
+
+              // { path: "/#", label: "Earn" },
+              // { path: "/crypto-blog", label: "Blog" },
+
+
+              { path: "/earn", label: "Earn" },
+
+              // { path: "/earn", label: "Earn" },
+
+              // { path: "/#", label: "Blog" },
 
               { path: "/faq", label: "FAQ" },
               { path: "/pricing", label: "Pricing" },
@@ -137,12 +148,28 @@ const Footer = () => {
                 label: "Profit Return Calculator",
               },
               {
+                path: "/calculators/investment-return-calculator",
+                label: "Investment Return Calculator",
+              },
+              {
+                path: "/calculators/PercentageChangeCalculator",
+                label: "PercentageChangeCalculator",
+              },
+              {
                 path: "/calculators/impermanent-loss-calculator",
                 label: "Impermanent Loss Calculator",
               },
               {
                 path: "/calculators/crypto-converter",
                 label: "Crypto Converter",
+              },
+              {
+                path: "/calculators/CompoundInterestCalculator",
+                label: "CompoundInterestCalculator",
+              },
+              {
+                path: "/calculators/MarginCalculator",
+                label: "MarginCalculator",
               },
               {
                 path: "/charts/bitcoin-rainbow-chart",
@@ -183,6 +210,7 @@ const Footer = () => {
               { path: "/disclaimer", label: "Disclaimer" },
               { path: "/terms-of-Use", label: "Term of use" },
               { path: "/privacy-policy", label: "Privacy Policy" },
+              { path: "/code-of-conduct", label: "Code of Conduct" },
 
               { path: "/cookie-policy", label: "Cookie Policy" },
 
@@ -459,14 +487,8 @@ const Footer = () => {
           paddingBottom: "0.5rem",
         }}
       >
-        <span>© 2024 CryptoTracker. All rights reserved.</span>
+        <span style={{fontSize: '0.7rem'}}>© 2024 CryptoTracker. All rights reserved.</span>
       </div>
-
-
-
-
-
-
     </footer>
   );
 };

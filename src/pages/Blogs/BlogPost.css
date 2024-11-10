@@ -1,0 +1,72 @@
+
+
+.blog-post {
+    background: #fff; 
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative; 
+    overflow: hidden; 
+    display: flex; 
+    flex-direction: column; 
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.blog-image {
+    width: 100%;
+    border-radius: 8px;
+    height: auto;
+    margin-bottom: 15px; 
+}
+
+.blog-post h2 {
+    font-size: 1.8rem;
+    color: #333; 
+    margin-bottom: 10px; 
+}
+
+.blog-date {
+    font-size: 0.9rem;
+    color: #999; /* Light mode date color */
+    margin-bottom: 10px; /* Space below the date */
+}
+
+.blog-post p {
+    font-size: 1rem;
+    color: #666; /* Light mode content color */
+    margin-bottom: 15px; /* Space below the content */
+    flex-grow: 1; /* Allow content to grow */
+}
+
+.read-more-button {
+    display: inline-block; /* Make it a block for better spacing */
+    background-color: #3a80e9; /* Light mode button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: center; 
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+    align-self: flex-start; /* Align button to the start */
+}
+.read-more-button:hover { background-color: #2a60b0;  transform: scale(1.05);  }
+
+
+[data-theme="dark"] .blog-post { background: #2a2a2a; }
+
+[data-theme="dark"] .blog-post h2 { color: #f9f9f9; /* Dark mode text color */ }
+
+[data-theme="dark"] .blog-date { color: #bbb; /* Dark mode date color */ }
+
+[data-theme="dark"] .blog-post p { color: #f9f9f9; /* Dark mode content color */ }
+
+[data-theme="dark"] .read-more-button { background-color: #3a80e9; /* Dark mode button color */ }
+
+[data-theme="dark"] .read-more-button:hover { background-color: #2a60b0; /* Dark mode button hover color */ }

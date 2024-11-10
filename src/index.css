@@ -273,3 +273,43 @@ a {
   text-decoration: none;
   color: var(--white);
 }
+
+#chatbase-bubble-button {
+    position: relative !important;
+    margin-left: 93.8% !important;
+    top: -9.5rem !important;
+
+}
+
+@media screen and (max-width: 1500px) {
+    #chatbase-bubble-button {
+        margin-left: 94% !important;
+    }
+  }
+  
+@media screen and (max-width: 1200px) {
+    #chatbase-bubble-button {
+        margin-left: 91.4% !important;
+
+    }
+  }
+  
+@media screen and (max-width: 850px) {
+    #chatbase-bubble-button {
+        top: -10.5rem !important;
+        margin-left: 90% !important;
+    }
+  }
+
+  
+@media screen and (max-width: 550px) {
+    #chatbase-bubble-button {
+        margin-left: 88% !important;
+    }
+  }
+
+@media screen and (max-width: 390px) {
+    #chatbase-bubble-button {
+        margin-left: 86% !important;
+    }
+  }

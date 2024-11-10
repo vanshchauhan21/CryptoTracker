@@ -1,0 +1,129 @@
+.defi-assets {
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+    animation: fadeIn 0.5s ease-in-out; /* Fade-in effect for the container */
+    perspective: 1000px; /* Perspective for 3D effect */
+}
+
+/* Light mode styles */
+.defi-assets.light {
+    background-color: #f9f9f9; /* Light background */
+    border: 2px solid #6610f2; /* Purple border for light mode */
+    color: #333; /* Dark text for light mode */
+}
+
+/* Dark mode styles */
+.defi-assets.dark {
+    background-color: #2c2c2c; /* Dark background */
+    border: 2px solid #3a80e9; /* Lighter purple for dark mode */
+    color: #f5f5f5; /* Light text for dark mode */
+}
+
+/* 3D effect on hover */
+.defi-assets:hover {
+    transform: translateY(-10px) rotateY(5deg) rotateX(5deg); /* 3D transformation */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Header styling */
+.defi-assets h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Styling for the asset list */
+.defi-asset-list {
+    text-align: left; /* Align text to the left for better readability */
+}
+
+.defi-asset-list h3 {
+    font-size: 1.8rem;
+    margin: 10px 0;
+}
+
+/* List styles */
+.defi-asset-list ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+}
+
+.defi-asset-list li {
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #e0e0e0; /* Light border for each asset */
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    background-color: inherit; /* Use inherited background color */
+    color: inherit; /* Use inherited text color */
+}
+
+.defi-asset-list li:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Emoticon styles */
+.emoticons {
+    display: flex; /* Flexbox for emoticon alignment */
+    justify-content: center; /* Center the emoticons */
+    margin: 10px 0; /* Spacing around emoticons */
+}
+
+.emoticon {
+    font-size: 2rem; /* Size of the emoticons */
+    margin: 0 5px; /* Spacing between emoticons */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.emoticon:hover {
+    transform: scale(1.2); /* Scale effect on hover */
+}
+
+/* Button styles */
+.defi-asset-button {
+    background-color: #28a745; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1rem;
+    margin-top: 10px; /* Space above the button */
+}
+
+.defi-asset-button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .defi-assets {
+        padding: 15px;
+    }
+    
+    .defi-assets h2 {
+        font-size: 2rem;
+    }
+    
+    .defi-asset-list h3 {
+        font-size: 1.5rem;
+    }
+}
