@@ -43,11 +43,11 @@ import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator"
 import ImpermanentLossCalculator from "./pages/ImpermanentLossCalculator";
 import DividendCalculator  from "./pages/DividendCalculator";
 import GasFreeEstimator  from "./pages/gfe.js";
-import DividendCalculator from "./pages/DividendCalculator";
-import GasFreeEstimator from "./pages/gfe.js";
+// import DividendCalculator from "./pages/DividendCalculator";
+// import GasFreeEstimator from "./pages/gfe.js";
 import DollarCostAveraging from "./pages/dca.js";
-import DividendCalculator  from "./pages/DividendCalculator";
-import GasFreeEstimator  from "./pages/gfe.js";
+// import DividendCalculator  from "./pages/DividendCalculator";
+// import GasFreeEstimator  from "./pages/gfe.js";
 import ProfitLoss from "./pages/ProfitLoss/ProfitLoss";
 import Cryptocard from "./pages/CryptoCard/Cryptocard";
 import CryptoQuiz from "./pages/CryptoQuiz/CryptoQuiz";
@@ -89,7 +89,7 @@ import InvestmentReturnCalculator from "./pages/Useful Tools/Investmentreturncal
 
 import InterestRateChangeEstimator from "./pages/rce.js";
 
-=======
+
 import ICOIDOPerformanceTracker from "./pages/ico.js";
 import CrossChainBridgeFeeOptimizer from "./pages/bfo.js";
 
