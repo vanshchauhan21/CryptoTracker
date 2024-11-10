@@ -1,0 +1,121 @@
+/* General container styling */
+.master-the-math-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff; /* Light mode background */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items */
+}
+
+/* Dark mode styles */
+[data-theme="dark"] .master-the-math-container {
+    background-color: #1e1e1e; /* Dark mode background */
+    color: #f5f5f5; /* Light text for dark mode */
+}
+
+/* Hover effect for the container */
+.master-the-math-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings styling */
+h2 {
+    color: #2c3e50; /* Darker color for main headings */
+    font-size: 2.5rem; /* Larger font size for prominence */
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    font-family: 'Poppins', sans-serif; /* Modern font */
+}
+
+/* Dark mode heading styles */
+[data-theme="dark"] h2 {
+    color: #3a80e9; /* Accent color for dark mode */
+}
+
+/* Adding an underline effect to the h2 */
+h2::after {
+    content: '';
+    display: block;
+    width: 60px; /* Slightly wider underline */
+    height: 4px;
+    background: #3a80e9; /* Accent color */
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* Subheading styling */
+h3 {
+    color: #34495e; /* Slightly lighter color for subheadings */
+    font-size: 1.8rem; /* Increased font size for better visibility */
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif; /* Modern font */
+}
+
+/* Dark mode subheading styles */
+[data-theme="dark"] h3 {
+    color: #e0e0e0; /* Light text for dark mode */
+}
+
+/* Paragraph styling */
+p {
+    line-height: 1.6;
+    color: #555; /* Dark gray for light mode */
+    margin-bottom: 15px;
+    font-size: 1rem; /* Base font size */
+    font-family: 'Arial', sans-serif; /* Clean font */
+}
+
+/* Dark mode paragraph styles */
+[data-theme="dark"] p {
+    color: #d3d3d3; /* Light gray for dark mode */
+}
+
+/* List styling */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    width: 100%; /* Full width for lists */
+}
+
+/* Anchor link styling */
+a {
+    color: #3a80e9; /* Primary link color */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for links */
+a:hover {
+    text-decoration: underline;
+    color: #2c3e50; /* Darker color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Dark mode link styles */
+[data-theme="dark"] a {
+    color: #3a80e9; /* Keep link color consistent */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .master-the-math-container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    h2 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    h3 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+}
