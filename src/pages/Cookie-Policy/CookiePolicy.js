@@ -93,7 +93,7 @@ function CookiePolicy() {
           at{" "}
           <a href="mailto:support@cryptotracker.com">
             support@cryptotracker.com
-          </a>.
+          </a>
         </p>
       </div>
     </>
