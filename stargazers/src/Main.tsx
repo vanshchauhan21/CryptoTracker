@@ -1,7 +1,7 @@
 import { useCurrentFrame, useVideoConfig } from "remotion";
 import { z } from "zod";
 import { Stargazer } from "./cache";
-import { Content } from "./Content";
+import { Content } from "./content";
 import { getProgress } from "./utils";
 
 export const mainSchema = z.object({
