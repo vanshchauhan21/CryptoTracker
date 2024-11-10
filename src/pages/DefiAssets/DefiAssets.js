@@ -1,5 +1,7 @@
 import React from 'react';
-import './DefiAssets.css';
+// import './DefiAssets.css';
+import './DeFiAssetStyles.css'; 
+
 import Header from '../../components/Common/Header';
 import Feedback from '../../components/Feedback/Feedbacksection';
 
@@ -39,6 +41,7 @@ function DefiAssets() {
         </ul>
     </div>
 </div>
+
 <Feedback />
 
         </>
