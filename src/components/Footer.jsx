@@ -180,6 +180,10 @@ const Footer = () => {
                 label: "Impermanent Loss Calculator",
               },
               {
+<<<<<<< HEAD
+                path: "/calculators/GasFreeEstimator",
+                label: " Gas Free Estimator",
+=======
 
                 path: "/calculators/dollar-cost-averaging",
                 label: "Dollar cost averaging Calculator",
@@ -187,6 +191,7 @@ const Footer = () => {
                 path: "/calculators/GasFreeEstimator",
                 label: " Gas Free Estimator",
 
+>>>>>>> 7f43507b97c6e9f9a757747e50c54654c584f2c7
               },
               {
                 path: "/calculators/crypto-converter",
@@ -261,7 +266,9 @@ const Footer = () => {
               { path: "/privacy-policy", label: "Privacy Policy" },
               { path: "/code-of-conduct", label: "Code of Conduct" },
 
+              
               { path: "/cookie-policy", label: "Cookie Policy" },
+              { path: "/licensing", label: "Licensing" },
 
               { path: "/terms-conditions", label: "terms_conditions" },
               { path: "/faq", label: "faq" },
