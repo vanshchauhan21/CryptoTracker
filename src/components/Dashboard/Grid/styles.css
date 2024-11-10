@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: 1.5rem;
   width: 15rem;
-  height: 22rem;
+  height: 28rem;
   padding: 2rem;
   background-color: var(--darkgrey);
   border-radius: 0.8rem;
@@ -19,6 +19,46 @@
 .grid-red:hover {
   border: 2px solid var(--red);
   transition: all 0.3s;
+}
+/* Base Grid Styles */
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 15rem;
+  height: 28rem;
+  padding: 2rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Light Mode */
+[data-theme="light"] .grid {
+  background-color: #f0f0f0; /* Light grey */
+  border: 2px solid #f0f0f0;
+}
+
+[data-theme="light"] .grid:hover {
+  border: 2px solid #4caf50; /* Light green */
+}
+
+[data-theme="light"] .grid-red:hover {
+  border: 2px solid #f44336; /* Light red */
+}
+
+/* Dark Mode */
+[data-theme="dark"] .grid {
+  background-color: #333333; /* Dark grey */
+  border: 2px solid #333333;
+}
+
+[data-theme="dark"] .grid:hover {
+  border: 2px solid #4caf50; /* Green */
+}
+
+[data-theme="dark"] .grid-red:hover {
+  border: 2px solid #f44336; /* Red */
 }
 
 .img-flex {
@@ -69,7 +109,7 @@
   text-transform: uppercase;
   font-weight: 600;
   margin: 0rem;
-  color:aliceblue;
+  color: aliceblue;
 }
 
 .coin-name {
@@ -77,6 +117,7 @@
   font-weight: 400;
   color: var(--grey);
   font-size: 0.8rem;
+  text-shadow: initial;
 }
 
 .chip-flex {
