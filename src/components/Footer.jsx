@@ -156,6 +156,10 @@ const Footer = () => {
                 label: "Crypto Converter",
               },
               {
+                path: "/calculators/DefiCalculator",
+                label: "DeFi Yield Estimator",
+              },
+              {
                 path: "/calculators/CompoundInterestCalculator",
                 label: "CompoundInterestCalculator",
               },
