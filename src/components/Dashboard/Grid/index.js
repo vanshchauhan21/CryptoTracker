@@ -54,10 +54,10 @@ function Grid({ coin, delay }) {
             alt={`${coin.name} logo`}
           />
 
-          <div className="icon-flex !text-white">
+          <div className="icon-flex">
             <div className="info-flex">
-              <p className="coin-symbol !text-white">{coin.symbol}</p>
-              <p className="coin-name !text-white">{coin.name}</p>
+              <p className="coin-symbol">{coin.symbol}</p>
+              <p className="coin-name">{coin.name}</p>
             </div>
             <div
               className={`watchlist-icon ${
@@ -94,14 +94,14 @@ function Grid({ coin, delay }) {
         <p
           className={
             coin.price_change_percentage_24h >= 0
-              ? "current-price !text-white"
+              ? "current-price"
               : "current-price-red"
           }
         >
           ${coin.current_price.toLocaleString()}
         </p>
 
-        <p className="coin-name !text-white">
+        <p className="coin-name">
           Total Volume : {coin.total_volume.toLocaleString()}
         </p>
         <p className="coin-name">

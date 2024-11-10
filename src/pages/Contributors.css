@@ -108,6 +108,15 @@ h2 {
   opacity:0.7;
 }
 
+.spinner-container,.error-message,.loading-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+  width: 100%; /* Full width */
+}
+
+
 @media (max-width: 1200px) {
   .contributor-card {
     max-width: 33.333%;
@@ -155,4 +164,18 @@ h2 {
   .contributors-grid {
     grid-template-columns: 1fr;
   }
+}
+.load-more-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.load-more-button:hover {
+  background-color: #0056b3;
 }
