@@ -23,7 +23,7 @@
 
   .carousel-card {
     background: linear-gradient(135deg, #9b59b6, #ff6ec7); /* Initial purple-pink gradient */
-    color: var(--text-color);
+    color: white;
     padding: 1.5rem;
     width: 250px;
     border-radius: 8px;
@@ -45,7 +45,7 @@
   
   .carousel-card p {
     font-size: 1rem;
-    color: #fff;
+    color: #fff !important;
   }
   
   /* Animation to alternate between purple and pink */
@@ -69,7 +69,7 @@
   
   [data-theme="light"] .carousel-card {
     background-color: #fff;
-    color: #333;
+    color: #ffffff;
   }
 
   @media screen and (max-width: 1100px) {

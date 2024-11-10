@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Header from "../../components/Common/Header";
+// import { Link } from "react-router-dom"; 
 
 const InvestmentReturnCalculator = () => {
   const [investment, setInvestment] = useState(0);
@@ -56,7 +57,18 @@ const InvestmentReturnCalculator = () => {
             Final Amount: ${finalAmount}
           </div>
         )}
+        </div>
+        <div className="flex flex-col items-center p-6 bg-gray-100 rounded-lg shadow-md max-w-md mx-auto justify-center mt-10 mb-20">
+        <h2 className="text-2xl font-semibold mb-4 text-gray-700">Expert Insights & Pro Tips</h2>
+        <ul className="list-disc list-inside text-gray-700">
+          <li>Start investing early to take advantage of compound interest.</li>
+          <li>Consider diversifying your investment portfolio to mitigate risks.</li>
+          <li>Regularly review and adjust your investment strategy based on market conditions.</li>
+          <li>Stay informed about economic trends that can impact your investments.</li>
+          <li>Consult with a financial advisor to tailor your investment strategy to your goals.</li>
+        </ul>
       </div>
+      
     </>
   );
 };

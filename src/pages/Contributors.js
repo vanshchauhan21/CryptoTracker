@@ -9,11 +9,38 @@ import "../components/ContributorAnimation/ContributorAnimation.css";
 import ContributorCard from "../components/Common/Contributors Card/ContributorCard";
 
 import "./Contributors.css";
+import LottieSpinner from "../components/Common/LottieSpinner/LottieSpinner";
 
 function Contributors() {
   const [contributors, setContributors] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [visibleCount, setVisibleCount] = useState(3); // Initially show 3 contributors
+  const contributorsData = [
+    { name: 'Contributor 1', description: 'Description for Contributor 1' },
+    { name: 'Contributor 2', description: 'Description for Contributor 2' },
+    { name: 'Contributor 3', description: 'Description for Contributor 3' },
+    { name: 'Contributor 4', description: 'Description for Contributor 4' },
+    { name: 'Contributor 5', description: 'Description for Contributor 5' },
+    { name: 'Contributor 6', description: 'Description for Contributor 6' },
+    { name: 'Contributor 7', description: 'Description for Contributor 7' },
+    { name: 'Contributor 8', description: 'Description for Contributor 8' },
+    { name: 'Contributor 9', description: 'Description for Contributor 9' },
+    { name: 'Contributor 10', description: 'Description for Contributor 10' },
+    { name: 'Contributor 11', description: 'Description for Contributor 11' },
+    { name: 'Contributor 12', description: 'Description for Contributor 12' },
+    { name: 'Contributor 13', description: 'Description for Contributor 13' },
+    { name: 'Contributor 14', description: 'Description for Contributor 14' },
+    { name: 'Contributor 15', description: 'Description for Contributor 15' },
+    { name: 'Contributor 16', description: 'Description for Contributor 16' },
+    { name: 'Contributor 17', description: 'Description for Contributor 17' },
+    { name: 'Contributor 18', description: 'Description for Contributor 18' },
+    { name: 'Contributor 19', description: 'Description for Contributor 19' },
+    { name: 'Contributor 20', description: 'Description for Contributor 20' },
+];
+  const handleLoadMore = () => {
+      setVisibleCount(prevCount => prevCount + 3); // Show 3 more contributors
+  };
 
   useEffect(() => {
     async function fetchContributors() {
@@ -62,17 +89,17 @@ function Contributors() {
 
     const cleanup = setupContributorCardAnimations();
 
-  
+
     return cleanup;
- 
+
   }, [contributors]);
-  
+
 
   if (loading) {
     return (
       <div className="loading-message">
-        <Header />
-        Loading contributors...
+        {/* <Header /> */}
+        <LottieSpinner />
       </div>
     );
   }
@@ -80,8 +107,8 @@ function Contributors() {
   if (error) {
     return (
       <div className="error-message">
-        <Header />
-        <p>{error}</p>
+        {/* <Header /> */}
+        <LottieSpinner />
       </div>
     );
   }
@@ -130,9 +157,18 @@ function Contributors() {
 
           ))
         ) : (
-          <p>No contributors found.</p>
+
+          <div className="spinner-container">
+            <LottieSpinner />
+          </div>
+
         )}
       </div>
+      {visibleCount < contributorsData.length && (
+                <button className="load-more-button" onClick={handleLoadMore}>
+                    Load More
+                </button>
+            )}
     </div>
   );
 }
