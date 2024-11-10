@@ -160,6 +160,10 @@ const Footer = () => {
                 label: "CompoundInterestCalculator",
               },
               {
+                path: "/calculators/InterestRateChangeEstimator",
+                label: "Interest Rate Change Estimator",
+              },
+              {
                 path: "/calculators/MarginCalculator",
                 label: "MarginCalculator",
               },
