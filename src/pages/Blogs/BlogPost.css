@@ -67,6 +67,6 @@
 
 [data-theme="dark"] .blog-post p { color: #f9f9f9; /* Dark mode content color */ }
 
-[data-theme="dark"] .read-more-button { background-color: #3a80e9; /* Dark mode button color */ }
+[data-theme="dark"] .read-more-button { background-color: #3a80e9; color: #fff; /* Dark mode button color */ }
 
 [data-theme="dark"] .read-more-button:hover { background-color: #2a60b0; /* Dark mode button hover color */ }
