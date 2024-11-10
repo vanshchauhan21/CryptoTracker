@@ -330,7 +330,7 @@ function App() {
 
                 <Route path="/methodology" element={<Methodology />} />
 
-              </Routes>
+             
 
                 <Route path="/sitemap" element={<Sitemap />} />
 
