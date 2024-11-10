@@ -65,7 +65,7 @@ import Cryptoreward from "./pages/Cryptoreward/Cryptoreward";
 import BTCDominance from "./pages/BTCDominance/BTCDominance";
 import MarketUpdate from "./pages/MarketUpdate/MarketUpdate.js";
 import HelpCenter from "./pages/HelpCenter/HelpCenter.js";
-
+import UltimateCryptoPortfolioTracker from './pages/UltimateCryptoPortfolioTracker/UltimateCryptoPortfolioTracker';
 import WhatsTrending from "./pages/WhatsTrending/WhatsTrending.js";
 
 
@@ -84,10 +84,11 @@ import FearAndGreedIndex from './pages/FearAndGreedIndex/FearAndGreedIndex';
 import Earn from './pages/Earn/Earn';
 
 import BitCoinRainBowCharDetail from "./pages/BitCoinRainBow/BitCoinRainBowCharDetail.js";
-
+import AffiliateProgram from './pages/AffiliateProgram/AffiliateProgram';
 import TrackNFTs from "./pages/TrackNFT/TrackNFTs.js";
 import InvestmentReturnCalculator from "./pages/Useful Tools/Investmentreturncalculator.js";
 import BackToTopButton from "./components/BackToTopButton/BackToTopButton.js";
+
 
 
 
@@ -323,13 +324,22 @@ function App() {
                 <Route path="/crypto-quiz" element={<CryptoQuiz />} />
                 <Route path="/fear-and-greed" element={<FearAndGreedIndex />} />
 
+
+                <Route path="/affiliate-program" element={<AffiliateProgram />} />
+
+                <Route path="/methodology" element={<Methodology />} />
+
+              </Routes>
+
                 <Route path="/sitemap" element={<Sitemap />} />
 
                 <Route path="/methodology" element={<Methodology />} />
                 <Route path="/earn" element={<Earn />} /> 
                 <Route path="/careers" element={<Careers />} /> 
+                <Route path="/ultimate-crypto-portfolio-tracker" element={<UltimateCryptoPortfolioTracker />} />
 
              </Routes>
+
 
             </BrowserRouter>
           </ThemeProvider>
