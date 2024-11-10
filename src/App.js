@@ -93,6 +93,7 @@ import InterestRateChangeEstimator from "./pages/rce.js";
 
 
 import BackToTopButton from "./components/BackToTopButton/BackToTopButton.js";
+import CosmosWalletTracker from "./pages/CosmosWalletTracker/CosmosWalletTracker.js";
 
 
 
@@ -254,6 +255,7 @@ function App() {
                 <Route path="/affiliate-program" element={<AffiliateProgram />} />
                 <Route path="/methodology" element={<Methodology />} />
                 <Route path="/sitemap" element={<Sitemap />} />
+                <Route path="/cosmos" element={<CosmosWalletTracker />} />
                 <Route path="/methodology" element={<Methodology />} />
                 <Route path="/earn" element={<Earn />} />
                 <Route path="/careers" element={<Careers />} />

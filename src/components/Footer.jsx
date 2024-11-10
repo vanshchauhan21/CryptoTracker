@@ -124,6 +124,7 @@ const Footer = () => {
               { path: "/affiliate-program", label: "Affiliate Program" },
 
               { path: "Sitemap", label: "Site map" },
+              { path: "/cosmos", label: "Cosmos Wallet Tracker"}
 
             ].map(({ path, label }) => (
               <li key={label}>
