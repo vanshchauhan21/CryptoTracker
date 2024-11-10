@@ -25,6 +25,7 @@ import i18n from "./i18n";
 import Contributors from "./pages/Contributors";
 import TermsOfUse from "./pages/TermsOfUse";
 import PrivacyPolicy from "./pages/Privacy-Policy/PrivacyPolicy";
+import CodeOfConduct from "./pages/CodeOfConduct/CodeOfConduct.js";
 import Pricing from "./pages/Pricing/Pricing";
 import Learn from "./components/Learn";
 import CryptoProfitCalculator from "./pages/CryptoProfitCalculator";
@@ -48,6 +49,7 @@ import Footer from "./components/Footer";
 import NFTShowcase from "./pages/NFTShowcase/NFTShowcase";
 import { Helmet } from "react-helmet";
 import CompoundInterestCalculator from "./pages/CompoundInterestCalculator.js";
+import Cryptofiat from "./pages/Cryptofiat.js";
 import MarginCalculator from "./pages/MarginCalculator.js";
 import DefiCalculator from "./pages/defi.js";
 
@@ -55,7 +57,7 @@ import Sitemap from './pages/Sitemap/Sitemap';
 
 
 import Methodology from './pages/Methodology/Methodology';
-
+import Careers from "./pages/Careers";
 
 
 import Cryptoreward from "./pages/Cryptoreward/Cryptoreward";
@@ -64,7 +66,7 @@ import Cryptoreward from "./pages/Cryptoreward/Cryptoreward";
 import BTCDominance from "./pages/BTCDominance/BTCDominance";
 import MarketUpdate from "./pages/MarketUpdate/MarketUpdate.js";
 import HelpCenter from "./pages/HelpCenter/HelpCenter.js";
-
+import UltimateCryptoPortfolioTracker from './pages/UltimateCryptoPortfolioTracker/UltimateCryptoPortfolioTracker';
 import WhatsTrending from "./pages/WhatsTrending/WhatsTrending.js";
 
 
@@ -83,9 +85,11 @@ import FearAndGreedIndex from './pages/FearAndGreedIndex/FearAndGreedIndex';
 import Earn from './pages/Earn/Earn';
 
 import BitCoinRainBowCharDetail from "./pages/BitCoinRainBow/BitCoinRainBowCharDetail.js";
-
+import AffiliateProgram from './pages/AffiliateProgram/AffiliateProgram';
 import TrackNFTs from "./pages/TrackNFT/TrackNFTs.js";
 import InvestmentReturnCalculator from "./pages/Useful Tools/Investmentreturncalculator.js";
+import BackToTopButton from "./components/BackToTopButton/BackToTopButton.js";
+
 
 
 
@@ -196,6 +200,7 @@ function App() {
                   <Route path="impermanent-loss-calculator" element={<ImpermanentLossCalculator />} />
                   <Route path="DividendCalculator" element={<DividendCalculator />} />
                   <Route path="crypto-converter" element={<CryptoConverter />} />
+                  <Route path="Cryptofiat" element={<Cryptofiat/>} />
                   <Route path="CompoundInterestCalculator" element={<CompoundInterestCalculator />} />
                   <Route path="MarginCalculator" element={<MarginCalculator />} />
                   <Route path="DefiCalculator" element={<DefiCalculator />} />
@@ -248,6 +253,7 @@ function App() {
                 <Route path="/disclaimer" element={<Disclaimer />} />
                 <Route path="/terms-of-Use" element={<TermsOfUse />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/code-of-conduct" element={<CodeOfConduct />} />
                 <Route path="/cookies-policy" element={<CookiesPolicy />} />
                 <Route path="/terms-conditions" element={<TermCondition />} />
                 <Route path="/faq" element={<Faq />} />
@@ -309,7 +315,6 @@ function App() {
                 />
 
                 <Route path="CryptoConverter" element={<CryptoConverter />} />
-
                 <Route path="/cookie-policy" element={<CookiePolicy />} />
 
                 <Route path="/GoogleTranslate" element={<GoogleTranslate />} />
@@ -320,13 +325,22 @@ function App() {
                 <Route path="/crypto-quiz" element={<CryptoQuiz />} />
                 <Route path="/fear-and-greed" element={<FearAndGreedIndex />} />
 
+
+                <Route path="/affiliate-program" element={<AffiliateProgram />} />
+
+                <Route path="/methodology" element={<Methodology />} />
+
+             
+
                 <Route path="/sitemap" element={<Sitemap />} />
 
                 <Route path="/methodology" element={<Methodology />} />
                 <Route path="/earn" element={<Earn />} /> 
-
+                <Route path="/careers" element={<Careers />} /> 
+                <Route path="/ultimate-crypto-portfolio-tracker" element={<UltimateCryptoPortfolioTracker />} />
 
              </Routes>
+
 
             </BrowserRouter>
           </ThemeProvider>
