@@ -2,12 +2,10 @@
 
 .sidebar {
     margin-top:20px;
-    background: #2a2a2a;
     color:#fff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0 , 0, 0, 0.1);
     padding: 20px;
-    margin-left: 20px; 
 }
 
 .sidebar h3 {
