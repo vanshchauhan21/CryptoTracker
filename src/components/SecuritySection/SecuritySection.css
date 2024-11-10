@@ -1,0 +1,153 @@
+
+.security-section {
+    background-color: var(--security-bg-color, #f9f9f9); /* Default light background */
+    border-radius: 12px; /* More rounded corners */
+    padding: 40px;
+    margin: 20px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Position for pseudo-elements */
+  }
+  
+  .security-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 12px; /* Match border radius */
+    background: linear-gradient(135deg, rgba(102, 16, 242, 0.1), rgba(102, 16, 242, 0.05));
+    z-index: 0; /* Behind the content */
+  }
+  
+  .security-heading {
+    color: var(--heading-color, #6610f2); /* Heading color */
+    font-size: 2.5em; /* Larger heading size */
+    margin-bottom: 20px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out; /* Animation for heading */
+    position: relative; /* Position for pseudo-elements */
+    z-index: 1; /* Above the gradient background */
+  }
+  
+  .security-description {
+    color: var(--text-color, #333);
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: center;
+    z-index: 1; /* Above the gradient background */
+  }
+  
+  .security-features {
+    display: flex;
+    justify-content: space-around;
+  /* Border for hover effect */
+   
+    flex-wrap: wrap;
+  }
+
+  
+  
+  .security-feature {
+    flex: 1 1 250px; /* Flexbox for responsive layout */
+    flex-direction: column;
+    margin: 15px;
+    padding: 30px; /* Increased padding for more space */
+    border-radius: 12px; /* More rounded corners */
+    background: var(--feature-bg-color, #ffffff); /* Default feature background */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Position for pseudo-elements */
+    z-index: 1; /* Above the gradient background */
+    /* border: 2px solid transparent; Border for hover effect */
+  }
+  
+  .security-feature:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    background-color: linear-gradient(135deg, #9b59b6, #4db1fd, #5843f4);
+    /* Highlight border on hover */
+    /* background: rgba(102, 16, 242, 0.1); Light background on hover */
+  }
+  
+  .security-icon {
+    font-size: 4em; /* Increased icon size for better visibility */
+    color: var(--icon-color, #6610f2); /* Icon color based on theme */
+    margin-bottom: 15px; /* Space below icon */
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .security-icon:hover {
+    color: #4b0c9b; /* Darker shade on hover */
+  }
+  
+  .security-feature h3 {
+    color: var(--heading-color, #333);
+    margin: 10px 0;
+    font-size: 1.5em; /* Increased heading size */
+    position: relative; /* Position for pseudo-elements */
+  }
+  
+  .security-feature h3::after {
+    content: '';
+    display: block;
+    width: 50px; /* Width of the underline */
+    height: 4px; /* Height of the underline */
+    background: var(--heading-color, #6610f2); /* Color of the underline */
+    margin: 10px auto; /* Center the underline */
+    border-radius: 5px; /* Rounded corners for the underline */
+    opacity: 0.7; /* Slight transparency */
+  }
+  
+  .security-feature p {
+    color: var(--text-color, #555);
+    line-height: 1.5;
+    font-size: 1em; /* Font size for better readability */
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .security -feature:hover p {
+    color: #333; /* Darker text on hover for contrast */
+  }
+  
+  /* Dark mode styles */
+  @media (prefers-color-scheme: dark) {
+    .security-section {
+      background-color: #1a1a1a; /* Dark background for the section */
+    }
+  
+    .security-feature {
+      background: #2a2a2a; /* Dark feature background */
+      border-color: #444; /* Dark border */
+    }
+  
+    .security-feature:hover {
+      background: rgba(102, 16, 242, 0.2); /* Lighter background on hover */
+    }
+  
+    .security-icon {
+      color: #ffffff; /* Light icon color */
+    }
+  
+    .security-feature h3 {
+      color: #ffffff; /* Light heading color */
+    }
+  
+    .security-feature p {
+      color: #cccccc; /* Light text color */
+    }
+  }
+  
+  /* Animation for heading */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

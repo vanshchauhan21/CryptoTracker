@@ -1,0 +1,52 @@
+.exit-strategy-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+    
+    /* border: 2px solid red; */
+  }
+  
+  .exit-strategy-description-wrapper {
+    text-align: center;
+  }
+  
+  .exit-strategy-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .exit-strategy-title b {
+    color: #4db1fd;
+  }
+  
+  .exit-strategy-description {
+    font-size: 1.1rem;
+    color: #666;
+  }
+  
+  .exit-strategy-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #4db1fd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .exit-strategy-button:hover {
+    background-color: #3b8bc4;
+  }
+  
+  .exit-strategy-banner {
+    margin-top: 30px;
+  }
+  
+  .exit-strategy-banner-img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+  }
+  

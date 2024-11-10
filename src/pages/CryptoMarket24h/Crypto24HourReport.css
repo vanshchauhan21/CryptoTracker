@@ -205,3 +205,88 @@ td.red {
     font-size: 0.95rem;
   }
 }
+/* Base Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f6f9; /* Light background for contrast */
+  color: #333; /* Dark text for readability */
+  margin: 0;
+  padding: 20px;
+}
+
+/* Main Container */
+.crypto-report-container {
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container */
+  padding: 20px;
+  background-color: #ffffff; /* White background for the report */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Header */
+.crypto-report-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.crypto-report-header h1 {
+  font-size: 2.5rem;
+  color: #007bff; /* Primary color for the title */
+  margin: 0;
+}
+
+.crypto-report-header p {
+  font-size: 1.2rem;
+  color: #666; /* Subtle color for description */
+}
+
+/* Table Styles */
+.crypto-report-table {
+  width: 100%;
+  border-collapse: collapse; /* Remove gaps between cells */
+  margin-bottom: 20px; /* Space below the table */
+}
+
+.crypto-report-table th, .crypto-report-table td {
+  padding: 15px; /* Padding for cells */
+  text-align: left; /* Align text to the left */
+  border-bottom: 1px solid #e0e0e0; /* Light border between rows */
+}
+
+.crypto-report-table th {
+  background-color: #007bff; /* Header background color */
+  color: white; /* White text for header */
+  font-weight: bold; /* Bold text for header */
+}
+
+.crypto-report-table tr:hover {
+  background-color: rgba(0, 123, 255, 0.1); /* Light blue background on hover */
+}
+
+/* Card Styles for Individual Reports */
+.crypto-report-card {
+  background-color: #f9f9f9; /* Light card background */
+  border: 1px solid #e0e0e0; /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px; /* Padding inside cards */
+  margin: 10px 0; /* Margin between cards */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.crypto-report-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .crypto-report-table, .crypto-report-card {
+      font-size: 0.9rem; /* Slightly smaller text on smaller screens */
+  }
+
+  .crypto-report-header h1 {
+      font-size: 2rem; /* Smaller title on smaller screens */
+  }
+}
