@@ -42,13 +42,10 @@ import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator"
 import ImpermanentLossCalculator from "./pages/ImpermanentLossCalculator";
 
 import DollarCostAveraging from "./pages/dca.js";
-=======
 
 
 import DividendCalculator  from "./pages/DividendCalculator";
 import GasFreeEstimator  from "./pages/gfe.js";
-=======
-import DividendCalculator from "./pages/DividendCalculator";
 
 import ProfitLoss from "./pages/ProfitLoss/ProfitLoss";
 import Cryptocard from "./pages/CryptoCard/Cryptocard";
@@ -61,8 +58,6 @@ import Cryptofiat from "./pages/Cryptofiat.js";
 import MarginCalculator from "./pages/MarginCalculator.js";
 
 import DefiCalculator from "./pages/defi.js";
-
-=======
 import CompoundStaking from "./pages/cics.js";
 
 import Sitemap from './pages/Sitemap/Sitemap';
@@ -89,7 +84,6 @@ import InvestmentReturnCalculator from "./pages/Useful Tools/Investmentreturncal
 import InterestRateChangeEstimator from "./pages/rce.js";
 
 
-=======
 
 
 
@@ -179,16 +173,13 @@ function App() {
                   <Route path="impermanent-loss-calculator" element={<ImpermanentLossCalculator />} />
 
                   <Route path="dollar-cost-averaging" element={<DollarCostAveraging />} />
-=======
 
      <Route path="DividendCalculator" element={<DividendCalculator />} />
                   <Route path="GasFreeEstimator" element={<GasFreeEstimator />} />
-=======
                   <Route path="dividend-calculator" element={<DividendCalculator />} />
 
                   <Route path="crypto-converter" element={<CryptoConverter />} />
 
-=======
 
                   <Route path="Cryptofiat" element={<Cryptofiat/>} />
                   <Route path="CompoundInterestCalculator" element={<CompoundInterestCalculator />} />
@@ -196,20 +187,12 @@ function App() {
 
                   <Route path="DefiCalculator" element={<DefiCalculator />} />
                 </Route>
-=======
                   <Route path="InterestRateChangeEstimator" element={<InterestRateChangeEstimator />} />
-=======
 
                   <Route path="cryptofiat" element={<Cryptofiat />} />
                   <Route path="compound-interest-calculator" element={<CompoundInterestCalculator />} />
                   <Route path="margin-calculator" element={<MarginCalculator />} />
                   <Route path="compound-staking" element={<CompoundStaking />} />
-
-=======
-
-
-
-                </Route>
                 <Route path="/charts">
                   <Route path="bitcoin-rainbow-chart" element={<BitcoinRainbowChart />} />
                   <Route path="bitcoin-rainbow-chart-detail" element={<BitCoinRainBowCharDetail />} />
