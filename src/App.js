@@ -88,6 +88,7 @@ import TrackNFTs from "./pages/TrackNFT/TrackNFTs.js";
 import InvestmentReturnCalculator from "./pages/Useful Tools/Investmentreturncalculator.js";
 import BreakEvenCalculator from "./pages/BreakEvenCalculator";
 import SlippageCalculator from "./pages/SlippageCalculator";
+import ROICalculator from "./pages/ROICalculator";
 
 import InterestRateChangeEstimator from "./pages/rce.js";
 import ICOIDOPerformanceTracker from "./pages/ico.js";
@@ -183,6 +184,7 @@ function App() {
                   <Route path="profit-return-calculator" element={<ProfitReturnCalculator />} />
                   <Route path="BreakEvenCalculator" element={<BreakEvenCalculator />} />
                   <Route path="SIPCalculator" element={<SIPCalculator />} />
+                  <Route path="ROICalculator" element={<ROICalculator />} />
                   <Route path="investment-return-calculator" element={<InvestmentReturnCalculator />} />
                   <Route path="impermanent-loss-calculator" element={<ImpermanentLossCalculator />} />
 
