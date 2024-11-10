@@ -11,7 +11,7 @@
   --feature-bg-hover: rgba(0, 0, 0, 0.75);
 }
 h2, p, .feature-item span, .feature-item i {
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 .buy-bitcoin-section {

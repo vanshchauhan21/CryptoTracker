@@ -1,20 +1,54 @@
-/* Base Card Styles */
+/* Card.css */
+:root {
+  --background-color: black;
+  --card-background-color: white;
+  --text-color: black;
+  --highlighted-background-color: white;
+  --highlighted-text-color: black;
+  --border-color: #3a80e9;
+  --button-background-color: #3a80e9;
+  --button-hover-background-color: #2d65b9;
+  --price-color: #61c96f;
+  --feature-item-color: black;
+}
+
+[data-theme='dark'] {
+  --background-color: black;
+  --card-background-color: #1a1a1a;
+  --text-color: white;
+  --highlighted-background-color: black;
+  --highlighted-text-color: white;
+  --border-color: #3a80e9;
+  --button-background-color: #3a80e9;
+  --button-hover-background-color: #2d65b9;
+  --price-color: #61c96f;
+  --feature-item-color: white;
+}
+
 .card {
   position: relative;
   border-radius: 20px;
   padding: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: var(--card-background-color);
+  color: var(--text-color);
   transition: all 0.3s ease;
-  border: 2px solid;
+  border: 2px solid var(--border-color);
   padding-bottom: 40px;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
 }
 
+.card.highlighted {
+  background-color: var(--highlighted-background-color);
+  color: var(--highlighted-text-color);
+}
+
 .card-title {
   font-size: 1.5rem;
   font-weight: bold;
+  color: var(--border-color);
 }
 
 .card-price {
@@ -26,16 +60,18 @@
 .price {
   font-size: 2.5rem;
   font-weight: bold;
-  animation: priceGlow 2s ease-in-out infinite alternate;
+  color: var(--price-color);
 }
 
 .per-month {
   font-size: 1rem;
+  color: var(--text-color);
 }
 
 .card-description {
   margin-top: 15px;
-  font-size: 1.3rem;
+  font-size: 1rem;
+  color: var(--text-color);
   line-height: 1.5;
 }
 
@@ -49,9 +85,11 @@
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  color: var(--feature-item-color);
 }
 
 .checkmark {
+  color: green !important;
   margin-right: 5px;
 }
 
@@ -61,12 +99,17 @@
   padding: 10px;
   text-align: center;
   border-radius: 5px;
+  background-color: var(--button-background-color);
+  color: white;
   text-decoration: none;
   transition: all 0.3s ease;
   margin-top: auto;
 }
+
 .card-button:hover {
+  background-color: var(--button-hover-background-color);
   transform: translateY(-2px);
+  color: black;
 }
 
 /* Hover effect for the entire card */
@@ -75,78 +118,9 @@
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Light Mode */
-[data-theme="light"] .card {
-  background-color: white;
-  color: black;
-  border-color: #3a80e9;
-}
-
-[data-theme="light"] .card-title {
-  font-size: 1.8rem;
-  color: #3a80e9; /* Indigo color */
-}
-
-[data-theme="light"] .price {
-  color: #61c96f; /* Green color */
-}
-
-[data-theme="light"] .per-month,
-[data-theme="light"] .card-description,
-[data-theme="light"] .feature-item,
-[data-theme="light"] .checkmark {
-  color: black;
-}
-
-[data-theme="light"] .checkmark {
-  color: green; /* Green checkmark */
-}
-
-[data-theme="light"] .card-button {
-  background-color: #3a80e9; /* Indigo color */
-  color: white;
-}
-
-[data-theme="light"] .card-button:hover {
-  background-color: #2d65b9; /* Darker blue */
-  color: black;
-}
-
-/* Dark Mode */
-[data-theme="dark"] .card {
-  background-color: black;
-  color: white;
-  border-color: #3a80e9;
-}
-
-[data-theme="dark"] .card-title {
-  font-size: 1.8rem;
-  color: #3a80e9;
-}
-
-[data-theme="dark"] .price {
-  color: #61c96f;
-}
-
-[data-theme="dark"] .per-month,
-[data-theme="dark"] .card-description,
-[data-theme="dark"] .feature-item,
-[data-theme="dark"] .checkmark {
-  color: white;
-}
-
-[data-theme="dark"] .checkmark {
-  color: #61c96f; /* Light green checkmark */
-}
-
-[data-theme="dark"] .card-button {
-  background-color: #3a80e9;
-  color: white;
-}
-
-[data-theme="dark"] .card-button:hover {
-  background-color: #2d65b9;
-  color: white;
+/* Highlighted card styles */
+.card.highlighted {
+  color: var(--highlighted-text-color);
 }
 
 /* Responsive design */
@@ -175,6 +149,10 @@
 }
 
 /* Animation for price */
+.price {
+  animation: priceGlow 2s ease-in-out infinite alternate;
+}
+
 @keyframes priceGlow {
   from {
     text-shadow: 0 0 5px rgba(97, 201, 111, 0.3);
