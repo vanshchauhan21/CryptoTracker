@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import "./Pricing.css";
 import Header from '../../components/Common/Header';
 import PriceCard from '../../components/Common/Price Card/PriceCard';
+import SecuritySection from '../../components/SecuritySection/SecuritySection';
 
 function Pricing() {
   const { t } = useTranslation();
@@ -40,7 +41,13 @@ function Pricing() {
           ]}
           isHighlighted
         />
+
       </div>
+<div>
+<SecuritySection/>
+
+</div>
+
     </>
   );
 }
