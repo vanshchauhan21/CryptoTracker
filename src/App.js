@@ -40,7 +40,8 @@ import Aboutus from "./pages/Aboutus/Aboutus";
 import CookiePolicy from "./pages/Cookie-Policy/CookiePolicy";
 import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator";
 import ImpermanentLossCalculator from "./pages/ImpermanentLossCalculator";
-
+import DividendCalculator  from "./pages/DividendCalculator";
+import GasFreeEstimator  from "./pages/gfe.js";
 import DividendCalculator from "./pages/DividendCalculator";
 import GasFreeEstimator from "./pages/gfe.js";
 import ProfitLoss from "./pages/ProfitLoss/ProfitLoss";
@@ -209,6 +210,25 @@ function App() {
                     path="MarginCalculator"
                     element={<MarginCalculator />}
                   />
+                  <Route path="crypto-profit-calculator" element={<CryptoProfitCalculator />} />
+                  <Route path="profit-return-calculator" element={<ProfitReturnCalculator />} />
+                  <Route path="investment-return-calculator" element={<InvestmentReturnCalculator />} />
+                  <Route path="impermanent-loss-calculator" element={<ImpermanentLossCalculator />} />
+
+                  <Route path="dollar-cost-averaging" element={<DollarCostAveraging />} />
+
+     <Route path="DividendCalculator" element={<DividendCalculator />} />
+                  <Route path="GasFreeEstimator" element={<GasFreeEstimator />} />
+
+                  <Route path="dividend-calculator" element={<DividendCalculator />} />
+
+                  <Route path="crypto-converter" element={<CryptoConverter />} />
+
+
+
+                  <Route path="Cryptofiat" element={<Cryptofiat/>} />
+                  <Route path="CompoundInterestCalculator" element={<CompoundInterestCalculator />} />
+                  <Route path="MarginCalculator" element={<MarginCalculator />} />
 
                   <Route path="DefiCalculator" element={<DefiCalculator />} />
                 </Route>
