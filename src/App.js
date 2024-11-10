@@ -57,6 +57,7 @@ import { Helmet } from "react-helmet";
 import CompoundInterestCalculator from "./pages/CompoundInterestCalculator.js";
 import Cryptofiat from "./pages/Cryptofiat.js";
 import MarginCalculator from "./pages/MarginCalculator.js";
+import SIPCalculator from "./pages/SIPCalculator.js";
 
 import DefiCalculator from "./pages/defi.js";
 import CompoundStaking from "./pages/cics.js";
@@ -225,6 +226,7 @@ function App() {
                   />
                   <Route path="crypto-profit-calculator" element={<CryptoProfitCalculator />} />
                   <Route path="profit-return-calculator" element={<ProfitReturnCalculator />} />
+                  <Route path="SIPCalculator" element={<SIPCalculator />} />
                   <Route path="investment-return-calculator" element={<InvestmentReturnCalculator />} />
                   <Route path="impermanent-loss-calculator" element={<ImpermanentLossCalculator />} />
 
