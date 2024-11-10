@@ -50,7 +50,12 @@ import { Helmet } from "react-helmet";
 import CompoundInterestCalculator from "./pages/CompoundInterestCalculator.js";
 import Cryptofiat from "./pages/Cryptofiat.js";
 import MarginCalculator from "./pages/MarginCalculator.js";
+
+import DefiCalculator from "./pages/defi.js";
+
+=======
 import CompoundStaking from "./pages/cics.js";
+
 import Sitemap from './pages/Sitemap/Sitemap';
 import Methodology from './pages/Methodology/Methodology';
 import Careers from "./pages/Careers";
@@ -172,6 +177,10 @@ function App() {
                   <Route path="Cryptofiat" element={<Cryptofiat/>} />
                   <Route path="CompoundInterestCalculator" element={<CompoundInterestCalculator />} />
                   <Route path="MarginCalculator" element={<MarginCalculator />} />
+
+                  <Route path="DefiCalculator" element={<DefiCalculator />} />
+                </Route>
+=======
                   <Route path="InterestRateChangeEstimator" element={<InterestRateChangeEstimator />} />
 =======
 
@@ -181,6 +190,7 @@ function App() {
                   <Route path="compound-staking" element={<CompoundStaking />} />
 
 =======
+
 
 
                 </Route>
