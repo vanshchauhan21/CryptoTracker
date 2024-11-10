@@ -9,7 +9,7 @@
     padding: 50px 20px;
     min-height: 80vh;
     margin:  100px auto;
-    background-color: var(--pricing-container-bg-color) !important;
+    background-color: var(--pricing-container-bg-color);
   }
   
 

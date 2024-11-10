@@ -26,6 +26,7 @@ function Pricing() {
             t('pricing.hobby_feature_3'),
             t('pricing.hobby_feature_4'),
           ]}
+          isHighlighted
         />
         <PriceCard
           title={t('pricing.enterprise_title')}
