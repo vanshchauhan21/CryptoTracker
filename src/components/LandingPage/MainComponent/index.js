@@ -31,7 +31,11 @@ import PortfolioComparison from "../../../pages/AnalyzeAssets/PortfolioCompariso
 
 import SwapWithBestRates from "../../SwapWithBestRates/SwapWithBestRates";
 import PlatformStatistics from "../../PlatformStatistics/PlatformStatistics";
+
+import UltimateSecurity from "../../UltimateSecurity/UltimateSecurity";
+=======
 import ExitStrategy from "../../ExitStrategy/ExitStrategy";
+
 
 
 function MainComponent() {
@@ -155,8 +159,13 @@ function MainComponent() {
       {/* ................................................Platform statistics.............. */}
       <PlatformStatistics />
 
+
+      {/* ..............................................UltimateSecurity............ */}
+<UltimateSecurity />
+=======
       {/* .................................ExitStrategy............. */}
 <ExitStrategy/>
+
     </div>
   );
 }
