@@ -87,6 +87,7 @@ import AffiliateProgram from './pages/AffiliateProgram/AffiliateProgram';
 import TrackNFTs from "./pages/TrackNFT/TrackNFTs.js";
 import InvestmentReturnCalculator from "./pages/Useful Tools/Investmentreturncalculator.js";
 import BreakEvenCalculator from "./pages/BreakEvenCalculator";
+import SlippageCalculator from "./pages/SlippageCalculator";
 
 import InterestRateChangeEstimator from "./pages/rce.js";
 import ICOIDOPerformanceTracker from "./pages/ico.js";
@@ -178,6 +179,7 @@ function App() {
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/calculators">
                   <Route path="crypto-profit-calculator" element={<CryptoProfitCalculator />} />
+                  <Route path="SlippageCalculator" element={<SlippageCalculator />} />
                   <Route path="profit-return-calculator" element={<ProfitReturnCalculator />} />
                   <Route path="BreakEvenCalculator" element={<BreakEvenCalculator />} />
                   <Route path="SIPCalculator" element={<SIPCalculator />} />
