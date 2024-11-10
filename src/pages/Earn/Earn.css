@@ -33,6 +33,7 @@
   font-size: 2.5rem;
   margin-bottom: 20px;
   font-weight: bold; /* Bold title */
+  color: blue;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Add text shadow */
 }
 

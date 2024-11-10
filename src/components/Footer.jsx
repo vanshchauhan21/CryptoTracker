@@ -187,6 +187,10 @@ const Footer = () => {
                 label: "Interest Rate Change Estimator",
               },
               {
+                path: "/calculators/ICOIDOPerformanceTracker ",
+                label: "ICO/IDO Performance Tracker",
+              },
+              {
                 path: "/calculators/MarginCalculator",
                 label: "MarginCalculator",
               },
