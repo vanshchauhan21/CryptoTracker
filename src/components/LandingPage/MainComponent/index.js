@@ -19,11 +19,47 @@ import LoveOurWebsiteCarousel from "../../LoveOurWebsite/LoveOurWebsiteCarousel"
 import { AnalyticsTwoTone } from "@mui/icons-material";
 import AnalyzeAssets from "../../../pages/AnalyzeAssets/AnalyzeAssets";
 import Marketdata from "../../../pages/Real-timeMarket-data/Marketdata";
+import CryptoTrackerManagingTool from "../../CryptoTrackerManagingTool/CryptoTrackerManagingTool";
+
+
+import Wallet from "../../../assets/Wallet.png";
+import Bitcoin from "../../../assets/Bitcoin.png";
+import Defi from "../../../assets/Defi.png";
+
+import PortfolioComparison from "../../../pages/AnalyzeAssets/PortfolioComparison";
+
+
+import SwapWithBestRates from "../../SwapWithBestRates/SwapWithBestRates";
+import PlatformStatistics from "../../PlatformStatistics/PlatformStatistics";
+
 
 function MainComponent() {
   useEffect(() => {
     AOS.init({ duration: 1000 }); // Initialize AOS with a duration of 1000ms
   }, []);
+
+
+  const infoData = [
+    {
+      icon: Wallet,
+      title: '300+ Wallets/Exchanges',
+      description: 'Track everything wherever you keep it: Binance, Trust Wallet, and others.',
+    },
+    {
+      icon: Defi,
+      title: '1,000+ DeFi Protocols',
+      description: 'Track and manage all your DeFi on 1000+ protocols and 10+ chains.',
+    },
+    {
+      icon: Bitcoin,
+      title: '20,000+ Cryptocurrencies',
+      description: 'Research, track, and manage any coin, set custom crypto alerts and more.',
+    },
+  ];
+
+
+
+
 
   return (
     <div className="main-wrapper">
@@ -102,9 +138,22 @@ function MainComponent() {
       {/* ........................why do people love our website.......... */}
       <LoveOurWebsiteCarousel />
       {/* .............................AnalyzeAssets................. */}
-      <AnalyzeAssets/>
+      <AnalyzeAssets />
+      <PortfolioComparison />
       {/* .............................AnalyzeAssets................. */}
-      <Marketdata/>
+      <Marketdata />
+
+      {/* ................SwapWithBestRates...................... */}
+      <SwapWithBestRates />
+      {/* .........................Crypto tracker Managing Tool.............. */}
+
+      <CryptoTrackerManagingTool data={infoData} />
+
+
+
+      {/* ................................................Platform statistics.............. */}
+      <PlatformStatistics />
+
     </div>
   );
 }

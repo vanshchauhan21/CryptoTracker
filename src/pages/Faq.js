@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Faq.css';
+import Feedback from '../components/Feedback/Feedbacksection'; 
 import Header from '../components/Common/Header';
 import {  Instagram, Github, Twitter, Linkedin } from "lucide-react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -175,6 +176,7 @@ const FAQ = () => {
         fontSize: "20px",
     }}
 >
+
     <span>Have more questions? Feel free to Connect with us on our social platforms.</span>
 </div>
 <div className="social-icons-container">
@@ -192,6 +194,7 @@ const FAQ = () => {
                         </div>
                     ))}
                 </div>
+                <Feedback />
            
         </>
 

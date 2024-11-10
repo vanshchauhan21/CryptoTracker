@@ -1,0 +1,186 @@
+.crypto-fiat-converter-container {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 70px;
+  background-color: #f8f8ff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  font-family: "Arial", sans-serif;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.head {
+  color: #0044cc;
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.converter-box {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.input-field {
+  padding: 11px;
+  font-size: 14px;
+  width: 100px;
+  border: 1px solid #ccddee;
+  border-radius: 4px;
+}
+
+.dropdown {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #1a73e8;
+  border-radius: 4px;
+}
+
+.swap-button {
+  padding: 8px;
+  font-size: 18px;
+  border: none;
+  background-color: #5a9bd5;
+  color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.swap-button:hover {
+  background-color: #3c7db3;
+}
+
+.result {
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2b2b2b;
+  text-align: center;
+}
+
+/* Styles for dark mode */
+[data-theme="dark"] .crypto-fiat-converter-container {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .head {
+  color: #8ab4f8;
+}
+
+[data-theme="dark"] .input-field,
+[data-theme="dark"] .dropdown {
+  background-color: #333333;
+  color: #ffffff;
+  border-color: #8ab4f8;
+}
+
+[data-theme="dark"] .input-field::placeholder {
+  color: #b3b3b3;
+}
+
+[data-theme="dark"] .swap-button {
+  background-color: #3c7db3;
+}
+
+[data-theme="dark"] .result {
+  color: #ffffff;
+}
+
+/* Learn More section styles */
+.learn-more-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.learn-more-header {
+  color: #0044cc;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.learn-more-item {
+  margin-bottom: 15px;
+  border: 1px solid #d1d5da;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.learn-more-title {
+  background-color: #e0e7ff;
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.learn-more-title:hover {
+  background-color: #cbd5e1;
+}
+
+.learn-more-arrow {
+  transition: transform 0.3s ease;
+}
+
+.learn-more-title.active .learn-more-arrow {
+  transform: rotate(180deg);
+}
+
+.learn-more-content {
+  padding: 0 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.learn-more-content.active {
+  max-height: 500px;
+  padding: 15px;
+}
+
+/* Dark mode styles for Learn More section */
+[data-theme="dark"] .learn-more-container {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .learn-more-header {
+  color: #8ab4f8;
+}
+
+[data-theme="dark"] .learn-more-item {
+  border-color: #8ab4f8;
+}
+
+[data-theme="dark"] .learn-more-title {
+  background-color: #333333;
+}
+
+[data-theme="dark"] .learn-more-content {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .learn-more-arrow {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .learn-more-title:hover {
+  background-color: #444444;
+}
+
+[data-theme="dark"] .learn-more-title.active {
+  background-color: #8ab4f8;
+  color: #ffffff;
+}
