@@ -166,6 +166,10 @@ const Footer = () => {
                 label: "Crypto Converter",
               },
               {
+                path: "/calculators/CompoundStaking",
+                label: "Compound Interest Calculator for Crypto Staking",
+              },
+              {
                 path: "/calculators/CompoundInterestCalculator",
                 label: "CompoundInterestCalculator",
               },
