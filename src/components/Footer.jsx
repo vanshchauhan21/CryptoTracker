@@ -5,6 +5,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import logo from "../assets/logo.jpg";
 import "./ComparePage/SelectCoins/index";
 import "./Footer.css";
+// import { Link } from 'react-router-dom';
 // import Careers from "./pages/Careers";
 import GoogleTranslate from "./GoogleTranslate";
 import { Link } from 'react-router-dom';
@@ -102,13 +103,14 @@ const Footer = () => {
               { path: "/blog", label: "Blog" },
 
               { path: "/earn", label: "Earn" },
+              { path: "/ultimate-crypto-portfolio-tracker", label: "Ultimate Crypto Portfolio Tracker" },
 
 
               // { path: "/#", label: "Earn" },
               // { path: "/crypto-blog", label: "Blog" },
 
 
-              { path: "/earn", label: "Earn" },
+              // { path: "/earn", label: "Earn" },
 
               // { path: "/earn", label: "Earn" },
 
@@ -118,9 +120,11 @@ const Footer = () => {
               { path: "/pricing", label: "Pricing" },
               { path: "/contributors", label: "Contributors" },
               { path: "/crypto-quiz", label: "Cryptocurrency Quiz" },
+
+              { path: "/affiliate-program", label: "Affiliate Program" },
+
               { path: "Sitemap", label: "Site map" },
-              { path: "/careers", label: "Careers" },
-              
+
             ].map(({ path, label }) => (
               <li key={label}>
                 <a href={path}>
