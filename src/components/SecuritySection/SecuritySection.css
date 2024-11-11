@@ -42,11 +42,16 @@
   .security-features {
     display: flex;
     justify-content: space-around;
+  /* Border for hover effect */
+   
     flex-wrap: wrap;
   }
+
+  
   
   .security-feature {
     flex: 1 1 250px; /* Flexbox for responsive layout */
+    flex-direction: column;
     margin: 15px;
     padding: 30px; /* Increased padding for more space */
     border-radius: 12px; /* More rounded corners */
@@ -56,14 +61,15 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative; /* Position for pseudo-elements */
     z-index: 1; /* Above the gradient background */
-    border: 2px solid transparent; /* Border for hover effect */
+    /* border: 2px solid transparent; Border for hover effect */
   }
   
   .security-feature:hover {
     transform: translateY(-5px); /* Lift effect on hover */
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-    border-color: var(--heading-color, #6610f2); /* Highlight border on hover */
-    background: rgba(102, 16, 242, 0.1); /* Light background on hover */
+    background-color: linear-gradient(135deg, #9b59b6, #4db1fd, #5843f4);
+    /* Highlight border on hover */
+    /* background: rgba(102, 16, 242, 0.1); Light background on hover */
   }
   
   .security-icon {
