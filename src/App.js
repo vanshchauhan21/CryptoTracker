@@ -42,6 +42,15 @@ import Aboutus from "./pages/Aboutus/Aboutus";
 import CookiePolicy from "./pages/Cookie-Policy/CookiePolicy";
 import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator";
 import ImpermanentLossCalculator from "./pages/ImpermanentLossCalculator";
+
+
+import DollarCostAveraging from "./pages/dca.js";
+
+
+import DividendCalculator  from "./pages/DividendCalculator";
+import GasFreeEstimator  from "./pages/gfe.js";
+
+=======
 import DividendCalculator  from "./pages/DividendCalculator";
 import GasFreeEstimator  from "./pages/gfe.js";
 // import DividendCalculator from "./pages/DividendCalculator";
@@ -49,6 +58,7 @@ import GasFreeEstimator  from "./pages/gfe.js";
 import DollarCostAveraging from "./pages/dca.js";
 // import DividendCalculator  from "./pages/DividendCalculator";
 // import GasFreeEstimator  from "./pages/gfe.js";
+
 import ProfitLoss from "./pages/ProfitLoss/ProfitLoss";
 import Cryptocard from "./pages/CryptoCard/Cryptocard";
 import CryptoQuiz from "./pages/CryptoQuiz/CryptoQuiz";
@@ -59,9 +69,12 @@ import CompoundInterestCalculator from "./pages/CompoundInterestCalculator.js";
 import Cryptofiat from "./pages/Cryptofiat.js";
 import MarginCalculator from "./pages/MarginCalculator.js";
 
+
+=======
 import CustomizableCryptoWatchlist from "./pages/ccw.js";
 
 import SIPCalculator from "./pages/SIPCalculator.js";
+
 
 
 import DefiCalculator from "./pages/defi.js";
@@ -108,8 +121,11 @@ import CosmosWalletTracker from "./pages/CosmosWalletTracker/CosmosWalletTracker
 
 
 
+
+=======
 import BackToTopButton from "./components/BackToTopButton/BackToTopButton.js";
 import PortFolio from "./pages/Portfolio/PortFolio.js";
+
 
 function App() {
   const theme = createTheme({
@@ -252,7 +268,6 @@ function App() {
 
      <Route path="DividendCalculator" element={<DividendCalculator />} />
                   <Route path="GasFreeEstimator" element={<GasFreeEstimator />} />
-
                   <Route path="dividend-calculator" element={<DividendCalculator />} />
 
                   <Route path="crypto-converter" element={<CryptoConverter />} />
@@ -267,6 +282,13 @@ function App() {
                   <Route path="CrossChainBridgeFeeOptimizer" element={<CrossChainBridgeFeeOptimizer />} />
                 </Route>
                   <Route path="InterestRateChangeEstimator" element={<InterestRateChangeEstimator />} />
+
+
+                  <Route path="cryptofiat" element={<Cryptofiat />} />
+                  <Route path="compound-interest-calculator" element={<CompoundInterestCalculator />} />
+                  <Route path="margin-calculator" element={<MarginCalculator />} />
+                  <Route path="compound-staking" element={<CompoundStaking />} />
+=======
                 <Route
                   path="InterestRateChangeEstimator"
                   element={<InterestRateChangeEstimator />}
@@ -285,7 +307,8 @@ function App() {
 
 
                 {/* </Route> */}
-                <Route path="/charts">
+
+               <Route path="/charts">
                   <Route
                     path="bitcoin-rainbow-chart"
                     element={<BitcoinRainbowChart />}
