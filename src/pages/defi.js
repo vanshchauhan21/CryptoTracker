@@ -63,6 +63,26 @@ function DeFiYieldEstimator() {
           </div>
         )}
       </div>
+      <section className="info-section">
+        <h2>What is DeFi?</h2>
+        <p>
+          Decentralized Finance (DeFi) refers to a financial ecosystem built on blockchain technology that allows users to access financial services like lending, borrowing, and trading without traditional intermediaries such as banks.
+        </p>
+      </section>
+
+      <section className="info-section">
+        <h2>How Does Yield Farming Work?</h2>
+        <p>
+          Yield farming involves lending your cryptocurrency to others through smart contracts in exchange for interest or rewards. The yield you earn can vary based on the platform, the asset, and market conditions.
+        </p>
+      </section>
+
+      <section className="info-section">
+        <h2>Risks Involved in DeFi Investments</h2>
+        <p>
+          While DeFi offers high returns, it also comes with risks such as smart contract vulnerabilities, market volatility, and potential loss of funds. Always do your research and consider your risk tolerance before investing.
+        </p>
+      </section>
     </div>
   );
 }
