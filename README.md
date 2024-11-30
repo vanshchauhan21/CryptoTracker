@@ -4,7 +4,7 @@ This project was created by @vanshchauhan.
 
 ## 📊 Description
 
-CryptoTracker is a web application that allows users to track and monitor cryptocurrency prices in real-time. With a user-friendly interface, users can easily access current market trends and make informed decisions about their investments.
+CryptoTracker is a web application that allows users to track and monitor cryptocurrency prices in real-time With a user-friendly interface, users can easily access current market trends and make informed decisions about their investments.
 
 ## 📈 GitHub Repository Stats
 | 🌟 **Stars** | 🍴 **Forks** | 🐛 **Issues** | 🔔 **Open PRs** | 🔕 **Closed PRs** | 🛠️ **Languages** | ✅ **Contributors** |
