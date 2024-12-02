@@ -388,7 +388,7 @@ function App() {
           </ThemeProvider>
         </div>
         <div className="footbelow">
-          <Footer />
+          <Footer />  
         </div>
       </I18nextProvider>
     </>
