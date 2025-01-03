@@ -81,7 +81,7 @@ p {
     line-height: 1.6;
     margin-bottom: 30px;
     color: #ffffff;
-    text-shadow: var(--text-shadow);
+    /* text-shadow: var(--text-shadow); */
     font-weight: 500;
 }
   
