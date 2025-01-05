@@ -1,9 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700&display=swap");
 
-/* Base Tailwind imports */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 /* Global Styles */
 body {
@@ -265,51 +262,47 @@ h1 {
   border-radius: 10px;
 }
 
-img {
-  user-drag: none;
-}
-
 a {
   text-decoration: none;
   color: var(--white);
 }
 
+/* Position button in the bottom-right corner */
 #chatbase-bubble-button {
-    position: relative !important;
-    margin-left: 93.8% !important;
-    top: -9.5rem !important;
-
+    position: fixed !important;
+    bottom: 10px !important; /* Adjust distance from the bottom */
+    right: 10px !important; /* Adjust distance from the right */
 }
 
 @media screen and (max-width: 1500px) {
     #chatbase-bubble-button {
-        margin-left: 94% !important;
+        right: 10px !important;
     }
-  }
-  
+}
+
 @media screen and (max-width: 1200px) {
     #chatbase-bubble-button {
-        margin-left: 91.4% !important;
-
+        right: 10px !important;
     }
-  }
-  
+}
+
 @media screen and (max-width: 850px) {
     #chatbase-bubble-button {
-        top: -10.5rem !important;
-        margin-left: 90% !important;
+        right: 10px !important;
+        bottom: 15px !important; /* Adjust distance from the bottom for smaller screens */
     }
-  }
+}
 
-  
 @media screen and (max-width: 550px) {
     #chatbase-bubble-button {
-        margin-left: 88% !important;
+        right: 10px !important;
+        bottom: 15px !important; /* Adjust distance from the bottom for smaller screens */
     }
-  }
+}
 
 @media screen and (max-width: 390px) {
     #chatbase-bubble-button {
-        margin-left: 86% !important;
+        right: 10px !important;
+        bottom: 15px !important; /* Adjust distance from the bottom for smaller screens */
     }
-  }
+}
