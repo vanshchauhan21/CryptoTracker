@@ -1,20 +1,18 @@
 import React, { useEffect, useState } from "react";
 import Button from "../Button";
 import TemporaryDrawer from "./drawer";
-import "./styles.css";
-import { styled } from "@mui/material/styles";
 import { Switch } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import { Link, NavLink } from "react-router-dom";
 import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 import { useTranslation } from "react-i18next";
 import MobileMenuButton from "./MobileMenuButton";
 import logo from "../../../assets/logo.jpg";
+import "./styles.css";
 
 function Header() {
   const { t } = useTranslation();
-  const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("theme") === "dark"
-  );
+  const [darkMode, setDarkMode] = useState(localStorage.getItem("theme") === "dark");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
 
@@ -29,19 +27,11 @@ function Header() {
 
   useEffect(() => {
     const theme = localStorage.getItem("theme");
-    if (theme === "dark") {
-      setDark();
-    } else {
-      setLight();
-    }
+    theme === "dark" ? setDark() : setLight();
   }, []);
 
   const changeMode = () => {
-    if (darkMode) {
-      setLight();
-    } else {
-      setDark();
-    }
+    darkMode ? setLight() : setDark();
     setDarkMode(!darkMode);
   };
 
@@ -60,11 +50,7 @@ function Header() {
   };
 
   const IOSSwitch = styled((props) => (
-    <Switch
-      focusVisibleClassName=".Mui-focusVisible"
-      disableRipple
-      {...props}
-    />
+    <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
   ))(({ theme }) => ({
     width: 60,
     height: 36,
@@ -119,104 +105,49 @@ function Header() {
   }));
 
   return (
-    <div className="header ">
-      <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
-        <div className="nav-logo">
-          <img src={logo} alt="logo" className="logo" />
-          <h1 className="nav-header">
-            {t("CryptoTracker")}
-            <span style={{ color: "var(--blue)" }}></span>
-          </h1>
-        </div>
-      </Link>
-      <div
-        className={`links ${
-          mobileMenuOpen ? "mobile-menu-open" : ""
-        } mb-3 mt-3`}
-      >
-        <NavLink
-          to="/"
-          className={({ isActive }) => (isActive ? "active-link link" : "link")}
-        >
-          {t("Home")}
-        </NavLink>
-        <NavLink
-          to="/compare"
-          className={({ isActive }) => (isActive ? "active-link link" : "link")}
-        >
-          {t("Compare")}
-        </NavLink>
-        <NavLink
-          to="/watchlist"
-          className={({ isActive }) => (isActive ? "active-link link" : "link")}
-        >
-          {t("Watchlist")}
-        </NavLink>
-        <NavLink
-          to="/contactus"
-          className={({ isActive }) => (isActive ? "active-link link" : "link")}
-        >
-          {t("Contact")}
-        </NavLink>
-        <NavLink
-          to="/learn"
-          className={({ isActive }) => (isActive ? "active-link link" : "link")}
-        >
-          {t("Learn")}
-        </NavLink>
-        <NavLink
-          to="/news"
-          className={({ isActive }) => (isActive ? "active-link link" : "link")}
-        >
-          {t("News")}
-        </NavLink>
-        <NavLink
-          to="/geminiChat"
-          className={({ isActive }) => (isActive ? "active-link link" : "link")}
-        >
-          {t("Gemini Chat")}
-        </NavLink>
-        <SignedIn>
-          <UserButton />
-        </SignedIn>
-        <SignedOut>
-          {/* <NavLink to="/signup" className={({ isActive }) => (isActive ? "active-link link" : "link")}>
-            {t("Sign Up")}
-          </NavLink> */}
-          <NavLink
-            to="/login"
-            className={({ isActive }) =>
-              isActive ? "active-link link" : "link"
-            }
-          >
-            {t("Log In")}
-          </NavLink>
-        </SignedOut>
-
-        <IOSSwitch
-          checked={darkMode}
-          onChange={changeMode}
-          inputProps={{ "aria-label": "theme toggle" }}
-        />
-        <NavLink to="/dashboard">
-          <Button text={"dashboard"} />
-        </NavLink>
+    <div className="header">
+      <div className="nav-logo-container">
+        <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+          <div className="nav-logo">
+            <img src={logo} alt="logo" className="logo" />
+            <h1 className="nav-header">{t("CryptoTracker")}</h1>
+          </div>
+        </Link>
       </div>
 
-      {isMobile && (
-        <div className="mobile-menu-button">
-          <MobileMenuButton
-            onClick={toggleMobileMenu}
-            isOpen={mobileMenuOpen}
-          />
+      <div className="links-container">
+        <div className={`links ${mobileMenuOpen ? "mobile-menu-open" : ""}`}>
+          <NavLink to="/" className={({ isActive }) => (isActive ? "active-link link" : "link")}>{t("Home")}</NavLink>
+          <NavLink to="/compare" className={({ isActive }) => (isActive ? "active-link link" : "link")}>{t("Compare")}</NavLink>
+          <NavLink to="/watchlist" className={({ isActive }) => (isActive ? "active-link link" : "link")}>{t("Watchlist")}</NavLink>
+          <NavLink to="/contactus" className={({ isActive }) => (isActive ? "active-link link" : "link")}>{t("Contact")}</NavLink>
+          <NavLink to="/learn" className={({ isActive }) => (isActive ? "active-link link" : "link")}>{t("Learn")}</NavLink>
+          <NavLink to="/news" className={({ isActive }) => (isActive ? "active-link link" : "link")}>{t("News")}</NavLink>
+          <NavLink to="/geminiChat" className={({ isActive }) => (isActive ? "active-link link" : "link")}>{t("Gemini Chat")}</NavLink>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+          <SignedOut>
+            <NavLink to="/login" className={({ isActive }) => (isActive ? "active-link link" : "link")}>{t("Log In")}</NavLink>
+          </SignedOut>
+          <IOSSwitch checked={darkMode} onChange={changeMode} inputProps={{ "aria-label": "theme toggle" }} />
+          <NavLink to="/dashboard">
+            <Button text={"Dashboard"} />
+          </NavLink>
         </div>
-      )}
 
-      {!isMobile && (
-        <div className="drawer-component">
-          <TemporaryDrawer />
-        </div>
-      )}
+        {isMobile && (
+          <div className="mobile-menu-button">
+            <MobileMenuButton onClick={toggleMobileMenu} isOpen={mobileMenuOpen} />
+          </div>
+        )}
+
+        {!isMobile && (
+          <div className="drawer-component">
+            <TemporaryDrawer />
+          </div>
+        )}
+      </div>
     </div>
   );
 }

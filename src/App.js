@@ -43,22 +43,9 @@ import CookiePolicy from "./pages/Cookie-Policy/CookiePolicy";
 import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator";
 import ImpermanentLossCalculator from "./pages/ImpermanentLossCalculator";
 
-
 import DollarCostAveraging from "./pages/dca.js";
-
-
-import DividendCalculator  from "./pages/DividendCalculator";
-import GasFreeEstimator  from "./pages/gfe.js";
-
-=======
-import DividendCalculator  from "./pages/DividendCalculator";
-import GasFreeEstimator  from "./pages/gfe.js";
-// import DividendCalculator from "./pages/DividendCalculator";
-// import GasFreeEstimator from "./pages/gfe.js";
-import DollarCostAveraging from "./pages/dca.js";
-// import DividendCalculator  from "./pages/DividendCalculator";
-// import GasFreeEstimator  from "./pages/gfe.js";
-
+import DividendCalculator from "./pages/DividendCalculator";
+import GasFreeEstimator from "./pages/gfe.js";
 import ProfitLoss from "./pages/ProfitLoss/ProfitLoss";
 import Cryptocard from "./pages/CryptoCard/Cryptocard";
 import CryptoQuiz from "./pages/CryptoQuiz/CryptoQuiz";
@@ -69,14 +56,8 @@ import CompoundInterestCalculator from "./pages/CompoundInterestCalculator.js";
 import Cryptofiat from "./pages/Cryptofiat.js";
 import MarginCalculator from "./pages/MarginCalculator.js";
 
-
-=======
 import CustomizableCryptoWatchlist from "./pages/ccw.js";
-
 import SIPCalculator from "./pages/SIPCalculator.js";
-
-
-
 import DefiCalculator from "./pages/defi.js";
 import CompoundStaking from "./pages/cics.js";
 
@@ -105,25 +86,11 @@ import SlippageCalculator from "./pages/SlippageCalculator";
 import ROICalculator from "./pages/ROICalculator";
 
 import InterestRateChangeEstimator from "./pages/rce.js";
-
-
 import ICOIDOPerformanceTracker from "./pages/ico.js";
 import CrossChainBridgeFeeOptimizer from "./pages/bfo.js";
 
-
-
-
- 
 import BackToTopButton from "./components/BackToTopButton/BackToTopButton.js";
 import CosmosWalletTracker from "./pages/CosmosWalletTracker/CosmosWalletTracker.js";
-=======
-
-
-
-
-
-=======
-import BackToTopButton from "./components/BackToTopButton/BackToTopButton.js";
 import PortFolio from "./pages/Portfolio/PortFolio.js";
 
 
