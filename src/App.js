@@ -21,6 +21,58 @@ import CryptoProfitCalculator from "./pages/CryptoProfitCalculator";
 import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator";
 import InvestmentReturnCalculator from "./pages/Useful Tools/Investmentreturncalculator";
 import ImpermanentLossCalculator from "./pages/ImpermanentLossCalculator";
+updated-navbar
+
+import DollarCostAveraging from "./pages/dca.js";
+import DividendCalculator from "./pages/DividendCalculator";
+import GasFreeEstimator from "./pages/gfe.js";
+import ProfitLoss from "./pages/ProfitLoss/ProfitLoss";
+import Cryptocard from "./pages/CryptoCard/Cryptocard";
+import CryptoQuiz from "./pages/CryptoQuiz/CryptoQuiz";
+import Footer from "./components/Footer.jsx";
+import NFTShowcase from "./pages/NFTShowcase/NFTShowcase";
+import { Helmet } from "react-helmet";
+import CompoundInterestCalculator from "./pages/CompoundInterestCalculator.js";
+import Cryptofiat from "./pages/Cryptofiat.js";
+import MarginCalculator from "./pages/MarginCalculator.js";
+
+import CustomizableCryptoWatchlist from "./pages/ccw.js";
+import SIPCalculator from "./pages/SIPCalculator.js";
+import DefiCalculator from "./pages/defi.js";
+import CompoundStaking from "./pages/cics.js";
+
+import Sitemap from "./pages/Sitemap/Sitemap";
+import Methodology from "./pages/Methodology/Methodology";
+import Careers from "./pages/Careers";
+import Cryptoreward from "./pages/Cryptoreward/Cryptoreward";
+import BTCDominance from "./pages/BTCDominance/BTCDominance";
+import MarketUpdate from "./pages/MarketUpdate/MarketUpdate.js";
+import HelpCenter from "./pages/HelpCenter/HelpCenter.js";
+import UltimateCryptoPortfolioTracker from "./pages/UltimateCryptoPortfolioTracker/UltimateCryptoPortfolioTracker";
+import WhatsTrending from "./pages/WhatsTrending/WhatsTrending.js";
+import DefiAssets from "./pages/DefiAssets/DefiAssets.js";
+import CryptoPrices from "./pages/cryptoPrice/cryptoPrice.js";
+import Blog from "./pages/Blogs/Blog.js";
+import Crypto24HourReport from "./pages/CryptoMarket24h/Crypto24HourReport.js";
+import GeminiChat from "./pages/GeminiAIChat/GeminiAIChat.jsx";
+import FearAndGreedIndex from "./pages/FearAndGreedIndex/FearAndGreedIndex";
+import Earn from "./pages/Earn/Earn";
+import BitCoinRainBowCharDetail from "./pages/BitCoinRainBow/BitCoinRainBowCharDetail.js";
+import AffiliateProgram from "./pages/AffiliateProgram/AffiliateProgram";
+import TrackNFTs from "./pages/TrackNFT/TrackNFTs.js";
+import InvestmentReturnCalculator from "./pages/Useful Tools/Investmentreturncalculator.js";
+import BreakEvenCalculator from "./pages/BreakEvenCalculator";
+import SlippageCalculator from "./pages/SlippageCalculator";
+import ROICalculator from "./pages/ROICalculator";
+
+import InterestRateChangeEstimator from "./pages/rce.js";
+import ICOIDOPerformanceTracker from "./pages/ico.js";
+import CrossChainBridgeFeeOptimizer from "./pages/bfo.js";
+
+import BackToTopButton from "./components/BackToTopButton/BackToTopButton.js";
+import CosmosWalletTracker from "./pages/CosmosWalletTracker/CosmosWalletTracker.js";
+import PortFolio from "./pages/Portfolio/PortFolio.js";
+
 import DividendCalculator from "./pages/DividendCalculator";
 import GasFreeEstimator from "./pages/gfe";
 import CryptoConverter from "./pages/CryptoConverter";
@@ -36,6 +88,7 @@ import CrossChainBridgeFeeOptimizer from "./pages/bfo";
 // Components
 import ProgressBar from "./components/Common/ProgressBar/ProgressBar";
 import BackToTopButton from "./components/BackToTopButton/BackToTopButton";
+ main
 
 function App() {
   const theme = createTheme({

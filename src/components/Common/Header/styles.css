@@ -211,3 +211,148 @@ body {
 a {
   display: flex !important;
 }
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between; /* Space between logo and other elements */
+  align-items: center;
+  padding: 5px 20px; /* Reduced padding to shrink navbar height */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 50px; /* Reduced height */
+}
+
+/* Logo container */
+.nav-logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Adjusted margin to control space on the right */
+  flex: 1; /* Makes the logo container take available space on the left */
+}
+
+/* Logo image and title */
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo .logo {
+  height: 30px; /* Reduced logo size */
+  margin-right: 10px;
+}
+
+.nav-header {
+  font-size: 1.2rem; /* Reduced font size for smaller header */
+  font-weight: bold;
+  color: #333;
+}
+
+/* Links container */
+.links-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the navigation links */
+  flex: 2; /* Take up space between the logo and the button */
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.link:hover {
+  background-color: #f0f0f0;
+}
+
+.active-link {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Button and switch alignment */
+.ios-switch-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Right aligned button */
+.nav-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1; /* Makes the button container take available space on the right */
+}
+
+/* Mobile menu styles */
+.mobile-menu-button {
+  display: none;
+}
+
+.drawer-component {
+  display: block;
+}
+
+@media (max-width: 800px) {
+  .header {
+    justify-content: space-between; /* Adjust navbar layout on mobile */
+    padding: 10px 15px;
+  }
+
+  .links-container {
+    display: none; /* Hide links on mobile */
+  }
+
+  .mobile-menu-button {
+    display: block; /* Show mobile menu button */
+  }
+
+  .mobile-menu-open {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .mobile-menu-open .link,
+  .mobile-menu-open .active-link {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* Logo and button alignment */
+@media (max-width: 800px) {
+  .nav-logo-container {
+    margin-right: auto;
+  }
+
+  .nav-btn-container {
+    display: none; /* Hide button container on mobile */
+  }
+}
+
+.drawer-component {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .drawer-component {
+    display: block;
+  }
+}
