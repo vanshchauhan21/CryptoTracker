@@ -105,7 +105,14 @@ function Header() {
   }));
 
   return (
-    <div className="header">
+    <div 
+      className="header"
+      style={{
+        backgroundColor: darkMode ? "#000000" : "#ffffff", // Dynamic background color
+        color: darkMode ? "#ffffff" : "#000000", // Dynamic text color
+        transition: "background-color 0.3s ease, color 0.3s ease", // Smooth transition
+      }}
+    >
       <div className="nav-logo-container">
         <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
           <div className="nav-logo">

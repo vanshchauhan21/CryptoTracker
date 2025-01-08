@@ -276,7 +276,7 @@ a {
 }
 
 .link:hover {
-  background-color: #f0f0f0;
+  background-color: rgba(var(--background-color), 0.1);
 }
 
 .active-link {
