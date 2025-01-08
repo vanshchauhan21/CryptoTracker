@@ -5,7 +5,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useRef } from "react";
 import metadata from "./metadata";
-import { Helmet } from "react-helmet";
+//import { Helmet } from "react-helmet";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 
@@ -16,16 +16,15 @@ import Watchlist from "./pages/Watchlist";
 import Dashboard from "./pages/Dashboard";
 import Pricing from "./pages/Pricing/Pricing";
 import Contributors from "./pages/Contributors";
-import Blog from "./pages/Blogs/Blog";
+//import Blog from "./pages/Blogs/Blog";
 import CryptoProfitCalculator from "./pages/CryptoProfitCalculator";
 import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator";
-import InvestmentReturnCalculator from "./pages/Useful Tools/Investmentreturncalculator";
+//import InvestmentReturnCalculator from "./pages/Useful Tools/Investmentreturncalculator";
 import ImpermanentLossCalculator from "./pages/ImpermanentLossCalculator";
-updated-navbar
 
 import DollarCostAveraging from "./pages/dca.js";
-import DividendCalculator from "./pages/DividendCalculator";
-import GasFreeEstimator from "./pages/gfe.js";
+//import DividendCalculator from "./pages/DividendCalculator";
+//import GasFreeEstimator from "./pages/gfe.js";
 import ProfitLoss from "./pages/ProfitLoss/ProfitLoss";
 import Cryptocard from "./pages/CryptoCard/Cryptocard";
 import CryptoQuiz from "./pages/CryptoQuiz/CryptoQuiz";
@@ -33,7 +32,7 @@ import Footer from "./components/Footer.jsx";
 import NFTShowcase from "./pages/NFTShowcase/NFTShowcase";
 import { Helmet } from "react-helmet";
 import CompoundInterestCalculator from "./pages/CompoundInterestCalculator.js";
-import Cryptofiat from "./pages/Cryptofiat.js";
+//import Cryptofiat from "./pages/Cryptofiat.js";
 import MarginCalculator from "./pages/MarginCalculator.js";
 
 import CustomizableCryptoWatchlist from "./pages/ccw.js";
@@ -77,18 +76,17 @@ import DividendCalculator from "./pages/DividendCalculator";
 import GasFreeEstimator from "./pages/gfe";
 import CryptoConverter from "./pages/CryptoConverter";
 import Cryptofiat from "./pages/Cryptofiat";
-import CompoundInterestCalculator from "./pages/CompoundInterestCalculator";
-import MarginCalculator from "./pages/MarginCalculator";
-import DollarCostAveraging from "./pages/dca";
-import ICOIDOPerformanceTracker from "./pages/ico";
-import InterestRateChangeEstimator from "./pages/rce";
-import CustomizableCryptoWatchlist from "./pages/ccw";
-import CrossChainBridgeFeeOptimizer from "./pages/bfo";
+//import CompoundInterestCalculator from "./pages/CompoundInterestCalculator";
+//import MarginCalculator from "./pages/MarginCalculator";
+//import DollarCostAveraging from "./pages/dca";
+//import ICOIDOPerformanceTracker from "./pages/ico";
+//import InterestRateChangeEstimator from "./pages/rce";
+//import CustomizableCryptoWatchlist from "./pages/ccw";
+//import CrossChainBridgeFeeOptimizer from "./pages/bfo";
 
 // Components
 import ProgressBar from "./components/Common/ProgressBar/ProgressBar";
-import BackToTopButton from "./components/BackToTopButton/BackToTopButton";
- main
+//import BackToTopButton from "./components/BackToTopButton/BackToTopButton";
 
 function App() {
   const theme = createTheme({

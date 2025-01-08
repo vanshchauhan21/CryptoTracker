@@ -1,7 +1,12 @@
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { Toaster } from 'react-hot-toast';
+import { ArrowRight } from 'react-feather';
+import { useTranslation } from 'react-i18next';
+
 
 const Footer = () => {
+  const { t } = useTranslation();
   const footerNavLinks = [
     {
       path: "/calculators/dollar-cost-averaging",
@@ -30,7 +35,7 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-updated-navbar
+      updated-navbar
       <Toaster></Toaster>
       {/* .................1 links-section............... */}
 
@@ -83,6 +88,7 @@ updated-navbar
             ))}
           </ul>
         </div>
+      
 
         {/* .....................................2...................... */}
 
@@ -289,6 +295,7 @@ updated-navbar
             ))}
           </ul>
         </div>
+      </div>
 
 
 
