@@ -155,6 +155,7 @@ function App() {
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/contributors" element={<Contributors />} />
                 <Route path="/blog" element={<Blog />} />
+                <Route path="/geminiChat" element={<GeminiChat />} />
                 
                 {/* Calculators */}
                 <Route path="/calculators">
