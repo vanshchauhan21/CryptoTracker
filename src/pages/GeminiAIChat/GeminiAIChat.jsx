@@ -1,12 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Container, TextField, Button, Paper, Box, List, ListItem, ListItemText, Divider, IconButton, Stack, Card, CardContent, Avatar, Typography } from '@mui/material';
+import { Container, TextField, Button, Paper, Box, List, ListItem, ListItemText, Divider, IconButton, Stack, Avatar, Typography } from '@mui/material';
 import { Send as SendIcon } from '@mui/icons-material';
-import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { motion } from 'framer-motion';
 import Header from "../../components/Common/Header";
-import { Send, Trash2 } from 'react-feather';
 import ScrollArea from 'react-scrollbars-custom';
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
@@ -20,7 +18,7 @@ const GeminiChat = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
 
-    const apiKey = 'AIzaSyBqKHw6cnbP1VnfQySbrsY6_81z7Xnbgpw';  
+    const apiKey = process.env.REACT_APP_GEMINI_API_KEY;
     const genAI = new GoogleGenerativeAI(apiKey);
 
     useEffect(() => {
@@ -67,7 +65,6 @@ const GeminiChat = () => {
             }
 
             const model = genAI.getGenerativeModel({ model: "gemini-pro" });
-            
             const chat = model.startChat({
                 history: chatHistory.map(msg => ({
                     role: msg.role,
@@ -77,7 +74,7 @@ const GeminiChat = () => {
 
             const result = await chat.sendMessage(userInput);
             const response = await result.response;
-            const rawText = response.text();
+            const rawText = await response.text();
             const text = rawText.replace(/[#_*~`]/g, ''); // Strips common Markdown characters
 
             const botMessage = { 
@@ -107,7 +104,7 @@ const GeminiChat = () => {
         <div style={{paddingTop: 100}}>
             <Container style={{ zIndex: 1, marginBottom: '2rem' }}>
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-                        <Paper elevation={3} style={{ padding: '1.5rem', borderRadius: '8px', background:"#0D71E2" }}>
+                    <Paper elevation={3} style={{ padding: '1.5rem', borderRadius: '8px', background: "#0D71E2" }}>
                         <motion.h1
                             className="m-2 text-5xl text-center font-extrabold text-white"
                             initial={{ y: -20, opacity: 0 }}
