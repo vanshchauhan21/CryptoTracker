@@ -89,6 +89,7 @@ const GeminiChat = () => {
         } catch (err) {
             console.error('Error:', err);
             setError(err.message || 'Failed to get response from Gemini');
+            toast.error(err.message || 'Failed to get response from Gemini');
         } finally {
             setIsLoading(false);
         }
@@ -97,12 +98,13 @@ const GeminiChat = () => {
     const handleClearChat = () => {
         setChatHistory([]);
         localStorage.removeItem('geminiChatHistory');
+        toast.info('Chat history cleared.');
     };
 
     return (
         <>
         <Header />
-        <div>
+        <div style={{paddingTop: 100}}>
             <Container style={{ zIndex: 1, marginBottom: '2rem' }}>
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
                         <Paper elevation={3} style={{ padding: '1.5rem', borderRadius: '8px', background:"#0D71E2" }}>
