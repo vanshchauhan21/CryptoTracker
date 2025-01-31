@@ -110,6 +110,7 @@ function Compare() {
           <div
             style={{
               paddingTop: "20px", 
+              marginTop:"100px",
             }}
             className="grey-wrapper"
           >
