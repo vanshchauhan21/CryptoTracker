@@ -19,7 +19,7 @@ const GeminiChat = () => {
     const [error, setError] = useState(null);
 
     const apiKey = process.env.REACT_APP_GEMINI_API_KEY;
-    const genAI = new GoogleGenerativeAI(apiKey);
+    const genAI = new GoogleGenerativeAI("apiKey");
 
     useEffect(() => {
         localStorage.setItem('geminiChatHistory', JSON.stringify(chatHistory));
