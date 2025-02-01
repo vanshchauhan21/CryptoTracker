@@ -16,6 +16,7 @@ import Watchlist from "./pages/Watchlist";
 import Dashboard from "./pages/Dashboard";
 import Pricing from "./pages/Pricing/Pricing";
 import Contributors from "./pages/Contributors";
+import Login from "./pages/Login.js"
 //import Blog from "./pages/Blogs/Blog";
 import CryptoProfitCalculator from "./pages/CryptoProfitCalculator";
 import ProfitReturnCalculator from "./pages/Useful Tools/ProfitReturnCalculator";
@@ -76,6 +77,8 @@ import DividendCalculator from "./pages/DividendCalculator";
 import GasFreeEstimator from "./pages/gfe";
 import CryptoConverter from "./pages/CryptoConverter";
 import Cryptofiat from "./pages/Cryptofiat";
+import Learn from "./components/Learn.jsx"
+import News from "./components/News.jsx";
 //import CompoundInterestCalculator from "./pages/CompoundInterestCalculator";
 //import MarginCalculator from "./pages/MarginCalculator";
 //import DollarCostAveraging from "./pages/dca";
@@ -152,6 +155,9 @@ function App() {
                 <Route path="/compare" element={<Compare />} />
                 <Route path="/watchlist" element={<Watchlist />} />
                 <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/Learn" element={<Learn />} />
+                <Route path="/News" element={<News />} />
+                <Route path="/Login" element={<Login />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/contributors" element={<Contributors />} />
                 <Route path="/blog" element={<Blog />} />
