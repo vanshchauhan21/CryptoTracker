@@ -68,6 +68,7 @@ import ROICalculator from "./pages/ROICalculator";
 import InterestRateChangeEstimator from "./pages/rce.js";
 import ICOIDOPerformanceTracker from "./pages/ico.js";
 import CrossChainBridgeFeeOptimizer from "./pages/bfo.js";
+import Contact from "./pages/Contactus/Contactus.jsx" 
 
 import BackToTopButton from "./components/BackToTopButton/BackToTopButton.js";
 import CosmosWalletTracker from "./pages/CosmosWalletTracker/CosmosWalletTracker.js";
@@ -162,6 +163,8 @@ function App() {
                 <Route path="/contributors" element={<Contributors />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/geminiChat" element={<GeminiChat />} />
+                <Route path="/contactus" element={<Contact/>} />
+                <Route path="/analysis" element={<BTCDominance/>} />
                 
                 {/* Calculators */}
                 <Route path="/calculators">
