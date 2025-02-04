@@ -306,6 +306,7 @@ a {
 
 .drawer-component {
   display: block;
+  margin-right:1rem;
 }
 
 @media (max-width: 800px) {
