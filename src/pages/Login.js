@@ -1,110 +1,106 @@
 import { SignIn } from "@clerk/clerk-react";
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function SignInPage() {
-  const [rememberMe, setRememberMe] = useState(false); // State for "Remember Me" checkbox
+  const [rememberMe, setRememberMe] = useState(false);
 
   const handleHomeClick = () => {
-    window.location.href = '/';
+    window.location.href = "/";
   };
 
   return (
-    <div
-      className="login-page"
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        minHeight: "100vh",
-        backgroundColor: "#f7fafc",
-        padding: "1rem",
-      }}
-    >
+    <div className="login-page">
+      {/* Home Button */}
       <div
-        style={{
-          position: "absolute",
-          top: "3rem",
-          left: "3rem",
-          cursor: "pointer",
-          transition: "transform 0.3s ease",
-        }}
+        className="home-icon"
         onClick={handleHomeClick}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.transform = "scale(1.2)";
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.transform = "scale(1)";
-        }}
+        aria-label="Go to home page"
       >
-        <i className="fas fa-home" style={{ fontSize: "24px", color: "#333" }}></i>
+        <i className="fas fa-home"></i>
       </div>
-      <div style={{ position: "relative" }}>
-        
-        {/* Remember Me and Forgot Password section */}
-        <div style={{ marginBottom: "1rem", textAlign: "left", width: "100%", marginLeft: "10px"}}>
-  <label style={{ fontSize: "14px", color: "#333", display: "inline-flex", alignItems: "center"}}>
-    <input
-      type="checkbox"
-      checked={rememberMe}
-      onChange={(e) => setRememberMe(e.target.checked)}
-      style={{ margin: "0", padding: "0" }}
-    />
-    Remember Me
-  </label>
 
-          <a
-            href="/forgot-password"
-            style={{ display: "block", color: "#3a80e9", textDecoration: "none", fontSize: "14px", marginTop: "-2.0rem", marginLeft: "18rem" }}
-          >
-            Forgot Password?
-          </a>
-        </div>
+      {/* Sign-In Form */}
+      <div className="signin-container">
+        
 
         <SignIn
           appearance={{
             elements: {
-              footerActionLink: {
-                display: "none",
-              },
-            },
-          }}
-        />
+              footerActionLink: { display: "none" },
+            }, }}
+           />
         
-        <div
-          style={{
-            position: "absolute",
-            bottom: "5rem",
-            width: "100%",
-            textAlign: "center",
-            fontSize: "14px",
-            color: "#333",
-          }}
-        >
-          <a
-            href="/signup"
-            className="custom-signup-link"
-          >
-            Sign up
-          </a>
-        </div>
       </div>
+
+      {/* Sign-Up Link */}
+      {/* <div className="signup-link-container">
+        <Link to="/signup" className="custom-signup-link">
+          Don’t have an account? Sign Up Here
+        </Link>
+      </div> */}
+
+      {/* Styles */}
       <style>
         {`
-          .cl-footerActionText {
-            display: !important;
-            padding-bottom:10px;
+          .login-page {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f7fafc;
+            padding: 1rem;
           }
-          .cl-footerActionLink {
-            display: none !important;
+          .home-icon {
+            position: absolute;
+            top: 3rem;
+            left: 3rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            font-size: 24px;
+            color: #333;
           }
-          .custom-signup-link{
+          .home-icon:hover {
+            transform: scale(1.2);
+          }
+          .signin-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+          }
+          .remember-forgot-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 1rem;
+          }
+          .remember-me-label {
+            font-size: 14px;
+            color: #333;
+          }
+          .forgot-password-link {
+            color: #3a80e9;
+            text-decoration: none;
+            font-size: 14px;
+          }
+          .custom-signup-link {
             color: #3a80e9;
             text-decoration: none;
             font-weight: bold;
-            position: relative;
-            top:0.1rem;
-            display: block !important;
+            display: block;
+            margin-top: 1rem;
+          }
+          .signup-link-container {
+            position: absolute;
+            bottom: 5rem;
+            text-align: center;
+            font-size: 14px;
+            color: #333;
           }
         `}
       </style>
