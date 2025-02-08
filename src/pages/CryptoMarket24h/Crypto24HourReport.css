@@ -53,7 +53,6 @@ table {
 
 th, td {
   padding: 12px 15px;
-  border-bottom: 1px solid #ddd;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 .coin-logo {
