@@ -113,6 +113,7 @@ function List({ coin, delay }) {
         >
           {isCoinAdded ? <StarIcon /> : <StarOutlineIcon />}
         </td>
+        <div className="horizontal-line"></div>
       </motion.tr>
     </a>
   );
