@@ -13,13 +13,14 @@
 }
 
 .vision-container {
+  height: 1000px;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
   background-color: var(--vision-bg-color);
   color: var(--vision-text-color);
   border-radius: 8px;
   transition: all 0.3s ease;
-  margin: 3rem;
+  margin: 2rem;
   /* Scale animation on hover */
   transform: translateY(0);
 }
@@ -92,37 +93,45 @@
   display: flex;
   flex-direction: column; /* Stack the span and p vertically */
   align-items: center; /* Center align content */
+  height : 115px;
+  margin: 0;
+  padding: 0;
 }
 
 .fund-date span {
   font-weight: bold;
   margin-bottom: 10px; /* Space below the date */
   font-size: 2rem; /* Adjusted font size */
-
+  padding: 0;
 }
 .fund-date p{
   color: rgba(53, 249, 252, 0.814);
   font-size: 2rem; /* Adjusted font size */
-
+  margin: 7px;
+  padding: 0;
 }
 /* User Styles */
 .user {
   display: flex;
+  height : 115px;
   flex-direction: column; /* Stack the span and p vertically */
   align-items: center; /* Center align content */
   /* background-color: #f1f1f1; Light background for user details */
-  padding: 10px; /* Padding around user details */
+  padding: 0; /* Padding around user details */
+  /* margin: 0; */
   border-radius: 4px; /* Slightly rounded corners */
   font-size: 2rem; /* Adjusted font size */
 
 }
 
 .user span {
+  font-weight: bold;
   font-size: 2rem; /* Adjusted font size */
-  font-size: 2rem; /* Adjusted font size */
-
+  margin-bottom: 10px;
 }
 .user p{
   color: rgba(53, 249, 252, 0.814);
-
+  margin: 7px;
+  padding: 0;
+  font-size: 2rem;
 }
