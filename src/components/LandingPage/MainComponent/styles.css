@@ -5,18 +5,11 @@
   /* Black for light theme */
 }
 
-.main-flex {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  padding: 1rem 3rem;
-  position: relative;
-}
-
 .heading1,
 .heading2 {
   font-size: 6rem;
   margin: 0;
+  padding:0;
 }
 
 /* .heading1:hover {
@@ -40,22 +33,25 @@
 }
 
 .info-text {
-  color: var(--grey);
   font-weight: 300;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .btn-flex {
   display: flex;
-  gap: 1rem;
+  gap: 4rem;
   margin-top: 1.5rem;
+  justify-content: center;
 }
 
 .gradient-div {
   position: relative;
-  width: 50%;
-  margin-left: auto;
-  margin-bottom: 30px; /*  bottom margin to create space */
+  width: 900px;
+  /* margin-left: auto; */
+  /* margin-bottom: 30px;  bottom margin to create space */
   z-index: 1;
+  height:505px;
 }
 
 .gradient {
@@ -189,6 +185,8 @@ clamp(minFontSize, ratio, maxFontSize)
 }
 
 .main-wrapper {
+  margin-top: 70px;
+  /* padding-top: 15px; */
   min-height: 80vh;
   position: relative;
   padding-bottom: 20px; /* Add padding to prevent footer overlap */
@@ -196,10 +194,13 @@ clamp(minFontSize, ratio, maxFontSize)
 
 .main-flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
-  padding: 3rem 3rem 1rem;
   position: relative;
+  padding: 2rem;
+  margin: 0 2rem 2rem 2rem;
+  height:500px;
+  gap: 6rem;
 }
 /* Custom CSS styling for share App dialog box */
 

@@ -16,7 +16,6 @@ import OurVision from "../../Common/OurVision/OurVision";
 import FreeTrial from "../../Common/FreeTrial/FreeTrial";
 import InDepthAnalysis from "../../Common/InDepthAnalysis/InDepthAnalysis";
 import LoveOurWebsiteCarousel from "../../LoveOurWebsite/LoveOurWebsiteCarousel";
-import { AnalyticsTwoTone } from "@mui/icons-material";
 import AnalyzeAssets from "../../../pages/AnalyzeAssets/AnalyzeAssets";
 import Marketdata from "../../../pages/Real-timeMarket-data/Marketdata";
 import CryptoTrackerManagingTool from "../../CryptoTrackerManagingTool/CryptoTrackerManagingTool";
@@ -110,7 +109,7 @@ function MainComponent() {
           </motion.div>
         </div>
         <div className="gradient-div" data-aos="fade-left">
-          <img src={gradient} alt="some image" className="gradient" />
+          <img src={gradient} alt="some" className="gradient" />
           <motion.img
             src={iphone}
             className="iphone"
