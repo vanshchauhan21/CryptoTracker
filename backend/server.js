@@ -10,19 +10,30 @@ const authRoutes = require('./routes/auth.route')
 app.use(cors());
 app.use(express.json());
 app.use("/api/contact", ContactRoutes);
-app.use('/api/generate-content', geminiChatRoute);
+app.use('//generate-content', geminiChatRoute);
 app.use("/api/auth",authRoutes)
 let API_KEY = process.env.NEWS_API_KEY || "test";
 let SERVER_PORT = process.env.PORT || 5000;
 
 app.get('/api/news', async (req, res) => {
 
+    // try {
+    //   let response = await axios.get();
+    //   res.json(response.data);
+    // } catch (error) {
+    //   res.status(error.status).send(error.message);
+    // }
     try {
-      let response = await axios.get(`https://newsapi.org/v2/everything?q=cryptocurrency&apiKey=${API_KEY}`);
-      res.json(response.data);
+      const response = await fetch(`https://newsapi.org/v2/everything?q=cryptocurrency&apiKey=${API_KEY}`);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json();
     } catch (error) {
-      res.status(error.status).send(error.message);
+      console.error('API Request Failed:', error);
+      alert('Failed to fetch data. Please try again later!');
     }
+    
 });
 
 app.listen(SERVER_PORT, () => {
