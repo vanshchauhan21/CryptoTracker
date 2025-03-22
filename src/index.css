@@ -306,3 +306,84 @@ a {
         bottom: 15px !important; /* Adjust distance from the bottom for smaller screens */
     }
 }
+/* Footer Styling */
+.footer {
+  background: #111;
+  color: #ddd;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Section */
+.footer-logo {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo h2 {
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* Navigation Links */
+.footer-links {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-links a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #4facfe;
+}
+
+/* Social Media Icons */
+.footer-social {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-social a {
+  color: #bbb;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #4facfe;
+}
+
+/* Copyright Section */
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+  font-size: 14px;
+  color: #bbb;
+}
+
