@@ -1,3 +1,4 @@
+import CryptoProfitCalculatorInfo from "./components/CryptoProfitCalculatorInfo";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
@@ -98,6 +99,10 @@ function App() {
           <ThemeProvider theme={theme}>
             <BrowserRouter>
               <Routes>
+              <Route path="/crypto-profit-calculator-info" element={<CryptoProfitCalculatorInfo />} />
+              <Route path="/crypto-profit-calculator" element={<CryptoProfitCalculatorInfo />} />
+
+
                 <Route path="/" element={<Home />} />
                 <Route path="/compare" element={<Compare />} />
                 <Route path="/watchlist" element={<Watchlist />} />
