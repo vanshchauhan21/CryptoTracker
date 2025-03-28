@@ -4,8 +4,10 @@ import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import { IconButton } from "@mui/material";
 import Switch from "@mui/material/Switch";
 import { toast } from "react-toastify";
+import "./styles.css";
 
-export default function TemporaryDrawer() {
+
+export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(
     localStorage.getItem("theme") === "dark" ? true : false
@@ -38,37 +40,39 @@ export default function TemporaryDrawer() {
     localStorage.setItem("theme", "light");
     document.documentElement.setAttribute("data-theme", "light");
   };
+
   return (
-    <div>
-      <IconButton onClick={() => setOpen(true)}>
-        <MenuRoundedIcon className="link" />
+    <nav className="header">
+      <div className="nav-logo-container">
+        <h1 className="nav-header">My Website</h1>
+      </div>
+      <div className="links-container">
+        <a href="/" className="link hover-effect">Home</a>
+        <a href="/compare" className="link hover-effect">Compare</a>
+        <a href="/watchlist" className="link hover-effect">Watchlist</a>
+        <a href="/learn" className="link hover-effect">Learn</a>
+        <a href="/dashboard" className="link hover-effect">Dashboard</a>
+        <a href="/signup" className="link hover-effect">Sign Up</a>
+        <a href="/login" className="link hover-effect">Log In</a>
+      </div>
+      <div className="nav-btn-container">
+        <Switch checked={darkMode} onClick={changeMode} />
+      </div>
+      <IconButton onClick={() => setOpen(true)} className="drawer-component">
+        <MenuRoundedIcon className="menu-icon" />
       </IconButton>
       <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
         <div className="drawer-div">
-          {<a href="/">
-            <p className="link">Home</p>
-          </a>}
-          <a href="/compare">
-            <p className="link">Compare</p>
-          </a>
-          <a href="/watchlist">
-            <p className="link">Watchlist</p>
-          </a>
-          <a href="/learn">
-            <p className="link">Learn</p>
-          </a>
-          <a href="/dashboard">
-            <p className="link">Dashboard</p>
-          </a>
-          <a href="/signup">
-            <p className="link">Sign Up</p>
-          </a>
-          <a href="/login">
-            <p className="link">Log In</p>
-          </a>
-          <Switch checked={darkMode} onClick={() => changeMode()} />
+          <a href="/" className="link hover-effect">Home</a>
+          <a href="/compare" className="link hover-effect">Compare</a>
+          <a href="/watchlist" className="link hover-effect">Watchlist</a>
+          <a href="/learn" className="link hover-effect">Learn</a>
+          <a href="/dashboard" className="link hover-effect">Dashboard</a>
+          <a href="/signup" className="link hover-effect">Sign Up</a>
+          <a href="/login" className="link hover-effect">Log In</a>
+          <Switch checked={darkMode} onClick={changeMode} />
         </div>
       </Drawer>
-    </div>
+    </nav>
   );
 }
