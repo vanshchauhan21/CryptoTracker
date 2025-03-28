@@ -1,6 +1,7 @@
+/* Light Mode */
 .info-container {
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
+    background-color: #f9fafb; /* Softer off-white */
+    border: 1px solid #d1d5db; /* Lighter border */
     border-radius: 12px;
     padding: 40px;
     margin: 20px auto;
@@ -14,62 +15,36 @@
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
+/* Keep "Information Hub" blue */
 .info-title {
     font-size: 2.5rem;
-    color: #3a80e9;
+    color: #1e40af !important; /* Dark blue */
     margin-bottom: 20px;
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.info-overview {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 25px;
-    line-height: 1.6;
-    text-align: justify;
-}
-
+/* Keep subtitles in blue */
 .info-subtitle {
     font-size: 1.8rem;
-    color: #007bff;
+    color: #2563eb !important; /* Brighter blue */
     margin-top: 30px;
     margin-bottom: 15px;
-    border-bottom: 2px solid #e0e0e0;
+    border-bottom: 2px solid #d1d5db;
     padding-bottom: 5px;
 }
 
-.info-description {
-    font-size: 1.1rem;
-    color: #333;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.info-steps,
-.info-tips {
-    list-style-type: disc;
-    padding-left: 20px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
+/* Change all black/gray text to white */
+.info-overview,
+.info-description,
+.info-final-note,
 .info-steps li,
 .info-tips li {
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-    line-height: 1.5;
+    color: white !important;
 }
 
-.info-final-note {
-    font-size: 1.1rem;
-    color: #333;
-    margin-bottom: 20px;
-    line-height: 1.6;
-    font-style: italic;
-}
-
+/* Dark Mode */
 @media (prefers-color-scheme: dark) {
     .info-container {
         background-color: #2c2c2c;
@@ -81,16 +56,44 @@
     .info-final-note,
     .info-steps li,
     .info-tips li {
-        color: #f5f5f5;
+        color: #f5f5f5 !important; /* Keep white in dark mode */
     }
 
-    .info-title,
+    /* Keep "Information Hub" blue in dark mode */
+    .info-title {
+        color: #3a80e9 !important; /* Brighter blue */
+    }
+
     .info-subtitle {
-        color: #3a80e9;
+        color: #3a80e9 !important; /* Keep subtitles blue */
     }
 
     .info-steps,
     .info-tips {
-        color: #f5f5f5;
+        color: #f5f5f5 !important;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .info-container {
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    .info-title {
+        font-size: 2rem;
+    }
+
+    .info-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .info-description,
+    .info-overview,
+    .info-final-note,
+    .info-steps li,
+    .info-tips li {
+        font-size: 1rem;
     }
 }
