@@ -16,10 +16,10 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Compare</a></li>
-            <li><a href="#">Watchlist</a></li>
-            <li><a href="#">Dashboard</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#comapre">Compare</a></li>
+            <li><a href="#watchlists">Watchlist</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
           </ul>
         </div>
 
@@ -27,10 +27,10 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Market Data</h4>
           <ul>
-            <li><a href="#">Bitcoin</a></li>
-            <li><a href="#">Ethereum</a></li>
-            <li><a href="#">Altcoins</a></li>
-            <li><a href="#">NFT Market</a></li>
+            <li><a href="#bitcoin">Bitcoin</a></li>
+            <li><a href="#Ethereum">Ethereum</a></li>
+            <li><a href="#altcoins">Altcoins</a></li>
+            <li><a href="#nftmarket">NFT Market</a></li>
           </ul>
         </div>
 
@@ -38,10 +38,10 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Resources</h4>
           <ul>
-            <li><a href="#">Crypto News</a></li>
-            <li><a href="#">Trading Guides</a></li>
-            <li><a href="#">Price Charts</a></li>
-            <li><a href="#">Security Tips</a></li>
+            <li><a href="#news">Crypto News</a></li>
+            <li><a href="#learn">Trading Guides</a></li>
+            <li><a href="#learn">Price Charts</a></li>
+            <li><a href="#security">Security Tips</a></li>
           </ul>
         </div>
 
@@ -49,9 +49,9 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Policies</h4>
           <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Use</a></li>
-            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#termscondition">Terms of Use</a></li>
+            <li><a href="#disclamer">Disclaimer</a></li>
           </ul>
         </div>
       </div>
@@ -60,11 +60,11 @@ const Footer = () => {
       <div className="footer-social">
         <h4>Follow Us</h4>
         <div className="footer-social-icons">
-          <a href="#"><FaFacebookF /></a>
-          <a href="#"><FaTwitter /></a>
-          <a href="#"><FaInstagram /></a>
-          <a href="#"><FaLinkedin /></a>
-          <a href="#"><FaYoutube /></a>
+          <a href="#facbook"><FaFacebookF /></a>
+          <a href="#twitter"><FaTwitter /></a>
+          <a href="#instagram"><FaInstagram /></a>
+          <a href="#linkedin"><FaLinkedin /></a>
+          <a href="#youtube"><FaYoutube /></a>
         </div>
       </div>
 
