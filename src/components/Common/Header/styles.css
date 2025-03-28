@@ -296,7 +296,7 @@ body {
 }
 
 @media (min-width: 800px) {
-=======
+
 /* Attractive Hover Effects */
 .hover-effect::after {
   content: "";
