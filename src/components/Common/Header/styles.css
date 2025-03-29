@@ -2,7 +2,10 @@
   --blue: #0066ff;
   --black: #121212;
   --white: #f5f5f5;
+
   --grey: #a0a3a8;
+
+
   --navbar-bg: rgba(255, 255, 255, 0.9);
   --shadow-color: rgba(0, 0, 0, 0.1);
 }
@@ -28,18 +31,20 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Header Styling */
+/* Navbar Styling */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 2.5rem;
-  min-height: 60px;
+  padding: 1rem 3rem;
+  min-height: 70px;
   position: sticky;
   top: 0;
+
   background-color: var(--navbar-bg);
   z-index: 1000;
   box-shadow: 0px 1px 10px var(--shadow-color);
+
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   backdrop-filter: blur(10px);
 }
@@ -62,6 +67,7 @@ body {
 
 .nav-header:hover {
   transform: scale(1.1);
+
 }
 
 /* Theme Switch Button */
@@ -93,14 +99,15 @@ body {
 [data-theme="dark"] .theme-switch:hover {
   background-color: var(--blue);
   color: var(--white);
+
+
 }
 
-/* Navigation Links */
-.links {
+.links-container {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .link {
@@ -118,6 +125,7 @@ body {
   color: var(--link-hover-color);
   transform: translateY(-2px);
 }
+
 
 /* Sidebar / Drawer Styling */
 .drawer-div {
@@ -287,7 +295,10 @@ body {
 }
 
 @media (min-width: 800px) {
+
   .drawer-component {
     display: block;
   }
 }
+
+
