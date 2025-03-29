@@ -1,14 +1,18 @@
 :root {
   --blue: #0066ff;
-  --grey: #a0a3a8;
   --black: #121212;
   --white: #f5f5f5;
+  --grey: #a0a3a8;
+  --navbar-bg: rgba(255, 255, 255, 0.9);
+  --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="dark"] {
   --background-color: var(--black);
   --text-color: var(--white);
   --link-hover-color: var(--blue);
+  --navbar-bg: rgba(18, 18, 18, 0.9);
+  --shadow-color: rgba(255, 255, 255, 0.1);
 }
 
 [data-theme="light"] {
@@ -33,22 +37,62 @@ body {
   min-height: 60px;
   position: sticky;
   top: 0;
-  background-color: var(--background-color);
+  background-color: var(--navbar-bg);
   z-index: 1000;
-  box-shadow: 0px 1px 10px #949494;
-  transition: background-color 0.3s ease;
-
+  box-shadow: 0px 1px 10px var(--shadow-color);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
-/* Header Text Styling */
-.header h1 {
-  font-size: 1.5rem;
+.nav-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-header {
+  font-size: 1.8rem;
   font-weight: 900;
   background: linear-gradient(45deg, #3a80e9, #b453e6);
   -webkit-background-clip: text;
   color: transparent;
   margin: 0;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.nav-header:hover {
+  transform: scale(1.1);
+}
+
+/* Theme Switch Button */
+.theme-switch {
+  background-color: var(--text-color); /* Opposite of background for contrast */
+  color: var(--background-color); /* Opposite of button background */
+  padding: 10px 15px;
+  border: 2px solid var(--text-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-switch:hover {
+  background-color: var(--link-hover-color);
+  color: var(--white);
+  transform: scale(1.05);
+}
+
+/* Ensure visibility in dark mode */
+[data-theme="dark"] .theme-switch {
+  background-color: var(--white);
+  color: var(--black);
+  border: 2px solid var(--white);
+}
+
+[data-theme="dark"] .theme-switch:hover {
+  background-color: var(--blue);
+  color: var(--white);
 }
 
 /* Navigation Links */
@@ -59,57 +103,48 @@ body {
   gap: 1.5rem;
 }
 
-.link,
-.active-link {
+.link {
   position: relative;
-  color: var(--text-color);
-
-
-  font-size: 21px;
+  text-decoration: none;
+  font-size: 18px;
   font-weight: 600;
-  cursor: pointer;
-  padding: 10px 15px;
-  transition: background-color 0.3s, border 0.3s;
-  border: 2px solid transparent;
+  color: var(--text-color);
+  padding: 8px 12px;
   border-radius: 5px;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.link:hover,
-.active-link {
-  color: #3a80e9;
-  /* background-color: rgba(245, 245, 245, 0.8); */
-  border: 2px solid #3a80e9;
+.link:hover {
+  color: var(--link-hover-color);
+  transform: translateY(-2px);
 }
 
-.link::after,
-.active-link::after {
-  content: "";
-  position: absolute;
-  bottom: -6px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--link-hover-color);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
+/* Sidebar / Drawer Styling */
+.drawer-div {
+  width: 30vw;
+  height: 100vh;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
-.link:hover::after,
-.active-link:hover::after,
-.active-link::after {
-  transform: scaleX(1);
+[data-theme="dark"] .drawer-div {
+  background-color: #1a1a1a;
 }
 
-/* Drawer component */
-.drawer-component {
-  display: none;
+/* Sidebar Links */
+.drawer-div .link {
+  color: var(--text-color);
+}
+
+.drawer-div .link:hover {
+  color: var(--link-hover-color);
 }
 
 /* Button Styling */
 .button {
   background-color: var(--blue);
-  color: white;
+  color: #fff;
   padding: 0.6rem 1.2rem;
   border-radius: 5px;
   font-weight: bold;
@@ -124,92 +159,36 @@ body {
   transform: scale(1.05);
 }
 
+/* Mobile Menu Button */
 .mobile-menu-button {
   display: none;
 }
 
 /* Mobile Responsiveness */
-@media only screen and (max-width: 800px) {
+@media (max-width: 800px) {
   .links {
     display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background-color: var(--background-color);
-    padding: 20px;
-    z-index: 1000;
   }
-
-  .links.mobile-menu-open {
-    display: flex;
-  }
-
+  
   .mobile-menu-button {
     display: block;
   }
-
-  .drawer-component {
-    display: none;
-  }
-
-  .header {
-    padding: 0.5rem 1.5rem;
-    color: var(--text-color);
-  }
-
+  
   .drawer-div {
     width: 40vw;
-    background-color: var(--background-color);
-    height: 100vh;
     padding: 0.5rem 1.5rem;
   }
-
-  .link {
-    font-size: 1rem;
-  }
 }
 
-@media only screen and (max-width: 768px) {
-  .links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background-color: var(--background-color);
-    padding: 20px;
-    z-index: 1000;
-  }
-
-  .links.mobile-menu-open {
-    display: flex;
-  }
-
-  .mobile-menu-button {
-    display: block;
-  }
-
-  .drawer-component {
-    display: none;
-  }
-}
-
+/* Logo & Navbar Styles */
 .nav-logo {
-  height: 3rem !important;
-  padding-top: 0.2rem !important;
-  display:flex;
-  align-items:center;
+  height: 3rem;
+  display: flex;
+  align-items: center;
 }
 
 .nav-header {
   padding: 0rem 0.5rem;
-}
-
-a {
-  display: flex !important;
 }
 
 .header {
@@ -217,47 +196,22 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fff;
+  background-color: var(--background-color);
   z-index: 1000;
   display: flex;
-  justify-content: space-between; /* Space between logo and other elements */
+  justify-content: space-between;
   align-items: center;
-  padding: 5px 20px; /* Reduced padding to shrink navbar height */
+  padding: 5px 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  height: 50px; /* Reduced height */
+  height: 50px;
 }
 
-/* Logo container */
-.nav-logo-container {
-  display: flex;
-  align-items: center;
-  margin-right: 20px; /* Adjusted margin to control space on the right */
-  flex: 1; /* Makes the logo container take available space on the left */
-}
-
-/* Logo image and title */
-.nav-logo {
-  display: flex;
-  align-items: center;
-}
-
-.nav-logo .logo {
-  height: 30px; /* Reduced logo size */
-  margin-right: 10px;
-}
-
-.nav-header {
-  font-size: 1.2rem; /* Reduced font size for smaller header */
-  font-weight: bold;
-  color: #333;
-}
-
-/* Links container */
+/* Navigation Links */
 .links-container {
   display: flex;
   align-items: center;
-  justify-content: center; /* Center the navigation links */
-  flex: 2; /* Take up space between the logo and the button */
+  justify-content: center;
+  flex: 2;
 }
 
 .links {
@@ -266,17 +220,8 @@ a {
   gap: 20px;
 }
 
-.link {
-  text-decoration: none;
-  font-size: 1rem;
-  color: #333;
-  padding: 8px 12px;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
 .link:hover {
-  background-color: rgba(var(--background-color), 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .active-link {
@@ -284,43 +229,43 @@ a {
   color: #007bff;
 }
 
-/* Button and switch alignment */
+/* Button & Switch Alignment */
 .ios-switch-container {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* Right aligned button */
+/* Right-aligned button */
 .nav-btn-container {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  flex: 1; /* Makes the button container take available space on the right */
+  flex: 1;
 }
 
-/* Mobile menu styles */
+/* Mobile Menu Styles */
 .mobile-menu-button {
   display: none;
 }
 
 .drawer-component {
   display: block;
-  margin-right:1rem;
+  margin-right: 1rem;
 }
 
 @media (max-width: 800px) {
   .header {
-    justify-content: space-between; /* Adjust navbar layout on mobile */
+    justify-content: space-between;
     padding: 10px 15px;
   }
 
   .links-container {
-    display: none; /* Hide links on mobile */
+    display: none;
   }
 
   .mobile-menu-button {
-    display: block; /* Show mobile menu button */
+    display: block;
   }
 
   .mobile-menu-open {
@@ -334,17 +279,6 @@ a {
   .mobile-menu-open .active-link {
     width: 100%;
     text-align: left;
-  }
-}
-
-/* Logo and button alignment */
-@media (max-width: 800px) {
-  .nav-logo-container {
-    margin-right: auto;
-  }
-
-  .nav-btn-container {
-    display: none; /* Hide button container on mobile */
   }
 }
 
