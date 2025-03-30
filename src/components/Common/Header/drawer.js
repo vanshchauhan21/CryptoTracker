@@ -28,7 +28,7 @@ export default function Navbar() {
       setLight();
     }
     setDarkMode(!darkMode);
-    toast.success("Theme Changed!");
+    
   };
 
   const setDark = () => {
