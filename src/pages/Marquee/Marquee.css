@@ -1,3 +1,12 @@
+:root {
+  --blur-border-color: #fff; /* Default light mode */
+  transition: --blur-border-color 0.1s ease;
+}
+
+.dark {
+  --blur-border-color: #121212; /* Dark mode */
+}
+
 .marquee {
   overflow: hidden;
   white-space: nowrap;
@@ -15,6 +24,11 @@
 .logo {
   display: inline-block;
   height: 50px; 
+}
+
+.dark .logo {
+  
+  background-color: white;
 }
 
 .logo:hover {

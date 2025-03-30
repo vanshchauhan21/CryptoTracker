@@ -28,6 +28,11 @@ font-size: 1rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    color: black;
+  }
+
+  .dark .info-title__CQA5j{
+    color: white;
   }
   
   .info-title__CQA5j img {
