@@ -5,7 +5,7 @@ import './CryptoTrackerManagingTool.css';
 const CryptoTrackerManagingTool = ({ data }) => {
     return (
         <>
-=        
+
 
 
             <div className="info-wrapper__OsPPP">
@@ -18,7 +18,7 @@ const CryptoTrackerManagingTool = ({ data }) => {
                         <div className="info__YW7qy" key={index}>
                             <div className="info-title__CQA5j">
                                 <img src={item.icon} alt={`${item.title} icon`} />
-                                <h4>{item.title}</h4>
+                                <h4 className='item_title'>{item.title}</h4>
                             </div>
                             <p className="description__mKln5">{item.description}</p>
 
