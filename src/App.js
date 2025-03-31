@@ -77,14 +77,22 @@ function App() {
       cursor.style.transform = "scale(1)";
     };
 
-    document.body.addEventListener("mousemove", moveCursor);
-    document.body.addEventListener("mousedown", handleMouseDown);
-    document.body.addEventListener("mouseup", handleMouseUp);
+    try {
+      document.body.addEventListener("mousemove", moveCursor);
+      document.body.addEventListener("mousedown", handleMouseDown);
+      document.body.addEventListener("mouseup", handleMouseUp);
+    } catch (error) {
+      console.error("Error setting up cursor event listeners:", error);
+    }
 
     return () => {
-      document.body.removeEventListener("mousemove", moveCursor);
-      document.body.removeEventListener("mousedown", handleMouseDown);
-      document.body.removeEventListener("mouseup", handleMouseUp);
+      try {
+        document.body.removeEventListener("mousemove", moveCursor);
+        document.body.removeEventListener("mousedown", handleMouseDown);
+        document.body.removeEventListener("mouseup", handleMouseUp);
+      } catch (error) {
+        console.error("Error cleaning up cursor event listeners:", error);
+      }
     };
   }, []);
 
