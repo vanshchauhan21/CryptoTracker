@@ -173,8 +173,8 @@ function Compare() {
                 gap: "10px",
               }}
             >
-              <Skeleton variant="rounded" sx={{ borderRadius: '5px' }}  width="261px" height="40px" /> 
-              <Skeleton variant="rounded" sx={{ borderRadius: '5px' }} width="205px" height="40px" />
+              <Skeleton variant="rounded" sx={{ borderRadius: '5px' }}  width="290px" height="40px" /> 
+              <Skeleton variant="rounded" sx={{ borderRadius: '5px' }} width="290px" height="40px" />
             </div>
             <div style={{display: "flex", flexDirection: "row", width: "930px", height: "192px",gap: "34px"}}>
               <div style={{ border:"4px solid rgba(0, 0, 0, 0.11)" , borderRadius: "20px",width:"448px" ,height:"190px"}} >
@@ -186,7 +186,7 @@ function Compare() {
                   <div style={{height: "87px",display: "flex", gap: "15px", flexDirection: "column"}}>
                     <Skeleton variant="text" sx={{ fontSize: "19px", width:"285px"}} />
                     <Skeleton variant="text" sx={{ fontSize: "19px", width:"285px"}} />
-                    <Skeleton variant="text" sx={{ fontSize: "19px", width:"285px"}} />
+                    <Skeleton variant="text" sx={{ fontSize: "19px", width:"200px"}} />
                   </div>
                 </div>              
               </div> 
@@ -212,6 +212,10 @@ function Compare() {
             }}>
               <Skeleton variant="rounded" sx={{ borderRadius: '5px' }} width="448px" height="48px"/> 
               <Skeleton variant="rounded" sx={{ borderRadius: '5px' }} width="200px" height="40px"/>
+            </div>
+            <div style={{display: "flex",gap: "10px"}}>
+            <Skeleton variant="rounded" sx={{ borderRadius: '5px' }} width="129px" height="50px"/>
+            <Skeleton variant="rounded" sx={{ borderRadius: '5px' }} width="129px" height="50px"/>
             </div>
             <div>
               <Skeleton variant="rounded" width="94.5vw" height="40vh"/> 
