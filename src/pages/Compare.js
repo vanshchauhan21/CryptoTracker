@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Info from "../components/CoinPage/Info";
-import LineChart from "../components/CoinPage/LineChart";
+// import LineChart from "../components/CoinPage/LineChart";
 import ToggleComponents from "../components/CoinPage/ToggleComponent";
 import Header from "../components/Common/Header";
-import Loader from "../components/Common/Loader";
+// import Loader from "../components/Common/Loader";
 import SelectCoins from "../components/ComparePage/SelectCoins";
 import List from "../components/Dashboard/List";
 import { get100Coins } from "../functions/get100Coins";
@@ -11,10 +11,15 @@ import { getCoinData } from "../functions/getCoinData";
 import { getPrices } from "../functions/getPrices";
 import { settingChartData } from "../functions/settingChartData";
 import { settingCoinObject } from "../functions/settingCoinObject";
+import { Page } from "../components/ComparePage/Chart";
+import IconPositionTabs from "../components/ComparePage/ChartTab/Tabs";
+import Selectdays from "../components/ComparePage/SelectDays";
+import Skeleton from '@mui/material/Skeleton';
 
 function Compare() {
   const [allCoins, setAllCoins] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+  setTimeout(()=>setLoading(false) , 5000)
   // id states
   const [crypto1, setCrypto1] = useState("bitcoin");
   const [crypto2, setCrypto2] = useState("ethereum");
@@ -26,12 +31,12 @@ function Compare() {
   const [priceType, setPriceType] = useState("prices");
   const [chartData, setChartData] = useState({
     labels: [],
-    datasets: [],
+    datasets: [{data:[]},{data:[]}],
   });
 
   useEffect(() => {
     getData();
-  }, []);
+  },  [crypto1, crypto2, priceType]);
 
   const getData = async () => {
     setLoading(true);
@@ -102,49 +107,137 @@ function Compare() {
 
   return (
     <div>
-      <Header />
-      {loading || !coin1Data?.id || !coin2Data?.id ? (
-        <Loader />
-      ) : (
+      {(loading===false ?
+      (
         <>
-          <div
-            style={{
-              paddingTop: "20px", 
-              marginTop:"100px",
-            }}
-            className="grey-wrapper"
-          >
-            <List coin={coin1Data} />
+        <Header />
+          <div style={{position: "absolute", width: "1882px",height: "auto", marginTop: "70px"}}>
+            <div style={{position: "absolute", display: "flex", flexDirection: "column", width: "1782px", height: "auto",paddingLeft: "50px", paddingRight: "50px", paddingTop: "80px",paddingBottom: "100px", gap: "3rem"}}>
+            <div
+                style={{
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "center",
+                }}
+              >
+                <SelectCoins
+                allCoins={allCoins}
+                crypto1={crypto1}
+                crypto2={crypto2}
+                onCoinChange={onCoinChange}
+                />
+              </div>
+              <div style={{display: "flex", flexDirection: "row", width: "930px", height: "192px",gap: "34px"}}>
+                <List coin={coin1Data} />
+                <List coin={coin2Data} />
+              </div>
+              <div
+                style={{
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "space-between",
+                }}
+              >
+                <ToggleComponents
+                priceType={priceType}
+                handlePriceTypeChange={handlePriceTypeChange}
+                />
+                <Selectdays
+                days={days}
+                handleDaysChange={handleDaysChange}
+                />
+              </div>
+              <div style={{display: "flex", gap: "10px", height: "50px", justifyContent: "center"}}>
+                <IconPositionTabs coin={coin1Data} />
+                <IconPositionTabs coin={coin2Data} />
+              </div>
+              <div style={{height: "40vh", width: "94.5vw",  display: "flex"}}> 
+                <Page chartData={chartData} multiAxis={true}/>
+              </div>
+              <div style={{display: "flex", flexDirection: "row", gap: "23.3rem",alignItems: "flex-start"}}>
+                <Info title={coin1Data.name}desc={coin1Data.desc} />
+                <Info title={coin2Data.name} desc={coin2Data.desc} />
+              </div>
+            </div>
           </div>
-          <div className="grey-wrapper">
-            <List coin={coin2Data} />
-          </div>
-          <div
+          </>
+      ):(
+        <div>
+          <Skeleton variant="rectangular" height="70px"/>
+          <div style={{position: "absolute", display: "flex", flexDirection: "column", width: "1782px", height: "auto", padding: "80px 50px 100px", gap: "3rem"}}>
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "center",
+                gap: "10px",
+              }}
+            >
+              <Skeleton variant="rounded" sx={{ borderRadius: '5px' }}  width="290px" height="40px" /> 
+              <Skeleton variant="rounded" sx={{ borderRadius: '5px' }} width="290px" height="40px" />
+            </div>
+            <div style={{display: "flex", flexDirection: "row", width: "930px", height: "192px",gap: "34px"}}>
+              <div style={{ border:"4px solid rgba(0, 0, 0, 0.11)" , borderRadius: "20px",width:"448px" ,height:"190px"}} >
+                <div style={{position: "relative", width: "405px", height: "163px", left: "18px", top: "10px", gap: "20px", display: "flex",flexDirection: "column"}}>
+                  <div style={{display: "flex", gap: "10px"}}>
+                    <Skeleton variant="circular" width="30px" height="30px" />
+                    <Skeleton variant="text" sx={{ fontSize: "30px", width:"365px"}} />
+                  </div>
+                  <div style={{height: "87px",display: "flex", gap: "15px", flexDirection: "column"}}>
+                    <Skeleton variant="text" sx={{ fontSize: "19px", width:"285px"}} />
+                    <Skeleton variant="text" sx={{ fontSize: "19px", width:"285px"}} />
+                    <Skeleton variant="text" sx={{ fontSize: "19px", width:"200px"}} />
+                  </div>
+                </div>              
+              </div> 
+              <div style={{ border:"4px solid rgba(0, 0, 0, 0.11)" , borderRadius: "20px",width:"448px" ,height:"190px"}} >
+                <div style={{position: "relative", width: "405px", height: "163px", left: "18px", top: "10px", gap: "20px", display: "flex",flexDirection: "column"}}>
+                  <div style={{display: "flex", gap: "10px"}}>
+                    <Skeleton variant="circular" width="30px" height="30px" />
+                    <Skeleton variant="text" sx={{ fontSize: "30px", width:"365px"}} />
+                  </div>
+                  <div style={{height: "87px",display: "flex", gap: "15px", flexDirection: "column"}}>
+                    <Skeleton variant="text" sx={{ fontSize: "19px", width:"285px"}} />
+                    <Skeleton variant="text" sx={{ fontSize: "19px", width:"285px"}} />
+                    <Skeleton variant="text" sx={{ fontSize: "19px", width:"285px"}} />
+                  </div>
+                </div>              
+              </div>
+            </div>
+            <div 
             style={{
               display: "flex",
               flexWrap: "wrap",
               justifyContent: "space-between",
-              margin: "1rem",
-            }}
-          >
-            <ToggleComponents
-              priceType={priceType}
-              handlePriceTypeChange={handlePriceTypeChange}
-            />
-            <SelectCoins
-              allCoins={allCoins}
-              crypto1={crypto1}
-              crypto2={crypto2}
-              onCoinChange={onCoinChange}
-              days={days}
-              handleDaysChange={handleDaysChange}
-            />
-          </div>
-          <LineChart chartData={chartData} multiAxis={true} />
-          <Info title={coin1Data.name} desc={coin1Data.desc} />
-          <Info title={coin2Data.name} desc={coin2Data.desc} />
-        </>
-      )}
+            }}>
+              <Skeleton variant="rounded" sx={{ borderRadius: '5px' }} width="448px" height="48px"/> 
+              <Skeleton variant="rounded" sx={{ borderRadius: '5px' }} width="200px" height="40px"/>
+            </div>
+            <div style={{display: "flex",gap: "10px"}}>
+            <Skeleton variant="rounded" sx={{ borderRadius: '5px' }} width="129px" height="50px"/>
+            <Skeleton variant="rounded" sx={{ borderRadius: '5px' }} width="129px" height="50px"/>
+            </div>
+            <div>
+              <Skeleton variant="rounded" width="94.5vw" height="40vh"/> 
+            </div>
+            <div style={{display: "flex", flexDirection: "row", gap: "23.3rem",alignItems: "flex-start"}}>
+              <div style={{ borderRadius: "10px", width:"700px", height:"246px",border:"2px solid rgba(0, 0, 0, 0.11)"}}>
+                <div style={{position: "relative",width: "620px", height: "179px", top: "36px", left: "40px", padding: "0 !important", margin:0,gap: "10px",display: "flex", flexDirection: "column"}}>
+                  <Skeleton variant="rounded" sx={{ borderRadius: '5px' }} width="620px" height="22px"/> 
+                  <Skeleton variant="rounded" sx={{ borderRadius: '5px' }} width="620px" height="138px"/>
+                </div>
+              </div>
+              <div style={{ borderRadius: "10px", width:"700px", height:"246px", border:"2px solid rgba(0, 0, 0, 0.11)"}}>
+                <div style={{position: "relative",width: "620px", height: "179px", top: "36px", left: "40px", padding: "0 !important", margin:0,gap: "10px",display: "flex", flexDirection: "column"}}>
+                  <Skeleton variant="rounded" sx={{ borderRadius: '5px' }} width="620px" height="22px"/> 
+                  <Skeleton variant="rounded" sx={{ borderRadius: '5px' }} width="620px" height="138px"/>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+      )
+    )}
     </div>
   );
 }

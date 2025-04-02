@@ -1,51 +1,150 @@
 .list-row {
   position: relative;
-  width: 90%;
-  padding: 1rem 2rem;
-  margin-bottom: 0.5rem !important;
+  width: 448px;
+  height: 190px;
+  /* padding: 1rem 2rem; */
+  /* margin-bottom: 0.5rem !important; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 0.8rem;
+  /* margin-left: auto;
+  margin-right: auto; */
+  border-radius: 20px;
   cursor: pointer;
-  background-color: var(--darkgrey);
-  border: 2px solid var(--darkgrey);
+  background-color: none;
+  /* border: 2px solid var(--darkgrey); */
 }
-
 .list-row:hover {
+    width: 450px;
+    height: 192px;
     border: 2px solid var(--green);
     transition: all 0.3s;
   }
 
   .list-row-red:hover {
+    width: 450px;
+    height: 192px;
     border: 2px solid var(--red);
     transition: all 0.3s;
   }
 
 .list-row td {
-  width: 20%;
+  padding: 0;
   text-align: left;
 }
-
+.td-fixed {
+  width: 95px !important;
+  height: 25px !important;
+  padding: 0;
+  position: absolute;
+  right: 0.3rem;
+}
 .td-img {
-  width: 3rem !important;
-  margin-right: 1rem;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  font-weight: 400;
+  font-size: 25px;
+}
+.coin-image-td {
+  width: 30px ;
+  height: 30px;
+}
+/* .info{
+  height: 30px;
+  width: 180px;
+} */
+/* .name, .symbol {
+  display: inline-block;
+  vertical-align: middle;
+} */
+/* .td-info{
+  display: flex;
+} */
+.info{
+  display: flex;
+  gap: 7px;
+  /* text-align: center; */
+  /* justify-content: center; */
+  /* align-content: center; */
+}
+.name{
+  /* display: inline-flex; */
+  align-content: center;
+  height: 30px;
+  width: auto;
+  max-width: 170px;
+  font-size: 25px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* align-items: center; */
+  /* padding-bottom: 2px; */
 }
 
-.td-info {
-  width: 10rem !important;
+.symbol{
+  align-content: flex-end;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 30px;
+  width: auto;
+  max-width:130px;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(92,92,92) !important;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
 }
-
-.td-current-price {
-  width: 6rem !important;
-  text-align: right !important;
+.css-cu2pad-MuiCardContent-root:last-child {
+  padding: 0 !important;
 }
+MuiCardContent-root {
+  padding-bottom: 0 !important;
+}
+.css-1855bqm-MuiTypography-root {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+  width: 253px;
+  height: 19px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+}
+/* .td-price {
+  width: 165px;
+  height: 19px;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  color: rgba(234,0,0) !important;
+} */
 
-.td-totalVolume,
-.td-marketCap {
-  text-align: right !important;
+.td-Volume{
+  width: 175px;
+  height: 19px;
+  font-size: 16px;
+  font-weight: 400 !important;
+  top: 1px;
+  padding: 0;
+  margin: 0;
+  color: #000000 !important;
+}
+.td-Cap {
+  width: 165px;
+  height: 19px;
+  font-size: 16px;
+  font-weight: 400 !important;
+  padding: 0;
+  margin: 0;
+  color: #000000 !important;
 }
 
 .mobile {
@@ -107,7 +206,7 @@
   }
 }
 
-.horizontal-line{
+/* .horizontal-line{
   
   left: 0;
   right: 0;
@@ -115,4 +214,45 @@
   position: absolute;
   bottom: 1rem;
   background-color: #ddd;
+} */
+.chip-flex2 {
+  width: 95px;
+  height: 22px;
+  display: flex;
+  /* justify-content:; */
+  align-items: center;
+  gap: 4px;
 }
+price-chip red{
+  height: 22px;
+  padding: 0;
+  margin: 0 !important;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--green);
+  display: flex;
+  border-radius: 7px;
+  right: 10px;
+  border: none !important;
+  color: var(--red);
+}
+.chip-icon red{
+  border: 1px solid var(--green);
+  width: 17px;
+  height: 18px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  /* position: absolute;
+  top:1px;
+  left: 12px; */
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none !important;
+  color: var(--red);
+}
+

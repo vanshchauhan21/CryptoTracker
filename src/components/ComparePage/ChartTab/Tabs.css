@@ -1,0 +1,19 @@
+.MuiTabs-flexContainer{
+    height: 50px !important;
+}
+.MuiTab-root.Mui-selected{
+    min-height: 50px !important;
+    text-transform: none;
+    font-size: 20px;
+    font-weight: 400;
+}
+.MuiTabs-indicator {
+    background-color: transparent !important;
+}
+.MuiButtonBase-root:hover{
+    border: none;
+    background-color: white;
+}
+button :hover{
+    
+}

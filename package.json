@@ -20,6 +20,8 @@
     "axios": "^1.7.7",
     "canvas-confetti": "^1.9.3",
     "chart.js": "^4.4.6",
+    "echarts": "^5.6.0",
+    "echarts-for-react": "^3.0.2",
     "font-awesome": "^4.7.0",
     "framer-motion": "^11.18.2",
     "i18next": "^23.16.4",

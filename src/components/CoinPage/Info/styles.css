@@ -1,21 +1,15 @@
-.frame {
-  border: 1px solid var(--black);
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  margin: 16px;
-}
-
-.info-component h1 {
-  font-size: 1.2rem;
+/* .box h1{
+  width: 519px;
+  height: 24px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  border: none;
   margin: 0;
-}
-
-.info-p a {
-  text-decoration: underline;
-}
-
-.info-p a:hover {
-  color: var(--blue) !important;
-  transition: all 0.3s;
-}
+  padding: 0;
+} */
+/* .box p{
+  /* height: 150px;
+  width: 519px; */
+  
+/* } */
