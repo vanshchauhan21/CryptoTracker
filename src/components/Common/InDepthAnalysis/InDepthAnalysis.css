@@ -1,12 +1,12 @@
 .tutorial {
   display: flex;
   justify-content: center;
-  padding: 20px;
   gap: 10rem;
   /* background-color: #1a1a1a; */
   color: #f5f5f5;
   border-radius: 8px;
-  margin-top: 4rem;
+  padding: 1rem;
+  margin: 2rem;
   /* border: 2px solid greenyellow; */
 }
 
@@ -67,6 +67,7 @@
   pointer-events: none;
   z-index: 1;
   box-shadow: 2px 2px 10px rgba(54, 131, 248, 0.588);
+  float: right;
 }
 
 @media screen and (max-width: 1300px) {

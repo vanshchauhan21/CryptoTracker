@@ -1,6 +1,7 @@
 .carousel-container {
     text-align: center;
-    margin: 2rem auto;
+    padding: 1rem;
+    margin: 2rem;
   }
   
   .carousel h2 {
@@ -25,7 +26,7 @@
     background: linear-gradient(135deg, #9b59b6, #ff6ec7); /* Initial purple-pink gradient */
     color: white;
     padding: 1.5rem;
-    width: 250px;
+    width: 200px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -41,11 +42,13 @@
   .carousel-card h3 {
     font-size: 1.25rem;
     color: #fff;
+    height: 50px;
   }
   
   .carousel-card p {
     font-size: 1rem;
     color: #fff !important;
+    height: 100px;
   }
   
   /* Animation to alternate between purple and pink */

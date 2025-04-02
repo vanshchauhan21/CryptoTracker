@@ -1,58 +1,77 @@
 .ultimate-security-section {
-    padding: 2rem;
-
-  }
-  
-  .ultimate-security-header {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-
-
-
-  .ultimate-security-title b {
-    background-image: linear-gradient(135deg, #9b59b6, #4db1fd, #5843f4);
-    background-clip: text;
-    -webkit-background-clip: text; /* For WebKit browsers */
-    color: transparent;
+  padding: 2rem;
 }
 
-  .ultimate-security-description {
-    font-size: 1rem;
-    color: #666;
-    margin-top: 0.5rem;
-  }
-  
-  .ultimate-security-features {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
-  }
-  
-  .security-feature-item {
-    display: flex;
-    align-items: flex-start;
-    max-width: 300px;
-    gap: 1rem;
-    text-align: left;
-  }
-  
-  .security-feature-icon {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .security-feature-title {
-    font-size: 1.2rem;
-    color: #333;
-    font-weight: bold;
-  }
-  
-  .security-feature-description {
-    font-size: 0.9rem;
-    color: #666;
-    margin-top: 0.3rem;
-  }
-  
+.ultimate-security-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.ultimate-security-title b {
+  background-image: linear-gradient(135deg, #9b59b6, #4db1fd, #5843f4);
+  background-clip: text;
+  -webkit-background-clip: text; /* For WebKit browsers */
+  color: transparent;
+}
+
+.ultimate-security-description {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.ultimate-security-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.security-feature-item {
+  display: flex;
+  align-items: flex-start;
+  max-width: 300px;
+  gap: 1rem;
+  text-align: left;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fff; /* Default background color */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+.security-feature-item:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+  background-color: #f0f8ff; /* Light background color on hover */
+}
+
+.security-feature-icon {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease; /* Smooth transition for the icon */
+}
+
+.security-feature-item:hover .security-feature-icon {
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+.security-feature-title {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.security-feature-item:hover .security-feature-title {
+  color: #007BFF; /* Change to blue color on hover */
+}
+
+.security-feature-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.3rem;
+  transition: color 0.3s ease;
+}
+
+.security-feature-item:hover .security-feature-description {
+  color: #333; /* Darker text color on hover */
+}

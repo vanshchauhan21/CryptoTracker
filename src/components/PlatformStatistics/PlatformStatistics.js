@@ -31,8 +31,8 @@ const PlatformStatistics = () => {
         <div className="platform-statistics-item" key={index}>
           <div className="platform-statistics-header">
             <div className="platform-statistics-inner">
+              <span className='platform-statistics-number'>{stat.number}</span> <br />
               <p className="platform-statistics-title">
-                {stat.number} <br />
                 <span className="platform-statistics-highlighted">{stat.title}</span>
               </p>
               <p className="platform-statistics-description">{stat.description}</p>

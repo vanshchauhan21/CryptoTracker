@@ -2,15 +2,20 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 5rem;
-    
+    gap: 6rem;
+    padding: 1rem;
+    margin: 2rem;
     /* border: 2px solid red; */
   }
   
   .exit-strategy-description-wrapper {
     text-align: center;
+    justify-content: center;
+    width: 600px;
   }
-  
+  .heading-wrapper{
+    max-width: 600px;
+  }
   .exit-strategy-title {
     font-size: 2rem;
     font-weight: bold;
@@ -40,13 +45,9 @@
     background-color: #3b8bc4;
   }
   
-  .exit-strategy-banner {
-    margin-top: 30px;
-  }
-  
   .exit-strategy-banner-img {
     width: 100%;
     height: auto;
-    max-width: 600px;
+    max-width: 500px;
   }
   

@@ -1,10 +1,10 @@
 /* src/components/InfoSection/InfoSection.css */
 .info-wrapper__OsPPP {
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
     /* flex-direction: column; */
     justify-content: center;
-    padding: 3rem;
+    padding: 1rem;
     margin: 2rem;
     /* border: 2px solid rgb(0, 255, 166); */
 
@@ -28,8 +28,11 @@ font-size: 1rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    color: black;
   }
-  
+  .dark .info-title__CQA5j{
+    color: white;
+  }
   .info-title__CQA5j img {
     width: 50px;
     height: 50px;
