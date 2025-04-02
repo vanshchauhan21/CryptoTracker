@@ -19,12 +19,10 @@ function LineChart({ chartData, multiAxis }) {
       crypto1: {
         position: "left",
       },
-      crypto2: multiAxis && {
-        position: "right",
-      },
+      ...(multiAxis && { crypto2: { position: "right" } }),
     },
   };
-
+  console.log(chartData);
   return <Line data={chartData} options={options} />;
 }
 
@@ -40,8 +38,8 @@ function YourComponent({ title, desc, longDesc, shortDesc, toggle, setToggle, ch
             border: 1px solid var(--black);
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            padding: 16px;
-            margin: 16px;
+            width: 1782px;
+            height: 873px;
           }
 
           .info-component h1 {
@@ -70,7 +68,7 @@ function YourComponent({ title, desc, longDesc, shortDesc, toggle, setToggle, ch
             onClick={() => setToggle(!toggle)}
           />
         </div>
-        <LineChart chartData={chartData} multiAxis={multiAxis} />
+        <LineChart chartData={chartData} multiAxis={multiAxis} /> 
       </div>
     </div>
   );
@@ -93,4 +91,4 @@ YourComponent.defaultProps = {
   desc: "", // Set default value for desc
 };
 
-export default YourComponent;
+export default LineChart;

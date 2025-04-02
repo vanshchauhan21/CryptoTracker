@@ -10,36 +10,36 @@ function SelectDays({ days, handleDaysChange, noPTag }) {
         value={days}
         onChange={(e) => handleDaysChange(e)}
         sx={{
-          height: "2.5rem",
-          color: "var(--text-color)",
           "& .MuiOutlinedInput-notchedOutline": {
-            borderColor: "var(--text-color)",
+            width: "165px",
+            border: "none",
           },
           "& .MuiSvgIcon-root": {
-          color: "var(--text-color)"
+          color: "#000000",
+          justifyContent: "right",
           },
           "&:hover": {
             "&& fieldset": {
-              borderColor: "#3a80e9",
+              borderColor: "none",
             },
           },
         }}
         MenuProps={{
           PaperProps: {
             sx: {
-              backgroundColor: "var(--black)",
+              backgroundColor: "#FFFFFF",
               boxShadow: "var(--select-box-shadow)",
               "& .MuiMenuItem-root": {
-                color: "var(--white)",
-                backgroundColor: "var(--black)",
+                color: "var(--black)",
+                backgroundColor: "#FFFFFF",
                 "&:hover": {
-                  backgroundColor: "var(--darkgrey)",
+                  backgroundColor: "rgba(0, 0, 0, 0.05)",
                 },
                 "&.Mui-selected": {
                     backgroundColor: "rgba(58, 128, 233, 0.1)",
                 },
                 "&.Mui-selected:hover": {
-                  backgroundColor: "rgba(58, 128, 233, 0.3)",
+                  backgroundColor: "rgba(58, 128, 233, 0.15)",
                 },
               },
             },
