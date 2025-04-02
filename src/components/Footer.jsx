@@ -27,7 +27,7 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Market Data</h4>
           <ul>
-            <li><a href="#bitcoin">Bitcoin</a></li>
+            <li><a href="https://www.google.com/finance/quote/BTC-USD">Bitcoin</a></li>
             <li><a href="#Ethereum">Ethereum</a></li>
             <li><a href="#altcoins">Altcoins</a></li>
             <li><a href="#nftmarket">NFT Market</a></li>
