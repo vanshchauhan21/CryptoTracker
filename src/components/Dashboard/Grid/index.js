@@ -90,7 +90,6 @@ function Grid({ coin, delay }) {
             )}
           </div>
         </div>
-
         <p
           className={
             coin.price_change_percentage_24h >= 0

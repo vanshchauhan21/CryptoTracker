@@ -50,7 +50,7 @@ function List({ coin, delay }) {
                     <img
                       src={coin.image}
                       alt={`${coin.name} logo`}
-                      className="coin-image coin-image-td"
+                      className="coin image coin-image-td"
                     />
                   </Tooltip>
                 </td>
