@@ -1,60 +1,81 @@
-.calculator-container {
-  background-color: #e6f6fb;
+.calculator-box {
+  background-color: #ffffff;
   border: 2px solid #ddd;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 20px;
-  max-width: 600px;
-  margin: 20px auto;
+  max-width: 900px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 h2 {
-  color: #0f0e0e;
-  font-size: 2rem;
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
 }
 
 .input-container {
-  margin: 10px 0;
+  margin-bottom: 15px;
+  max-width: 900px;
+  text-align: left;
 }
 
 .input-container label {
-  margin-top: 20px;
   font-weight: bold;
-  font-size: 1.2rem;
-  margin-bottom: 6px;
+  font-size: 1rem;
   display: block;
+  margin-bottom: 5px;
 }
 
 .input-container input {
-  width: 80%;
-  padding: 8px;
+  width: 100%; /* Change this */
+  max-width:900px !important; /* Optional: Adjust as needed */
+  padding: 12px; /* Increased padding for better UI */
   border-radius: 6px;
-  border: 2px solid #0b53ee;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  display: block;
+ 
 }
 
+
 button {
-  background-color: #0620e6;
+  background-color: #007bff;
   color: white;
-  padding: 10px 30px;
+  padding: 10px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
+  font-size: 1rem;
   cursor: pointer;
-  /* margin-top: 10px; */
   transition: background-color 0.3s ease;
+  width: 100%;
 }
 
 button:hover {
-  background-color: #cfd3ec;
-  color: #0f0e0e;
-  border: 1px solid #012a83;
+  background-color: #0056b3;
 }
 
-.result {
+.result-box {
   margin-top: 20px;
-  font-size: 1.1em;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
 }
 
-.result p {
+.result-box p {
+  width: 100%;
+  max-width: 900px;
   margin: 5px 0;
-  color: #0a0909;
+}
+
+.text-green {
+  color: green;
+}
+
+.text-red {
+  color: red;
 }

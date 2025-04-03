@@ -38,11 +38,15 @@ function Header() {
   const setDark = () => {
     localStorage.setItem("theme", "dark");
     document.documentElement.setAttribute("data-theme", "dark");
+    // Add the Tailwind `dark` class to enable dark mode styles
+    document.documentElement.classList.add("dark");
   };
 
   const setLight = () => {
     localStorage.setItem("theme", "light");
     document.documentElement.setAttribute("data-theme", "light");
+    // Remove the Tailwind `dark` class to switch back to light mode
+    document.documentElement.classList.remove("dark");
   };
 
   const toggleMobileMenu = () => {
@@ -105,7 +109,7 @@ function Header() {
   }));
 
   return (
-    <div 
+    <div
       className="header"
       style={{
         backgroundColor: darkMode ? "#000000" : "#ffffff", // Dynamic background color
