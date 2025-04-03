@@ -1,3 +1,12 @@
+:root {
+  --blur-border-color: #fff; /* Default light mode */
+  transition: --blur-border-color 0.1s ease;
+}
+
+.dark {
+  --blur-border-color: #121212; /* Dark mode */
+}
+
 .marquee {
   overflow: hidden;
   white-space: nowrap;
@@ -8,25 +17,18 @@
 }
 
 .marquee-content {
-  display: inline-block;
   display: flex;
-  flex-direction:row ;
-  animation: marquee 30s linear infinite; /* Adjust speed here */
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%); /* Shift by entire width of the full set of logos */
-  }
+  flex-direction: row ;
 }
 
 .logo {
   display: inline-block;
   height: 50px; 
+}
 
+.dark .logo {
+  
+  background-color: white;
 }
 
 .logo:hover {
@@ -35,13 +37,13 @@
   cursor: pointer; /* Change cursor to pointer */
 }
 .company-logo-box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 .company-logo-box h5{
-  margin-top: 0.3rem;
-    font-size: 0.7rem;
+  margin-top: 0.2rem;
+  font-size: 0.7rem;
 }
