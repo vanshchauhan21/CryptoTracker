@@ -78,7 +78,8 @@
 .watchlist-icon {
   position: relative;
   top: 0px;
-  right: 3px;
+  right: 1px;
+  text-align: center;
   /* display: flex;
   justify-content: center;
   align-items: center; */
@@ -89,14 +90,16 @@
   /* color: var(--green); */
   margin: 0;
   padding: 0;
-  height: 18px;
+  height: 16px !important;
   width: 18px;
 }
-.css-1umw9bq-MuiSvgIcon-root {
-  width: 16px !important;
-  height: 16px !important;
+.MuiSvgIcon-root {
+  width: 24px !important;
+  height: 18px !important;
   display: flex;
-  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
 }
 .watchlist-icon-red {
   border: 0.63px solid rgba(0,0,0,0.1);
@@ -142,16 +145,17 @@
 }
 
 .chip-flex {
-  width: 93px;
-  height: 22px;
+  width: 98px;
+  height: 25px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 7px;
 }
 
 .price-chip {
-  width: 70px;
-  height: 22px;
+  width: 75px;
+  height: 25px;
   padding: 0;
   margin: 0 !important;
   font-size: 18px;
@@ -169,8 +173,8 @@
 }
 
 .chip-icon {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 25px;
   padding: 0;
   margin: 0;
   border-radius: 50%;

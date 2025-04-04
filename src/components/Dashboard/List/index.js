@@ -91,7 +91,7 @@ function List({ coin, delay }) {
                 </Typography>
               </CardContent>
             </div>
-            <div style={{justifyContent: "space-between", position: "relative", display: "flex", flexDirection: "row", width: "123px", height: "25px", top: "5px",right: "3px", alignItems: "center"}}>
+            <div style={{justifyContent: "space-between", position: "relative", display: "flex", flexDirection: "row", width: "123px", height: "25px",top: "5px",right: "3px", alignItems: "center"}}>
               <div style={{width: "98px", height: "25px"}}>
                 <h1 style={{width: "98px", height: "25px", fontSize: "18px", fontWeight: 400, color: "rgba(234,0,0,1)", margin: 0, padding: 0}}>
                   {coin.price_change_percentage_24h >= 0 ? (
@@ -124,11 +124,11 @@ function List({ coin, delay }) {
                             },
                           }}
                         >
-                          <div className="price-chip red">
+                          <div className="price-red">
                             {coin.price_change_percentage_24h.toFixed(2)}%
                           </div>
                         </Tooltip>
-                        <div className="chip-icon td-chip-icon red">
+                        <div className="chip-red">
                           <TrendingDownRoundedIcon />
                         </div>
                       </div>
@@ -136,28 +136,28 @@ function List({ coin, delay }) {
                   )}
                 </h1>
               </div>
-                <div style={{width: "25px",height: "25px"}}>
-                  <div style={{width: "24px", height: "25px",borderRadius: "50%", position: "relative", top: "1px"}}>
-                    <div style={{width: "21px", height: "20px", backgroundColor: "rgba(0,0,0,0) !important",display: "flex", alignItems: "center", position: "relative"}}>
-                      <div style={{width: "18px", height: "18px", border: "0.75px solid rgba(0,0,0,0.8) !important", padding: 0, margin: 0,position: "relative",display: "flex", alignItems: "center"}}>
-                        <td className={`watchlist-icon ${
-                          coin.price_change_percentage_24h < 0 && "watchlist-icon-red"
-                        }`}
-                        onClick={(e) => {
-                          if (isCoinAdded) {
-                            removeItemToWatchlist(e, coin.id, setIsCoinAdded);
-                          } else {
-                            setIsCoinAdded(true);
-                            saveItemToWatchlist(e, coin.id);
-                          }
-                        }}
-                        >
-                          {isCoinAdded ? <StarIcon /> : <StarOutlineIcon />}
-                        </td>
-                      </div>
+              <div style={{width: "25px",height: "25px", top: "2px"}}>
+                <div style={{width: "25px", height: "25px",borderRadius: "50%", position: "relative", top: "1px",justifyContent: "center",display: "flex"}}>
+                  <div style={{width: "25px", height: "25px", backgroundColor: "rgba(0,0,0,0) !important",display: "flex", alignContent: "center", position: "relative", justifyContent: "center"}}>
+                    <div style={{top: "1px",right: "-2px",width: "20px", height: "18px", border: "0.75px solid rgba(0,0,0,0.8) !important", padding: 0, margin: 0,position: "relative",display: "flex", justifyContent: "center"}}>
+                      <td className={`watchlist-icon ${
+                        coin.price_change_percentage_24h < 0 && "watchlist-icon-red"
+                      }`}
+                      onClick={(e) => {
+                        if (isCoinAdded) {
+                          removeItemToWatchlist(e, coin.id, setIsCoinAdded);
+                        } else {
+                          setIsCoinAdded(true);
+                          saveItemToWatchlist(e, coin.id);
+                        }
+                      }}
+                      >
+                        {isCoinAdded ? <StarIcon /> : <StarOutlineIcon />}
+                      </td>
                     </div>
                   </div>
                 </div>
+              </div>
             </div>
           </div>
         </Card>

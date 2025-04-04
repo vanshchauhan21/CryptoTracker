@@ -33,11 +33,11 @@
   text-align: left;
 }
 .td-fixed {
-  width: 95px !important;
+  width: 98px !important;
   height: 25px !important;
   padding: 0;
   position: absolute;
-  right: 0.3rem;
+  right: 1 rem;
 }
 .td-img {
   width: 30px;
@@ -216,15 +216,16 @@ MuiCardContent-root {
   background-color: #ddd;
 } */
 .chip-flex2 {
-  width: 95px;
-  height: 22px;
+  width: 98px;
+  height: 25px;
   display: flex;
-  /* justify-content:; */
+  justify-content:space-between;
   align-items: center;
   gap: 4px;
 }
-price-chip red{
-  height: 22px;
+.price-red{
+  width: 78px;
+  height: 25px;
   padding: 0;
   margin: 0 !important;
   text-align: center;
@@ -232,17 +233,16 @@ price-chip red{
   align-items: center;
   font-size: 18px;
   font-weight: 400;
-  color: var(--green);
   display: flex;
   border-radius: 7px;
   right: 10px;
   border: none !important;
   color: var(--red);
 }
-.chip-icon red{
+.chip-red{
   border: 1px solid var(--green);
-  width: 17px;
-  height: 18px;
+  width: 16px;
+  height: 25px;
   padding: 0;
   margin: 0;
   display: flex;
