@@ -51,7 +51,7 @@ function Compare() {
         // getPrices
         const prices1 = await getPrices(crypto1, days, priceType);
         const prices2 = await getPrices(crypto2, days, priceType);
-        settingChartData(setChartData, prices1, prices2);
+        settingChartData(setChartData, prices1, prices2, data1, data2);
         setLoading(false);
       }
     }
@@ -69,7 +69,7 @@ function Compare() {
       // fetch prices again
       const prices1 = await getPrices(crypto1, days, priceType);
       const prices2 = await getPrices(newCrypto2, days, priceType);
-      settingChartData(setChartData, prices1, prices2);
+      settingChartData(setChartData, prices1, prices2,data2);
     } else {
       const newCrypto1 = e.target.value;
       // crypto1 is being changed
@@ -80,7 +80,7 @@ function Compare() {
       // fetch coin prices
       const prices1 = await getPrices(newCrypto1, days, priceType);
       const prices2 = await getPrices(crypto2, days, priceType);
-      settingChartData(setChartData, prices1, prices2);
+      settingChartData(setChartData, prices1, prices2,data1);
     }
     setLoading(false);
   };

@@ -141,7 +141,7 @@ function List({ coin, delay }) {
                   <div style={{width: "25px", height: "25px", backgroundColor: "rgba(0,0,0,0) !important",display: "flex", alignContent: "center", position: "relative", justifyContent: "center"}}>
                     <div style={{top: "1px",right: "-2px",width: "20px", height: "18px", border: "0.75px solid rgba(0,0,0,0.8) !important", padding: 0, margin: 0,position: "relative",display: "flex", justifyContent: "center"}}>
                       <td className={`watchlist-icon ${
-                        coin.price_change_percentage_24h < 0 && "watchlist-icon-red"
+                        coin.price_change_percentage_24h < 0 && "watchlist-red"
                       }`}
                       onClick={(e) => {
                         if (isCoinAdded) {

@@ -94,14 +94,14 @@
   width: 18px;
 }
 .MuiSvgIcon-root {
-  width: 24px !important;
-  height: 18px !important;
+  width: 18px !important;
+  height: 17px !important;
   display: flex;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   text-align: center;
 }
-.watchlist-icon-red {
+.watchlist-red {
   border: 0.63px solid rgba(0,0,0,0.1);
   background-color: rgba(217, 217, 217,0.6);
   position: absolute;
@@ -150,11 +150,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 7px;
+  gap: 5px;
 }
 
 .price-chip {
-  width: 75px;
+  width: 78px;
   height: 25px;
   padding: 0;
   margin: 0 !important;
@@ -173,7 +173,7 @@
 }
 
 .chip-icon {
-  width: 16px;
+  width: 18px;
   height: 25px;
   padding: 0;
   margin: 0;
