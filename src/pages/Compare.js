@@ -36,7 +36,7 @@ function Compare() {
 
   useEffect(() => {
     getData();
-  },  [crypto1, crypto2, priceType]);
+  },  [crypto1, crypto2, priceType, days]);
 
   const getData = async () => {
     setLoading(true);
@@ -107,64 +107,11 @@ function Compare() {
 
   return (
     <div>
-      {(loading===false ?
+      {(loading ?
       (
-        <>
-        <Header />
-          <div style={{position: "absolute", width: "1882px",height: "auto", marginTop: "70px"}}>
-            <div style={{position: "absolute", display: "flex", flexDirection: "column", width: "1782px", height: "auto",paddingLeft: "50px", paddingRight: "50px", paddingTop: "80px",paddingBottom: "100px", gap: "3rem"}}>
-            <div
-                style={{
-                display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "center",
-                }}
-              >
-                <SelectCoins
-                allCoins={allCoins}
-                crypto1={crypto1}
-                crypto2={crypto2}
-                onCoinChange={onCoinChange}
-                />
-              </div>
-              <div style={{display: "flex", flexDirection: "row", width: "930px", height: "192px",gap: "34px"}}>
-                <List coin={coin1Data} />
-                <List coin={coin2Data} />
-              </div>
-              <div
-                style={{
-                display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "space-between",
-                }}
-              >
-                <ToggleComponents
-                priceType={priceType}
-                handlePriceTypeChange={handlePriceTypeChange}
-                />
-                <Selectdays
-                days={days}
-                handleDaysChange={handleDaysChange}
-                />
-              </div>
-              <div style={{display: "flex", gap: "10px", height: "50px", justifyContent: "center"}}>
-                <IconPositionTabs coin={coin1Data} />
-                <IconPositionTabs coin={coin2Data} />
-              </div>
-              <div style={{height: "40vh", width: "94.5vw",  display: "flex"}}> 
-                <Page chartData={chartData} multiAxis={true}/>
-              </div>
-              <div style={{display: "flex", flexDirection: "row", gap: "23.3rem",alignItems: "flex-start"}}>
-                <Info title={coin1Data.name}desc={coin1Data.desc} />
-                <Info title={coin2Data.name} desc={coin2Data.desc} />
-              </div>
-            </div>
-          </div>
-          </>
-      ):(
         <div>
           <Skeleton variant="rectangular" height="70px"/>
-          <div style={{position: "absolute", display: "flex", flexDirection: "column", width: "1782px", height: "auto", padding: "80px 50px 100px", gap: "3rem"}}>
+          <div style={{position: "relative", display: "flex", flexDirection: "column", width: "1782px", height: "auto", padding: "80px 50px 100px", gap: "3rem"}}>
             <div
               style={{
                 display: "flex",
@@ -213,9 +160,9 @@ function Compare() {
               <Skeleton variant="rounded" sx={{ borderRadius: '5px' }} width="448px" height="48px"/> 
               <Skeleton variant="rounded" sx={{ borderRadius: '5px' }} width="200px" height="40px"/>
             </div>
-            <div style={{display: "flex",gap: "10px"}}>
-            <Skeleton variant="rounded" sx={{ borderRadius: '5px' }} width="129px" height="50px"/>
-            <Skeleton variant="rounded" sx={{ borderRadius: '5px' }} width="129px" height="50px"/>
+            <div style={{display: "flex",gap: "10px", justifyContent: "center"}}>
+              <Skeleton variant="rounded" sx={{ borderRadius: '5px' }} width="129px" height="50px"/>
+              <Skeleton variant="rounded" sx={{ borderRadius: '5px' }} width="129px" height="50px"/>
             </div>
             <div>
               <Skeleton variant="rounded" width="94.5vw" height="40vh"/> 
@@ -236,8 +183,60 @@ function Compare() {
             </div>
           </div> 
         </div>
-      )
-    )}
+      ):(
+        <>
+          <Header />
+          <div style={{ position: "relative",width: "1882px",height: "auto", marginTop: "70px"}}>
+            <div style={{position: "relative", display: "flex", flexDirection: "column", width: "1782px", height: "auto",paddingLeft: "50px", paddingRight: "50px", paddingTop: "80px",paddingBottom: "100px", gap: "3rem"}}>
+              <div
+                style={{
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "center",
+                }}
+              >
+                <SelectCoins
+                allCoins={allCoins}
+                crypto1={crypto1}
+                crypto2={crypto2}
+                onCoinChange={onCoinChange}
+                />
+              </div>
+              <div style={{display: "flex", flexDirection: "row", width: "930px", height: "192px",gap: "34px"}}>
+                <List coin={coin1Data} />
+                <List coin={coin2Data} />
+              </div>
+              <div
+                style={{
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "space-between",
+                }}
+              >
+                <ToggleComponents
+                priceType={priceType}
+                handlePriceTypeChange={handlePriceTypeChange}
+                />
+                <Selectdays
+                days={days}
+                handleDaysChange={handleDaysChange}
+                />
+              </div>
+              <div style={{display: "flex", gap: "10px", height: "50px", justifyContent: "center"}}>
+                <IconPositionTabs coin={coin1Data} />
+                <IconPositionTabs coin={coin2Data} />
+              </div>
+              <div style={{height: "40vh", width: "94.5vw",  display: "flex"}}> 
+                <Page chartData={chartData} multiAxis={true}/>
+              </div>
+              <div style={{display: "flex", flexDirection: "row", gap: "23.3rem",alignItems: "flex-start"}}>
+                <Info title={coin1Data.name}desc={coin1Data.desc} />
+                <Info title={coin2Data.name} desc={coin2Data.desc} />
+              </div>
+            </div>
+          </div>  
+        </>
+      ))}
     </div>
   );
 }
