@@ -88,12 +88,12 @@ const Benefit = ({ text }) => (
   <div className="benefit" data-aos="fade-up" data-aos-delay="300">
     <svg
       width="24"
-      height="24"
-      viewBox="0 0 24 24"
+      height="30"
+      viewBox="0 0 30 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="12" cy="12" r="10" fill="var(--e80Color)" />
+      <circle cx="12" cy="11" r="10" fill="var(--e80Color)" />
       <path
         d="M18.3 8.67L10.6019 16.5L5.69995 11.514L6.85908 10.335L10.6019 14.142L17.1408 7.5L18.3 8.67Z"
         fill="var(--bgColor)"

@@ -1,15 +1,19 @@
 .swapWithBestRates__container {
     display: flex;
     flex-direction: row-reverse;
-    padding: 20px;
     /* border: 2px solid red; */
-justify-content: center;
-margin: 2rem 5rem;
+    justify-content: center;
+    padding: 1rem;
+    margin: 2rem;
+    height: 400px;
+    gap: 9rem;
 }
 
 .swapWithBestRatesDescription__container {
     flex: 1;
     padding-right: 20px;
+    /* width: 50%; */
+    max-width: 500px;
 }
 
 .headingWrapper__container {
@@ -53,6 +57,7 @@ background: linear-gradient(135deg, #9b59b6, #4db1fd, #43f455);
     position: relative;
     flex: 1;
     height: 100%;
+    max-width: 600px;
 }
 
 .swapBanner__image {

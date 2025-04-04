@@ -1,6 +1,8 @@
 .free-trial-container {
   display: flex;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  padding: 1rem;
+  margin: 2rem;
   justify-content: center;
   align-items: center;
   gap: 10rem;
@@ -37,10 +39,11 @@
 .benefit {
   display: flex;
   align-items: center;
-  margin-bottom: 0.5rem;
-  padding: 0.6rem 0;
+  /* margin-bottom: 0.5rem; */
+  /* padding: 0.6rem 0; */
   font-size: 1.5rem;
   transition: transform 0.3s ease;
+  /* justify-content: center; */
 }
 
 /* Slight move-up animation on hover for each benefit */
@@ -63,9 +66,8 @@
   color: #fff;
   border: none;
   cursor: pointer;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   border-radius: 1rem;
-  margin-left: 2rem;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -79,9 +81,9 @@
 
 .plan-description {
   display: block;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   color: #666;
-  margin-left: 2rem;
+  margin-left: 1rem;
   transition: color 0.3s ease;
 }
 
@@ -93,13 +95,15 @@
 .additional-info {
   margin-top: 1rem;
   margin-left: 2rem;
+  text-align: center;
 }
 
 .link-button {
   color: #007bff;
   text-decoration: none;
-  margin-right: 0.5rem;
+  justify-content: center;
   transition: color 0.3s ease;
+  margin: 10px;
 }
 
 /* Hover effect to darken link color */
@@ -113,6 +117,9 @@
   color: #666;
   cursor: pointer;
   transition: color 0.3s ease;
+  padding:0;
+  margin: 10px;
+  align-items: center;
 }
 
 /* Hover effect for cancel button */

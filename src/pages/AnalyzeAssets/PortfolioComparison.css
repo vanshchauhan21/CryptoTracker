@@ -2,9 +2,10 @@
 .main-wrapper-porfolio {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding:5rem 3rem;
-  margin-top: 5rem;
+  justify-content: center;
+  padding: 1rem;
+  margin: 2rem;
+  gap: 6rem;
   /* border: 2px solid red; */
 
 }
@@ -13,8 +14,7 @@
 .deatil-wrapper-porfolio {
   /* margin-bottom: 20px; */
   /* border: 2px solid rgb(61, 182, 28); */
-margin: 2rem;
-padding: 1rem 4rem;
+  width: 600px;
 }
 
 /* Title styles */
@@ -57,11 +57,11 @@ padding: 1rem 4rem;
 /* Banner Image Styles */
 .tutorialBanner__b9zhX {
   position: relative;
-  height: 300px;
+  height: 450px;
 }
 .main-banner img {
   object-fit: cover;
-  width: 800px;
+  width: 500px;
   /* height:500px; */
 }
 
@@ -76,7 +76,7 @@ padding: 1rem 4rem;
 
 .tutorial-v2__w0jq2 {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 

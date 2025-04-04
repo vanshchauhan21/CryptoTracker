@@ -1,11 +1,9 @@
 /* AnalyzeAssets.css */
 .tutorialV2__oZoVu {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 2rem;
-  margin: 5rem 2rem;
-  padding: 4rem 2rem;
+  padding: 1rem;
+  margin: 2rem;
+  height: 450px;
+  gap: 6rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth hover effect */
 }
 
@@ -39,9 +37,11 @@
 }
 
 .tutorialV2Description__CXkQB {
-  max-width: 50%;
+  width: 550px;
 }
-
+.tutorialBanner__b9zhX{
+  height: 450px;
+}
 .tutorialBanner__b9zhX img {
   width: 100%;
   height: auto;

@@ -11,7 +11,7 @@ const UltimateSecurity = () => {
           Your Digital Assets
         </h2>
         <p className="ultimate-security-description">
-          CoinStats is equipped with a top-quality security infrastructure designed to ensure maximum protection of assets at all times. Since we ask for read-only access only, your holdings are perfectly safe under any conditions.
+          CoinStats is equipped with a top-quality security infrastructure designed to ensure maximum protection of assets at all times. Since we ask for read-only access only,your holdings are  <br/>perfectly safe under any conditions.
         </p>
       </div>
       
