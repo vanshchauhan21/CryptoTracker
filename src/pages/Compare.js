@@ -15,6 +15,7 @@ import { Page } from "../components/ComparePage/Chart";
 import IconPositionTabs from "../components/ComparePage/ChartTab/Tabs";
 import Selectdays from "../components/ComparePage/SelectDays";
 import Skeleton from '@mui/material/Skeleton';
+import "./Compare.css"
 
 function Compare() {
   const [allCoins, setAllCoins] = useState([]);
@@ -186,12 +187,12 @@ function Compare() {
       ):(
         <>
           <Header />
-          <div style={{ position: "relative",width: "1882px",height: "auto", marginTop: "70px"}}>
-            <div style={{position: "relative", display: "flex", flexDirection: "column", width: "1782px", height: "auto",paddingLeft: "50px", paddingRight: "50px", paddingTop: "80px",paddingBottom: "100px", gap: "3rem"}}>
+          <div style={{ position: "relative",height: "auto", marginTop: "70px"}}>
+            <div style={{position: "relative", display: "flex", flexDirection: "column", height: "auto", padding: "80px 50px 100px 50px", gap: "3rem"}}>
               <div
                 style={{
                 display: "flex",
-                flexWrap: "wrap",
+                // flexWrap: "wrap",
                 justifyContent: "center",
                 }}
               >
@@ -202,14 +203,14 @@ function Compare() {
                 onCoinChange={onCoinChange}
                 />
               </div>
-              <div style={{display: "flex", flexDirection: "row", width: "930px", height: "192px",gap: "34px"}}>
+              <div className="list-detail"style={{display: "flex", width: "930px", height: "192px",gap: "34px"}}>
                 <List coin={coin1Data} />
                 <List coin={coin2Data} />
               </div>
-              <div
+              <div className="button-details"
                 style={{
                 display: "flex",
-                flexWrap: "wrap",
+                // flexWrap: "wrap",
                 justifyContent: "space-between",
                 }}
               >
@@ -226,10 +227,10 @@ function Compare() {
                 <IconPositionTabs coin={coin1Data} />
                 <IconPositionTabs coin={coin2Data} />
               </div>
-              <div style={{height: "40vh", width: "94.5vw",  display: "flex"}}> 
+              <div style={{height: "40vh", width:"94.5vw", display: "block", flexDirection: "column", position: "relative"}}> 
                 <Page chartData={chartData} multiAxis={true}/>
               </div>
-              <div style={{display: "flex", flexDirection: "row", gap: "23.3rem",alignItems: "flex-start"}}>
+              <div className="info-details">
                 <Info title={coin1Data.name}desc={coin1Data.desc} />
                 <Info title={coin2Data.name} desc={coin2Data.desc} />
               </div>

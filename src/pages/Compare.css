@@ -1,0 +1,28 @@
+.info-details{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+@media screen and (max-width: 1500px) {
+    .info-details{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+@media screen and (max-width: 780px) {
+    .button-details{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+/* @media screen and (max-width: 980px) {
+    .list-detail{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding-bottom: 3rem;
+    }
+} */

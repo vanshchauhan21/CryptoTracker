@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
+import ResizeObserver from 'resize-observer-polyfill';
 import ReactECharts from 'echarts-for-react';
 import * as echarts from 'echarts/core';
 import {
@@ -25,6 +26,31 @@ echarts.use([
 export const Page: React.FC = ({ chartData, multiAxis }) => {
   const y_min = Math.round(Math.min(...chartData.datasets[0].data))
   const y_min1 = Math.round(Math.min(...chartData.datasets[1].data))
+
+  const chartRef = useRef(null);
+  const containerRef = useRef(null);
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    const resizeObserver = new ResizeObserver((entries) => {
+      for (let entry of entries) {
+        const newWidth = entry.contentRect.width;
+        setWidth(newWidth);
+      }
+    });
+  
+    if (containerRef.current) {
+      resizeObserver.observe(containerRef.current);
+    }
+  
+    return () => resizeObserver.disconnect();
+  }, []);
+  
+  useEffect(() => {
+    if (chartRef.current && chartRef.current.getEchartsInstance) {
+      chartRef.current.getEchartsInstance().resize();
+    }
+  }, [width]);
   const options = {
     tooltip: {
       trigger: 'axis',
@@ -144,14 +170,22 @@ export const Page: React.FC = ({ chartData, multiAxis }) => {
  
   return (
     <div 
+    ref={containerRef}
     style={{
       height: "100%", 
       width: "100%",
+      position: "absolute",
+      inset: 0,
       }}
     >
       <ReactECharts 
+      ref={chartRef}
       option={options}
-      style={{height: "100%", width: "100%"}}
+      notMerge={true}
+      lazyUpdate={true}
+      style={{ height: "100%", width: "100%" }}
+      opts={{ renderer: 'canvas' }}
+      autoResize
       />
     </div>
   )
