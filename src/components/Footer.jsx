@@ -7,13 +7,13 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div>
-        {/* Brand Info */}
-        <div className="brand">
-          <h2>CryptoTracker</h2>
-        </div>
-        <div className="footer-title">
-          <p>Your trusted source for cryptocurrency data and analysis.</p>
-        </div>
+          {/* Brand Info */}
+          <div className="brand">
+            <h2>CryptoTracker</h2>
+          </div>
+          <div className="footer-title">
+            <p>Your trusted source for cryptocurrency data and analysis.</p>
+          </div>
         </div>
 
         <div className="main-links">
