@@ -13,7 +13,7 @@ export default function ToggleComponents({ priceType, handlePriceTypeChange }) {
       sx={{
         margin: 0,
         padding: 0,
-        width: "448px",
+        // width: "448px",
         height: "48px",
         borderRadius: "5px",
         color: "#FFFFFF",

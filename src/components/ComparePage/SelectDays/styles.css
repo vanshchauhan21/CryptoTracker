@@ -14,7 +14,7 @@
    .select-day {
        margin: 0;
        padding: 0;
-       width: 200px;
+       /* width: 200px; */
        height: 40px;
        display: flex;
        /* flex-direction: row; */
@@ -23,7 +23,7 @@
        /* gap: 10px; */
    }
    .select-flex-3 {
-       width: 200px;
+       /* width: 200px; */
        height: 40px;
        border: none;
        display: flex;

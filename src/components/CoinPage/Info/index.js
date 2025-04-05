@@ -7,8 +7,8 @@ function Info({ title, desc }) {
   const [toggle, setToggle] = useState(false);
 
   return (
-      <Card sx={{ flexShrink: "0", width: "700px", height:"246px", borderRadius:"10px", boxShadow: "none", border: "2px solid rgba(58,128,233, 0.1)", backgroundColor: "rgba(58, 128, 233, 0.05)", padding: 0, margin: 0}}>
-        <CardContent sx={{position: "relative",width: "620px", height: "179px", top: "36px", left: "40px", padding: "0 !important", margin:0}}>
+      <Card sx={{ flexShrink: "0", width: "min-content", height:"246px", borderRadius:"10px", boxShadow: "none", border: "2px solid rgba(58,128,233, 0.1)", backgroundColor: "rgba(58, 128, 233, 0.05)", padding: 0, margin: 0}}>
+        <CardContent sx={{position: "relative",width: "min-content", height: "179px", padding: "40px", margin:0}}>
           <Typography variant="h6" component="div" sx={{width: "620px", height: "22px", margin: 0, padding: 0, border: "none",fontSize: "18px", fontWeight: 600, color:" #000000", textAlign: "center"}}>
             {title}
           </Typography>

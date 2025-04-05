@@ -27,11 +27,11 @@ function List({ coin, delay }) {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: delay }}
       >
-      <div style={{width: "448px", height: "190px", backgroundColor: "#FFFFFF", border: "1.5px solid rgba(201,201,201,0.6)", borderRadius: "20px"}}>
+      <div style={{ height: "190px", backgroundColor: "#FFFFFF", border: "1.5px solid rgba(201,201,201,0.6)", borderRadius: "20px"}}>
         <Card sx={{width: "442px", height: "184px", backgroundColor: "#FFFFFF", border: "3px solid rgba(0,0,0,0.05)", borderRadius: "20px", boxShadow: "none"}}>
-          <div style={{position: "relative", width: "405px", height: "163px", left: "18px", top: "10px", display: "flex", flexDirection: "row"}}>
+          <div style={{position: "relative", width: "405px", height: "163px", left: "18px", top: "10px", display: "flex"}}>
             <div style={{display: "flex", flexDirection: "column",width: "285px", height: "147px", top: "3px", gap: "30px"}}>
-              <div style={{display: "flex", flexDirection: "row",width: "260px", height: "30px", gap: "10px"}}>
+              <div style={{display: "flex",width: "260px", height: "30px", gap: "10px"}}>
                 <td className="td-img">
                   <Tooltip title="Coin Image" placement="top"
                     slotProps={{
@@ -62,7 +62,7 @@ function List({ coin, delay }) {
                 </td>
               </div>
               <CardContent sx={{width: "285px", height: "87px", padding: 0, display: "flex",flexDirection: "column", gap: "15px"}}>
-                <Typography sx={{width: "285px", height: "19px", padding: 0, display: "flex", flexDirection: "row"}}>
+                <Typography sx={{width: "285px", height: "19px", padding: 0, display: "flex"}}>
                   <div style={{display: "flex",width: "285px", height: "19px"}}>
                     <div style={{padding: 0, margin: 0, height: "19px", width: "110px", fontSize: "16px", fontWeight: 400}}>Current Price : </div>
                     {coin.price_change_percentage_24h >= 0 ? (
@@ -76,13 +76,13 @@ function List({ coin, delay }) {
                     )}
                   </div>
                 </Typography>
-                <Typography sx={{width: "285px", height: "19px", padding: 0, display: "flex", flexDirection: "row"}}>
+                <Typography sx={{width: "285px", height: "19px", padding: 0, display: "flex"}}>
                   <div style={{padding: 0, margin: 0, height: "19px", width: "110px", fontSize: "16px", fontWeight: 400}}>Total Volume : </div>
                     <td className="coin-name td-Volume !text-white">
                       {coin.total_volume.toLocaleString()}
                     </td>
                 </Typography>
-                <Typography sx={{width: "285px", height: "19px", padding: 0, display: "flex", flexDirection: "row"}}>
+                <Typography sx={{width: "285px", height: "19px", padding: 0, display: "flex"}}>
                   <div style={{padding: 0, margin: 0, height: "19px", width: "120px", fontSize: "16px", fontWeight: 400}}>Market Capital : </div>
                     <td className="coin-name td-Cap !text-white">
                       ${coin.market_cap.toLocaleString()}
@@ -91,7 +91,7 @@ function List({ coin, delay }) {
                 </Typography>
               </CardContent>
             </div>
-            <div style={{justifyContent: "space-between", position: "relative", display: "flex", flexDirection: "row", width: "123px", height: "25px",top: "5px",right: "3px", alignItems: "center"}}>
+            <div style={{justifyContent: "space-between", position: "relative", display: "flex", width: "123px", height: "25px",top: "5px",right: "3px", alignItems: "center"}}>
               <div style={{width: "98px", height: "25px"}}>
                 <h1 style={{width: "98px", height: "25px", fontSize: "18px", fontWeight: 400, color: "rgba(234,0,0,1)", margin: 0, padding: 0}}>
                   {coin.price_change_percentage_24h >= 0 ? (
