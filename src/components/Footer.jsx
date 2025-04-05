@@ -28,8 +28,8 @@ const Footer = () => {
           <h4>Market Data</h4>
           <ul>
             <li><a href="https://www.google.com/finance/quote/BTC-USD">Bitcoin</a></li>
-            <li><a href="https://www.google.com/finance/quote/ETC-USD">Ethereum</a></li>
-            <li><a href="#altcoins">Altcoins</a></li>
+            <li><a href="https://www.google.com/finance/quote/ETH-USD">Ethereum</a></li>
+            <li><a href="https://in.tradingview.com/markets/cryptocurrencies/global-charts/">Altcoins</a></li>
             <li><a href="https://www.google.com/finance/quote/NFTM:OTCMKTS">NFT Market</a></li>
           </ul>
         </div>
