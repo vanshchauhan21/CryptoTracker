@@ -14,10 +14,10 @@
    .select-coins-div {
        margin: 0;
        padding: 0;
-       width: 686px;
+       width: 630px;
        height: 40px;
        display: flex;
-       flex-direction: row;
+       /* flex-direction: row; */
        justify-content: center;
        align-items: center;
        gap: 10px;
@@ -136,3 +136,13 @@
        color: #000000 !important;
        justify-content: right;
    }
+
+   @media screen and (max-width: 1500px) {
+    .select-coins-div{
+        /* display: flex; */
+        flex-direction: column;
+        padding-bottom: 3rem;
+        align-items: center;
+        /* gap: 10px; */
+    }
+  }

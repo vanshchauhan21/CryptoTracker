@@ -48,6 +48,7 @@
     "react-visibility-sensor": "^5.1.1",
     "react-web-share": "^2.0.2",
     "reactflow": "^11.11.4",
+    "resize-observer-polyfill": "^1.5.1",
     "sitemap": "^8.0.0",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^4.2.4"
