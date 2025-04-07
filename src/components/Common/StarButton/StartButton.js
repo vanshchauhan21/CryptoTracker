@@ -10,7 +10,7 @@ function StartButton() {
   return (
     <button
       type="button"
-      className="cs-button__iO2MF tutorialButton__wQg_i large__e7_uP"
+      className="cs-button__iO2MF tutorialButton__wQg_i large__e7_uP text-[1rem] px-5 py-2.5"
       title="Start Analyzing"
       onClick={handleStartClick}
     >

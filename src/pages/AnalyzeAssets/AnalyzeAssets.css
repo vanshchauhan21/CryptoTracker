@@ -12,10 +12,6 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow effect on hover */
 }
 
-.heading-wrapper__PsGv8 {
-  font-size: 1.5rem;
-}
-
 .title__fU7gu {
   font-weight: bold;
   margin-bottom: 10px;
@@ -44,7 +40,6 @@
 }
 .tutorialBanner__b9zhX img {
   width: 100%;
-  height: auto;
   margin-top: 30px;
   transition: transform 0.3s ease, filter 0.3s ease; /* Add smooth transformation and filter effect */
 }

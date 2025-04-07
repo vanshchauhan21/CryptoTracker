@@ -1,19 +1,11 @@
 /* src/components/InfoSection/InfoSection.css */
 .info-wrapper__OsPPP {
     display: flex;
-    gap: 4rem;
-    /* flex-direction: column; */
     justify-content: center;
-    padding: 1rem;
-    margin: 2rem;
     /* border: 2px solid rgb(0, 255, 166); */
 
   }
   
-.detail-sec{
-    /* border: 2px solid rgb(204, 30, 117); */
-padding: 3rem;
-}
 
 
   .info__YW7qy h4 {
@@ -45,10 +37,3 @@ font-size: 1rem;
     color: #555;
   }
   
-  .image-sec{
-    /* border: 2px solid rgb(198, 238, 18); */
-padding: 2rem 0.6rem;
-  }
-  .image-sec img{
-    width: 600px;
-  }

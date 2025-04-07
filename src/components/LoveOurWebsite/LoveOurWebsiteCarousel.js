@@ -22,11 +22,11 @@ const LoveOurWebsiteCarousel = () => {
   ];
 
   return (
-    <div className="carousel-container">
+    <div className="carousel-container md:p-[1rem] md:m-[2rem]">
       <h2>Why Do People Love Our Website?</h2>
       <div className="carousel">
         {reasons.map((reason, index) => (
-          <div className="carousel-card" key={index}>
+          <div className="carousel-card w-[270px] md:w-[200px]" key={index}>
             <h3>{reason.title}</h3>
             <p>{reason.description}</p>
           </div>

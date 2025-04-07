@@ -1,6 +1,5 @@
 .swapWithBestRates__container {
     display: flex;
-    flex-direction: row-reverse;
     /* border: 2px solid red; */
     justify-content: center;
     padding: 1rem;
@@ -63,7 +62,5 @@ background: linear-gradient(135deg, #9b59b6, #4db1fd, #43f455);
 .swapBanner__image {
     position: absolute;
     inset: 0;
-    width: 400px;
-    height: 400px;
     object-fit: cover;
 }

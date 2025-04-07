@@ -4,10 +4,8 @@
      */
  background: linear-gradient(135deg, #9b59b6, #4db1fd, #5843f4);   
      color: white;
-    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
     text-align: center;
     border: none;
   }

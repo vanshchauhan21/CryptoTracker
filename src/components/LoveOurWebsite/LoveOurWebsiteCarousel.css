@@ -1,7 +1,5 @@
 .carousel-container {
     text-align: center;
-    padding: 1rem;
-    margin: 2rem;
   }
   
   .carousel h2 {
@@ -13,7 +11,7 @@
   .carousel {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 0.1fr));
-    margin: 0 auto;
+    margin: 0;
     padding: 1rem;
 
     justify-items: center;
@@ -22,16 +20,37 @@
   }
 
 
-  .carousel-card {
-    background: linear-gradient(135deg, #9b59b6, #ff6ec7); /* Initial purple-pink gradient */
-    color: white;
-    padding: 1.5rem;
-    width: 200px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: colorChange 2s infinite alternate; /* Adding animation */
+ .carousel-card {
+  background: linear-gradient(135deg, 
+    rgb(155, 89, 182), 
+    rgb(255, 110, 199), 
+    rgb(89, 57, 247), 
+    rgb(255, 0, 255), 
+    rgb(65, 32, 255), 
+    rgb(56, 104, 247)
+  );
+  background-size: 500% 400%;
+  animation: gradientShift 6s ease infinite;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform .3s linear, box-shadow .3s linear;
+}
+
+  /* Animation to alternate between purple and pink */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
   }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
   
   .carousel-card:hover {
     transform: scale(1.05);
@@ -51,18 +70,8 @@
     height: 100px;
   }
   
-  /* Animation to alternate between purple and pink */
-  @keyframes colorChange {
-    0% {
-      background: linear-gradient(135deg, #9b59b6, #ff6ec7); /* Purple to Pink */
-    }
-    50% {
-      background: linear-gradient(135deg, #5939f7, #ff00ff); /* Purple to Bright Pink */
-    }
-    100% {
-      background: linear-gradient(135deg, #4120ff, #3868f7); /* Bright Pink to Purple */
-    }
-  }
+
+
   
   /* Add support for dark and light mode */
   [data-theme="dark"] .carousel-card {

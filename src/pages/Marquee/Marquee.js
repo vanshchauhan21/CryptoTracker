@@ -5,7 +5,7 @@ import React from 'react'
 const Marquee = () => {
 
   return (
-    <div className="marquee ">
+    <div className="marquee p-0 md:p-[1.5rem] mx-0  md:mx-[6rem] md:my-4">
       <div className="marquee-content">
         <Slider
           width="100px"

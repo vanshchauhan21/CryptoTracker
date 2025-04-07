@@ -1,16 +1,16 @@
 import React from 'react';
-import './ExitStrategy.css'; 
+import './ExitStrategy.css';
 
 // Import corresponding CSS file
 import exitStrategyImg from "../../assets/exit-strategy.avif";
 const ExitStrategy = () => {
   return (
-    <div className="exit-strategy-container">
-      <div className="exit-strategy-description-wrapper">
+    <div className="exit-strategy-container flex flex-col-reverse md:flex-row gap-8 md:p-[1rem] md:m-[2rem] md:gap-[6rem]">
+      <div className="exit-strategy-description-wrapper mx-auto md:w-[600px] px-4">
         <div className="heading-wrapper">
           <div>
             <h2 className="exit-strategy-title">
-              Use AI for Your Exit Strategy &amp; <b>Price Predictions</b> ✨
+              Use AI for Your Exit Strategy &amp; <b>Price Predictions</b>
             </h2>
             <p className="exit-strategy-description">
               Exit strategy lets you set up pre-determined sell prices for all your crypto assets. This kind of planning will help you avoid making emotional decisions and take profits at the right time.
@@ -30,7 +30,7 @@ const ExitStrategy = () => {
       </div>
       <div className="exit-strategy-banner">
         <picture>
-         
+
           <img
             src={exitStrategyImg}
             loading="lazy"

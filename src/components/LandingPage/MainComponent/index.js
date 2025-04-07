@@ -61,15 +61,11 @@ function MainComponent() {
     },
   ];
 
-
-
-
-
   return (
-    <div className="main-wrapper">
-      <div className="main-flex">
-        <div className="info-landing" data-aos="fade-up">
-          <h1 className="heading1 text-start ml-2">Real Time</h1>
+    <div className="main-wrapper ">
+      <div className="main-flex md:gap-[6rem] h-[800px] md:h-[500px] md:p-[2rem] mx-0 md:mx-8 mb-8  ">
+        <div className=" w-[100%]  px-2 mt-36 md:w-auto  md:mt-12 md:max-w-auto" data-aos="fade-up">
+          <h1 className="heading1 text-start   text-[10px] md:text-6xl ">Real Time</h1>
           <motion.h1
             className="heading2"
             initial={{ opacity: 0, x: 50 }}
@@ -79,7 +75,7 @@ function MainComponent() {
             Track Crypto
           </motion.h1>
           <motion.p
-            className="info-text"
+            className="info-text  lg:text-md"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1, duration: 1 }}
@@ -87,8 +83,9 @@ function MainComponent() {
             Track crypto through a public API in real time. Visit the dashboard
             to do so!
           </motion.p>
+          {/* buttons */}
           <motion.div
-            className="btn-flex"
+            className="btn-flex gap-2 md:gap-[4rem] flex-col md:flex-row items-center justify-start"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.25, duration: 0.75 }}
@@ -108,6 +105,7 @@ function MainComponent() {
             </RWebShare>
           </motion.div>
         </div>
+
         <div className="gradient-div" data-aos="fade-left">
           <img src={gradient} alt="some" className="gradient" />
           <motion.img
@@ -130,14 +128,14 @@ function MainComponent() {
       {/* ...................Our Vision............. */}
       <OurVision />
 
-      {/* .......................Free Trial............. */}
+      {/* .......................Free Trial.............*/}
       <FreeTrial />
 
       {/* .............In-depth Analysis................... */}
       <InDepthAnalysis />
+
       {/* ...................Pro Free Subcription...........
       <ProFreeSubcription data-aos="fade-down" /> */}
-
 
       {/* ........................why do people love our website.......... */}
       <LoveOurWebsiteCarousel />
@@ -149,21 +147,19 @@ function MainComponent() {
 
       {/* ................SwapWithBestRates...................... */}
       <SwapWithBestRates />
+
       {/* .........................Crypto tracker Managing Tool.............. */}
-
       <CryptoTrackerManagingTool data={infoData} />
-
-
 
       {/* ................................................Platform statistics.............. */}
       <PlatformStatistics />
 
 
-      {/* ..............................................UltimateSecurity............ */}
+      {/* ..............................................UltimateSecurity............  */}
       <UltimateSecurity />
 
       {/* .................................ExitStrategy............. */}
-<ExitStrategy/>
+      <ExitStrategy />
 
     </div>
   );
