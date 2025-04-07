@@ -1,17 +1,12 @@
 .exit-strategy-container {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
-    gap: 6rem;
-    padding: 1rem;
-    margin: 2rem;
     /* border: 2px solid red; */
   }
   
   .exit-strategy-description-wrapper {
     text-align: center;
     justify-content: center;
-    width: 600px;
+    
   }
   .heading-wrapper{
     max-width: 600px;

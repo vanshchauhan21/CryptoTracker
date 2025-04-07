@@ -10,14 +10,14 @@ const InDepthAnalysis = () => {
   }, []);
 
   return (
-    <div className="tutorial" data-aos="fade-up">
+    <div className="tutorial mx-0 md:m-[2rem] " data-aos="fade-up">
       <div className="tutorial-description" data-aos="fade-right">
         {/* Text Content */}
-        <div className="heading-wrapper">
-          <h2 className="title w-full">
+        <div className="heading-wrapper ">
+          <h2 className="title md:text-[1.8em] w-[50%] md:w-full">
             Get In-Depth Profit &amp; Loss Analysis
           </h2>
-          <p className="description" data-aos="fade-in" data-aos-delay="200">
+          <p className="description max-w-xs md:max-w-lg   md:text-[1em]   m-16" data-aos="fade-in" data-aos-delay="200">
             Connect your wallet to get 24h, daily, weekly, and cumulative Profit
             &amp; Loss analysis. Level up your crypto investing strategy.
           </p>
@@ -30,7 +30,7 @@ const InDepthAnalysis = () => {
       {/* Video Section */}
       <div className="tutorial-banner" data-aos="fade-left" data-aos-delay="600">
         <video
-          className="background-video"
+          className="background-video w-[300px] md:w-[600px]"
           preload="auto"
           autoPlay
           loop

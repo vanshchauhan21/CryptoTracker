@@ -3,7 +3,7 @@ import './SwapWithBestRates.css'; // Import the CSS file for styling
 
 const SwapWithBestRates = () => {
   return (
-    <div className="swapWithBestRates__container reverseRow__container">
+    <div className="swapWithBestRates__container flex flex-col-reverse md:flex-row-reverse  min-h-screen md:min-h-[auto] ">
       <div className="swapWithBestRatesDescription__container">
         <div className="headingWrapper__container">
           <div>
@@ -24,9 +24,9 @@ const SwapWithBestRates = () => {
           alt="Swap Banner"
           src="https://coinstats.app/static/images/portfolio/landing/new-swap-banner-solana.svg"
           decoding="async"
-          className="swapBanner__image"
+          className="swapBanner__image w-[300px] md:w-[400px] md:h-[400px]"
           sizes="100vw"
-       />
+        />
       </div>
     </div>
   );

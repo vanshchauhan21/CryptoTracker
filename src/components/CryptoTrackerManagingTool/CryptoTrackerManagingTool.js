@@ -8,14 +8,14 @@ const CryptoTrackerManagingTool = ({ data }) => {
 
 
 
-            <div className="info-wrapper__OsPPP">
+            <div className="info-wrapper__OsPPP flex flex-col-reverse md:flex-row md:p-[1rem] md:m-[1rem] gap-2 md:gap-[4rem]">
 
                 {/* ........................detail section................ */}
-                <div className='detail-sec'>
+                <div className='p-8 md:p-[3rem]'>
 
                     {data.map((item, index) => (
 
-                        <div className="info__YW7qy" key={index}>
+                        <div className="info__YW7qy " key={index}>
                             <div className="info-title__CQA5j">
                                 <img src={item.icon} alt={`${item.title} icon`} />
                                 <h4 className='item_title'>{item.title}</h4>
@@ -30,8 +30,9 @@ const CryptoTrackerManagingTool = ({ data }) => {
                     ))}
                 </div>
                 {/* ...................image section.............. */}
-                <div className='image-sec'>
-                    <img src="https://coinstats.app/static/images/sprites/onboardingAnimation/darkHead.web.svg" />
+                <div className='justify-center items-center flex '>
+                    <img className='w-[320px] md:w-[600px]'
+                        src="https://coinstats.app/static/images/sprites/onboardingAnimation/darkHead.web.svg" />
                 </div>
             </div>
 

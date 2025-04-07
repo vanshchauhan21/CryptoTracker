@@ -40,7 +40,6 @@
 
 .btn-flex {
   display: flex;
-  gap: 4rem;
   margin-top: 1.5rem;
   justify-content: center;
 }
@@ -105,7 +104,6 @@
   .main-flex {
     flex-direction: column;
     justify-content: center;
-    align-items: center;
   }
 
   .heading1,
@@ -124,24 +122,24 @@
   }
 
   .gradient-div {
-    margin-top: 3rem;
+    margin-top: 2rem;
     margin-right: auto;
     margin-bottom: 50px;
   }
 
   .gradient,
   .iphone {
-    left: 0px;
-    right: 0px;
+    left: 10%;
+    right: 10%;
   }
   .gradient {
     right: 0px;
     top: 60px;
-    width: 200px;
-    height: 50%;
+    width: 160px;
+    height: 89%;
   }
   .iphone {
-    width: 95%;
+    width: 20%;
     max-width: 400px;
     top: 20px;
   }
@@ -197,10 +195,6 @@ clamp(minFontSize, ratio, maxFontSize)
   justify-content: center;
   align-items: flex-start;
   position: relative;
-  padding: 2rem;
-  margin: 0 2rem 2rem 2rem;
-  height:500px;
-  gap: 6rem;
 }
 /* Custom CSS styling for share App dialog box */
 

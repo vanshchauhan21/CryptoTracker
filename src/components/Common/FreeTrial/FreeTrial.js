@@ -18,23 +18,20 @@ const FreeTrial = () => {
   }, []);
 
 
-
-
-
   return (
-    <div className="free-trial-container" data-aos="fade-up">
-        {/* David Banner Image */}
-        <div className="david-banner" data-aos="fade-left">
-            <img src={davidBanner} alt="David Banner" loading="lazy" />
-        </div>
-      <div className="free-trial-content">
+    <div className="free-trial-container m-2 md:m-[2rem] " data-aos="fade-up">
+      {/* David Banner Image */}
+      <div className="david-banner" data-aos="fade-left">
+        <img src={davidBanner} alt="David Banner" loading="lazy" className="w-[300px] md:w-[600px]" />
+      </div>
+      <div className="free-trial-content ">
         {/* Heading */}
         <div className="heading-wrapper" data-aos="fade-right">
           <h2 className="title">Go Premium for Free</h2>
         </div>
 
         {/* Benefits */}
-        <div className="benefits" data-aos="fade-up" data-aos-delay="200">
+        <div className="benefits  text-center" data-aos="fade-up" data-aos-delay="200">
           <Benefit text="Connect up to 100 portfolios" />
           <Benefit text="Track up to 100,000 transactions" />
           <Benefit text="View in-depth Profit & Loss analysis" />
@@ -51,7 +48,7 @@ const FreeTrial = () => {
           Start My Free Trial
         </button>
         <span
-          className="plan-description"
+          className="plan-description  text-xs md:text-md"
           data-aos="fade-up"
           data-aos-delay="600"
         >
@@ -67,12 +64,12 @@ const FreeTrial = () => {
         >
           <div className="terms">
             <a
-                href="/terms.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-button"
-                >
-                Terms &amp; Conditions
+              href="/terms.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-button"
+            >
+              Terms &amp; Conditions
             </a>
           </div>
           <span>·</span>

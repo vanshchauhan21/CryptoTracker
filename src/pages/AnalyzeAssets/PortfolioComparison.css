@@ -1,11 +1,5 @@
 /* Container for the tutorial section */
 .main-wrapper-porfolio {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 1rem;
-  margin: 2rem;
-  gap: 6rem;
   /* border: 2px solid red; */
 
 }
@@ -14,7 +8,6 @@
 .deatil-wrapper-porfolio {
   /* margin-bottom: 20px; */
   /* border: 2px solid rgb(61, 182, 28); */
-  width: 600px;
 }
 
 /* Title styles */
@@ -43,7 +36,6 @@
   background-color: #ff9332;
   color: white;
   font-size: 16px;
-  padding: 12px 24px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -61,7 +53,6 @@
 }
 .main-banner img {
   object-fit: cover;
-  width: 500px;
   /* height:500px; */
 }
 
@@ -83,31 +74,34 @@
 .heading-wrapper__PsGv8 {
   display: flex;
   flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
 }
 
 /* Media Queries for Responsiveness */
 @media screen and (max-width: 768px) {
   .tutorialV2__oZoVu {
-    padding: 15px;
+    padding: 10px;
   }
 
   .tutorialV2Description__CXkQB {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
   }
 
   .title__fU7gu {
-    font-size: 20px;
+    font-size: 25px;
   }
 
   .description__e7VeV {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .cs-button__iO2MF {
-    padding: 10px 20px;
+    font-size: 14px;
   }
 
   .tutorialBanner__b9zhX {
-    height: 250px;
+    height: 150px;
   }
 }

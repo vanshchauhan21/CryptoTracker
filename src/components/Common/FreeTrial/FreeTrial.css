@@ -1,8 +1,6 @@
 .free-trial-container {
   display: flex;
-  /* margin: 0 auto; */
   padding: 1rem;
-  margin: 2rem;
   justify-content: center;
   align-items: center;
   gap: 10rem;
@@ -10,7 +8,7 @@
 
 .free-trial-content {
   max-width: 600px;
-  padding-left: 1rem;
+  /* padding-left: 1rem; */
 }
 
 .heading-wrapper {
@@ -60,7 +58,7 @@
 }
 
 .start-trial-btn {
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   font-size: 1rem;
   background-color: #007bff;
   color: #fff;
@@ -83,7 +81,6 @@
   display: block;
   margin-top: 1rem;
   color: #666;
-  margin-left: 1rem;
   transition: color 0.3s ease;
 }
 
@@ -129,7 +126,6 @@
 }
 
 .david-banner img {
-  width: 600px;
   border-radius: 3rem;
   transition: transform 0.3s ease, opacity 0.3s ease;
   opacity: 0.9;
@@ -172,10 +168,6 @@
         width: 100%;
         align-items: center;
         margin-top: 0rem;
-        margin-left: -0.5rem;
-    }
-
-    .start-trial-btn {
-        margin-left: -1rem;
+        margin-left: 0rem;
     }
 }
