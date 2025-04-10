@@ -31,28 +31,26 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-
-  padding: 0.75rem 2.5rem;
-  min-height: 60px;
-  position: sticky;
-  top: 0;
-  background-color: var(--navbar-bg);
-  z-index: 1000;
-  box-shadow: 0px 1px 10px var(--shadow-color);
-
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 5px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-height: 70px;
   backdrop-filter: blur(10px);
 }
 
 .nav-logo-container {
   display: flex;
   align-items: center;
-
 }
 
 .nav-header {
@@ -102,11 +100,19 @@ body {
 }
 
 /* Navigation Links */
-.links {
-  display: flex;
-  justify-content: flex-end;
+.links-container {
+  /* width:auto;
+  box-sizing: border-box;
+  display: flex; */
   align-items: center;
-  gap: 1.5rem;
+  /* justify-content: center;
+  flex-wrap: wrap; */
+}
+
+.links {
+  /* justify-content: space-between; */
+  align-items: center;
+  /* gap: 1.5rem; */
 }
 
 .link {
@@ -114,6 +120,7 @@ body {
   text-decoration: none;
   font-size: 18px;
   font-weight: 600;
+  margin-right: 10px;
   color: var(--text-color);
   padding: 8px 12px;
   border-radius: 5px;
@@ -123,8 +130,19 @@ body {
 .link:hover {
   color: var(--link-hover-color);
   transform: translateY(-2px);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
+.active-link {
+  font-weight: bold;
+  color: #007bff;
+}
+.btn{
+  width: auto !important;
+  margin-left: 10px;
+  border-radius: 8px !important;
+
+}
 /* Sidebar / Drawer Styling */
 .drawer-div {
   width: 30vw;
@@ -149,7 +167,8 @@ body {
 
 /* Button Styling */
 .button {
-  background-color: var(--blue);
+  /* width: 50px; */
+  /* background-color: var(--blue);
   color: #fff;
   padding: 0.6rem 1.2rem;
   border-radius: 5px;
@@ -157,7 +176,7 @@ body {
   text-transform: uppercase;
   cursor: pointer;
   border: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease; */
 }
 
 .button:hover {
@@ -195,44 +214,6 @@ body {
 
 .nav-header {
   padding: 0rem 0.5rem;
-}
-
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--background-color);
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  height: 50px;
-}
-
-/* Navigation Links */
-.links-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 2;
-}
-
-.links {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.active-link {
-  font-weight: bold;
-  color: #007bff;
 }
 
 /* Button & Switch Alignment */
@@ -297,7 +278,6 @@ body {
     display: block;
   }
 }
-=======
 /* Attractive Hover Effects */
 .hover-effect::after {
   content: "";

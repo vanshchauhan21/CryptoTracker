@@ -9,8 +9,8 @@
 }
 
 .swapWithBestRatesDescription__container {
-    flex: 1;
-    padding-right: 20px;
+    /* flex: 1; */
+    padding-left: 20px;
     /* width: 50%; */
     max-width: 500px;
 }
@@ -54,13 +54,36 @@ background: linear-gradient(135deg, #9b59b6, #4db1fd, #43f455);
 
 .tutorialBanner__container {
     position: relative;
-    flex: 1;
+    /* justify-content: center; */
+    align-items: center;
+    /* flex: 1; */
     height: 100%;
-    max-width: 600px;
+    width: 400px;
 }
 
 .swapBanner__image {
     position: absolute;
     inset: 0;
     object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .tutorialBanner__container {
+        align-items: center;
+        width: 60%;
+        height: 40%;
+    }
+    .swapWithBestRatesDescription__container{
+        padding: 0;
+    }
+    .swapWithBestRates__container{
+        gap: 2px;
+        align-items: center;
+        justify-content: center;
+    }
+    .swapBanner__image{
+        height:auto;
+        left: -1rem;
+        align-items: center;
+    }
 }

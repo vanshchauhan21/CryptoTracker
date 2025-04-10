@@ -5,8 +5,8 @@ import './ExitStrategy.css';
 import exitStrategyImg from "../../assets/exit-strategy.avif";
 const ExitStrategy = () => {
   return (
-    <div className="exit-strategy-container flex flex-col-reverse md:flex-row gap-8 md:p-[1rem] md:m-[2rem] md:gap-[6rem]">
-      <div className="exit-strategy-description-wrapper mx-auto md:w-[600px] px-4">
+    <div className="exit-strategy-container flex flex-col-reverse md:flex-row gap-8 md:p-[1rem] md:gap-[6rem]">
+      <div className="exit-strategy-description-wrapper md:w-[600px] px-4">
         <div className="heading-wrapper">
           <div>
             <h2 className="exit-strategy-title">

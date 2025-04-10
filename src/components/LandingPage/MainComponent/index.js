@@ -63,11 +63,11 @@ function MainComponent() {
 
   return (
     <div className="main-wrapper ">
-      <div className="main-flex md:gap-[6rem] h-[800px] md:h-[500px] md:p-[2rem] mx-0 md:mx-8 mb-8  ">
-        <div className=" w-[100%]  px-2 mt-36 md:w-auto  md:mt-12 md:max-w-auto" data-aos="fade-up">
-          <h1 className="heading1 text-start   text-[10px] md:text-6xl ">Real Time</h1>
+      <div className="landing-gap main-flex md:gap-[6rem] h-[800px] md:h-[500px] md:p-[2rem] mx-0 md:mx-8 mb-8  ">
+        <div className=" landing-name w-[100%]  px-2 mt-36 md:w-auto  md:mt-12 md:max-w-auto" data-aos="fade-up">
+          <h1 className="heading1 text-center   text-[10px] md:text-6xl ">Real Time</h1>
           <motion.h1
-            className="heading2"
+            className="heading2 text-center   text-[10px] md:text-6xl "
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.75, duration: 1 }}
@@ -85,7 +85,7 @@ function MainComponent() {
           </motion.p>
           {/* buttons */}
           <motion.div
-            className="btn-flex gap-2 md:gap-[4rem] flex-col md:flex-row items-center justify-start"
+            className="btn-flex gap-2 md:gap-[4rem] md:flex-row items-center"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.25, duration: 0.75 }}
