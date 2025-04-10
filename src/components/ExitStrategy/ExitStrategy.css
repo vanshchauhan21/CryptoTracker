@@ -24,6 +24,7 @@
   .exit-strategy-description {
     font-size: 1.1rem;
     color: #666;
+    justify-content: space-around;
   }
   
   .exit-strategy-button {
@@ -42,7 +43,22 @@
   
   .exit-strategy-banner-img {
     width: 100%;
-    height: auto;
+    height: 100%;
     max-width: 500px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .exit-strategy-banner-img {
+      justify-content: center;
+      align-items: center;
+    }
+    .exit-strategy-banner{
+      width: 50%;
+      align-items: center;
+    }
+    .exit-strategy-container{
+      justify-content: center;
+      align-items: center;
+    }
   }
   

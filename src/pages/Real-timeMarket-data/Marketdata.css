@@ -36,10 +36,6 @@
     color: var(--hover-color, #ff9432);
 }
 
-.marketDataDescription {
-    
-}
-
 .marketBanner img {
     border-radius: 20px;
     height: auto;
@@ -63,4 +59,12 @@
 
 .marketStats p {
     margin: 0.3rem 0;
+}
+@media screen and (max-width: 1200px) {
+    .description{
+        width: auto;
+    }
+    .marketBanner img{
+        height: auto;
+    }
 }

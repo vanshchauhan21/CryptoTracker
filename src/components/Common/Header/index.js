@@ -147,7 +147,7 @@ function Header() {
           </NavLink>
         </div>
 
-        {isMobile && (
+        {/* {isMobile && (
           <div className="mobile-menu-button">
             <MobileMenuButton onClick={toggleMobileMenu} isOpen={mobileMenuOpen} />
           </div>
@@ -157,7 +157,7 @@ function Header() {
           <div className="drawer-component">
             <TemporaryDrawer />
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );

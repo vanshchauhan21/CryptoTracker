@@ -88,7 +88,7 @@ function SelectCoins({
               labelId="demo-name-label"
               id="demo-name"
               value={crypto2}
-              onChange={(e) => onCoinChange(e, false)}
+              onChange={(e) => onCoinChange(e, true)}
               MenuProps={MenuProps}
               sx={{
                 height: "40px",width: "290px", borderRadius: "10px",margin: 0, padding: "10px",border: "1px solid rgba(0,0,0,0.2)",

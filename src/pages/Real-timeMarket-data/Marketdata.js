@@ -24,7 +24,7 @@ function RealTimeMarketData() {
   }, []);
 
   return (
-    <div className="marketData__container gap-4 md:gap-[1rem] flex flex-col-reverse justify-center items-center md:flex-row-reverse p-0 m-0 min-h-screen md:min-h-auto md:p-[1rem] md:m-[2rem]  rounded-lg md:max-w-[97%] mx-auto">
+    <div className="marketData__container gap-4 md:gap-[5rem] flex flex-col-reverse justify-center items-center md:flex-row-reverse p-0 m-0 md:p-[1rem] md:m-[2rem]  rounded-lg md:max-w-[97%] mx-auto">
       <div className="max-w-[100%] md:max-w-[50%] ">
         <div className="headingWrapper">
           <h2 className="title">Real-Time Market Data</h2>

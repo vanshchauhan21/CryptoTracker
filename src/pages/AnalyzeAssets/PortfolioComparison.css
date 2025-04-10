@@ -83,6 +83,11 @@
 @media screen and (max-width: 768px) {
   .tutorialV2__oZoVu {
     padding: 10px;
+    margin: 2rem;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    gap: 1rem;
   }
 
   .tutorialV2Description__CXkQB {
@@ -102,6 +107,6 @@
   }
 
   .tutorialBanner__b9zhX {
-    height: 150px;
+    height: 50%;
   }
 }
