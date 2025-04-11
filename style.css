@@ -113,7 +113,7 @@
     nav ul {
       flex-direction: column;
       align-items: center;
-      gap: 15px;
+      gap: 16px;
     }
   
     nav ul li {
@@ -168,19 +168,19 @@
   }
   
   footer a:hover {
-    color: #36afff;
+    color: #36daff;
   }
   /* Add Meta Viewport for Responsive Design */
 @media screen and (max-width: 480px) {
   body {
-    font-size: 14px; /* Adjust font size for readability */
+    font-size: 12px; /* Adjust font size for readability */
   }
   nav {
    width:70px; /*android devices */
 }
 
  .logo img {
-   height: 60px; /* Logo adjustments */
+   height: 65px; /* Logo adjustments */
 }
 }
 
