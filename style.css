@@ -19,7 +19,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background: rgba(20, 20, 20, 0.8); /* Glassmorphism Effect */
+    background:dark rgb(2, 49, 2); /* Glassmorphism Effect */
     backdrop-filter: blur(10px);
     position: fixed;
     width: 100%;
@@ -168,6 +168,6 @@
   }
   
   footer a:hover {
-    color: #0099ff;
+    color: #36afff;
   }
   
