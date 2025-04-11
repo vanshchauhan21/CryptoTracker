@@ -64,7 +64,7 @@ const GoogleTranslate = () => {
       className="google-translate-container pl-20 md:pl-0"
     >
       <style jsx>
-        {`
+        {
           #google_element {
             padding-top: 20px; 
           }
