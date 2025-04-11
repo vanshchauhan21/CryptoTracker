@@ -20,13 +20,13 @@
     align-items: center;
     padding: 15px 30px;
     background:dark rgb(2, 49, 2); /* Glassmorphism Effect */
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(64, 221, 221, 0.235);
     transition: all 0.3s ease-in-out;
   }
   
@@ -190,4 +190,5 @@
 .nav-items { 
     display:block;} 
 
-.footer { color=greenness; /* Adjust footer color */}
+.footer { color=greenness; /* Adjust footer color */
+}
