@@ -5,7 +5,7 @@ const CryptoCalculator = () => {
   const [conversionRate, setConversionRate] = useState('');
   const [result, setResult] = useState(null);
 
-  const handleCalculate = () => {
+  const handleCalculate = () =>   {
     if (!cryptoAmount || !conversionRate) {
       alert('Please enter both the cryptocurrency amount and conversion rate.');
       return;
@@ -45,7 +45,7 @@ const CryptoCalculator = () => {
         Calculate
       </button>
       {result && (
-        <div style={{ marginTop: '20px', fontSize: '18px', fontWeight: 'bold' }}>
+        <div style={{ marginTop: '20px',  fontSize: '18px', fontWeight: 'bold' }}>
           Converted Value: {result}
         </div>
       )}
