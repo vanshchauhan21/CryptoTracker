@@ -107,7 +107,7 @@ Not a coder? You can still make a big impact! Help us keep our documentation cle
 Have questions or need guidance? Here’s how you can get help:  
 - Join discussions in the [CryptoTracker community forum](https://github.com/<your-username>/CryptoTracker/discussions).  
 - Reach out to the project maintainers for mentorship or advice on contributions.  
-- Check our [Wiki](https://github.com/<your-username>/CryptoTracker/wiki) for additional resources.
+- Check our [Wiki](https://github.com/<your-username>/CryptoTracker/wiki) for additional resources
 
 ---
 
