@@ -170,4 +170,24 @@
   footer a:hover {
     color: #36afff;
   }
-  
+  /* Add Meta Viewport for Responsive Design */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px; /* Adjust font size for readability */
+  }
+  nav {
+   width:70px; /*android devices */
+}
+
+ .logo img {
+   height: 60px; /* Logo adjustments */
+}
+}
+
+.footer {
+     color: greenness /* Adjust footer color */
+}
+.nav-items { 
+    display:block;} 
+
+.footer { color=greenness; /* Adjust footer color */}
