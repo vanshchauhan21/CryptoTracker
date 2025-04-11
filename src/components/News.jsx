@@ -103,7 +103,7 @@ const News = () => {
             <h2>{fav.title}</h2>
             <p>{fav.description}</p>
             <a href={fav.url} target="_blank" rel="noopener noreferrer">
-              Read more
+              Read more...
             </a>
           </div>
         ))}
