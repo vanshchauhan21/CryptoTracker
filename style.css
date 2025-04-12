@@ -176,11 +176,11 @@
     font-size: 12px; /* Adjust font size for readability */
   }
   nav {
-   width:70px; /*android devices */
+   width:72px; /*android devices */
 }
 
  .logo img {
-   height: 65px; /* Logo adjustments */
+   height: 66px; /* Logo adjustments */
 }
 }
 
