@@ -137,13 +137,13 @@
 }
 
 .footer-social a:hover {
-  color: #4facfe;
+  color: #75bdfb;
 }
 
 /* Copyright Section */
 .footer-bottom {
-  margin-top: 20px;
-  border-top: 1px solid #333;
+  margin-top: 22px;
+  border-top: 2px solid #333;
   padding-top: 10px;
   font-size: 14px;
   color: #bbb;
