@@ -8,8 +8,8 @@
   
   /* Body Styling */
   body {
-    background-color: #0d0d0d; /* Dark background */
-    color: #ffffff;
+    background-color: #000000; /* Dark background */
+    color: #fff6f6;
     text-align: center;
   }
   
@@ -176,19 +176,19 @@
     font-size: 12px; /* Adjust font size for readability */
   }
   nav {
-   width:70px; /*android devices */
+   width:72px; /*android devices */
 }
 
  .logo img {
-   height: 65px; /* Logo adjustments */
+   height: 66px; /* Logo adjustments */
 }
 }
 
 .footer {
-     color: greenness /* Adjust footer color */
+     color: rgb(83, 143, 83) /* Adjust footer color */
 }
 .nav-items { 
     display:block;} 
 
-.footer { color=greenness; /* Adjust footer color */
+.footer { color:greenness; /* Adjust footer color */
 }
