@@ -1,9 +1,9 @@
 [data-theme="dark"] body {
-  background: #121212;
+  background: #000000;
 }
 
 [data-theme="dark"] {
-  --footer-bg-color: linear-gradient(135deg, #000000 0%, #00275c 100%) !important;
+  --footer-bg-color: linear-gradient(135deg, #000000 0%, #01193b 100%) !important;
 }
 
 [data-theme="light"] {
@@ -11,7 +11,7 @@
 }
 .footer {
   background: var(--footer-bg-color);
-  color: #fff;
+  color: #f3f3f3;
   padding: 4rem 0 0;
   font-family: system-ui, -apple-system, sans-serif;
   position: relative;
