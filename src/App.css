@@ -73,7 +73,7 @@
   gap: 1rem;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.099);
   transition: border-color 0.3s ease-in-out;
 }
 
@@ -97,7 +97,7 @@
 }
 
 .logo:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(104, 99, 99, 0.25);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
@@ -137,7 +137,7 @@
 
 .section-title {
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 650;
   margin-bottom: 1.5rem;
   color: #fff;
   position: relative;
