@@ -70,8 +70,8 @@ const Contactus = () => {
     <>
       <Header />
       <Toaster />
-      <div className="md:h-[500px] flex flex-col items-center" style={{ display: "flex", justifycontent: "space-between", marginTop: "70px", padding: "20px"}}>
-        <div style={{width: "541px", height:"658px", margin:"9rem"}}>
+      <div className="flex flex-row items-center" style={{ display: "flex", justifycontent: "space-between", marginTop: "70px", padding: "20px"}}>
+        <div style={{width: "541px", height:"558px", margin:"9rem"}}>
           <div style={{ width: "541px", height: "25px", top: "187px", left: "49px", alignItems: "flex-start"}}>
             <h1 style={{fontWeight: "600", fontSize: "30px", lineHeight: "25px", color: " #000000",margin:"0", padding: "0", textAlign: "left"}}>
               Get in touch with our team
@@ -90,24 +90,14 @@ const Contactus = () => {
               style={{margin: "0"}}
           />
         </div>
-        <div className="mt-0" style={{ width: "700px", height: "650px", top: "187px", left: "686px", borderRadius: "20px", border: "4px solid #F5F5F5", margin:"5rem"}}>
+        <div className="mt-0" style={{ width: "600px", height: "550px", top: "187px", left: "500px", borderRadius: "20px", border: "4px solid #F5F5F5", margin:"4rem"}}>
           <Box
             component="form"
             onSubmit={handleSubmit}
-            // sx={{
-            //   mt: 4,
-            //   maxWidth: 600,
-            //   display: "flex",
-            //   flexDirection: "column",
-            //   gap: 2,
-            // }}
-            // className="md:w-full !w-[90%]"
           >
-            <div style={{width: "620px", height: "576px", top: "36px", left: "40px", margin:"40px"}}>
-              <div style={{width: "620px", height: "476px"}}>
-                <div style={{width: "620px", height: "79px"}}>
-                  <div style={{width: "620px", height: "19px"}}>
-                    <h4 style={{fontWeight:"400", fontSize: "16px", lineHeight: "19.36px", background:" #000000;"}}>Name*</h4>
+                <div style={{width: "550px", height: "79px"}}>
+                  <div style={{width: "550px", height: "19px"}}>
+                    <h4 style={{fontWeight:"400", fontSize: "16px", lineHeight: "19.36px", background:" #000000;" , paddingLeft: "20px"}}>Name*</h4>
                   </div>
                   <div>
                     <TextField
@@ -128,12 +118,12 @@ const Contactus = () => {
                           margin: 0,
                           color:"#8F8D8D",
                         }},
-                        placeholder: { style: { fontWeight:400, color: "#8F8D8D" } }, // Light grey text
+                        placeholder: { style: { fontWeight:400, color: "#8F8D8D", paddingTop: "-12px" } }, // Light grey text
                       }}
                       sx={{
-                        width: 620,
+                        width: 520,
                         height: 50,
-                        marginTop: 0.5,
+                        paddingLeft: 2,
                         opacity: 1,
                         color: "1px solid #000000",
                         borderRadius: 2,
@@ -145,21 +135,21 @@ const Contactus = () => {
                           color: "#8F8D8D", // Placeholder text color
                           opacity: 1, // Ensures it’s fully visible
                         },
-                        // "& .MuiOutlinedInput-root": {
-                        //   "&:hover fieldset": {
-                        //     borderColor: mode ? "white" : "gray",
-                        //   },
-                        //   "&.Mui-focused fieldset": {
-                        //     borderColor: mode ? "white" : "blue",
-                        //   },
-                        // },
+                        "& .MuiOutlinedInput-root": {
+                          "&:hover fieldset": {
+                            borderColor: mode ? "white" : "gray",
+                          },
+                          "&.Mui-focused fieldset": {
+                            borderColor: mode ? "white" : "blue",
+                          },
+                        },
                       }}
                     />
                   </div>
                 </div>
-                <div style={{width: "620px", height: "79px"}}>
-                  <div style={{width: "620px", height: "19px"}}>
-                    <h4 style={{fontWeight:"400", fontSize: "16px", lineHeight: "19.36px", background:" #000000;"}}>Email*</h4>
+                <div style={{width: "550px", height: "79px"}}>
+                  <div style={{width: "550px", height: "19px"}}>
+                    <h4 style={{fontWeight:"400", fontSize: "16px", lineHeight: "19.36px", background:" #000000;", paddingLeft: "20px"}}>Email*</h4>
                   </div>
                   <div>
                     <TextField
@@ -184,8 +174,9 @@ const Contactus = () => {
                         placeholder: { style: { fontWeight:400, color: "#8F8D8D" } }, // Light grey text
                       }}
                       sx={{
-                        width: 620,
+                        width: 520,
                         height: 50,
+                        paddingLeft: 2,
                         marginTop: 0.5,
                         opacity: 1,
                         color: "1px solid #000000",
@@ -198,21 +189,21 @@ const Contactus = () => {
                           color: "#8F8D8D",
                           opacity: 1,
                         },
-                        // "& .MuiOutlinedInput-root": {
-                        //   "&:hover fieldset": {
-                        //     borderColor: mode ? "white" : "gray",
-                        //   },
-                        //   "&.Mui-focused fieldset": {
-                        //     borderColor: mode ? "white" : "blue",
-                        //   },
-                        // },
+                        "& .MuiOutlinedInput-root": {
+                          "&:hover fieldset": {
+                            borderColor: mode ? "white" : "gray",
+                          },
+                          "&.Mui-focused fieldset": {
+                            borderColor: mode ? "white" : "blue",
+                          },
+                        },
                       }}
                     />
                   </div>
                 </div>
-                <div style={{width: "620px", height: "79px"}}>
-                  <div style={{width: "620px", height: "19px"}}>
-                    <h4 style={{fontWeight:"400", fontSize: "16px", lineHeight: "19.36px", background:" #000000;"}}>Phone*</h4>
+                <div style={{width: "550px", height: "79px"}}>
+                  <div style={{width: "550px", height: "19px"}}>
+                    <h4 style={{fontWeight:"400", fontSize: "16px", lineHeight: "19.36px", background:" #000000;", paddingLeft: "20px"}}>Phone*</h4>
                   </div>
                   <div>
                     <TextField
@@ -236,8 +227,9 @@ const Contactus = () => {
                         placeholder: { style: { color: "#8F8D8D" } }, // Light grey text
                       }}
                       sx={{
-                        width: 620,
+                        width: 520,
                         height: 50,
+                        paddingLeft: 2,
                         marginTop: 0.5,
                         opacity: 1,
                         color: "1px solid #000000",
@@ -250,21 +242,21 @@ const Contactus = () => {
                           color: "#8F8D8D", // Placeholder text color
                           opacity: 1, // Ensures it’s fully visible
                         },
-                        // "& .MuiOutlinedInput-root": {
-                        //   "&:hover fieldset": {
-                        //     borderColor: mode ? "white" : "gray",
-                        //   },
-                        //   "&.Mui-focused fieldset": {
-                        //     borderColor: mode ? "white" : "blue",
-                        //   },
-                        // },
+                        "& .MuiOutlinedInput-root": {
+                          "&:hover fieldset": {
+                            borderColor: mode ? "white" : "gray",
+                          },
+                          "&.Mui-focused fieldset": {
+                            borderColor: mode ? "white" : "blue",
+                          },
+                        },
                       }}
                     />
                   </div>
                 </div>
-                <div style={{width: "620px", height: "179px"}}>
-                  <div style={{width: "620px", height: "19px"}}>
-                    <h4 style={{fontWeight:"400", fontSize: "16px", lineHeight: "19.36px", background:" #000000;"}}>Message*</h4>
+                <div style={{width: "550px", height: "79px"}}>
+                  <div style={{width: "550px", height: "19px"}}>
+                    <h4 style={{fontWeight:"400", fontSize: "16px", lineHeight: "19.36px", background:" #000000;", paddingLeft: "20px"}}>Message*</h4>
                   </div>
                   <div>
                     <TextField
@@ -290,7 +282,8 @@ const Contactus = () => {
                         placeholder: { style: { color: "#8F8D8D" } }, // Light grey text
                       }}
                       sx={{
-                        width: 620,
+                        width: 520,
+                        paddingLeft: 2,
                         height: 150,
                         marginTop: 0.5,
                         opacity: 1,
@@ -304,33 +297,31 @@ const Contactus = () => {
                           color: "#8F8D8D", // Placeholder text color
                           opacity: 1, // Ensures it’s fully visible
                         },
-                        // "& .MuiOutlinedInput-root": {
-                        //   "&:hover fieldset": {
-                        //     borderColor: mode ? "white" : "gray",
-                        //   },
-                        //   "&.Mui-focused fieldset": {
-                        //     borderColor: mode ? "white" : "blue",
-                        //   },
-                        // },
+                        "& .MuiOutlinedInput-root": {
+                          "&:hover fieldset": {
+                            borderColor: mode ? "white" : "gray",
+                          },
+                          "&.Mui-focused fieldset": {
+                            borderColor: mode ? "white" : "blue",
+                          },
+                        },
                       }}
                     />
                   </div>
                 </div>
-              </div>
-              <div style={{width: "620px", height: "60px", marginTop: "40px"}}>
+              <div style={{width: "550px", height: "30px", marginTop: "20px"}}>
                 <Button
                   variant="contained"
                   color="primary"
                   type="submit"
                   disabled={loading}
-                  sx={{margin: 0, padding: 0, height: 60, color: "white", borderRadius: 3, backgroundColor:"#3A80E9"}}
+                  sx={{margin: 0, padding: 0, height: 60, borderRadius: 3, backgroundColor:"#3A80E9"}}
                 >
                   <div style={{textTransform: "none", width: 68, height: 24, fontSize: 20, fontWeight: 500, display: "flex", alignItems: "center"}}>
                     {loading ? "Sending..." : "Submit"}
                   </div>
                 </Button>
               </div>
-            </div>
           </Box>
         </div>
       </div> 
