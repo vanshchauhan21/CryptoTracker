@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
@@ -56,7 +57,7 @@ const Footer = () => {
             <ul>
               <li><a href="#privacy">Privacy Policy</a></li>
               <li><a href="#termscondition">Terms of Use</a></li>
-              <li><a href="#disclamer">Disclaimer</a></li>
+              <li><Link to="/disclaimer">Disclaimer</Link></li>
             </ul>
           </div>
         </div>
