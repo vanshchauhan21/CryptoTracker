@@ -10,13 +10,13 @@ const Feedback = ({ pageName }) => {
 
   const submitFeedback = (wasHelpful) => {
     setFeedback(wasHelpful);
-    console.log(Feedback for ${pageName}: ${wasHelpful ? 'Helpful' : 'Not Helpful'});
+    console.log(`Feedback for ${pageName}: ${wasHelpful ? 'Helpful' : 'Not Helpful'}`);
   };
 
   const handleSubmitDetails = () => {
     setIsSubmitted(true);
-    console.log(Detailed Feedback: ${detailedFeedback});
-    console.log(Category: ${category});
+    console.log(`Detailed Feedback: ${detailedFeedback}`);
+    console.log(`Category: ${category}`);
   };
 
   return (
