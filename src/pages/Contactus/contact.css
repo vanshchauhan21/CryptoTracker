@@ -12,7 +12,7 @@
 
 .contact-us-title {
   font-size: 2.5rem;
-  color: #333; /* Dark color for the title */
+  color: #333;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -23,7 +23,8 @@
 }
 
 .input-group {
-  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .input-group label {
@@ -35,7 +36,7 @@
 .input-group input,
 .input-group textarea {
   width: 100%;
-  padding: 10px;
+  top: 50%;
   border: 1px solid #ccc; /* Light gray border */
   border-radius: 5px;
   font-size: 1rem;
@@ -49,6 +50,15 @@
   color: #666; /* Darker gray color for placeholders */
   opacity: 1; /* Ensure full opacity for better visibility */
   font-style: italic; /* Optional: Make it italic for differentiation */
+}
+
+.input-group input:focus,
+.input-groupt input:hover,
+.input-group textarea:focus,
+.input-group textarea:hover {
+  border-color: #007bff; /* Primary color on focus/hover */
+  border-width: 1px; /* Thicker border on focus/hover */
+  outline: none; /* Remove default outline */
 }
 
 .submit-button {
