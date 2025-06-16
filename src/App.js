@@ -49,6 +49,7 @@ import CrossChainBridgeFeeOptimizer from "./pages/bfo.js";
 import ProgressBar from "./components/Common/ProgressBar/ProgressBar";
 import Footer from "./components/Footer.jsx";  // ✅ Footer is correctly imported
 import BackToTopButton from "./components/BackToTopButton/BackToTopButton.js";
+import Disclaimer from "./components/Disclaimer/Disclaimer.js";
 
 function App() {
   const theme = createTheme({
@@ -124,7 +125,8 @@ function App() {
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/geminiChat" element={<GeminiChat />} />
                 <Route path="/contactus" element={<Contact />} />
-                <Route path="/analysis" element={<BTCDominance />} />
+                <Route path="/analysis" element={<BTCDominance />} /> 
+                <Route path="/disclaimer" element={<Disclaimer />} /> 
 
                 {/* Calculators */}
                 <Route path="/calculators">
