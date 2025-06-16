@@ -3,7 +3,6 @@ import Drawer from "@mui/material/Drawer";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import { IconButton } from "@mui/material";
 import Switch from "@mui/material/Switch";
-import { toast } from "react-toastify";
 import "./styles.css";
 
 export default function Navbar() {
@@ -20,7 +19,7 @@ export default function Navbar() {
   const changeMode = () => {
     if (localStorage.getItem("theme") !== "dark") setDark();
     else setLight();
-    setDarkMode(!darkMode);
+    setDarkMode((prev) => !prev);
   };
 
   const setDark = () => {
@@ -33,57 +32,54 @@ export default function Navbar() {
     document.documentElement.setAttribute("data-theme", "light");
   };
 
-  // Closes drawer when any nav link is clicked (for better UX)
-  const handleDrawerClose = () => setOpen(false);
-
   return (
     <nav className="header">
-      <div className="nav-logo-container">
-        <h1 className="nav-header" tabIndex={0}>My Website</h1>
+      <div className="nav-left">
+        <img src="/logo192.png" alt="CryptoTracker Logo" className="nav-logo-img" />
+        <span className="nav-header">CryptoTracker</span>
       </div>
-      <div className="links-container">
-        <a href="/" className="link hover-effect">Home</a>
-        <a href="/compare" className="link hover-effect">Compare</a>
-        <a href="/watchlist" className="link hover-effect">Watchlist</a>
-        <a href="/learn" className="link hover-effect">Learn</a>
-        <a href="/dashboard" className="link hover-effect">Dashboard</a>
-        <a href="/signup" className="link hover-effect">Sign Up</a>
-        <a href="/login" className="link hover-effect">Log In</a>
+      <div className="nav-center">
+        <div className="links-container">
+          <a href="/" className="link hover-effect">Home</a>
+          <a href="/compare" className="link hover-effect">Compare</a>
+          <a href="/watchlist" className="link hover-effect">Watchlist</a>
+          <a href="/contact" className="link hover-effect">Contact</a>
+          <a href="/learn" className="link hover-effect">Learn</a>
+          <a href="/news" className="link hover-effect">News</a>
+          <a href="/geminiChat" className="link hover-effect">Gemini Chat</a>
+          <a href="/login" className="link hover-effect">Log In</a>
+          <a href="/dashboard" className="link hover-effect"><div className="btn">Dashboard</div></a>
+        </div>
       </div>
-      <div className="nav-btn-container">
+      <div className="nav-right">
         <Switch checked={darkMode} onClick={changeMode} />
+        <IconButton
+          onClick={() => setOpen(true)}
+          className="drawer-component"
+          aria-label="Open navigation menu"
+          size="large"
+        >
+          <MenuRoundedIcon className="menu-icon themed-menu-icon" />
+        </IconButton>
       </div>
-      {/* Hamburger IconButton - visible only on mobile */}
-      <IconButton
-        onClick={() => setOpen(true)}
-        className="drawer-component"
-        aria-label="Open navigation menu"
-        aria-controls="mobile-nav-drawer"
-        aria-haspopup="true"
-        tabIndex={0}
-      >
-        <MenuRoundedIcon className="menu-icon" />
-      </IconButton>
-      {/* Drawer menu for mobile */}
       <Drawer
         anchor="right"
         open={open}
-        onClose={handleDrawerClose}
-        id="mobile-nav-drawer"
-        role="navigation"
-        aria-label="Mobile navigation menu"
-        ModalProps={{
-          keepMounted: true, // Improves performance on mobile
+        onClose={() => setOpen(false)}
+        PaperProps={{
+          className: "themed-drawer"
         }}
       >
         <div className="drawer-div" tabIndex={0}>
-          <a href="/" className="link hover-effect" onClick={handleDrawerClose}>Home</a>
-          <a href="/compare" className="link hover-effect" onClick={handleDrawerClose}>Compare</a>
-          <a href="/watchlist" className="link hover-effect" onClick={handleDrawerClose}>Watchlist</a>
-          <a href="/learn" className="link hover-effect" onClick={handleDrawerClose}>Learn</a>
-          <a href="/dashboard" className="link hover-effect" onClick={handleDrawerClose}>Dashboard</a>
-          <a href="/signup" className="link hover-effect" onClick={handleDrawerClose}>Sign Up</a>
-          <a href="/login" className="link hover-effect" onClick={handleDrawerClose}>Log In</a>
+          <a href="/" className="link hover-effect" onClick={() => setOpen(false)}>Home</a>
+          <a href="/compare" className="link hover-effect" onClick={() => setOpen(false)}>Compare</a>
+          <a href="/watchlist" className="link hover-effect" onClick={() => setOpen(false)}>Watchlist</a>
+          <a href="/contact" className="link hover-effect" onClick={() => setOpen(false)}>Contact</a>
+          <a href="/learn" className="link hover-effect" onClick={() => setOpen(false)}>Learn</a>
+          <a href="/news" className="link hover-effect" onClick={() => setOpen(false)}>News</a>
+          <a href="/geminiChat" className="link hover-effect" onClick={() => setOpen(false)}>Gemini Chat</a>
+          <a href="/login" className="link hover-effect" onClick={() => setOpen(false)}>Log In</a>
+          <a href="/dashboard" className="link hover-effect" onClick={() => setOpen(false)}><div className="btn">Dashboard</div></a>
           <Switch checked={darkMode} onClick={changeMode} />
         </div>
       </Drawer>
