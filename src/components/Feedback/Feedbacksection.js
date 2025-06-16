@@ -81,7 +81,6 @@ const Feedback = ({ pageName }) => {
   );
 };
 
-// Prop type validation
 Feedback.propTypes = {
   pageName: PropTypes.string.isRequired,
 };

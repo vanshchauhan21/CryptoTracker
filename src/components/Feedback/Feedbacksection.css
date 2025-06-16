@@ -84,6 +84,7 @@
 
 @media (max-width: 768px) {
   .feedback-container {
+    margin: 1rem;
       margin: 1rem;
       padding: 1.5rem;
   }
@@ -95,4 +96,4 @@
       width: 100%;
       justify-content: center;
   }
-}
+}}
