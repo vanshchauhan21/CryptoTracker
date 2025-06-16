@@ -6,7 +6,7 @@ We currently support the latest stable version of CryptoTracker. Users are encou
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in PromptShell, please help us keep the project and its users safe by following these steps:
+If you discover a security vulnerability in CryptoTracker, please help us keep the project and its users safe by following these steps:
 
 1.  **Do not open public issues** for security vulnerabilities.
 2.  **Privately report the vulnerability** by emailing the maintainer.
