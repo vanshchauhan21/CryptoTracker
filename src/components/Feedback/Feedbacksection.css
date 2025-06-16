@@ -85,16 +85,7 @@
 @media (max-width: 768px) {
   .feedback-container {
     margin: 1rem;
-<<<<<<< add-disclaimer-page
     padding: 1.5rem;
-=======
-      margin: 1rem;
-      padding: 1.5rem;
-  }
-  .feedback-buttons {
-      flex-direction: column;
-      gap: 1rem;
->>>>>>> main
   }
 
   .feedback-buttons {
@@ -106,8 +97,4 @@
     width: 100%;
     justify-content: center;
   }
-<<<<<<< add-disclaimer-page
 }
-=======
-}}
->>>>>>> main
