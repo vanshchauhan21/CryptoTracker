@@ -17,7 +17,6 @@ const Feedback = ({ pageName }) => {
     setIsSubmitted(true);
     console.log(`Detailed Feedback: ${detailedFeedback}`);
     console.log(`Category: ${category}`);
-
   };
 
   return (
@@ -82,7 +81,6 @@ const Feedback = ({ pageName }) => {
   );
 };
 
-// Prop type validation
 Feedback.propTypes = {
   pageName: PropTypes.string.isRequired,
 };
