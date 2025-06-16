@@ -1,0 +1,66 @@
+.disclaimer-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2.5rem 3rem;
+  background: rgba(255, 255, 255, 0.8); /* frosted glass */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  transition: all 0.4s ease;
+  transform-style: preserve-3d;
+  animation: fadeInUp 0.8s ease both;
+}
+
+.disclaimer-container h1 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  margin-bottom: 1.8rem;
+  text-align: center;
+  background: linear-gradient(90deg, #111, #555);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.disclaimer-container p {
+  font-size: 1.125rem;
+  line-height: 1.85;
+  color: #333333;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.2px;
+}
+
+/* Hover tilt + lift */
+.disclaimer-container:hover {
+  transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) scale(1.015);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
+}
+
+/* Entry animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .disclaimer-container {
+    margin: 1rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .disclaimer-container h1 {
+    font-size: 2rem;
+  }
+
+  .disclaimer-container p {
+    font-size: 1rem;
+  }
+}
