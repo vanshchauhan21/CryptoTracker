@@ -3,13 +3,11 @@ import PropTypes from 'prop-types';
 import './Feedbacksection.css';
 
 const Feedback = ({ pageName }) => {
-  const [feedback, setFeedback] = useState(null);
   const [detailedFeedback, setDetailedFeedback] = useState('');
   const [category, setCategory] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const submitFeedback = (wasHelpful) => {
-    setFeedback(wasHelpful);
     console.log(`Feedback for ${pageName}: ${wasHelpful ? 'Helpful' : 'Not Helpful'}`);
   };
 

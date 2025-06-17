@@ -43,13 +43,15 @@
   box-shadow: 0 2px 5px rgba(0,0,0,0.08);
   backdrop-filter: blur(10px);
 }
+
 .nav-right {
   display: flex;
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
-  margin-left: auto;   /* This pushes .nav-right to the far right */
+  margin-left: auto;
 }
+
 .nav-left {
   display: flex;
   align-items: center;
@@ -100,6 +102,7 @@
   display: flex;
   align-items: center;
 }
+
 .link:hover,
 .hover-effect:hover {
   background: var(--link-hover-color);
@@ -121,24 +124,17 @@
   color: #fff !important;
 }
 
-/* Hamburger hidden on desktop, shown on mobile */
 .drawer-component {
   display: none !important;
 }
 
-.menu-icon.themed-menu-icon {
+.menu-icon.themed-menu-icon,
+.menu-icon {
   font-size: 38px !important;
   color: var(--drawer-text) !important;
 }
 
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
-}
-
-/* Responsive Styles */
+/* Responsive Layout */
 @media (max-width: 1100px) {
   .links-container {
     gap: 0.75rem;
@@ -151,7 +147,6 @@
   }
   .drawer-component {
     display: flex !important;
-    
   }
   .header {
     padding: 0 8px;
@@ -165,7 +160,50 @@
   }
 }
 
-/* Drawer menu styles */
+@media (max-width: 900px) {
+  .links-container {
+    display: none !important;
+  }
+  .drawer-component {
+    display: block !important;
+  }
+}
+
+@media (min-width: 901px) {
+  .links-container {
+    display: flex !important;
+  }
+  .drawer-component {
+    display: none !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .header {
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-header {
+    font-size: 1.1rem;
+    padding: 0 0.2rem;
+    word-break: break-word;
+    max-width: 80vw;
+    white-space: normal;
+  }
+}
+
+/* Right-aligned button container */
+.nav-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+/* Drawer Styles */
 .MuiDrawer-paper, .themed-drawer {
   background: var(--drawer-bg) !important;
   color: var(--drawer-text) !important;
@@ -222,6 +260,7 @@
 .drawer-div .MuiSwitch-thumb {
   background: var(--drawer-text) !important;
 }
+
 .drawer-div .MuiSwitch-track {
   background: var(--drawer-bg) !important;
   opacity: 0.4;

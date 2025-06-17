@@ -1,8 +1,5 @@
 import { MenuItem, Select, Typography } from "@mui/material";
-import OutlinedInput from '@mui/material/OutlinedInput';
-import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
-import DoneIcon from '@mui/icons-material/Done';
 import React from "react";
 import "./styles.css";
 
