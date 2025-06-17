@@ -50,6 +50,7 @@ import ProgressBar from "./components/Common/ProgressBar/ProgressBar";
 import Footer from "./components/Footer.jsx";  // ✅ Footer is correctly imported
 import BackToTopButton from "./components/BackToTopButton/BackToTopButton.js";
 import Disclaimer from "./components/Disclaimer/Disclaimer.js";
+import Chatbot from "./components/Chatbot-button/Chatbot.js";
 
 function App() {
   const theme = createTheme({
@@ -149,6 +150,8 @@ function App() {
 
               {/* ✅ Footer is placed **outside** of <Routes> so it appears on all pages */}
               <Footer />
+              {/*chatbot placed such that it appears on all pages */}
+              <Chatbot />
             </BrowserRouter>
           </ThemeProvider>
         </div>
