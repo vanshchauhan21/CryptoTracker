@@ -26,7 +26,7 @@ function News() {
             <div className="h-[500px] flex flex-col justify-center items-center">
                 {/* Animation */}
                 <Lottie options={defaultOptions} height={250} width={200} />
-                <h1>Sorry, No Items In The News.</h1>
+                <h1 className="text-black dark:text-white">Sorry, No Items In The News.</h1>
                 <div>
                     <a href="/dashboard">
                         <Button text="Dashboard" />
