@@ -213,3 +213,20 @@ This project is licensed under the MIT License
         <img src="https://img.shields.io/badge/Back%20to%20Top-000000?style=for-the-badge&logo=github&logoColor=white" alt="Back to Top">
     </a>
 </div>
+
+
+Docker Setup✅
+
+Run the application in a containerized environment using Docker.
+
+Prerequisites Docker desktop installed
+
+1 Build the Docker Image and run all this command in terminal:-
+
+docker build . -t my-crypto
+
+2 Run the Container
+
+docker run -p 3000:3000 your-app-name
+
+Replace 3000:3000 with : as needed.
