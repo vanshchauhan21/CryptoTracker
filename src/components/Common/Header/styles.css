@@ -185,9 +185,7 @@ body {
 }
 
 /* Mobile Menu Button */
-.mobile-menu-button {
-  display: none;
-}
+
 
 /* Mobile Responsiveness */
 @media (max-width: 800px) {
@@ -195,9 +193,7 @@ body {
     display: none;
   }
   
-  .mobile-menu-button {
-    display: block;
-  }
+
   
   .drawer-div {
     width: 40vw;
@@ -232,9 +228,7 @@ body {
 }
 
 /* Mobile Menu Styles */
-.mobile-menu-button {
-  display: none;
-}
+
 
 .drawer-component {
   display: block;
@@ -251,22 +245,11 @@ body {
     display: none;
   }
 
-  .mobile-menu-button {
-    display: block;
-  }
 
-  .mobile-menu-open {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
 
-  .mobile-menu-open .link,
-  .mobile-menu-open .active-link {
-    width: 100%;
-    text-align: left;
-  }
+  
+
+  
 }
 
 .drawer-component {
@@ -331,5 +314,37 @@ body {
   }
 }
 
+@media (max-width: 900px) {
+  .links-container {
+    display: none !important;
+  }
+  .drawer-component {
+    display: block !important;
+  }
+}
 
+@media (min-width: 901px) {
+  .links-container {
+    display: flex !important;
+  }
+  .drawer-component {
+    display: none !important;
+  }
+}
 
+.drawer-component {
+  display: none;
+}
+.menu-icon {
+  color: var(--text-color) !important; /* Ensures it matches your current theme */
+  font-size: 2.5rem !important;        /* Make it larger if needed */
+}
+@media (max-width: 600px) {
+  .nav-header {
+    font-size: 1.1rem;
+    padding: 0 .2rem;
+    word-break: break-word;
+    max-width: 80vw;
+    white-space: normal;
+  }
+}
