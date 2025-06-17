@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Common/Header";
-import Loader from "../components/Common/Loader";
 
 import axios from "axios";
 import { setupContributorCardAnimations } from "../components/ContributorAnimation";
 import "../components/ContributorAnimation/ContributorAnimation.css";
-
-import ContributorCard from "../components/Common/Contributors Card/ContributorCard";
 
 import "./Contributors.css";
 import LottieSpinner from "../components/Common/LottieSpinner/LottieSpinner";

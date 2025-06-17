@@ -5,7 +5,6 @@ import Search from "../components/Dashboard/Search";
 import TabsComponent from "../components/Dashboard/Tabs";
 import PaginationComponent from "../components/Dashboard/Pagination";
 import TopButton from "../components/Common/TopButton";
-import Footer from "../components/Footer";
 import TopCoinsTable from "../components/Dashboard/TopCoinsTable/TopCoinsTable";
 import TopNftsTable from "../components/Dashboard/TopNftsTable/TopNftsTable"; // Import new NFT Table
 import axios from 'axios';

@@ -23,7 +23,7 @@ echarts.use([
     CanvasRenderer,
     UniversalTransition
   ]);
-export const Page: React.FC = ({ chartData, multiAxis }) => {
+export const Page = ({ chartData, multiAxis }) => {
   const y_min = Math.round(Math.min(...chartData.datasets[0].data))
   const y_min1 = Math.round(Math.min(...chartData.datasets[1].data))
 
