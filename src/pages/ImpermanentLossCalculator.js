@@ -20,7 +20,6 @@ const ImpermanentLossCalculator = () => {
       return;
     }
 
-    const initialRatio = initialPriceA / initialPriceB;
     const finalRatio = finalPriceA / finalPriceB;
 
     const loss = ((2 * Math.sqrt(finalRatio)) / (finalRatio + 1) - 1) * 100;

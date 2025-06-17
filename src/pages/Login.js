@@ -1,9 +1,7 @@
 import { SignIn } from "@clerk/clerk-react";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
 export default function SignInPage() {
-  const [rememberMe, setRememberMe] = useState(false);
 
   const handleHomeClick = () => {
     window.location.href = "/";

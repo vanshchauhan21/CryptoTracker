@@ -286,7 +286,7 @@ a {
 
 @media screen and (max-width: 1200px) {
     #chatbase-bubble-button {
-        right: 10px !important;
+        right: 10px !important; 
     }
 }
 
