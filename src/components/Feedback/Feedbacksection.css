@@ -83,7 +83,6 @@
 }
 
 @media (max-width: 768px) {
-  
     .feedback-container {
         margin: 1rem;
         margin: 1rem;
@@ -99,30 +98,24 @@
     }
 }
 
-  .feedback-container {
+.feedback-container {
     margin: 1rem;
-
     padding: 1.5rem;
-
-      margin: 1rem;
-      padding: 1.5rem;
-  }
-  .feedback-buttons {
-      flex-direction: column;
-      gap: 1rem;
-
-  }
-
-  .feedback-buttons {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .feedback-button {
-    width: 100%;
-    justify-content: center;
-  }
-
+    margin: 1rem;
+    padding: 1.5rem;
 }
 
-}}
+.feedback-buttons {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.feedback-buttons {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.feedback-button {
+    width: 100%;
+    justify-content: center;
+}
