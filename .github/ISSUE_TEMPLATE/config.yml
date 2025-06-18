@@ -1,8 +1,0 @@
-blank_issues_enabled: true
-contact_links:
-  - name: Questions or need suggestions?
-    url: https://github.com/vanshchauhan21/CryptoTracker/discussions/new?category=q-a
-    about: You can create a Q&A discussion and ask for clarifications 
-  - name: Guidelines
-    url: https://github.com/vanshchauhan21/CryptoTracker/blob/main/Contributing.md
-    about: Before opening a new issue, please make sure to read CONTRIBUTING.md

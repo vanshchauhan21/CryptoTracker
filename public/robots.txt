@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /private
-Allow: /
-Sitemap: https://crypto-tracker-kappa-ebon.vercel.app/sitemap.xml
