@@ -95,7 +95,7 @@ const Contactus = () => {
             style={{
               fontWeight: 600,
               fontSize: 30,
-              color: "#000",
+              color: "#8F8D8D",
               margin: 0,
               textAlign: "left",
             }}
